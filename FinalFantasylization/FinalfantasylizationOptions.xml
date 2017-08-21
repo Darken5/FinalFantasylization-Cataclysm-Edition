@@ -1,6 +1,6 @@
-﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
 
-	
+	<Script file="FinalFantasylizationOptions.lua"/>
 
 	<!-- Standard FinalFantasylization large frame tab template -->
 	<Frame name="FinalFantasylizationUITabPageTemplate" virtual="true" hidden="true">
@@ -12,7 +12,7 @@
 		<Size><AbsDimension x="145" y="25" /></Size>
 		<HitRectInsets><AbsInset left="0" right="-0" top="0" bottom="0"/></HitRectInsets>
 		<Scripts>
-			<OnEnter>FinalFantasylizationUI_TooltipOn(this)</OnEnter>
+			<OnEnter>FinalFantasylizationUI_TooltipOn(self, "ANCHOR_BOTTOMRIGHT")</OnEnter>
 			<OnLeave>FinalFantasylizationUI_TooltipOff()</OnLeave>
 		</Scripts>
 	</Button>
@@ -22,7 +22,7 @@
 		<Size><AbsDimension x="175" y="75" /></Size>
 		<HitRectInsets><AbsInset left="0" right="-0" top="0" bottom="0"/></HitRectInsets>
 		<Scripts>
-			<OnEnter>FinalFantasylizationUI_TooltipOn(this)</OnEnter>
+			<OnEnter>FinalFantasylizationUI_TooltipOn(self, "ANCHOR_BOTTOMRIGHT")</OnEnter>
 			<OnLeave>FinalFantasylizationUI_TooltipOff()</OnLeave>
 		</Scripts>
 	</Button>
@@ -32,7 +32,7 @@
 		<Size><AbsDimension x="25" y="25" /></Size>
 		<HitRectInsets><AbsInset left="0" right="-150" top="0" bottom="0"/></HitRectInsets>
 		<Scripts>
-			<OnEnter>FinalFantasylizationUI_TooltipOn(this)</OnEnter>
+			<OnEnter>FinalFantasylizationUI_TooltipOn(self, "ANCHOR_BOTTOMRIGHT")</OnEnter>
 			<OnLeave>FinalFantasylizationUI_TooltipOff()</OnLeave>
 		</Scripts>
 	</CheckButton>
@@ -54,7 +54,7 @@
 		<Size><AbsDimension x="15" y="15" /></Size>
 		<HitRectInsets><AbsInset left="0" right="-200" top="0" bottom="0"/></HitRectInsets>
 		<Scripts>
-			<OnEnter>FinalFantasylizationUI_TooltipOn(this)</OnEnter>
+			<OnEnter>FinalFantasylizationUI_TooltipOn(self, "ANCHOR_BOTTOMRIGHT")</OnEnter>
 			<OnLeave>FinalFantasylizationUI_TooltipOff:Hide()</OnLeave>
 		</Scripts>
 	</CheckButton>
@@ -95,7 +95,7 @@
 
 		<Scripts>
 			<OnLoad>
-				this:RegisterForClicks("LeftButtonDown","RightButtonDown")
+				self:RegisterForClicks("LeftButtonDown","RightButtonDown")
 			</OnLoad>
 			<OnClick>
 				if not IsControlKeyDown() then
@@ -104,11 +104,11 @@
 					FinalFantasylizationUIDebug_Show()
 				end
 			</OnClick>
-			<OnMouseDown> if IsShiftKeyDown() then this:StartMoving() end  </OnMouseDown>
-			<OnMouseUp>  this:StopMovingOrSizing(); </OnMouseUp>
-			<OnDragStop> this:StopMovingOrSizing(); </OnDragStop>
+			<OnMouseDown> if IsShiftKeyDown() then self:StartMoving() end  </OnMouseDown>
+			<OnMouseUp>  self:StopMovingOrSizing(); </OnMouseUp>
+			<OnDragStop> self:StopMovingOrSizing(); </OnDragStop>
 			<OnEnter>
-				GameTooltip:SetOwner(this, "BOTTOMLEFT")
+				GameTooltip:SetOwner(self, "BOTTOMLEFT")
 				GameTooltip:SetText("FinalFantasylization")
 			</OnEnter>
 			<OnLeave>
@@ -121,7 +121,7 @@
 	<Frame name="FinalFantasylizationDropDownMenu" inherits="UIDropDownMenuTemplate" id="1">
 		<Scripts>
 			<OnLoad>
-				UIDropDownMenu_Initialize(this, FinalFantasylizationDropDownMenu.initialize, "MENU");
+				UIDropDownMenu_Initialize(self, FinalFantasylizationDropDownMenu.initialize, "MENU");
 			</OnLoad>
 		</Scripts>
 	</Frame>

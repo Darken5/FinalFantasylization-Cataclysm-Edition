@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------
+------------------------------------------------------------
 -- FinalFantasylization by Hellfox and Darken5
 -- See Readme.htm for more information.
 
@@ -769,19 +769,19 @@ end
 -- The title of the tooltip will be the text on a control with the same name plus "_Label" on the
 -- end if available, or otherwise the actual text on the control if there is any.  If the tooltip text
 -- OR title is missing, no tooltip is displayed.
-function FinalFantasylizationUI_TooltipOn(this)
-	local TooltipText = getglobal(this:GetName() .. "_Tooltip")
+function FinalFantasylizationUI_TooltipOn(self)
+	local TooltipText = getglobal(self:GetName() .. "_Tooltip")
 	if TooltipText then
 		local Label
-		local FontString = getglobal(this:GetName() .. "_Label")
+		local FontString = getglobal(self:GetName() .. "_Label")
 		if FontString then
 			Label = FontString:GetText()
-		elseif this.GetText and this:GetText() then
-			Label = this:GetText()
+		elseif self.GetText and self:GetText() then
+			Label = self:GetText()
 		end
 		if Label then
 			GameTooltip:ClearLines()
-			GameTooltip:SetOwner(this, "ANCHOR_BOTTOMRIGHT")
+			GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT")
 			GameTooltip:AddLine(Label, 1, 1, 1, 1)
 			GameTooltip:AddLine(TooltipText, nil, nil, nil, 1, 1)
 			GameTooltip:Show()
