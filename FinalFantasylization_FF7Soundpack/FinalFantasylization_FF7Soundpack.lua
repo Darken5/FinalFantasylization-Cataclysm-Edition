@@ -829,7 +829,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Fargodeep Mine
 	function FinalFantasylization_SubzoneFargodeepMine()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --		Forest's Edge
 	function FinalFantasylization_SubzoneForestsEdge()
@@ -842,19 +847,39 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Goldtooth's Den
 	function FinalFantasylization_SubzoneGoldtoothsDen()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --		Hogger Hill
 	function FinalFantasylization_SubzoneHoggerHill()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --		Jasperlode Mine
 	function FinalFantasylization_SubzoneJasperlodeMine()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --		Jerod's Landing
 	function FinalFantasylization_SubzoneJerodsLanding()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --		The Maclure Vineyards
 	function FinalFantasylization_SubzoneTheMaclureVineyards()
@@ -866,11 +891,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Mirror Lake Orchard
 	function FinalFantasylization_SubzoneMirrorLakeOrchard()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --		Ridgepoint Tower
 	function FinalFantasylization_SubzoneRidgepointTower()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --		Stone Cairn Lake
 	function FinalFantasylization_SubzoneStoneCairnLake()
@@ -890,7 +920,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Tower of Azora
 	function FinalFantasylization_SubzoneTowerofAzora()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --		Westbrook Garrison
 	function FinalFantasylization_SubzoneWestbrookGarrison()
@@ -901,146 +936,301 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Gilneas
 	function FinalFantasylization_EasternKingdomsGilneas()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Duskhaven
 	function FinalFantasylization_AllianceTownDuskhaven()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --		Greymane Manor
 	function FinalFantasylization_AllianceTownGreymaneManor()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --		Keel Harbor
 	function FinalFantasylization_AllianceTownKeelHarbor()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --		Stormglen Village
 	function FinalFantasylization_AllianceTownStormglenVillage()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --	SUBZONES:
 --	Aderic's Repose
 	function FinalFantasylization_SubzoneAdericsRepose()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Allen Farmstead
 	function FinalFantasylization_SubzoneAllenFarmstead()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	The Bite
 	function FinalFantasylization_SubzoneTheBite()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	The Blackwald
 	function FinalFantasylization_SubzoneTheBlackwald()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	The Bradshaw Mill
 	function FinalFantasylization_SubzoneTheBradshawMill()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Crowley Orchard
 	function FinalFantasylization_SubzoneCrowleyOrchard()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Crowley Stable Grounds
 	function FinalFantasylization_SubzoneCrowleyStableGrounds()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Duskmist Shore
 	function FinalFantasylization_SubzoneDuskmistShore()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Emberstone Mine
 	function FinalFantasylization_SubzoneEmberstoneMine()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Emberstone Village
 	function FinalFantasylization_SubzoneEmberstoneVillage()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Forsaken Forward Command
 	function FinalFantasylization_SubzoneForsakenForwardCommand()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Galewatch Lighthouse
 	function FinalFantasylization_SubzoneGalewatchLighthouse()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	The Greymane Wall
 	function FinalFantasylization_SubzoneTheGreymaneWall()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Hailwood Marsh
 	function FinalFantasylization_SubzoneHailwoodMarsh()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Hammond Farmstead
 	function FinalFantasylization_SubzoneHammondFarmstead()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Hayward Fishery
 	function FinalFantasylization_SubzoneHaywardFishery()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	The Headlands
 	function FinalFantasylization_SubzoneTheHeadlands()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	King's Gate
 	function FinalFantasylization_SubzoneKingsGate()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Koroth's Den
 	function FinalFantasylization_SubzoneKorothsDen()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Livery Outpost
 	function FinalFantasylization_SubzoneLiveryOutpost()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Northern Headlands
 	function FinalFantasylization_SubzoneNorthernHeadlands()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Northgate River
 	function FinalFantasylization_SubzoneNorthgateRiver()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Northgate Woods
 	function FinalFantasylization_SubzoneNorthgateWoods()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Queen's Gate
 	function FinalFantasylization_SubzoneQueensGate()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Rygna's Lair
 	function FinalFantasylization_SubzoneRygnasLair()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Stagecoach Crash Site
 	function FinalFantasylization_SubzoneStagecoachCrashSite()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Tal'doren
 	function FinalFantasylization_SubzoneTaldoren()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Tempest's Reach
 	function FinalFantasylization_SubzoneTempestsReach()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Wahl Cottage
 	function FinalFantasylization_SubzoneWahlCottage()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Wood's End Cabin
 	function FinalFantasylization_SubzoneWoodsEndCabin()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Gilneas City : Worgen
@@ -1504,260 +1694,540 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Azuremyst Isle
 	function FinalFantasylization_KalimdorAzuremystIsle()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Azure Watch
 	function FinalFantasylization_AllianceTownAzureWatch()
-	
+		FinalFantasylization_AllianceTowns()
 	end
 --		Crash Site
 	function FinalFantasylization_AllianceTownCrashSite()
-	
+		FinalFantasylization_AllianceTowns()
 	end
 --		Odesyus' Landing
 	function FinalFantasylization_AllianceTownOdesyusLanding()
-	
+		FinalFantasylization_AllianceTowns()
 	end
 --	SUBZONES:
 --	Ammen Fields
 	function FinalFantasylization_SubzoneAmmenFields()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Ammen Ford
 	function FinalFantasylization_SubzoneAmmenFord()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Ammen Vale
 	function FinalFantasylization_SubzoneAmmenVale()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Bristlelimb Village
 	function FinalFantasylization_SubzoneBristlelimbVillage()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Emberglade
 	function FinalFantasylization_SubzoneEmberglade()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Fairbridge Strand
 	function FinalFantasylization_SubzoneFairbridgeStrand()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Geezle's Camp
 	function FinalFantasylization_SubzoneGeezlesCamp()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Menagerie Wreckage
 	function FinalFantasylization_SubzoneMenagerieWreckage()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Moongraze Woods
 	function FinalFantasylization_SubzoneMoongrazeWoods()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Moonwing Den
 	function FinalFantasylization_SubzoneMoonwingDen()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Nestlewood Hills
 	function FinalFantasylization_SubzoneNestlewoodHills()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Nestlewood Thicket
 	function FinalFantasylization_SubzoneNestlewoodThicket()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Pod Cluster
 	function FinalFantasylization_SubzonePodCluster()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Pod Wreckage
 	function FinalFantasylization_SubzonePodWreckage()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Sacred Grove
 	function FinalFantasylization_SubzoneTheSacredGrove()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Shadow Ridge
 	function FinalFantasylization_SubzoneShadowRidge()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Silting Shore
 	function FinalFantasylization_SubzoneSiltingShore()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Silverline Lake
 	function FinalFantasylization_SubzoneSilverlineLake()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Silvermyst Isle
 	function FinalFantasylization_SubzoneSilvermystIsle()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Stillpine Hold
 	function FinalFantasylization_SubzoneStillpineHold()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Veiled Sea
 	function FinalFantasylization_SubzoneTheVeiledSea()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Tides' Hollow
 	function FinalFantasylization_SubzoneTidesHollow()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Traitor's Cove
 	function FinalFantasylization_SubzoneTraitorsCove()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Valaar's Berth
 	function FinalFantasylization_SubzoneValaarsBerth()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Wildwind Path
 	function FinalFantasylization_SubzoneWildwindPath()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Wildwind Peak
 	function FinalFantasylization_SubzoneWildwindPeak()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Wrathscale Point
 	function FinalFantasylization_SubzoneWrathscalePoint()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --'==========================================================================================
 --' Kalimdor Zones: Bloodmyst Isle
 --'==========================================================================================
 --	Zone: Bloodmyst Isle
 	function FinalFantasylization_KalimdorBloodmystIsle()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Blood Watch
 	function FinalFantasylization_AllianceTownBloodWatch()
-	
+		FinalFantasylization_AllianceTowns()
 	end
 --		Kessel's Crossing
 	function FinalFantasylization_AllianceTownKesselsCrossing()
-	
+		FinalFantasylization_AllianceTowns()
 	end
 --		Vindicator's Rest
 	function FinalFantasylization_AllianceTownVindicatorsRest()
-	
+		FinalFantasylization_AllianceTowns()
 	end
 --	SUBZONES:
 --	Amberweb Pass
 	function FinalFantasylization_SubzoneAmberwebPass()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Axxarien
 	function FinalFantasylization_SubzoneAxxarien()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Beryl Coast
 	function FinalFantasylization_SubzoneBerylCoast()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Blacksilt Shore
 	function FinalFantasylization_SubzoneBlacksiltShore()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Bladewood
 	function FinalFantasylization_SubzoneBladewood()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Bloodcurse Isle
 	function FinalFantasylization_SubzoneBloodcurseIsle()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Bloodcursed Reef
 	function FinalFantasylization_SubzoneTheBloodcursedReef()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Bloodwash
 	function FinalFantasylization_SubzoneTheBloodwash()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Bristlelimb Enclave
 	function FinalFantasylization_SubzoneBristlelimbEnclave()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Crimson Reach
 	function FinalFantasylization_SubzoneTheCrimsonReach()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Cryo-Core
 	function FinalFantasylization_SubzoneTheCryoCore()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Foul Pool
 	function FinalFantasylization_SubzoneTheFoulPool()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Hidden Reef
 	function FinalFantasylization_SubzoneTheHiddenReef()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Lost Fold
 	function FinalFantasylization_SubzoneTheLostFold()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Middenvale
 	function FinalFantasylization_SubzoneMiddenvale()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Mystwood
 	function FinalFantasylization_SubzoneMystwood()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Nazzivian
 	function FinalFantasylization_SubzoneNazzivian()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Ragefeather Ridge
 	function FinalFantasylization_SubzoneRagefeatherRidge()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Ruins of Loreth'Aran
 	function FinalFantasylization_SubzoneRuinsofLorethAran()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Talon Stand
 	function FinalFantasylization_SubzoneTalonStand()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Tel'athion's Camp
 	function FinalFantasylization_SubzoneTelathionsCamp()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Veiled Sea
 	function FinalFantasylization_SubzoneTheVeiledSea()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Vector Coil
 	function FinalFantasylization_SubzoneTheVectorCoil()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Veridian Point
 	function FinalFantasylization_SubzoneVeridianPoint()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	The Warp Piston
 	function FinalFantasylization_SubzoneTheWarpPiston()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Wrathscale Lair
 	function FinalFantasylization_SubzoneWrathscaleLair()
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	Wyrmscar Island
 	function FinalFantasylization_SubzoneWyrmscarIsland()	
-	
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 	
 	
