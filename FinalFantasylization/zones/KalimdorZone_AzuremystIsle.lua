@@ -450,7 +450,7 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
-			FinalFantasylization_EasternKingdomsAzuremystIsle()
+			FinalFantasylization_KalimdorAzuremystIsle()
 			FinalFantasylization_IsPlaying = true
 		else
 			return

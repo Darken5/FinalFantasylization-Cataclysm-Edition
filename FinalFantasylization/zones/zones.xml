@@ -6,7 +6,7 @@
 	<Script file="EasternKingdomsZone_Badlands.lua"/>
 	<Script file="EasternKingdomsZone_BlastedLands.lua"/>
 	<Script file="EasternKingdomsZone_ElwynnForest.lua"/>
-	<Script file="EasternKingdomsZone_Gilneas"/>
+	<Script file="EasternKingdomsZone_Gilneas.lua"/>
 	<Script file="EasternKingdomsZone_GilneasCity.lua"/>
 	<Script file="EasternKingdomsZone_SilverpineForest.lua"/>
 	<Script file="EasternKingdomsZone_TirisfalGlades.lua"/>	
@@ -14,6 +14,6 @@
 	<Script file="EasternKingdomsZone_Westfall.lua"/>
 	
 	<!--Kalimdor-->
-	<Script file="KalimdorZone_AzuremystIsle"/>
-	<Script file="KalimdorZone_BloodmystIsle"/>
+	<Script file="KalimdorZone_AzuremystIsle.lua"/>
+	<Script file="KalimdorZone_BloodmystIsle.lua"/>
 </Ui>

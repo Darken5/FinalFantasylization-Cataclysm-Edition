@@ -450,7 +450,7 @@ function FinalFantasylization_KalimdorZones_BloodmystIsle()
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
-			FinalFantasylization_EasternKingdomsBloodmystIsle()
+			FinalFantasylization_KalimdorBloodmystIsle()
 			FinalFantasylization_IsPlaying = true
 		else
 			return
