@@ -12,7 +12,7 @@ function FinalFantasylization_EasternKingdomsZones_BurningSteppes()
 --	Neutral:
 --		Chiselgrip					FinalFantasylization_NeutralTownChiselgrip()
 --		Flamestar Post				FinalFantasylization_NeutralTownFlamestarPost()
---	
+--
 --	SUBZONES:
 --	Altar of Storms				FinalFantasylization_SubzoneAltarofStorms()
 --	Blackrock Mountain			FinalFantasylization_SubzoneBlackrockMountain()

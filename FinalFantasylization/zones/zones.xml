@@ -1,12 +1,19 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+
+	<!--Eastern Kingdoms-->
 	<Script file="EasternKingdomsZone_AbyssalDepths.lua"/>
 	<Script file="EasternKingdomsZone_ArathiHighlands.lua"/>
 	<Script file="EasternKingdomsZone_Badlands.lua"/>
 	<Script file="EasternKingdomsZone_BlastedLands.lua"/>
 	<Script file="EasternKingdomsZone_ElwynnForest.lua"/>
+	<Script file="EasternKingdomsZone_Gilneas"/>
 	<Script file="EasternKingdomsZone_GilneasCity.lua"/>
 	<Script file="EasternKingdomsZone_SilverpineForest.lua"/>
 	<Script file="EasternKingdomsZone_TirisfalGlades.lua"/>	
 	<Script file="EasternKingdomsZone_Undercity.lua"/>
 	<Script file="EasternKingdomsZone_Westfall.lua"/>
+	
+	<!--Kalimdor-->
+	<Script file="KalimdorZone_AzuremystIsle"/>
+	<Script file="KalimdorZone_BloodmystIsle"/>
 </Ui>

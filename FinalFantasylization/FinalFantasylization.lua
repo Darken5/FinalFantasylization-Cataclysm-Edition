@@ -840,28 +840,39 @@ function FinalFantasylization_GetMusic()
 --' Eastern Kingdoms Zones
 --'==========================================================================================
 		if not (( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true )) then
-			if not ( IsResting() ) and ( ZoneName == Z["Abyssal Depths"] ) then
-				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)	-- Abyssal Depths
-			elseif not ( IsResting() ) and ( ZoneName == Z["Arathi Highlands"] ) then
-				FinalFantasylization_EasternKingdomsZones_ArathiHighlands(SubZoneName)	-- Arathi Highlands
-			elseif not ( IsResting() ) and ( ZoneName == Z["Badlands"] ) then
-				FinalFantasylization_EasternKingdomsZones_Badlands(SubZoneName)			-- Badlands
-			elseif not ( IsResting() ) and ( ZoneName == Z["Blasted Lands"] ) then
-				FinalFantasylization_EasternKingdomsZones_BlastedLands(SubZoneName)		-- Blasted Lands
-			elseif not ( IsResting() ) and ( ZoneName == Z["Burning Steppes"] ) then
-				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)	-- Burning Steppes
-			elseif not ( IsResting() ) and ( ZoneName == Z["Elwynn Forest"] ) then
-				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)		-- Elwynn Forest
-			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas City"] ) then
-				FinalFantasylization_EasternKingdomsZones_GilneasCity(SubZoneName)		-- Gilneas City
-			elseif ( ZoneName == Z["Silverpine Forest"] ) then
-				FinalFantasylization_EasternKingdomsZones_SilverpineForest(SubZoneName)	-- Silverpine Forest
-			elseif not ( IsResting() ) and ( ZoneName == Z["Tirisfal Glades"] ) then
-				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)	-- Tirisfal Glades
-			elseif ( ZoneName == Z["Undercity"] ) then
-				FinalFantasylization_EasternKingdomsZones_Undercity(SubZoneName)		-- Undercity
-			elseif not ( IsResting() ) and ( ZoneName == Z["Westfall"] ) then
-				FinalFantasylization_EasternKingdomsZones_Westfall(SubZoneName)			-- Westfall
+			if not ( IsResting() ) and ( ZoneName == Z["Abyssal Depths"] ) then			-- Abyssal Depths
+				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)	--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Arathi Highlands"] ) then	-- Arathi Highlands
+				FinalFantasylization_EasternKingdomsZones_ArathiHighlands(SubZoneName)	--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Badlands"] ) then			-- Badlands
+				FinalFantasylization_EasternKingdomsZones_Badlands(SubZoneName)			--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Blasted Lands"] ) then		-- Blasted Lands
+				FinalFantasylization_EasternKingdomsZones_BlastedLands(SubZoneName)		--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Burning Steppes"] ) then	-- Burning Steppes
+				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)	--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Elwynn Forest"] ) then		-- Elwynn Forest
+				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)		--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas"] ) then			-- Gilneas
+				FinalFantasylization_EasternKingdomsZones_Gilneas(SubZoneName)			--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas City"] ) then		-- Gilneas City
+				FinalFantasylization_EasternKingdomsZones_GilneasCity(SubZoneName)		--		|
+			elseif ( ZoneName == Z["Silverpine Forest"] ) then							-- Silverpine Forest
+				FinalFantasylization_EasternKingdomsZones_SilverpineForest(SubZoneName)	--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Tirisfal Glades"] ) then	-- Tirisfal Glades
+				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)	--		|
+			elseif ( ZoneName == Z["Undercity"] ) then									-- Undercity
+				FinalFantasylization_EasternKingdomsZones_Undercity(SubZoneName)		--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Westfall"] ) then			-- Westfall
+				FinalFantasylization_EasternKingdomsZones_Westfall(SubZoneName)			--		|
+
+
+--'==========================================================================================
+--' Kalimdor Zones
+--'==========================================================================================	
+			elseif not ( IsResting() ) and ( ZoneName == Z["Azuremyst Isle"] ) then		-- Azuremyst Isle
+				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)			--		|
+			elseif not ( IsResting() ) and ( ZoneName == Z["Bloodmyst Isle"] ) then		-- Bloodmyst Isle
+				FinalFantasylization_KalimdorZones_BloodmystIsle(SubZoneName)			--		|
 			
 			elseif not ( IsResting() ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")

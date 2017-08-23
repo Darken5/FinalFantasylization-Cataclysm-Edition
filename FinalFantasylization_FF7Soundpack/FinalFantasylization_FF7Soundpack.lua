@@ -896,7 +896,152 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWestbrookGarrison()
 
 	end
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Gilneas : Worgen
+--'==========================================================================================
+--	Zone: Gilneas
+	function FinalFantasylization_EasternKingdomsGilneas()
 
+	end
+--	TOWNS:
+--	Alliance:
+--		Duskhaven
+	function FinalFantasylization_AllianceTownDuskhaven()
+
+	end
+--		Greymane Manor
+	function FinalFantasylization_AllianceTownGreymaneManor()
+
+	end
+--		Keel Harbor
+	function FinalFantasylization_AllianceTownKeelHarbor()
+
+	end
+--		Stormglen Village
+	function FinalFantasylization_AllianceTownStormglenVillage()
+
+	end
+--	SUBZONES:
+--	Aderic's Repose
+	function FinalFantasylization_SubzoneAdericsRepose()
+
+	end
+--	Allen Farmstead
+	function FinalFantasylization_SubzoneAllenFarmstead()
+
+	end
+--	The Bite
+	function FinalFantasylization_SubzoneTheBite()
+
+	end
+--	The Blackwald
+	function FinalFantasylization_SubzoneTheBlackwald()
+
+	end
+--	The Bradshaw Mill
+	function FinalFantasylization_SubzoneTheBradshawMill()
+
+	end
+--	Crowley Orchard
+	function FinalFantasylization_SubzoneCrowleyOrchard()
+
+	end
+--	Crowley Stable Grounds
+	function FinalFantasylization_SubzoneCrowleyStableGrounds()
+
+	end
+--	Duskmist Shore
+	function FinalFantasylization_SubzoneDuskmistShore()
+
+	end
+--	Emberstone Mine
+	function FinalFantasylization_SubzoneEmberstoneMine()
+
+	end
+--	Emberstone Village
+	function FinalFantasylization_SubzoneEmberstoneVillage()
+
+	end
+--	Forsaken Forward Command
+	function FinalFantasylization_SubzoneForsakenForwardCommand()
+
+	end
+--	Galewatch Lighthouse
+	function FinalFantasylization_SubzoneGalewatchLighthouse()
+
+	end
+--	The Greymane Wall
+	function FinalFantasylization_SubzoneTheGreymaneWall()
+
+	end
+--	Hailwood Marsh
+	function FinalFantasylization_SubzoneHailwoodMarsh()
+
+	end
+--	Hammond Farmstead
+	function FinalFantasylization_SubzoneHammondFarmstead()
+
+	end
+--	Hayward Fishery
+	function FinalFantasylization_SubzoneHaywardFishery()
+
+	end
+--	The Headlands
+	function FinalFantasylization_SubzoneTheHeadlands()
+
+	end
+--	King's Gate
+	function FinalFantasylization_SubzoneKingsGate()
+
+	end
+--	Koroth's Den
+	function FinalFantasylization_SubzoneKorothsDen()
+
+	end
+--	Livery Outpost
+	function FinalFantasylization_SubzoneLiveryOutpost()
+
+	end
+--	Northern Headlands
+	function FinalFantasylization_SubzoneNorthernHeadlands()
+
+	end
+--	Northgate River
+	function FinalFantasylization_SubzoneNorthgateRiver()
+
+	end
+--	Northgate Woods
+	function FinalFantasylization_SubzoneNorthgateWoods()
+
+	end
+--	Queen's Gate
+	function FinalFantasylization_SubzoneQueensGate()
+
+	end
+--	Rygna's Lair
+	function FinalFantasylization_SubzoneRygnasLair()
+
+	end
+--	Stagecoach Crash Site
+	function FinalFantasylization_SubzoneStagecoachCrashSite()
+
+	end
+--	Tal'doren
+	function FinalFantasylization_SubzoneTaldoren()
+
+	end
+--	Tempest's Reach
+	function FinalFantasylization_SubzoneTempestsReach()
+
+	end
+--	Wahl Cottage
+	function FinalFantasylization_SubzoneWahlCottage()
+
+	end
+--	Wood's End Cabin
+	function FinalFantasylization_SubzoneWoodsEndCabin()
+
+	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Gilneas City : Worgen
 --'==========================================================================================
@@ -1261,7 +1406,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong()
 			end
 	end
---
 --	TOWNS:
 --	Alliance:
 --		Moonbrook
@@ -1284,7 +1428,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_AllianceTownSentinelTower()
 		FinalFantasylization_AllianceTowns()
 	end
---	
 --	SUBZONES:
 --	Alexston Farmstead
 	function FinalFantasylization_SubzoneAlexstonFarmstead()
@@ -1350,6 +1493,275 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWestfallLighthouse()
 	
 	end
+	
+	
+	
+--###########################################################################################
+--##   KALIMDOR ZONES
+--###########################################################################################	
+--'==========================================================================================
+--' Kalimdor Zones: Azuremyst Isle : Draenei
+--'==========================================================================================
+--	Zone: Azuremyst Isle
+	function FinalFantasylization_KalimdorAzuremystIsle()
+	
+	end
+--	TOWNS:
+--	Alliance:
+--		Azure Watch
+	function FinalFantasylization_AllianceTownAzureWatch()
+	
+	end
+--		Crash Site
+	function FinalFantasylization_AllianceTownCrashSite()
+	
+	end
+--		Odesyus' Landing
+	function FinalFantasylization_AllianceTownOdesyusLanding()
+	
+	end
+--	SUBZONES:
+--	Ammen Fields
+	function FinalFantasylization_SubzoneAmmenFields()
+	
+	end
+--	Ammen Ford
+	function FinalFantasylization_SubzoneAmmenFord()
+	
+	end
+--	Ammen Vale
+	function FinalFantasylization_SubzoneAmmenVale()
+	
+	end
+--	Bristlelimb Village
+	function FinalFantasylization_SubzoneBristlelimbVillage()
+	
+	end
+--	Emberglade
+	function FinalFantasylization_SubzoneEmberglade()
+	
+	end
+--	Fairbridge Strand
+	function FinalFantasylization_SubzoneFairbridgeStrand()
+	
+	end
+--	Geezle's Camp
+	function FinalFantasylization_SubzoneGeezlesCamp()
+	
+	end
+--	Menagerie Wreckage
+	function FinalFantasylization_SubzoneMenagerieWreckage()
+	
+	end
+--	Moongraze Woods
+	function FinalFantasylization_SubzoneMoongrazeWoods()
+	
+	end
+--	Moonwing Den
+	function FinalFantasylization_SubzoneMoonwingDen()
+	
+	end
+--	Nestlewood Hills
+	function FinalFantasylization_SubzoneNestlewoodHills()
+	
+	end
+--	Nestlewood Thicket
+	function FinalFantasylization_SubzoneNestlewoodThicket()
+	
+	end
+--	Pod Cluster
+	function FinalFantasylization_SubzonePodCluster()
+	
+	end
+--	Pod Wreckage
+	function FinalFantasylization_SubzonePodWreckage()
+	
+	end
+--	The Sacred Grove
+	function FinalFantasylization_SubzoneTheSacredGrove()
+	
+	end
+--	Shadow Ridge
+	function FinalFantasylization_SubzoneShadowRidge()
+	
+	end
+--	Silting Shore
+	function FinalFantasylization_SubzoneSiltingShore()
+	
+	end
+--	Silverline Lake
+	function FinalFantasylization_SubzoneSilverlineLake()
+	
+	end
+--	Silvermyst Isle
+	function FinalFantasylization_SubzoneSilvermystIsle()
+	
+	end
+--	Stillpine Hold
+	function FinalFantasylization_SubzoneStillpineHold()
+	
+	end
+--	The Veiled Sea
+	function FinalFantasylization_SubzoneTheVeiledSea()
+	
+	end
+--	Tides' Hollow
+	function FinalFantasylization_SubzoneTidesHollow()
+	
+	end
+--	Traitor's Cove
+	function FinalFantasylization_SubzoneTraitorsCove()
+	
+	end
+--	Valaar's Berth
+	function FinalFantasylization_SubzoneValaarsBerth()
+	
+	end
+--	Wildwind Path
+	function FinalFantasylization_SubzoneWildwindPath()
+	
+	end
+--	Wildwind Peak
+	function FinalFantasylization_SubzoneWildwindPeak()
+	
+	end
+--	Wrathscale Point
+	function FinalFantasylization_SubzoneWrathscalePoint()
+	
+	end
+--'==========================================================================================
+--' Kalimdor Zones: Bloodmyst Isle
+--'==========================================================================================
+--	Zone: Bloodmyst Isle
+	function FinalFantasylization_KalimdorBloodmystIsle()
+	
+	end
+--	TOWNS:
+--	Alliance:
+--		Blood Watch
+	function FinalFantasylization_AllianceTownBloodWatch()
+	
+	end
+--		Kessel's Crossing
+	function FinalFantasylization_AllianceTownKesselsCrossing()
+	
+	end
+--		Vindicator's Rest
+	function FinalFantasylization_AllianceTownVindicatorsRest()
+	
+	end
+--	SUBZONES:
+--	Amberweb Pass
+	function FinalFantasylization_SubzoneAmberwebPass()
+	
+	end
+--	Axxarien
+	function FinalFantasylization_SubzoneAxxarien()
+	
+	end
+--	Beryl Coast
+	function FinalFantasylization_SubzoneBerylCoast()
+	
+	end
+--	Blacksilt Shore
+	function FinalFantasylization_SubzoneBlacksiltShore()
+	
+	end
+--	Bladewood
+	function FinalFantasylization_SubzoneBladewood()
+	
+	end
+--	Bloodcurse Isle
+	function FinalFantasylization_SubzoneBloodcurseIsle()
+	
+	end
+--	The Bloodcursed Reef
+	function FinalFantasylization_SubzoneTheBloodcursedReef()
+	
+	end
+--	The Bloodwash
+	function FinalFantasylization_SubzoneTheBloodwash()
+	
+	end
+--	Bristlelimb Enclave
+	function FinalFantasylization_SubzoneBristlelimbEnclave()
+	
+	end
+--	The Crimson Reach
+	function FinalFantasylization_SubzoneTheCrimsonReach()
+	
+	end
+--	The Cryo-Core
+	function FinalFantasylization_SubzoneTheCryoCore()
+	
+	end
+--	The Foul Pool
+	function FinalFantasylization_SubzoneTheFoulPool()
+	
+	end
+--	The Hidden Reef
+	function FinalFantasylization_SubzoneTheHiddenReef()
+	
+	end
+--	The Lost Fold
+	function FinalFantasylization_SubzoneTheLostFold()
+	
+	end
+--	Middenvale
+	function FinalFantasylization_SubzoneMiddenvale()
+	
+	end
+--	Mystwood
+	function FinalFantasylization_SubzoneMystwood()
+	
+	end
+--	Nazzivian
+	function FinalFantasylization_SubzoneNazzivian()
+	
+	end
+--	Ragefeather Ridge
+	function FinalFantasylization_SubzoneRagefeatherRidge()
+	
+	end
+--	Ruins of Loreth'Aran
+	function FinalFantasylization_SubzoneRuinsofLorethAran()
+	
+	end
+--	Talon Stand
+	function FinalFantasylization_SubzoneTalonStand()
+	
+	end
+--	Tel'athion's Camp
+	function FinalFantasylization_SubzoneTelathionsCamp()
+	
+	end
+--	The Veiled Sea
+	function FinalFantasylization_SubzoneTheVeiledSea()
+	
+	end
+--	The Vector Coil
+	function FinalFantasylization_SubzoneTheVectorCoil()
+	
+	end
+--	Veridian Point
+	function FinalFantasylization_SubzoneVeridianPoint()
+	
+	end
+--	The Warp Piston
+	function FinalFantasylization_SubzoneTheWarpPiston()
+	
+	end
+--	Wrathscale Lair
+	function FinalFantasylization_SubzoneWrathscaleLair()
+	
+	end
+--	Wyrmscar Island
+	function FinalFantasylization_SubzoneWyrmscarIsland()	
+	
+	end
+	
+	
+	
 
 	--#############
 	--## PVP ZONES
