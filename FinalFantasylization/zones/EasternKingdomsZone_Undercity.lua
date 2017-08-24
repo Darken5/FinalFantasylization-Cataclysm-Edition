@@ -143,10 +143,10 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 				FinalFantasylization_CurrentZone = ZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_EasternKingdoms_Undercity()
-				FinalFantasylization_IsPlaying = true
 			else
 				return
-			end	
+			end
+			FinalFantasylization_IsPlaying = true
 		end
 	--'==========================================================================================
 	--' Undercity: Alliance Check
@@ -158,6 +158,7 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 			FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 		else
 			return
-		end	
+		end
+		FinalFantasylization_IsPlaying = true
 	end
 end

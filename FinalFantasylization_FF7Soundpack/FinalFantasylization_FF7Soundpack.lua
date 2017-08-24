@@ -199,56 +199,204 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --##   EASTERN KINGDOMS ZONES
 --###########################################################################################
 --'==========================================================================================
+--' Eastern Kingdoms Capital: Stormwind City : Alliance
+--'==========================================================================================
+--	Zone: Stormwind City
+	function FinalFantasylization_EasternKingdoms_StormwindCity()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	SUBZONES:
+--	The Canals
+	function FinalFantasylization_StormwindCity_SubzoneTheCanals()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Cathedral Square
+	function FinalFantasylization_StormwindCity_SubzoneCathedralSquare()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Cathedral of Light
+	function FinalFantasylization_StormwindCity_SubzoneCathedralofLight()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Dwarven District
+	function FinalFantasylization_StormwindCity_SubzoneDwarvenDistrict()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Cut-Throat Alley
+	function FinalFantasylization_StormwindCity_SubzoneCutThroatAlley()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Mage Quarter
+	function FinalFantasylization_StormwindCity_SubzoneMageQuarter()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		The Slaughtered Lamb
+	function FinalFantasylization_StormwindCity_SubzoneTheSlaughteredLamb()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Wizard's Sanctum
+	function FinalFantasylization_StormwindCity_SubzoneWizardsSanctum()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	The Old Barracks
+	function FinalFantasylization_StormwindCity_SubzoneTheOldBarracks()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Old Town
+	function FinalFantasylization_StormwindCity_SubzoneOldTown()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Champions' Hall
+	function FinalFantasylization_StormwindCity_SubzoneChampionsHall()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Command Center
+	function FinalFantasylization_StormwindCity_SubzoneCommandCenter()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		SI:7
+	function FinalFantasylization_StormwindCity_SubzoneSI7()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Stormwind City Cemetery
+	function FinalFantasylization_StormwindCity_SubzoneStormwindCityCemetery()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Stormwind City Outskirts
+	function FinalFantasylization_StormwindCity_SubzoneStormwindCityOutskirts()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Olivia's Pond
+	function FinalFantasylization_StormwindCity_SubzoneOliviasPond()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		The Wollerton Stead
+	function FinalFantasylization_StormwindCity_SubzoneTheWollertonStead()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		The Eastern Earthshrine
+	function FinalFantasylization_StormwindCity_SubzoneTheEasternEarthshrine()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Stormwind Harbor
+	function FinalFantasylization_StormwindCity_SubzoneStormwindHarbor()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Stormwind Keep
+	function FinalFantasylization_StormwindCity_SubzoneStormwindKeep()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Petitioner's Chamber
+	function FinalFantasylization_StormwindCity_SubzonePetitionersChamber()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Royal Gallery
+	function FinalFantasylization_StormwindCity_SubzoneRoyalGallery()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Royal Library
+	function FinalFantasylization_StormwindCity_SubzoneRoyalLibrary()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		War Room
+	function FinalFantasylization_StormwindCity_SubzoneWarRoom()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Stormwind Lake
+	function FinalFantasylization_StormwindCity_SubzoneStormwindLake()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Trade District
+	function FinalFantasylization_StormwindCity_SubzoneTradeDistrict()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Gryphon Roost
+	function FinalFantasylization_StormwindCity_SubzoneGryphonRoost()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Valley of Heroes
+	function FinalFantasylization_StormwindCity_SubzoneValleyofHeroes()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--'==========================================================================================
 --' Eastern Kingdoms Capital: Undercity
 --'==========================================================================================
---	Zone: Undercity			
+--	Zone: Undercity
 	function FinalFantasylization_EasternKingdoms_Undercity()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---
 --	SUBZONES:
---	Apothecarium			
+--	Apothecarium
 	function FinalFantasylization_Undercity_SubzoneTheApothecarium()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---	Canals					
+--	Canals
 	function FinalFantasylization_Undercity_SubzoneCanals()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---	Magic Quarter			
+--	Magic Quarter
 	function FinalFantasylization_Undercity_SubzoneMagicQuarter()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---	Rogues' Quarter			
+--	Rogues' Quarter
 	function FinalFantasylization_Undercity_SubzoneRoguesQuarter()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---	Royal Quarter			
+--	Royal Quarter
 	function FinalFantasylization_Undercity_SubzoneRoyalQuarter()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---	Ruins of Lordaeron		
+--	Ruins of Lordaeron
 	function FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---	Sewers					
+--	Sewers
 	function FinalFantasylization_Undercity_SubzoneSewers()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---	Trade Quarter			
+--	Trade Quarter
 	function FinalFantasylization_Undercity_SubzoneTradeQuarter()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---	War Quarter				
+--	War Quarter
 	function FinalFantasylization_Undercity_SubzoneWarQuarter()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
@@ -284,15 +432,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Abandoned Reef
 	function FinalFantasylization_SubzoneAbandonedReef()
-	
+
 	end
 --	Abyssal Breach
 	function FinalFantasylization_SubzoneAbyssalBreach()
-	
+
 	end
 --		The Abyssal Maw
 	function FinalFantasylization_SubzoneTheAbyssalMaw()
-	
+
 	end
 --	The Cerebrillum
 	function FinalFantasylization_SubzoneTheCerebrillum()
@@ -790,7 +938,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheWhelpingDowns()
 	
 	end
-
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Deeprun Tram : Alliance
+--'==========================================================================================
+--	Zone: Deeprun Tram
+	function FinalFantasylization_EasternKingdoms_DeeprunTram()
+		FinalFantasylization_FriendlySong()
+	end
+	
+	
 
 --'==========================================================================================
 --' Eastern Kingdoms Zone: Elwynn Forest - Alliance
@@ -1395,7 +1551,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Skittering Dark					
 	function FinalFantasylization_SubzoneTheSkitteringDark()
-
+		FinalFantasylization_PlagueSong()
 	end
 --	South Tide's Run					
 	function FinalFantasylization_SubzoneSouthTidesRun()
@@ -1690,6 +1846,36 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --##   KALIMDOR ZONES
 --###########################################################################################	
 --'==========================================================================================
+--' Kalimdor Capital: The Exodar : Alliance
+--'==========================================================================================
+--	Zone: The Exodar
+	function FinalFantasylization_Kalimdor_TheExodar()
+		FinalFantasylization_PlayMusic(S .. ExodarSong);
+		FinalFantasylization_debugMsg("ExodarSong")
+	end
+--	SUBZONES:
+--	The Crystal Hall
+	function FinalFantasylization_TheExodar_SubzoneTheCrystalHall()
+		FinalFantasylization_PlayMusic(S .. ExodarSong);
+		FinalFantasylization_debugMsg("ExodarSong")
+	end
+--	Seat of the Naaru
+	function FinalFantasylization_TheExodar_SubzoneSeatoftheNaaru()
+		FinalFantasylization_PlayMusic(S .. ExodarSong);
+		FinalFantasylization_debugMsg("ExodarSong")
+	end
+--	Traders' Tier
+	function FinalFantasylization_TheExodar_SubzoneTradersTier()
+		FinalFantasylization_PlayMusic(S .. ExodarSong);
+		FinalFantasylization_debugMsg("ExodarSong")
+	end
+--	The Vault of Lights
+	function FinalFantasylization_TheExodar_SubzoneTheVaultofLights()
+		FinalFantasylization_PlayMusic(S .. ExodarSong);
+		FinalFantasylization_debugMsg("ExodarSong")
+	end
+
+--'==========================================================================================
 --' Kalimdor Zones: Azuremyst Isle : Draenei
 --'==========================================================================================
 --	Zone: Azuremyst Isle
@@ -1862,21 +2048,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Silting Shore
 	function FinalFantasylization_SubzoneSiltingShore()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
+		FinalFantasylization_WaterSong()
 	end
 --	Silverline Lake
 	function FinalFantasylization_SubzoneSilverlineLake()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
+		FinalFantasylization_LakeSong()
 	end
 --	Silvermyst Isle
 	function FinalFantasylization_SubzoneSilvermystIsle()
@@ -1898,21 +2074,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Veiled Sea
 	function FinalFantasylization_SubzoneTheVeiledSea()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
+		FinalFantasylization_WaterSong()
 	end
 --	Tides' Hollow
 	function FinalFantasylization_SubzoneTidesHollow()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
+		FinalFantasylization_WaterSong()
 	end
 --	Traitor's Cove
 	function FinalFantasylization_SubzoneTraitorsCove()

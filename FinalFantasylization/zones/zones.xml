@@ -5,15 +5,18 @@
 	<Script file="EasternKingdomsZone_ArathiHighlands.lua"/>
 	<Script file="EasternKingdomsZone_Badlands.lua"/>
 	<Script file="EasternKingdomsZone_BlastedLands.lua"/>
+	<Script file="EasternKingdomsZone_DeeprunTram.lua"/>
 	<Script file="EasternKingdomsZone_ElwynnForest.lua"/>
 	<Script file="EasternKingdomsZone_Gilneas.lua"/>
 	<Script file="EasternKingdomsZone_GilneasCity.lua"/>
 	<Script file="EasternKingdomsZone_SilverpineForest.lua"/>
+	<Script file="EasternKingdomsZone_StormwindCity.lua"/>
 	<Script file="EasternKingdomsZone_TirisfalGlades.lua"/>	
 	<Script file="EasternKingdomsZone_Undercity.lua"/>
 	<Script file="EasternKingdomsZone_Westfall.lua"/>
-	
+
 	<!--Kalimdor-->
 	<Script file="KalimdorZone_AzuremystIsle.lua"/>
 	<Script file="KalimdorZone_BloodmystIsle.lua"/>
+	<Script file="KalimdorZone_TheExodar.lua"/>
 </Ui>
