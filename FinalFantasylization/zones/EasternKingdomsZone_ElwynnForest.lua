@@ -5,6 +5,14 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 --	Zone: Elwynn Forest			FinalFantasylization_EasternKingdomsElwynnForest()
 --
 --	TOWNS:
+--	Human Start:
+--		Northshire Abbey			FinalFantasylization_Human_Start_NorthshireAbbey()
+--			Hall of Arms				FinalFantasylization_Human_Start_HallofArms()
+--			Library Wing				FinalFantasylization_Human_Start_LibraryWing()
+--			Main Hall					FinalFantasylization_Human_Start_MainHall()
+--		Echo Ridge Mine				FinalFantasylization_Human_Start_EchoRidgeMine()
+--		Northshire River			FinalFantasylization_Human_Start_NorthshireRiver()
+--		Northshire Vineyards		FinalFantasylization_Human_Start_NorthshireVineyards()
 --	Alliance: 
 --		Eastvale Logging Camp		FinalFantasylization_AllianceTownEastvaleLoggingCamp()
 --		Goldshire					FinalFantasylization_AllianceTownGoldshire()
@@ -30,9 +38,120 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 --	Tower of Azora				FinalFantasylization_SubzoneTowerofAzora()
 --	Westbrook Garrison			FinalFantasylization_SubzoneWestbrookGarrison()
 	--'==========================================================================================
+	--' Elwynn Forest: Human Starting Area: Northshire Abbey
+	--'==========================================================================================
+	if ( SubZoneName == SZ["Northshire Abbey"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Human_Start_NorthshireAbbey()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Elwynn Forest: Human Starting Area: Hall of Arms
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Hall of Arms"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Human_Start_HallofArms()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Elwynn Forest: Human Starting Area: Library Wing
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Library Wing"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Human_Start_LibraryWing()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Elwynn Forest: Human Starting Area: Main Hall
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Main Hall"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Human_Start_MainHall()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Elwynn Forest: Human Starting Area: Echo Ridge Mine
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Echo Ridge Mine"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Human_Start_EchoRidgeMine()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Elwynn Forest: Human Starting Area: Northshire River
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Northshire River"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Human_Start_NorthshireRiver()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Elwynn Forest: Human Starting Area: Northshire Vineyards
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Northshire Vineyards"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Human_Start_NorthshireVineyards()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Elwynn Forest Alliance Town: Eastvale Logging Camp
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Eastvale Logging Camp"] ) then
+	elseif ( SubZoneName == SZ["Eastvale Logging Camp"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

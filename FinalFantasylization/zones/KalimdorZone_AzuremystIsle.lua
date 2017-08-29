@@ -5,15 +5,20 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 --	Zone: Azuremyst Isle	FinalFantasylization_KalimdorAzuremystIsle()
 --
 --	TOWNS:
+--	Draenei Start:
+--		Crash Site					FinalFantasylization_Draenei_Start_CrashSite()
+--			Ammen Fields				FinalFantasylization_Draenei_Start_AmmenFields()
+--			Ammen Vale					FinalFantasylization_Draenei_Start_AmmenVale()
+--			Nestlewood Hills			FinalFantasylization_Draenei_Start_NestlewoodHills()
+--			Nestlewood Thicket			FinalFantasylization_Draenei_Start_NestlewoodThicket()
+--			Shadow Ridge				FinalFantasylization_Draenei_Start_ShadowRidge()
+--			Silverline Lake				FinalFantasylization_Draenei_Start_SilverlineLake()
 --	Alliance:
 --		Azure Watch				FinalFantasylization_AllianceTownAzureWatch()
---		Crash Site				FinalFantasylization_AllianceTownCrashSite()
 --		Odesyus' Landing		FinalFantasylization_AllianceTownOdesyusLanding()
 --
 --	SUBZONES:
---	Ammen Fields			FinalFantasylization_SubzoneAmmenFields()
 --	Ammen Ford				FinalFantasylization_SubzoneAmmenFord()
---	Ammen Vale				FinalFantasylization_SubzoneAmmenVale()
 --	Bristlelimb Village		FinalFantasylization_SubzoneBristlelimbVillage()
 --	Emberglade				FinalFantasylization_SubzoneEmberglade()
 --	Fairbridge Strand		FinalFantasylization_SubzoneFairbridgeStrand()
@@ -21,14 +26,10 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 --	Menagerie Wreckage		FinalFantasylization_SubzoneMenagerieWreckage()
 --	Moongraze Woods			FinalFantasylization_SubzoneMoongrazeWoods()
 --	Moonwing Den			FinalFantasylization_SubzoneMoonwingDen()
---	Nestlewood Hills		FinalFantasylization_SubzoneNestlewoodHills()
---	Nestlewood Thicket		FinalFantasylization_SubzoneNestlewoodThicket()
 --	Pod Cluster				FinalFantasylization_SubzonePodCluster()
 --	Pod Wreckage			FinalFantasylization_SubzonePodWreckage()
 --	The Sacred Grove		FinalFantasylization_SubzoneTheSacredGrove()
---	Shadow Ridge			FinalFantasylization_SubzoneShadowRidge()
 --	Silting Shore			FinalFantasylization_SubzoneSiltingShore()
---	Silverline Lake			FinalFantasylization_SubzoneSilverlineLake()
 --	Silvermyst Isle			FinalFantasylization_SubzoneSilvermystIsle()
 --	Stillpine Hold			FinalFantasylization_SubzoneStillpineHold()
 --	The Veiled Sea			FinalFantasylization_SubzoneTheVeiledSea()
@@ -39,15 +40,15 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 --	Wildwind Peak			FinalFantasylization_SubzoneWildwindPeak()
 --	Wrathscale Point		FinalFantasylization_SubzoneWrathscalePoint()
 	--'==========================================================================================
-	--' Azuremyst Isle Alliance Town: Azure Watch
+	--' Azuremyst Isle: Draenei Starting Area: Crash Site
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Azure Watch"] ) then
+	if ( SubZoneName == SZ["Crash Site"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
+			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownAzureWatch()
-			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_Draenei_Start_CrashSite()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -57,14 +58,92 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Azuremyst Isle Alliance Town: Crash Site
+	--' Azuremyst Isle: Draenei Starting Area: Ammen Fields
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Crash Site"] ) then
+	elseif ( SubZoneName == SZ["Ammen Fields"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Draenei_Start_AmmenFields()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Azuremyst Isle: Draenei Starting Area: Ammen Vale
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Ammen Vale"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Draenei_Start_AmmenVale()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Azuremyst Isle: Draenei Starting Area: Nestlewood Hills
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Nestlewood Hills"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Draenei_Start_NestlewoodHills()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Azuremyst Isle: Draenei Starting Area: Nestlewood Thicket
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Nestlewood Thicket"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Draenei_Start_NestlewoodThicket()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Azuremyst Isle: Draenei Starting Area: Shadow Ridge
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Shadow Ridge"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Draenei_Start_ShadowRidge()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Azuremyst Isle: Draenei Starting Area: Silverline Lake
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Silverline Lake"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Draenei_Start_SilverlineLake()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Azuremyst Isle Alliance Town: Azure Watch
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Azure Watch"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownCrashSite()
+				FinalFantasylization_AllianceTownAzureWatch()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -93,19 +172,6 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Azuremyst Isle Subzone: Ammen Fields
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ammen Fields"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneAmmenFields()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Azuremyst Isle Subzone: Ammen Ford
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Ammen Ford"] ) then
@@ -113,19 +179,6 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneAmmenFord()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Azuremyst Isle Subzone: Ammen Vale
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ammen Vale"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneAmmenVale()
 		else
 			return
 		end
@@ -223,32 +276,6 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Azuremyst Isle Subzone: Nestlewood Hills
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Nestlewood Hills"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneNestlewoodHills()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Azuremyst Isle Subzone: Nestlewood Thicket
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Nestlewood Thicket"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneNestlewoodThicket()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Azuremyst Isle Subzone: Pod Cluster
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Pod Cluster"] ) then
@@ -288,19 +315,6 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Azuremyst Isle Subzone: Shadow Ridge
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Shadow Ridge"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneShadowRidge()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Azuremyst Isle Subzone: Silting Shore
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Silting Shore"] ) then
@@ -308,19 +322,6 @@ function FinalFantasylization_KalimdorZones_AzuremystIsle()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneSiltingShore()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Azuremyst Isle Subzone: Silverline Lake
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Silverline Lake"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSilverlineLake()
 		else
 			return
 		end

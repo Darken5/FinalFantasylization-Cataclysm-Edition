@@ -961,6 +961,35 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			end
 	end
 --	TOWNS:
+--	Human Start:
+--		Northshire Abbey			
+	function FinalFantasylization_Human_Start_NorthshireAbbey()
+
+	end
+--			Hall of Arms			
+	function FinalFantasylization_Human_Start_HallofArms()
+
+	end
+--			Library Wing			
+	function FinalFantasylization_Human_Start_LibraryWing()
+
+	end
+--			Main Hall			
+	function FinalFantasylization_Human_Start_MainHall()
+
+	end
+--		Echo Ridge Mine			
+	function FinalFantasylization_Human_Start_EchoRidgeMine()
+
+	end
+--		Northshire River			
+	function FinalFantasylization_Human_Start_NorthshireRiver()
+
+	end
+--		Northshire Vineyards			
+	function FinalFantasylization_Human_Start_NorthshireVineyards()
+
+	end
 --	Alliance: 
 --		Eastvale Logging Camp
 	function FinalFantasylization_AllianceTownEastvaleLoggingCamp()
@@ -1888,13 +1917,68 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			end
 	end
 --	TOWNS:
+--	Draenei Start:
+--		Crash Site
+	function FinalFantasylization_Draenei_Start_CrashSite()
+		FinalFantasylization_AllianceTowns()
+	end
+--			Ammen Fields
+	function FinalFantasylization_Draenei_Start_AmmenFields()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--			Ammen Vale
+	function FinalFantasylization_Draenei_Start_AmmenVale()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--			Nestlewood Hills
+	function FinalFantasylization_Draenei_Start_NestlewoodHills()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--			Nestlewood Thicket
+	function FinalFantasylization_Draenei_Start_NestlewoodThicket()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--			Shadow Ridge
+	function FinalFantasylization_Draenei_Start_ShadowRidge()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--			Silverline Lake
+	function FinalFantasylization_Draenei_Start_SilverlineLake()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
 --	Alliance:
 --		Azure Watch
 	function FinalFantasylization_AllianceTownAzureWatch()
-		FinalFantasylization_AllianceTowns()
-	end
---		Crash Site
-	function FinalFantasylization_AllianceTownCrashSite()
 		FinalFantasylization_AllianceTowns()
 	end
 --		Odesyus' Landing
@@ -1902,26 +1986,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_AllianceTowns()
 	end
 --	SUBZONES:
---	Ammen Fields
-	function FinalFantasylization_SubzoneAmmenFields()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
-	end
 --	Ammen Ford
 	function FinalFantasylization_SubzoneAmmenFord()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
-	end
---	Ammen Vale
-	function FinalFantasylization_SubzoneAmmenVale()
 		local x = math.random(1, 2);
 			if x == 1 then
 				FinalFantasylization_PlagueSong()
@@ -1992,24 +2058,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong()
 			end
 	end
---	Nestlewood Hills
-	function FinalFantasylization_SubzoneNestlewoodHills()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
-	end
---	Nestlewood Thicket
-	function FinalFantasylization_SubzoneNestlewoodThicket()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
-	end
 --	Pod Cluster
 	function FinalFantasylization_SubzonePodCluster()
 		local x = math.random(1, 2);
@@ -2037,22 +2085,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong()
 			end
 	end
---	Shadow Ridge
-	function FinalFantasylization_SubzoneShadowRidge()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
-	end
 --	Silting Shore
 	function FinalFantasylization_SubzoneSiltingShore()
 		FinalFantasylization_WaterSong()
-	end
---	Silverline Lake
-	function FinalFantasylization_SubzoneSilverlineLake()
-		FinalFantasylization_LakeSong()
 	end
 --	Silvermyst Isle
 	function FinalFantasylization_SubzoneSilvermystIsle()
