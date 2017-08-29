@@ -964,31 +964,35 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Human Start:
 --		Northshire Abbey			
 	function FinalFantasylization_Human_Start_NorthshireAbbey()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --			Hall of Arms			
 	function FinalFantasylization_Human_Start_HallofArms()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --			Library Wing			
 	function FinalFantasylization_Human_Start_LibraryWing()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --			Main Hall			
 	function FinalFantasylization_Human_Start_MainHall()
-
+		FinalFantasylization_AllianceTowns()
 	end
 --		Echo Ridge Mine			
 	function FinalFantasylization_Human_Start_EchoRidgeMine()
-
+		FinalFantasylization_ForestSong()
 	end
 --		Northshire River			
 	function FinalFantasylization_Human_Start_NorthshireRiver()
-
+		FinalFantasylization_LakeSong()
+	end
+--		Northshire Valley			
+	function FinalFantasylization_Human_Start_NorthshireValley()
+		FinalFantasylization_ForestSong()
 	end
 --		Northshire Vineyards			
 	function FinalFantasylization_Human_Start_NorthshireVineyards()
-
+FinalFantasylization_HostileSong()
 	end
 --	Alliance: 
 --		Eastvale Logging Camp

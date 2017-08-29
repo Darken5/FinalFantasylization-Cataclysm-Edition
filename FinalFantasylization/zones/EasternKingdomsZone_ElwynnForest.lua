@@ -12,6 +12,7 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 --			Main Hall					FinalFantasylization_Human_Start_MainHall()
 --		Echo Ridge Mine				FinalFantasylization_Human_Start_EchoRidgeMine()
 --		Northshire River			FinalFantasylization_Human_Start_NorthshireRiver()
+--		Northshire Valley			FinalFantasylization_Human_Start_NorthshireValley()
 --		Northshire Vineyards		FinalFantasylization_Human_Start_NorthshireVineyards()
 --	Alliance: 
 --		Eastvale Logging Camp		FinalFantasylization_AllianceTownEastvaleLoggingCamp()
@@ -43,10 +44,10 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 	if ( SubZoneName == SZ["Northshire Abbey"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
+			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Human_Start_NorthshireAbbey()
-			elseif ( factionEnglish == "Alliance" ) then
+			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -61,10 +62,10 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 	elseif ( SubZoneName == SZ["Hall of Arms"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
+			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Human_Start_HallofArms()
-			elseif ( factionEnglish == "Alliance" ) then
+			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -79,10 +80,10 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 	elseif ( SubZoneName == SZ["Library Wing"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
+			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Human_Start_LibraryWing()
-			elseif ( factionEnglish == "Alliance" ) then
+			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -97,10 +98,10 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 	elseif ( SubZoneName == SZ["Main Hall"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
+			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Human_Start_MainHall()
-			elseif ( factionEnglish == "Alliance" ) then
+			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -130,6 +131,19 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_Human_Start_NorthshireRiver()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Elwynn Forest: Human Starting Area: Northshire Valley
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Northshire Valley"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Human_Start_NorthshireValley()
 		else
 			return
 		end
