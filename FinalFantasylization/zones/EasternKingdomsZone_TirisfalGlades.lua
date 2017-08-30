@@ -87,14 +87,9 @@ function FinalFantasylization_EasternKingdomsZones_TirisfalGlades()
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Night Web's Hollow"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Forsaken_Start_NightWebsHollow()
-			elseif ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
+			FinalFantasylization_Forsaken_Start_NightWebsHollow()
 		else
 			return
 		end
@@ -105,14 +100,9 @@ function FinalFantasylization_EasternKingdomsZones_TirisfalGlades()
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Rotbrain Encampment"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Forsaken_Start_RotbrainEncampment()
-			elseif ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
+			FinalFantasylization_Forsaken_Start_RotbrainEncampment()
 		else
 			return
 		end
@@ -123,14 +113,9 @@ function FinalFantasylization_EasternKingdomsZones_TirisfalGlades()
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Shadow Grave"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Forsaken_Start_ShadowGrave()
-			elseif ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
+			FinalFantasylization_Forsaken_Start_ShadowGrave()
 		else
 			return
 		end
