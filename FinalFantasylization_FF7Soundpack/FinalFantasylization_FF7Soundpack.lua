@@ -961,7 +961,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Dwarf Start:
 --		Anvilmar
 	function FinalFantasylization_Dwarf_Start_Anvilmar()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Coldridge Pass
 	function FinalFantasylization_Dwarf_Start_ColdridgePass()
@@ -1002,7 +1002,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		New Tinkertown
 	function FinalFantasylization_Gnome_Start_NewTinkertown()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Crushcog's Arsenal
 	function FinalFantasylization_Gnome_Start_CrushcogsArsenal()
@@ -1023,15 +1023,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Alliance:
 --		Brewnall Village
 	function FinalFantasylization_AllianceTownBrewnallVillage()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Gates of Ironforge
 	function FinalFantasylization_AllianceTownGatesofIronforge()
-
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
 	end
 --		Gol'Bolar Quarry
 	function FinalFantasylization_AllianceTownGolBolarQuarry()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --			Gol'Bolar Quarry Mine
 	function FinalFantasylization_AllianceTownGolBolarQuarryMine()
@@ -1043,15 +1044,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Kharanos
 	function FinalFantasylization_AllianceTownKharanos()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --			Thunderbrew Distillery
 	function FinalFantasylization_AllianceTownThunderbrewDistillery()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Steelgrill's Depot
 	function FinalFantasylization_AllianceTownSteelgrillsDepot()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Amberstill Ranch
@@ -1317,28 +1318,28 @@ FinalFantasylization_HostileSong()
 	end
 --			The Sunspire
 	function FinalFantasylization_BloodElf_Start_TheSunspire()
-
+		FinalFantasylization_HordeTowns()
 	end
 --	Horde:
 --		Fairbreeze Village
 	function FinalFantasylization_HordeTownFairbreezeVillage()
-
+		FinalFantasylization_HordeTowns()
 	end
 --		Falconwing Square
 	function FinalFantasylization_HordeTownFalconwingSquare()
-
+		FinalFantasylization_HordeTowns()
 	end
 --		Farstrider Retreat
 	function FinalFantasylization_HordeTownFarstriderRetreat()
-
+		FinalFantasylization_HordeTowns()
 	end
 --		Saltheril's Haven
 	function FinalFantasylization_HordeTownSaltherilsHaven()
-
+		FinalFantasylization_HordeTowns()
 	end
 --		Thuron's Livery
 	function FinalFantasylization_HordeTownThuronsLivery()
-
+		FinalFantasylization_HordeTowns()
 	end
 --	SUBZONES:
 --	Azurebreeze Coast
@@ -2769,13 +2770,18 @@ FinalFantasylization_HostileSong()
 --'==========================================================================================
 --	Zone: Durotar
 	function FinalFantasylization_KalimdorDurotar()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_LandSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	TOWNS:
 --	Orc Start:
 --		Valley of Trials
 	function FinalFantasylization_Orc_Start_ValleyofTrials()
-
+		FinalFantasylization_LandSong();
 	end
 --			Burning Blade Coven
 	function FinalFantasylization_Orc_Start_BurningBladeCoven()
@@ -2788,7 +2794,7 @@ FinalFantasylization_HostileSong()
 --	Troll Start:
 --		Echo Isles
 	function FinalFantasylization_Troll_Start_EchoIsles()
-
+		FinalFantasylization_BeachSong();
 	end
 --			Bloodtalon Shore
 	function FinalFantasylization_Troll_Start_BloodtalonShore()
@@ -2817,15 +2823,15 @@ FinalFantasylization_HostileSong()
 --	Horde:
 --		Razor Hill
 	function FinalFantasylization_HordeTownRazorHill()
-
+		FinalFantasylization_HordeTowns()
 	end
 --			Razor Hill Barracks
 	function FinalFantasylization_HordeTownRazorHillBarracks()
-
+		FinalFantasylization_HordeTowns()
 	end
 --		Sen'jin Village
 	function FinalFantasylization_HordeTownSenjinVillage()
-
+		FinalFantasylization_HordeTowns()
 	end
 --	SUBZONES:
 --	Bladefist Bay
@@ -2922,7 +2928,12 @@ FinalFantasylization_HostileSong()
 --'==========================================================================================
 --	Zone: Mulgore
 	function FinalFantasylization_KalimdorMulgore()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
 	end
 --	TOWNS:
 --	Tauren Start:
@@ -2940,7 +2951,7 @@ FinalFantasylization_HostileSong()
 	end
 --			Camp Narache
 	function FinalFantasylization_Tauren_Start_CampNarache()
-
+		FinalFantasylization_LandSong();
 	end
 --			Fargaze Mesa
 	function FinalFantasylization_Tauren_Start_FargazeMesa()
@@ -2957,11 +2968,11 @@ FinalFantasylization_HostileSong()
 --	Horde:
 --		Bloodhoof Village
 	function FinalFantasylization_HordeTownBloodhoofVillage()
-
+		FinalFantasylization_HordeTowns()
 	end
 --		Camp Sungraze
 	function FinalFantasylization_HordeTownCampSungraze()
-
+		FinalFantasylization_HordeTowns()
 	end
 --	SUBZONES:		
 --	Bael'dun Digsite
@@ -3035,7 +3046,8 @@ FinalFantasylization_HostileSong()
 --'==========================================================================================
 --	Zone: Kezan
 	function FinalFantasylization_MaelstromKezan()
-
+		FinalFantasylization_PlayMusic(S .. Alliance1Town);
+		FinalFantasylization_debugMsg("Alliance1Town")
 	end
 --	TOWNS:
 --	Goblin Start:
