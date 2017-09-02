@@ -6,7 +6,9 @@
 	<Script file="EasternKingdomsZone_Badlands.lua"/>
 	<Script file="EasternKingdomsZone_BlastedLands.lua"/>
 	<Script file="EasternKingdomsZone_DeeprunTram.lua"/>
+	<Script file="EasternKingdomsZone_DunMorogh.lua"/>
 	<Script file="EasternKingdomsZone_ElwynnForest.lua"/>
+	<Script file="EasternKingdomsZone_EversongWoods.lua"/>
 	<Script file="EasternKingdomsZone_Gilneas.lua"/>
 	<Script file="EasternKingdomsZone_GilneasCity.lua"/>
 	<Script file="EasternKingdomsZone_SilverpineForest.lua"/>
@@ -18,5 +20,11 @@
 	<!--Kalimdor-->
 	<Script file="KalimdorZone_AzuremystIsle.lua"/>
 	<Script file="KalimdorZone_BloodmystIsle.lua"/>
+	<Script file="KalimdorZone_Durotar.lua"/>
 	<Script file="KalimdorZone_TheExodar.lua"/>
+	<Script file="KalimdorZone_Mulgore.lua"/>
+	<Script file="KalimdorZone_Teldrassil.lua"/>
+	
+	<!--Maelstrom-->
+	<Script file="MaelstromZone_Kezan.lua"/>
 </Ui>

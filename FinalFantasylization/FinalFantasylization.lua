@@ -866,8 +866,12 @@ function FinalFantasylization_GetMusic()
 				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)	--		_|_
 			elseif ( MinimapZoneName == Z["Deeprun Tram"] ) then						-- Deeprun Tram
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()					--		_|_
+			elseif not ( IsResting() ) and ( ZoneName == Z["Dun Morogh"] ) then			-- Dun Morogh
+				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)		--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Elwynn Forest"] ) then		-- Elwynn Forest
 				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)		--		_|_
+			elseif not ( IsResting() ) and ( ZoneName == Z["Eversong Woods"] ) then		-- Eversong Woods
+				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)	--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas"] ) then			-- Gilneas
 				FinalFantasylization_EasternKingdomsZones_Gilneas(SubZoneName)			--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas City"] ) then		-- Gilneas City
@@ -891,9 +895,22 @@ function FinalFantasylization_GetMusic()
 				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)			--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Bloodmyst Isle"] ) then		-- Bloodmyst Isle
 				FinalFantasylization_KalimdorZones_BloodmystIsle(SubZoneName)			--		_|_
+			elseif not ( IsResting() ) and ( ZoneName == Z["Durotar"] ) then			-- Durotar
+				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)					--		_|_
 			elseif ( ZoneName == Z["The Exodar"] ) then									-- The Exodar
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)				--		_|_
-			
+			elseif not ( IsResting() ) and ( ZoneName == Z["Mulgore"] ) then			-- Mulgore
+				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)					--		_|_
+			elseif not ( IsResting() ) and ( ZoneName == Z["Teldrassil"] ) then			-- Teldrassil
+				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)				--		_|_
+
+
+--'==========================================================================================
+--' Maelstrom Zones
+--'==========================================================================================	
+			elseif not ( IsResting() ) and ( ZoneName == Z["Kezan"] ) then				-- Kezan
+				FinalFantasylization_MaelstromZones_Kezan(SubZoneName)					--		_|_
+
 			elseif not ( IsResting() ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")
 			end
