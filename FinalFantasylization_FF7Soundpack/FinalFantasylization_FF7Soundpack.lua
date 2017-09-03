@@ -78,6 +78,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		BeachSong = "BeachSong.mp3" -- 
 		LakeSong = "LakeSong.mp3" -- 
 		WaterSong = "WaterSong.mp3" -- 
+		CaveSong = "Horde4Town.mp3"
 
 		-- Battlegrounds Events --
 		BattleGround1 = "BattleGround1.mp3" -- 
@@ -622,7 +623,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Witherbark Caverns
 	function FinalFantasylization_SubzoneWitherbarkCaverns()
-	
+		FinalFantasylization_CaveSong()
 	end
 --	Witherbark Village
 	function FinalFantasylization_SubzoneWitherbarkVillage()
@@ -1187,12 +1188,7 @@ FinalFantasylization_HostileSong()
 	end
 --		Fargodeep Mine
 	function FinalFantasylization_SubzoneFargodeepMine()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
+		FinalFantasylization_CaveSong()
 	end
 --		Forest's Edge
 	function FinalFantasylization_SubzoneForestsEdge()
@@ -1223,12 +1219,7 @@ FinalFantasylization_HostileSong()
 	end
 --		Jasperlode Mine
 	function FinalFantasylization_SubzoneJasperlodeMine()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_FriendlySong()
-			end
+		FinalFantasylization_CaveSong()
 	end
 --		Jerod's Landing
 	function FinalFantasylization_SubzoneJerodsLanding()
@@ -1348,7 +1339,7 @@ FinalFantasylization_HostileSong()
 	end
 --	The Dead Scar
 	function FinalFantasylization_SubzoneTheDeadScar()
-
+		FinalFantasylization_PlagueSong()
 	end
 --	Duskwither Grounds
 	function FinalFantasylization_SubzoneDuskwitherGrounds()
@@ -1555,12 +1546,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Emberstone Mine
 	function FinalFantasylization_SubzoneEmberstoneMine()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_CaveSong()
 	end
 --	Emberstone Village
 	function FinalFantasylization_SubzoneEmberstoneVillage()
@@ -1842,7 +1828,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Deep Elem Mine						
 	function FinalFantasylization_SubzoneDeepElemMine()
-
+		FinalFantasylization_CaveSong()
 	end
 --	Gilneas Liberation Front Base Camp	
 	function FinalFantasylization_SubzoneGilneasLiberationFrontBaseCamp()
@@ -2123,7 +2109,7 @@ FinalFantasylization_HostileSong()
 	end
 --			Deadmines
 	function FinalFantasylization_SubzoneDeadmines()
-	
+		FinalFantasylization_CaveSong()
 	end
 --			Moonbrook Schoolhouse
 	function FinalFantasylization_AllianceTownMoonbrookSchoolhouse()
@@ -2168,11 +2154,11 @@ FinalFantasylization_HostileSong()
 	end
 --	Gold Coast Quarry
 	function FinalFantasylization_SubzoneGoldCoastQuarry()
-	
+		FinalFantasylization_CaveSong()
 	end
 --	Jangolode Mine
 	function FinalFantasylization_SubzoneJangolodeMine()
-	
+		FinalFantasylization_CaveSong()
 	end
 --	The Jansen Stead
 	function FinalFantasylization_SubzoneTheJansenStead()
@@ -2856,7 +2842,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Dustwind Cave
 	function FinalFantasylization_SubzoneDustwindCave()
-
+		FinalFantasylization_CaveSong()
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
@@ -3036,7 +3022,92 @@ FinalFantasylization_HostileSong()
 
 	end
 
+--'==========================================================================================
+--' Kalimdor Zones: Teldrassil
+--'==========================================================================================
+--	Zone: Teldrassil
+	function FinalFantasylization_KalimdorTeldrassil()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlayMusic(S .. Alliance7Town);
+				FinalFantasylization_debugMsg("Alliance7Town")
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--	TOWNS:
+--	Night Elf Start:
+--		Shadowglen
+	function FinalFantasylization_NightElf_Start_Shadowglen()
+		FinalFantasylization_FriendlySong()
+	end
+--			Aldrassil
+	function FinalFantasylization_NightElf_Start_Aldrassil()
+		FinalFantasylization_PlayMusic(S .. Alliance7Town);
+		FinalFantasylization_debugMsg("Alliance7Town")
+	end
+--			Shadowthread Cave
+	function FinalFantasylization_NightElf_Start_ShadowthreadCave()
+		FinalFantasylization_CaveSong()
+	end
+--	Alliance:
+--		Dolanaar
+	function FinalFantasylization_AllianceTownDolanaar()
+		FinalFantasylization_AllianceTowns()
+	end
+--		Rut'theran Village
+	function FinalFantasylization_AllianceTownRuttheranVillage()
+		FinalFantasylization_AllianceTowns()
+	end
+--	SUBZONES:
+--	Ban'ethil Hollow
+	function FinalFantasylization_SubzoneBanethilHollow()
 
+	end
+--		Ban'ethil Barrow Den
+	function FinalFantasylization_SubzoneBanethilBarrowDen()
+
+	end
+--	The Cleft
+	function FinalFantasylization_SubzoneTheCleft()
+
+	end
+--	Fel Rock
+	function FinalFantasylization_SubzoneFelRock()
+
+	end
+--	Gnarlpine Hold
+	function FinalFantasylization_SubzoneGnarlpineHold()
+
+	end
+--	Lake Al'Ameth
+	function FinalFantasylization_SubzoneLakeAlAmeth()
+
+	end
+--	The Oracle Glade
+	function FinalFantasylization_SubzoneTheOracleGlade()
+
+	end
+--	Pools of Arlithrien
+	function FinalFantasylization_SubzonePoolsofArlithrien()
+
+	end
+--	Starbreeze Village
+	function FinalFantasylization_SubzoneStarbreezeVillage()
+
+	end
+--	The Veiled Sea
+	function FinalFantasylization_SubzoneTheVeiledSea()
+
+	end
+--	Wellspring Lake
+	function FinalFantasylization_SubzoneWellspringLake()
+
+	end
+--	Wellspring River
+	function FinalFantasylization_SubzoneWellspringRiver()
+
+	end
 
 --###########################################################################################
 --##   MAELSTROM ZONES
@@ -3073,7 +3144,7 @@ FinalFantasylization_HostileSong()
 	end
 --		Kaja'mine
 	function FinalFantasylization_Goblin_Start_Kajamine()
-
+		FinalFantasylization_CaveSong()
 	end
 --		Kajaro Field
 	function FinalFantasylization_Goblin_Start_KajaroField()
@@ -3156,6 +3227,10 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_WaterSong()
 		FinalFantasylization_PlayMusic(S .. WaterSong);
 		FinalFantasylization_debugMsg("WaterSong")
+	end
+	function FinalFantasylization_CaveSong()
+		FinalFantasylization_PlayMusic(S .. CaveSong);
+		FinalFantasylization_debugMsg("CaveSong")
 	end
 
 	--################
