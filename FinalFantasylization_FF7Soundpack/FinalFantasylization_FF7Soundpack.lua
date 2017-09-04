@@ -966,19 +966,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Coldridge Pass
 	function FinalFantasylization_Dwarf_Start_ColdridgePass()
-
+		FinalFantasylization_SnowSong()
 	end
 --		Coldridge Valley
 	function FinalFantasylization_Dwarf_Start_ColdridgeValley()
-
-	end
---		Frostmane Hovel
-	function FinalFantasylization_Dwarf_Start_FrostmaneHovel()
-
+		FinalFantasylization_SnowSong()
 	end
 --		Whitebeard's Encampment
 	function FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
-
+		FinalFantasylization_SnowSong()
 	end
 --	Gnome Start:
 --		Gnomeregan
@@ -1015,11 +1011,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Iceflow Lake
 	function FinalFantasylization_Gnome_Start_IceflowLake()
-
+		FinalFantasylization_SnowSong()
 	end
 --		The Toxic Airfield
 	function FinalFantasylization_Gnome_Start_TheToxicAirfield()
-
+		FinalFantasylization_PlagueSong()
 	end
 --	Alliance:
 --		Brewnall Village
@@ -1297,15 +1293,17 @@ FinalFantasylization_HostileSong()
 --	Blood Elf Start:
 --		Sunstrider Isle
 	function FinalFantasylization_BloodElf_Start_SunstriderIsle()
-
+		FinalFantasylization_FriendlySong()
 	end
 --			Falthrien Academy
 	function FinalFantasylization_BloodElf_Start_FalthrienAcademy()
-
+		FinalFantasylization_PlayMusic(S ..Horde7Town);
+		FinalFantasylization_debugMsg("Horde7Town")
 	end
 --			Shrine of Dath'Remar
 	function FinalFantasylization_BloodElf_Start_ShrineofDathRemar()
-
+		FinalFantasylization_PlayMusic(S ..DalaranSong);
+		FinalFantasylization_debugMsg("DalaranSong, Thought it fit.")
 	end
 --			The Sunspire
 	function FinalFantasylization_BloodElf_Start_TheSunspire()
@@ -2833,7 +2831,7 @@ FinalFantasylization_HostileSong()
 
 	end
 --	Dranosh'ar Blockade
-	function FinalFantasylization_SubzoneDranosharBlockade()
+	function FinalFantasylization_SubzoneTheDranosharBlockade()
 
 	end
 --	Drygulch Ravine

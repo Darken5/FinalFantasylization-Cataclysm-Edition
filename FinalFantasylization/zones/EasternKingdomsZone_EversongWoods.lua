@@ -87,14 +87,14 @@ function FinalFantasylization_EasternKingdomsZones_EversongWoods()
 	--'==========================================================================================
 	--' Eversong Woods: Blood Elf Starting Area: The Sunspire
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Sunspire"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
+	elseif ( MinimapZoneName == SZ["The Sunspire"] ) then
+		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
+			FinalFantasylization_CurrentZone = MinimapZoneName
 			if ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MinimapZoneName..", "..ZoneName)
 				FinalFantasylization_BloodElf_Start_TheSunspire()
 			elseif ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. MinimapZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
 		else

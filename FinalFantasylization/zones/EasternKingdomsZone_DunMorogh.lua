@@ -9,7 +9,6 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 --		Anvilmar						FinalFantasylization_Dwarf_Start_Anvilmar()
 --		Coldridge Pass					FinalFantasylization_Dwarf_Start_ColdridgePass()
 --		Coldridge Valley				FinalFantasylization_Dwarf_Start_ColdridgeValley()
---		Frostmane Hovel					FinalFantasylization_Dwarf_Start_FrostmaneHovel()
 --		Whitebeard's Encampment			FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
 --	Gnome Start:
 --		Gnomeregan						FinalFantasylization_Gnome_Start_Gnomeregan()
@@ -87,19 +86,6 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_Dwarf_Start_ColdridgeValley()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Dun Morogh: Dwarf Starting Area: Frostmane Hovel
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Frostmane Hovel"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Dwarf_Start_FrostmaneHovel()
 		else
 			return
 		end

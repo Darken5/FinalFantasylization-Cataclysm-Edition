@@ -398,7 +398,8 @@ function FinalFantasylization_Command(Command)
 			FFZlib.Message(FFZlib.Color.Yellow .. BattlegroundOnMessage)
 		end
 	elseif Lower == TestCommand then
-		ZoneName = GetRealZoneText();
+		ZoneName = GetMapNameByID(GetCurrentMapAreaID());
+		ZoneName2 = GetRealZoneText();
 		MinimapZoneName = GetMinimapZoneText()
 		SubZoneName = GetSubZoneText()
 		areaID = GetCurrentMapAreaID()
@@ -408,14 +409,18 @@ function FinalFantasylization_Command(Command)
 		ZoneText = GetZoneText()
 		local inInstance, instanceType = IsInInstance();
 		local classification = UnitClassification("target"); --'classification: "worldboss", "rareelite", "elite", "rare", "normal" or "trivial"
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage1..FFZlib.Color.Crimson..realm)
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage2..FFZlib.Color.Crimson..factionEnglish)
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage3..FFZlib.Color.Crimson..ZoneName)
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage8..FFZlib.Color.Crimson..areaID)
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage4..FFZlib.Color.Crimson..instanceType)
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage5..FFZlib.Color.Crimson..SubZoneName)
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage6..FFZlib.Color.Crimson..MinimapZoneName)
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage7..FFZlib.Color.Crimson..classification)
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage1..FFZlib.Color.Crimson.."|"..realm.."|")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage2..FFZlib.Color.Crimson.."|"..factionEnglish.."|")
+			if ZoneName2 ~= nil then
+				FFZlib.Message(FFZlib.Color.Grey..TestMessage3..FFZlib.Color.Crimson.."|"..ZoneName.. "| or |"..ZoneName2.."|")
+			else
+				FFZlib.Message(FFZlib.Color.Grey..TestMessage3..FFZlib.Color.Crimson.."|"..ZoneName.. "|, ZoneName2 = nil")
+			end
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage8..FFZlib.Color.Crimson.."|"..areaID.."|")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage4..FFZlib.Color.Crimson.."|"..instanceType.."|")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage5..FFZlib.Color.Crimson.."|"..SubZoneName.."|")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage6..FFZlib.Color.Crimson.."|"..MinimapZoneName.."|")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage7..FFZlib.Color.Crimson.."|"..classification.."|")
 	else
 		FinalFantasylizationUsage()
 	end
@@ -614,12 +619,14 @@ function FinalFantasylization_GetMusic()
 
 	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
 		ZoneName = GetMapNameByID(GetCurrentMapAreaID());
+		ZoneName2 = GetRealZoneText();
 		MinimapZoneName = GetMinimapZoneText()
 		SubZoneName = GetSubZoneText()
 		factionEnglish, factionLocale = UnitFactionGroup("player"); --'Horde, Alliance
 		classification = UnitClassification("target"); --'classification: "worldboss", "rareelite", "elite", "rare", "normal" or "trivial"
 		pvpType, isFFA, faction = GetZonePVPInfo(); --'("friendly";"contested";"hostile";"sanctuary") (1;nil) ("Alliance";"Horde")
 		ZoneText = GetZoneText()
+		MapID = GetCurrentMapAreaID()
 
 --'==========================================================================================
 --'	Sounds
@@ -871,7 +878,7 @@ function FinalFantasylization_GetMusic()
 			elseif not ( IsResting() ) and ( ZoneName == Z["Elwynn Forest"] ) then		-- Elwynn Forest
 				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)		--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Eversong Woods"] ) then		-- Eversong Woods
-				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)	--		_|_
+				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName, MinimapZoneName)	--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas"] ) then			-- Gilneas
 				FinalFantasylization_EasternKingdomsZones_Gilneas(SubZoneName)			--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas City"] ) then		-- Gilneas City

@@ -26,7 +26,7 @@ function FinalFantasylization_KalimdorZones_Durotar()
 --	Bladefist Bay					FinalFantasylization_SubzoneBladefistBay()
 --	Darkspear Strand				FinalFantasylization_SubzoneDarkspearStrand()
 --	Deadeye Shore					FinalFantasylization_SubzoneDeadeyeShore()
---	Dranosh'ar Blockade				FinalFantasylization_SubzoneDranosharBlockade()
+--	The Dranosh'ar Blockade			FinalFantasylization_SubzoneTheDranosharBlockade()
 --	Drygulch Ravine					FinalFantasylization_SubzoneDrygulchRavine()
 --	Dustwind Cave					FinalFantasylization_SubzoneDustwindCave()
 --	The Great Sea					FinalFantasylization_SubzoneTheGreatSea()
@@ -289,13 +289,13 @@ function FinalFantasylization_KalimdorZones_Durotar()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Durotar Subzone: Dranosh'ar Blockade
+	--' Durotar Subzone: The Dranosh'ar Blockade
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Dranosh'ar Blockade"] ) then
+	elseif ( SubZoneName == SZ["The Dranosh'ar Blockade"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDranosharBlockade()
+			FinalFantasylization_SubzoneTheDranosharBlockade()
 		else
 			return
 		end
