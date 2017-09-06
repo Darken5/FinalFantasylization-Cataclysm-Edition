@@ -147,6 +147,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		KillSound = "Kill.wav" -- Leave combat sound
 		CombatSound = "Combat.wav" -- Enter combat sound
 		LevelUpSong = "LevelUpSong.mp3" -- Level Up song
+		
+		-- Misc Songs --
+		Misc1Song = "Misc1Song.mp3" -- 
 
 		
 	--#######################################
@@ -1389,7 +1392,8 @@ FinalFantasylization_HostileSong()
 	end
 --		Dawning Lane
 	function FinalFantasylization_SubzoneDawningLane()
-
+		FinalFantasylization_PlayMusic(S ..Misc1Song);
+		FinalFantasylization_debugMsg("Misc1Song")
 	end
 --		Feth's Way
 	function FinalFantasylization_SubzoneFethsWay()
@@ -2782,27 +2786,31 @@ FinalFantasylization_HostileSong()
 	end
 --			Bloodtalon Shore
 	function FinalFantasylization_Troll_Start_BloodtalonShore()
-
+		FinalFantasylization_BeachSong();
 	end
 --			Darkspear Isle
 	function FinalFantasylization_Troll_Start_DarkspearIsle()
-
+		FinalFantasylization_BeachSong();
 	end
 --				Darkspear Hold
 	function FinalFantasylization_Troll_Start_DarkspearHold()
-
+		FinalFantasylization_BeachSong();
 	end
 --				Darkspear Training Grounds
 	function FinalFantasylization_Troll_Start_DarkspearTrainingGrounds()
-
+		FinalFantasylization_BeachSong();
 	end
 --			Spitescale Cove
 	function FinalFantasylization_Troll_Start_SpitescaleCove()
-
+		FinalFantasylization_BeachSong();
+	end
+--				Spitescale Cavern
+	function FinalFantasylization_Troll_Start_SpitescaleCavern()
+		FinalFantasylization_CaveSong();
 	end
 --			Zalazane's Fall
 	function FinalFantasylization_Troll_Start_ZalazanesFall()
-
+		FinalFantasylization_BeachSong();
 	end
 --	Horde:
 --		Razor Hill
@@ -2824,7 +2832,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Darkspear Strand
 	function FinalFantasylization_SubzoneDarkspearStrand()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Deadeye Shore
 	function FinalFantasylization_SubzoneDeadeyeShore()
@@ -3122,11 +3130,13 @@ FinalFantasylization_HostileSong()
 --	Goblin Start:
 --		Bilgewater Port
 	function FinalFantasylization_Goblin_Start_BilgewaterPort()
-
+		FinalFantasylization_PlayMusic(S .. Horde2Town);
+		FinalFantasylization_debugMsg("Horde2Town")
 	end
 --		Drudgetown
 	function FinalFantasylization_Goblin_Start_Drudgetown()
-
+		FinalFantasylization_PlayMusic(S .. Alliance10Town);
+		FinalFantasylization_debugMsg("Alliance10Town")
 	end
 --		First Bank of Kezan
 	function FinalFantasylization_Goblin_Start_FirstBankofKezan()
@@ -3150,7 +3160,8 @@ FinalFantasylization_HostileSong()
 	end
 --		KTC Headquarters
 	function FinalFantasylization_Goblin_Start_KTCHeadquarters()
-
+		FinalFantasylization_PlayMusic(S .. Alliance8Town);
+		FinalFantasylization_debugMsg("Alliance8Town")
 	end
 --		The Slick
 	function FinalFantasylization_Goblin_Start_TheSlick()

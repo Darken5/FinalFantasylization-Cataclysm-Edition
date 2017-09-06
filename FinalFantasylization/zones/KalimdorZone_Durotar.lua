@@ -16,6 +16,7 @@ function FinalFantasylization_KalimdorZones_Durotar()
 --				Darkspear Hold					FinalFantasylization_Troll_Start_DarkspearHold()
 --				Darkspear Training Grounds		FinalFantasylization_Troll_Start_DarkspearTrainingGrounds()
 --			Spitescale Cove					FinalFantasylization_Troll_Start_SpitescaleCove()
+--				Spitescale Cavern					FinalFantasylization_Troll_Start_SpitescaleCavern()
 --			Zalazane's Fall					FinalFantasylization_Troll_Start_ZalazanesFall()
 --	Horde:
 --		Razor Hill						FinalFantasylization_HordeTownRazorHill()
@@ -177,6 +178,19 @@ function FinalFantasylization_KalimdorZones_Durotar()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_Troll_Start_SpitescaleCove()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Durotar: Troll Starting Area: Spitescale Cavern in Spitescale Cove
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Spitescale Cavern"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Troll_Start_SpitescaleCavern()
 		else
 			return
 		end
