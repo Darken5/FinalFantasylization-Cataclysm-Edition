@@ -3104,6 +3104,10 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_AllianceTownRuttheranVillage()
 		FinalFantasylization_AllianceTowns()
 	end
+--		Wellspring Hovel
+	function FinalFantasylization_AllianceTownWellspringHovel()
+		FinalFantasylization_AllianceTowns()
+	end
 --	SUBZONES:
 --	Ban'ethil Hollow
 	function FinalFantasylization_SubzoneBanethilHollow()

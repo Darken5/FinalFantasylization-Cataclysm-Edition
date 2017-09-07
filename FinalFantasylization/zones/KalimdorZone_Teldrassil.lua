@@ -12,6 +12,7 @@ function FinalFantasylization_KalimdorZones_Teldrassil()
 --	Alliance:
 --		Dolanaar					FinalFantasylization_AllianceTownDolanaar()
 --		Rut'theran Village			FinalFantasylization_AllianceTownRuttheranVillage()
+--		Wellspring Hovel			FinalFantasylization_AllianceTownWellspringHovel()
 --
 --	SUBZONES:
 --	Ban'ethil Hollow			FinalFantasylization_SubzoneBanethilHollow()
@@ -102,6 +103,24 @@ function FinalFantasylization_KalimdorZones_Teldrassil()
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_AllianceTownRuttheranVillage()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Teldrassil Alliance Town: Wellspring Hovel
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Wellspring Hovel"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownWellspringHovel()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
