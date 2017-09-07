@@ -2190,7 +2190,51 @@ FinalFantasylization_HostileSong()
 	
 --###########################################################################################
 --##   KALIMDOR ZONES
---###########################################################################################	
+--###########################################################################################
+--'==========================================================================================
+--' Kalimdor Capital: Darnassus : Alliance
+--'==========================================================================================
+--	Zone: Darnassus
+	function FinalFantasylization_Kalimdor_Darnassus()
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
+	end
+--	SUBZONES:
+--	Cenarion Enclave
+	function FinalFantasylization_Darnassus_SubzoneCenarionEnclave()
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
+	end
+--	Craftsmen's Terrace
+	function FinalFantasylization_Darnassus_SubzoneCraftsmensTerrace()
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
+	end
+--	Howling Oak
+	function FinalFantasylization_Darnassus_SubzoneTheHowlingOak()
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
+	end
+--	The Temple Gardens
+	function FinalFantasylization_Darnassus_SubzoneTheTempleGardens()
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
+	end
+--	The Temple of the Moon
+	function FinalFantasylization_Darnassus_SubzoneTempleoftheMoon()
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
+	end
+--	Tradesmen's Terrace
+	function FinalFantasylization_Darnassus_SubzoneTradesmensTerrace()
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
+	end
+--	Warrior's Terrace
+	function FinalFantasylization_Darnassus_SubzoneWarriorsTerrace()
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
+	end
 --'==========================================================================================
 --' Kalimdor Capital: The Exodar : Alliance
 --'==========================================================================================
@@ -3071,7 +3115,7 @@ FinalFantasylization_HostileSong()
 	end
 --	The Cleft
 	function FinalFantasylization_SubzoneTheCleft()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Fel Rock
 	function FinalFantasylization_SubzoneFelRock()

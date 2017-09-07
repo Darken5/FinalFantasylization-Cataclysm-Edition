@@ -870,7 +870,7 @@ function FinalFantasylization_GetMusic()
 			elseif not ( IsResting() ) and ( ZoneName == Z["Elwynn Forest"] ) then		-- Elwynn Forest
 				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)		--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Eversong Woods"] ) then		-- Eversong Woods
-				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName, MinimapZoneName)	--		_|_
+				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)	--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas"] ) then			-- Gilneas
 				FinalFantasylization_EasternKingdomsZones_Gilneas(SubZoneName)			--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas City"] ) then		-- Gilneas City
@@ -894,6 +894,8 @@ function FinalFantasylization_GetMusic()
 				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)			--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Bloodmyst Isle"] ) then		-- Bloodmyst Isle
 				FinalFantasylization_KalimdorZones_BloodmystIsle(SubZoneName)			--		_|_
+			elseif ( ZoneName == Z["Darnassus"] ) then									-- Darnassus
+				FinalFantasylization_KalimdorZones_Darnassus(SubZoneName)				--		_|_	
 			elseif not ( IsResting() ) and ( ZoneName == Z["Durotar"] ) then			-- Durotar
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)					--		_|_
 			elseif ( ZoneName == Z["The Exodar"] ) then									-- The Exodar
