@@ -1633,12 +1633,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Koroth's Den
 	function FinalFantasylization_SubzoneKorothsDen()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_HostileSong()
 	end
 --	Livery Outpost
 	function FinalFantasylization_SubzoneLiveryOutpost()
@@ -3068,11 +3063,11 @@ FinalFantasylization_HostileSong()
 --	SUBZONES:
 --	Ban'ethil Hollow
 	function FinalFantasylization_SubzoneBanethilHollow()
-
+		FinalFantasylization_ForestSong()
 	end
 --		Ban'ethil Barrow Den
 	function FinalFantasylization_SubzoneBanethilBarrowDen()
-
+		FinalFantasylization_SwampSong()
 	end
 --	The Cleft
 	function FinalFantasylization_SubzoneTheCleft()
@@ -3080,7 +3075,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Fel Rock
 	function FinalFantasylization_SubzoneFelRock()
-
+		FinalFantasylization_CaveSong()
 	end
 --	Gnarlpine Hold
 	function FinalFantasylization_SubzoneGnarlpineHold()
@@ -3088,7 +3083,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Lake Al'Ameth
 	function FinalFantasylization_SubzoneLakeAlAmeth()
-
+		FinalFantasylization_LakeSong()
 	end
 --	The Oracle Glade
 	function FinalFantasylization_SubzoneTheOracleGlade()
@@ -3096,23 +3091,23 @@ FinalFantasylization_HostileSong()
 	end
 --	Pools of Arlithrien
 	function FinalFantasylization_SubzonePoolsofArlithrien()
-
+		FinalFantasylization_LakeSong()
 	end
 --	Starbreeze Village
 	function FinalFantasylization_SubzoneStarbreezeVillage()
-
+		FinalFantasylization_ForestSong()
 	end
 --	The Veiled Sea
 	function FinalFantasylization_SubzoneTheVeiledSea()
-
+		FinalFantasylization_WaterSong()
 	end
 --	Wellspring Lake
 	function FinalFantasylization_SubzoneWellspringLake()
-
+		FinalFantasylization_LakeSong()
 	end
 --	Wellspring River
 	function FinalFantasylization_SubzoneWellspringRiver()
-
+		FinalFantasylization_LakeSong()
 	end
 
 --###########################################################################################
