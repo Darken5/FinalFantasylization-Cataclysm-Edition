@@ -1,53 +1,117 @@
-function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
+function FinalFantasylization_EasternKingdomsZones_EversongWoods()
 --'==========================================================================================
---' Eastern Kingdoms Zones: Elwynn Forest : Alliance
+--' Eastern Kingdoms Zones: Eversong Woods : Horde
 --'==========================================================================================
---	Zone: Elwynn Forest			FinalFantasylization_EasternKingdomsElwynnForest()
+--	Zone: Eversong Woods		FinalFantasylization_EasternKingdomsEversongWoods()
 --
 --	TOWNS:
---	Human Start:
---		Northshire Abbey			FinalFantasylization_Human_Start_NorthshireAbbey()
---			Hall of Arms				FinalFantasylization_Human_Start_HallofArms()
---			Library Wing				FinalFantasylization_Human_Start_LibraryWing()
---			Main Hall					FinalFantasylization_Human_Start_MainHall()
---		Echo Ridge Mine				FinalFantasylization_Human_Start_EchoRidgeMine()
---		Northshire River			FinalFantasylization_Human_Start_NorthshireRiver()
---		Northshire Valley			FinalFantasylization_Human_Start_NorthshireValley()
---		Northshire Vineyards		FinalFantasylization_Human_Start_NorthshireVineyards()
---	Alliance: 
---		Eastvale Logging Camp		FinalFantasylization_AllianceTownEastvaleLoggingCamp()
---		Goldshire					FinalFantasylization_AllianceTownGoldshire()
---			Lion's Pride Inn			FinalFantasylization_AllianceInnLionsPrideInn()
---	
+--	Blood Elf Start:
+--		Sunstrider Isle				FinalFantasylization_BloodElf_Start_SunstriderIsle()
+--			Falthrien Academy			FinalFantasylization_BloodElf_Start_FalthrienAcademy()
+--			Shrine of Dath'Remar		FinalFantasylization_BloodElf_Start_ShrineofDathRemar()
+--			The Sunspire				FinalFantasylization_BloodElf_Start_TheSunspire()
+--	Horde:
+--		Fairbreeze Village			FinalFantasylization_HordeTownFairbreezeVillage()
+--		Falconwing Square			FinalFantasylization_HordeTownFalconwingSquare()
+--		Farstrider Retreat			FinalFantasylization_HordeTownFarstriderRetreat()
+--		Saltheril's Haven			FinalFantasylization_HordeTownSaltherilsHaven()
+--		Thuron's Livery				FinalFantasylization_HordeTownThuronsLivery()
+--
 --	SUBZONES:
---	Brackwell Pumpkin Patch		FinalFantasylization_SubzoneBrackwellPumpkinPatch()
---	Crystal Lake				FinalFantasylization_SubzoneCrystalLake()
---	Fargodeep Mine				FinalFantasylization_SubzoneFargodeepMine()
---	Forest's Edge				FinalFantasylization_SubzoneForestsEdge()
---	Goldtooth's Den				FinalFantasylization_SubzoneGoldtoothsDen()
---	Hogger Hill					FinalFantasylization_SubzoneHoggerHill()
---	Jasperlode Mine				FinalFantasylization_SubzoneJasperlodeMine()
---	Jerod's Landing				FinalFantasylization_SubzoneJerodsLanding()
---	The Maclure Vineyards		FinalFantasylization_SubzoneTheMaclureVineyards()
---	Mirror Lake					FinalFantasylization_SubzoneMirrorLake()
---	Mirror Lake Orchard			FinalFantasylization_SubzoneMirrorLakeOrchard()
---	Ridgepoint Tower			FinalFantasylization_SubzoneRidgepointTower()
---	Stone Cairn Lake			FinalFantasylization_SubzoneStoneCairnLake()
---		Heroes' Vigil				FinalFantasylization_SubzoneHeroesVigil()
---	The Stonefield Farm			FinalFantasylization_SubzoneTheStonefieldFarm()
---	Thunder Falls				FinalFantasylization_SubzoneThunderFalls()
---	Tower of Azora				FinalFantasylization_SubzoneTowerofAzora()
---	Westbrook Garrison			FinalFantasylization_SubzoneWestbrookGarrison()
+--	Azurebreeze Coast			FinalFantasylization_SubzoneAzurebreezeCoast()
+--	The Dead Scar				FinalFantasylization_SubzoneTheDeadScar()
+--	Duskwither Grounds			FinalFantasylization_SubzoneDuskwitherGrounds()
+--	Duskwither Spire			FinalFantasylization_SubzoneDuskwitherSpire()
+--	East Sanctum				FinalFantasylization_SubzoneEastSanctum()
+--	Elrendar Falls				FinalFantasylization_SubzoneElrendarFalls()
+--	Golden Strand				FinalFantasylization_SubzoneGoldenStrand()
+--	Goldenbough Pass			FinalFantasylization_SubzoneGoldenboughPass()
+--	Huntress of the Sun			FinalFantasylization_SubzoneHuntressoftheSun()
+--	Lake Elrendar				FinalFantasylization_SubzoneLakeElrendar()
+--	The Living Wood				FinalFantasylization_SubzoneTheLivingWood()
+--	North Sanctum				FinalFantasylization_SubzoneNorthSanctum()
+--	Ruins of Silvermoon			FinalFantasylization_SubzoneRuinsofSilvermoon()
+--		Commons Hall				FinalFantasylization_SubzoneCommonsHall()
+--		Dawning Lane				FinalFantasylization_SubzoneDawningLane()
+--		Feth's Way					FinalFantasylization_SubzoneFethsWay()
+--		Skulking Row				FinalFantasylization_SubzoneSkulkingRow()
+--	Runestone Falithas			FinalFantasylization_SubzoneRunestoneFalithas()
+--	Runestone Shan'dor			FinalFantasylization_SubzoneRunestoneShandor()
+--	Sunsail Anchorage			FinalFantasylization_SubzoneSunsailAnchorage()
+--	The Scorched Grove			FinalFantasylization_SubzoneTheScorchedGrove()
+--	The Shepherd's Gate			FinalFantasylization_SubzoneTheShepherdsGate()
+--	Stillwhisper Pond			FinalFantasylization_SubzoneStillwhisperPond()
+--	Tor'Watha					FinalFantasylization_SubzoneTorWatha()
+--	Tranquil Shore				FinalFantasylization_SubzoneTranquilShore()
+--	West Sanctum				FinalFantasylization_SubzoneWestSanctum()
+--	Zeb'Watha					FinalFantasylization_SubzoneZebWatha()
 	--'==========================================================================================
-	--' Elwynn Forest: Human Starting Area: Northshire Abbey
+	--' Eversong Woods: Blood Elf Starting Area: Sunstrider Isle
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Northshire Abbey"] ) then
+	if ( SubZoneName == SZ["Sunstrider Isle"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_BloodElf_Start_SunstriderIsle()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods: Blood Elf Starting Area: Falthrien Academy
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Falthrien Academy"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_BloodElf_Start_FalthrienAcademy()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods: Blood Elf Starting Area: Shrine of Dath'Remar
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Shrine of Dath'Remar"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_BloodElf_Start_ShrineofDathRemar()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods: Blood Elf Starting Area: The Sunspire
+	--'==========================================================================================
+	elseif ( MinimapZoneName == SZ["The Sunspire"] ) then
+		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
+			FinalFantasylization_CurrentZone = MinimapZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MinimapZoneName..", "..ZoneName)
+				FinalFantasylization_BloodElf_Start_TheSunspire()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. MinimapZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Horde Town: Fairbreeze Village
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Fairbreeze Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
+			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Human_Start_NorthshireAbbey()
-			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_HordeTownFairbreezeVillage()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -57,15 +121,15 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest: Human Starting Area: Hall of Arms
+	--' Eversong Woods Horde Town: Falconwing Square
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Hall of Arms"] ) then
+	elseif ( SubZoneName == SZ["Falconwing Square"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
+			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Human_Start_HallofArms()
-			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_HordeTownFalconwingSquare()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -75,15 +139,15 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest: Human Starting Area: Library Wing
+	--' Eversong Woods Horde Town: Farstrider Retreat
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Library Wing"] ) then
+	elseif ( SubZoneName == SZ["Farstrider Retreat"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
+			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Human_Start_LibraryWing()
-			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_HordeTownFarstriderRetreat()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -93,15 +157,15 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest: Human Starting Area: Main Hall
+	--' Eversong Woods Horde Town: Saltheril's Haven
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Main Hall"] ) then
+	elseif ( SubZoneName == SZ["Saltheril's Haven"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
+			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Human_Start_MainHall()
-			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_HordeTownSaltherilsHaven()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -111,67 +175,15 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest: Human Starting Area: Echo Ridge Mine
+	--' Eversong Woods Horde Town: Thuron's Livery
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Echo Ridge Mine"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Human_Start_EchoRidgeMine()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Elwynn Forest: Human Starting Area: Northshire River
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Northshire River"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Human_Start_NorthshireRiver()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Elwynn Forest: Human Starting Area: Northshire Valley
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Northshire Valley"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Human_Start_NorthshireValley()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Elwynn Forest: Human Starting Area: Northshire Vineyards
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Northshire Vineyards"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Human_Start_NorthshireVineyards()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Elwynn Forest Alliance Town: Eastvale Logging Camp
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Eastvale Logging Camp"] ) then
+	elseif ( SubZoneName == SZ["Thuron's Livery"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
+			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownEastvaleLoggingCamp()
-			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_HordeTownThuronsLivery()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -181,284 +193,364 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Alliance Town: Goldshire
+	--' Eversong Woods Subzone: Azurebreeze Coast
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Goldshire"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownGoldshire()
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Elwynn Forest Alliance Inn: Lion's Pride Inn
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Lion's Pride Inn"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_PlayerIsResting = true
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceInnLionsPrideInn()
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Elwynn Forest Subzone: Brackwell Pumpkin Patch
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Brackwell Pumpkin Patch"] ) then
+	elseif ( SubZoneName == SZ["Azurebreeze Coast"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBrackwellPumpkinPatch()
+			FinalFantasylization_SubzoneAzurebreezeCoast()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Crystal Lake
+	--' Eversong Woods Subzone: The Dead Scar
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Crystal Lake"] ) then
+	elseif ( SubZoneName == SZ["The Dead Scar"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneCrystalLake()
+			FinalFantasylization_SubzoneTheDeadScar()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Fargodeep Mine
+	--' Eversong Woods Subzone: Duskwither Grounds
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Fargodeep Mine"] ) then
+	elseif ( SubZoneName == SZ["Duskwither Grounds"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFargodeepMine()
+			FinalFantasylization_SubzoneDuskwitherGrounds()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Forest's Edge
+	--' Eversong Woods Subzone: Duskwither Spire
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Forest's Edge"] ) then
+	elseif ( SubZoneName == SZ["Duskwither Spire"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneForestsEdge()
+			FinalFantasylization_SubzoneDuskwitherSpire()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Goldtooth's Den
+	--' Eversong Woods Subzone: East Sanctum
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Goldtooth's Den"] ) then
+	elseif ( SubZoneName == SZ["East Sanctum"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneGoldtoothsDen()
+			FinalFantasylization_SubzoneEastSanctum()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Hogger Hill
+	--' Eversong Woods Subzone: Elrendar Falls
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Hogger Hill"] ) then
+	elseif ( SubZoneName == SZ["Elrendar Falls"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneHoggerHill()
+			FinalFantasylization_SubzoneElrendarFalls()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Jasperlode Mine
+	--' Eversong Woods Subzone: Golden Strand
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Jasperlode Mine"] ) then
+	elseif ( SubZoneName == SZ["Golden Strand"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneJasperlodeMine()
+			FinalFantasylization_SubzoneGoldenStrand()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Jerod's Landing
+	--' Eversong Woods Subzone: Goldenbough Pass
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Jerod's Landing"] ) then
+	elseif ( SubZoneName == SZ["Goldenbough Pass"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneJerodsLanding()
+			FinalFantasylization_SubzoneGoldenboughPass()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: The Maclure Vineyards
+	--' Eversong Woods Subzone: Huntress of the Sun
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Maclure Vineyards"] ) then
+	elseif ( SubZoneName == SZ["Huntress of the Sun"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheMaclureVineyards()
+			FinalFantasylization_SubzoneHuntressoftheSun()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Mirror Lake
+	--' Eversong Woods Subzone: Lake Elrendar
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Mirror Lake"] ) then
+	elseif ( SubZoneName == SZ["Lake Elrendar"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneMirrorLake()
+			FinalFantasylization_SubzoneLakeElrendar()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Mirror Lake Orchard
+	--' Eversong Woods Subzone: The Living Wood
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Mirror Lake Orchard"] ) then
+	elseif ( SubZoneName == SZ["The Living Wood"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneMirrorLakeOrchard()
+			FinalFantasylization_SubzoneTheLivingWood()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Ridgepoint Tower
+	--' Eversong Woods Subzone: North Sanctum
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ridgepoint Tower"] ) then
+	elseif ( SubZoneName == SZ["North Sanctum"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRidgepointTower()
+			FinalFantasylization_SubzoneNorthSanctum()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Stone Cairn Lake
+	--' Eversong Woods Subzone: Ruins of Silvermoon
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Stone Cairn Lake"] ) then
+	elseif ( SubZoneName == SZ["Ruins of Silvermoon"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneStoneCairnLake()
+			FinalFantasylization_SubzoneRuinsofSilvermoon()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Heroes' Vigil in Stone Cairn Lake
+	--' Eversong Woods Subzone: Commons Hall in Ruins of Silvermoon
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Heroes' Vigil"] ) then
+	elseif ( SubZoneName == SZ["Commons Hall"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneHeroesVigil()
+			FinalFantasylization_SubzoneCommonsHall()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Thunder Falls
+	--' Eversong Woods Subzone: Dawning Lane in Ruins of Silvermoon
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Thunder Falls"] ) then
+	elseif ( SubZoneName == SZ["Dawning Lane"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneThunderFalls()
+			FinalFantasylization_SubzoneDawningLane()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: The Stonefield Farm
+	--' Eversong Woods Subzone: Feth's Way in Ruins of Silvermoon
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Stonefield Farm"] ) then
+	elseif ( SubZoneName == SZ["Feth's Way"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheStonefieldFarm()
+			FinalFantasylization_SubzoneFethsWay()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Tower of Azora
+	--' Eversong Woods Subzone: Skulking Row in Ruins of Silvermoon
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Tower of Azora"] ) then
+	elseif ( SubZoneName == SZ["Skulking Row"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTowerofAzora()
+			FinalFantasylization_SubzoneSkulkingRow()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Elwynn Forest Subzone: Westbrook Garrison
+	--' Eversong Woods Subzone: Runestone Falithas
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Westbrook Garrison"] ) then
+	elseif ( SubZoneName == SZ["Runestone Falithas"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneWestbrookGarrison()
+			FinalFantasylization_SubzoneRunestoneFalithas()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		return	
+		return
 	--'==========================================================================================
-	--' Elwynn Forest END
+	--' Eversong Woods Subzone: Runestone Shan'dor
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Runestone Shan'dor"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneRunestoneShandor()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Subzone: Sunsail Anchorage
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Sunsail Anchorage"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneSunsailAnchorage()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Subzone: The Scorched Grove
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Scorched Grove"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheScorchedGrove()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Subzone: The Shepherd's Gate
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Shepherd's Gate"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheShepherdsGate()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Subzone: Stillwhisper Pond
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Stillwhisper Pond"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneStillwhisperPond()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Subzone: Tor'Watha
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Tor'Watha"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTorWatha()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Subzone: Tranquil Shore
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Tranquil Shore"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTranquilShore()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Subzone: West Sanctum
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["West Sanctum"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWestSanctum()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods Subzone: Zeb'Watha
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Zeb'Watha"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneZebWatha()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Eversong Woods END
 	--'==========================================================================================
 	else
 		if FinalFantasylization_CurrentZone ~= ZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn ..ZoneName)
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
 			FinalFantasylization_CurrentZone = ZoneName
-			FinalFantasylization_EasternKingdomsElwynnForest()
+			FinalFantasylization_EasternKingdomsEversongWoods()
 			FinalFantasylization_IsPlaying = true
 		else
 			return

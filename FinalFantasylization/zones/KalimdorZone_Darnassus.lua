@@ -1,157 +1,129 @@
-function FinalFantasylization_EasternKingdomsZones_Undercity()
+function FinalFantasylization_KalimdorZones_Darnassus()
 --'==========================================================================================
---' Eastern Kingdoms Capital: Undercity : Horde
+--' Kalimdor Capital: Darnassus : Alliance
 --'==========================================================================================
---	Zone: Undercity			FinalFantasylization_EasternKingdoms_Undercity()
+--	Zone: Darnassus			FinalFantasylization_Kalimdor_Darnassus()
 --
 --	SUBZONES:
---	Apothecarium			FinalFantasylization_Undercity_SubzoneTheApothecarium()
---	Canals					FinalFantasylization_Undercity_SubzoneCanals()
---	Magic Quarter			FinalFantasylization_Undercity_SubzoneMagicQuarter()
---	Rogues' Quarter			FinalFantasylization_Undercity_SubzoneRoguesQuarter()
---	Royal Quarter			FinalFantasylization_Undercity_SubzoneRoyalQuarter()
---	Ruins of Lordaeron		FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
---	Sewers					FinalFantasylization_Undercity_SubzoneSewers()
---	Trade Quarter			FinalFantasylization_Undercity_SubzoneTradeQuarter()
---	War Quarter				FinalFantasylization_Undercity_SubzoneWarQuarter()
+--	Cenarion Enclave			FinalFantasylization_Darnassus_SubzoneCenarionEnclave()
+--	Craftsmen's Terrace			FinalFantasylization_Darnassus_SubzoneCraftsmensTerrace()
+--	Howling Oak					FinalFantasylization_Darnassus_SubzoneHowlingOak()
+--	The Temple Gardens			FinalFantasylization_Darnassus_SubzoneTheTempleGardens()
+--	The Temple of the Moon		FinalFantasylization_Darnassus_SubzoneTheTempleoftheMoon()
+--	Tradesmen's Terrace			FinalFantasylization_Darnassus_SubzoneTradesmensTerrace()
+--	Warrior's Terrace			FinalFantasylization_Darnassus_SubzoneWarriorsTerrace()
 	--'==========================================================================================
-	--' Undercity: Horde Check
+	--' Darnassus: Alliance Check
 	--'==========================================================================================
-	if ( factionEnglish == "Horde" ) then
+	if ( factionEnglish == "Alliance" ) then
 	--'==========================================================================================
-	--' Undercity: The Apothecarium
+	--' Stormwind City: Cenarion Enclave
 	--'==========================================================================================
-		if ( SubZoneName == SZ["The Apothecarium"] ) then
+		if ( SubZoneName == SZ["Cenarion Enclave"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneTheApothecarium()
+				FinalFantasylization_Darnassus_SubzoneCenarionEnclave()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Canals
+	--' Darnassus: Craftsmen's Terrace
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Canals"] ) then
+		elseif ( SubZoneName == SZ["Craftsmen's Terrace"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneCanals()
+				FinalFantasylization_Darnassus_SubzoneCraftsmensTerrace()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Magic Quarter
+	--' Darnassus: The Howling Oak
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Magic Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Howling Oak"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneMagicQuarter()
+				FinalFantasylization_Darnassus_SubzoneTheHowlingOak()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Rogues' Quarter
+	--' Darnassus: The Temple Gardens
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Rogues' Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Temple Gardens"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRoguesQuarter()
+				FinalFantasylization_Darnassus_SubzoneTheTempleGardens()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Royal Quarter
+	--' Darnassus: Temple of the Moon
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Royal Quarter"] ) then
+		elseif ( SubZoneName == SZ["Temple of the Moon"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRoyalQuarter()
+				FinalFantasylization_Darnassus_SubzoneTempleoftheMoon()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Ruins of Lordaeron
+	--' Darnassus: Tradesmen's Terrace
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Ruins of Lordaeron"] ) then
+		elseif ( SubZoneName == SZ["Tradesmen's Terrace"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
+				FinalFantasylization_Darnassus_SubzoneTradesmensTerrace()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Sewers
+	--' Darnassus: Warrior's Terrace
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Sewers"] ) then
+		elseif ( SubZoneName == SZ["Warrior's Terrace"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneSewers()
+				FinalFantasylization_Darnassus_SubzoneWarriorsTerrace()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Trade Quarter
-	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Trade Quarter"] ) then
-			if FinalFantasylization_CurrentZone ~= SubZoneName then
-				FinalFantasylization_CurrentZone = SubZoneName
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneTradeQuarter()
-			else
-				return
-			end
-			FinalFantasylization_IsPlaying = true
-			return
-	--'==========================================================================================
-	--' Undercity: War Quarter
-	--'==========================================================================================
-		elseif ( SubZoneName == SZ["War Quarter"] ) then
-			if FinalFantasylization_CurrentZone ~= SubZoneName then
-				FinalFantasylization_CurrentZone = SubZoneName
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneWarQuarter()
-			else
-				return
-			end
-			FinalFantasylization_IsPlaying = true
-			return
-	--'==========================================================================================
-	--' Undercity END
+	--' Darnassus END
 	--'==========================================================================================
 		else
 			if FinalFantasylization_CurrentZone ~= ZoneName then
 				FinalFantasylization_CurrentZone = ZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_EasternKingdoms_Undercity()
+				FinalFantasylization_Kalimdor_Darnassus()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 		end
 	--'==========================================================================================
-	--' Undercity: Alliance Check
+	--' Darnassus: Horde Check
 	--'==========================================================================================
-	elseif ( factionEnglish == "Alliance" ) then
+	elseif ( factionEnglish == "Horde" ) then
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)

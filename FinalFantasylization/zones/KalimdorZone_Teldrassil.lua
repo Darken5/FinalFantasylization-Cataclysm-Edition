@@ -1,44 +1,41 @@
-function FinalFantasylization_EasternKingdomsZones_BurningSteppes()
+function FinalFantasylization_KalimdorZones_Teldrassil()
 --'==========================================================================================
---' Eastern Kingdoms Zones: Burning Steppes
+--' Kalimdor Zones: Teldrassil
 --'==========================================================================================
---	Zone: Burning Steppes		FinalFantasylization_EasternKingdomsBurningSteppes()
+--	Zone: Teldrassil			FinalFantasylization_KalimdorTeldrassil()
 --
 --	TOWNS:
+--	Night Elf Start:
+--		Shadowglen					FinalFantasylization_NightElf_Start_Shadowglen()
+--			Aldrassil					FinalFantasylization_NightElf_Start_Aldrassil()
+--			Shadowthread Cave			FinalFantasylization_NightElf_Start_ShadowthreadCave()
 --	Alliance:
---		Morgan's Vigil				FinalFantasylization_AllianceTownMorgansVigil()
---	Horde:
---		Flame Crest					FinalFantasylization_HordeTownFlameCrest()
---	Neutral:
---		Chiselgrip					FinalFantasylization_NeutralTownChiselgrip()
---		Flamestar Post				FinalFantasylization_NeutralTownFlamestarPost()
+--		Dolanaar					FinalFantasylization_AllianceTownDolanaar()
+--		Rut'theran Village			FinalFantasylization_AllianceTownRuttheranVillage()
+--		Wellspring Hovel			FinalFantasylization_AllianceTownWellspringHovel()
 --
 --	SUBZONES:
---	Altar of Storms				FinalFantasylization_SubzoneAltarofStorms()
---	Blackrock Mountain			FinalFantasylization_SubzoneBlackrockMountain()
---	Blackrock Pass				FinalFantasylization_SubzoneBlackrockPass()
---	Blackrock Stronghold		FinalFantasylization_SubzoneBlackrockStronghold()
---	Black Tooth Hovel			FinalFantasylization_SubzoneBlackToothHovel()
---		The Pillar of Ash			FinalFantasylization_SubzoneThePillarofAsh()
---	Dreadmaul Rock				FinalFantasylization_SubzoneDreadmaulRock()
---		Firegut Furnace				FinalFantasylization_SubzoneFiregutFurnace()
---		The Skull Warren			FinalFantasylization_SubzoneTheSkullWarren()
---	Fields of Honor				FinalFantasylization_SubzoneFieldsofHonor()
---	Redridge Highway			FinalFantasylization_SubzoneRedridgeHighway()
---	Ruins of Thaurissan			FinalFantasylization_SubzoneRuinsofThaurissan()
---	Slither Rock				FinalFantasylization_SubzoneSlitherRock()
---	Terror Wing Path			FinalFantasylization_SubzoneTerrorWingPath()
---	Valley of Ashes				FinalFantasylization_SubzoneValleyofAshes()
---	The Whelping Downs			FinalFantasylization_SubzoneTheWhelpingDowns()
+--	Ban'ethil Hollow			FinalFantasylization_SubzoneBanethilHollow()
+--		Ban'ethil Barrow Den		FinalFantasylization_SubzoneBanethilBarrowDen()
+--	The Cleft					FinalFantasylization_SubzoneTheCleft()
+--	Fel Rock					FinalFantasylization_SubzoneFelRock()
+--	Gnarlpine Hold				FinalFantasylization_SubzoneGnarlpineHold()
+--	Lake Al'Ameth				FinalFantasylization_SubzoneLakeAlAmeth()
+--	The Oracle Glade			FinalFantasylization_SubzoneTheOracleGlade()
+--	Pools of Arlithrien			FinalFantasylization_SubzonePoolsofArlithrien()
+--	Starbreeze Village			FinalFantasylization_SubzoneStarbreezeVillage()
+--	The Veiled Sea				FinalFantasylization_SubzoneTheVeiledSea()
+--	Wellspring Lake				FinalFantasylization_SubzoneWellspringLake()
+--	Wellspring River			FinalFantasylization_SubzoneWellspringRiver()
 	--'==========================================================================================
-	--' Burning Steppes Alliance Town: Morgan's Vigil
+	--' Teldrassil: Night Elf Starting Area: Shadowglen
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Morgan's Vigil"] ) then
+	if ( SubZoneName == SZ["Shadowglen"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownMorgansVigil()
+				FinalFantasylization_NightElf_Start_Shadowglen()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -49,15 +46,15 @@ function FinalFantasylization_EasternKingdomsZones_BurningSteppes()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Horde Town: Flame Crest
+	--' Teldrassil: Night Elf Starting Area: Aldrassil
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Flame Crest"] ) then
+	elseif ( SubZoneName == SZ["Aldrassil"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
+			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownFlameCrest()
-			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_NightElf_Start_Aldrassil()
+			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -67,247 +64,236 @@ function FinalFantasylization_EasternKingdomsZones_BurningSteppes()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Neutral Town: Chiselgrip
+	--' Teldrassil: Night Elf Starting Area: Shadowthread Cave
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Chiselgrip"] ) then
+	elseif ( SubZoneName == SZ["Shadowthread Cave"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownChiselgrip()
+			FinalFantasylization_NightElf_Start_ShadowthreadCave()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Neutral Town: Flamestar Post
+	--' Teldrassil Alliance Town: Dolanaar
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Flamestar Post"] ) then
+	elseif ( SubZoneName == SZ["Dolanaar"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownFlamestarPost()
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownDolanaar()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Altar of Storms
+	--' Teldrassil Alliance Town: Rut'theran Village
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Altar of Storms"] ) then
+	elseif ( SubZoneName == SZ["Rut'theran Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneAltarofStorms()
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownRuttheranVillage()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Blackrock Mountain
+	--' Teldrassil Alliance Town: Wellspring Hovel
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Blackrock Mountain"] ) then
+	elseif ( SubZoneName == SZ["Wellspring Hovel"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBlackrockMountain()
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownWellspringHovel()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Blackrock Pass
+	--' Teldrassil Subzone: Ban'ethil Hollow
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Blackrock Pass"] ) then
+	elseif ( SubZoneName == SZ["Ban'ethil Hollow"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBlackrockPass()
+			FinalFantasylization_SubzoneBanethilHollow()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Blackrock Stronghold
+	--' Teldrassil Subzone: Ban'ethil Barrow Den in Ban'ethil Hollow
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Blackrock Stronghold"] ) then
+	elseif ( SubZoneName == SZ["Ban'ethil Barrow Den"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBlackrockStronghold()
+			FinalFantasylization_SubzoneBanethilBarrowDen()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Black Tooth Hovel
+	--' Teldrassil Subzone: The Cleft
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Black Tooth Hovel"] ) then
+	elseif ( SubZoneName == SZ["The Cleft"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBlackToothHovel()
+			FinalFantasylization_SubzoneTheCleft()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: The Pillar of Ash in Black Tooth Hovel
+	--' Teldrassil Subzone: Fel Rock
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Pillar of Ash"] ) then
+	elseif ( SubZoneName == SZ["Fel Rock"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneThePillarofAsh()
+			FinalFantasylization_SubzoneFelRock()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Dreadmaul Rock
+	--' Teldrassil Subzone: Gnarlpine Hold
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Dreadmaul Rock"] ) then
+	elseif ( SubZoneName == SZ["Gnarlpine Hold"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDreadmaulRock()
+			FinalFantasylization_SubzoneGnarlpineHold()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Firegut Furnace in Dreadmaul Rock
+	--' Teldrassil Subzone: Lake Al'Ameth
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Firegut Furnace"] ) then
+	elseif ( SubZoneName == SZ["Lake Al'Ameth"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFiregutFurnace()
+			FinalFantasylization_SubzoneLakeAlAmeth()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: The Skull Warren in Dreadmaul Rock
+	--' Teldrassil Subzone: The Oracle Glade
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Skull Warren"] ) then
+	elseif ( SubZoneName == SZ["The Oracle Glade"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheSkullWarren()
+			FinalFantasylization_SubzoneTheOracleGlade()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Fields of Honor
+	--' Teldrassil Subzone: Pools of Arlithrien
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Fields of Honor"] ) then
+	elseif ( SubZoneName == SZ["Pools of Arlithrien"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFieldsofHonor()
+			FinalFantasylization_SubzonePoolsofArlithrien()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Redridge Highway 
+	--' Teldrassil Subzone: Starbreeze Village
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Redridge Highway"] ) then
+	elseif ( SubZoneName == SZ["Starbreeze Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRedridgeHighway()
+			FinalFantasylization_SubzoneStarbreezeVillage()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Ruins of Thaurissan
+	--' Teldrassil Subzone: The Veiled Sea
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ruins of Thaurissan"] ) then
+	elseif ( SubZoneName == SZ["The Veiled Sea"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRuinsofThaurissan()
+			FinalFantasylization_SubzoneTheVeiledSea()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Slither Rock
+	--' Teldrassil Subzone: Wellspring Lake
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Slither Rock"] ) then
+	elseif ( SubZoneName == SZ["Wellspring Lake"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSlitherRock()
+			FinalFantasylization_SubzoneWellspringLake()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Terror Wing Path
+	--' Teldrassil Subzone: Wellspring River
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Terror Wing Path"] ) then
+	elseif ( SubZoneName == SZ["Wellspring River"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTerrorWingPath()
+			FinalFantasylization_SubzoneWellspringRiver()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Burning Steppes Subzone: Valley of Ashes
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Valley of Ashes"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneValleyofAshes()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Burning Steppes Subzone: The Whelping Downs
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Whelping Downs"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheWhelpingDowns()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Burning Steppes END
+	--' Teldrassil END
 	--'==========================================================================================
 	else
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
-			FinalFantasylization_EasternKingdomsBurningSteppes()
+			FinalFantasylization_KalimdorTeldrassil()
 			FinalFantasylization_IsPlaying = true
 		else
 			return
