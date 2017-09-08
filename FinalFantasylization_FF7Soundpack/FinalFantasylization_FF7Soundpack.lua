@@ -3127,7 +3127,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Gnarlpine Hold
 	function FinalFantasylization_SubzoneGnarlpineHold()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Lake Al'Ameth
 	function FinalFantasylization_SubzoneLakeAlAmeth()
@@ -3135,7 +3135,7 @@ FinalFantasylization_HostileSong()
 	end
 --	The Oracle Glade
 	function FinalFantasylization_SubzoneTheOracleGlade()
-
+		FinalFantasylization_FriendlySong()
 	end
 --	Pools of Arlithrien
 	function FinalFantasylization_SubzonePoolsofArlithrien()

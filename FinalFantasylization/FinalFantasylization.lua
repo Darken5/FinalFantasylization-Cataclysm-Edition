@@ -852,7 +852,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' Eastern Kingdoms Zones
 --'==========================================================================================
-		if not (( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true )) then
+		if not ( ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) or ( FinalFantasylization_PlayerIsSwimming == true ) ) then
 			if not ( IsResting() ) and ( ZoneName == Z["Abyssal Depths"] ) then			-- Abyssal Depths
 				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)	--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Arathi Highlands"] ) then	-- Arathi Highlands
