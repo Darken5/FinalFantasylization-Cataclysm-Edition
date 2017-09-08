@@ -1,7 +1,7 @@
 ============================
 >>>                      <<<
 >>> FinalFantasylization <<<
->>>  ReadMe for 3.3.2    <<<
+>>>  ReadMe for 4.0.0    <<<
 >>>                      <<<
 ============================
 
@@ -166,6 +166,28 @@ Fix the Fanfare sound issue on world (sometimes doesn't play)
 Add more zone/subzone detections
 
 *********************
+29. July 2017 - FinalFantasylization: Cataclysm Edition - Day 1 >> Darken5 <<
+	- Begun working on FFz for Cataclysm (and future expansions)
+
+-------------------------------------------------------------------------------------------------------
+20. August 2017 - FinalFantasylization 3.3.5 - New Subzones, and Many Fixes >> Darken5 and stevenm281 <<
+	- Fixes! (bugs found by stevenm281, fixed by Darken5)
+		- Combat Fix - Would restart music if looting during combat
+		- Sleep Fix - Would have to leave town and come back to Inn to have Sleep Music play again
+		- Zone Change Fix - Would continue playing Subzone music even after you left the Subzone
+		- The Stonefield Farm (in Elwynn Forest) - was incorrectly named Stonefield Farm so it was causing an error
+	- New Subzones 
+		- Sentinel Tower in Sentinel Hill, Westfall (Added by Darken5)
+		- Darkshire Town Hall in Darkshire, Duskwood (Added by stevenm281)
+		- Steelgrill's Depot in Kharanos, Dun Morogh (Added by stevenm281)
+		- Lakeshire Town Hall in Lakeshire, Redridge Mountains (Added by stevenm281)
+
+7. August 2017 - FinalFantasylization 3.3.4 - Interface Buttons Fix
+	- They do what there supposed to do now...
+
+5. August 2017 - FinalFantasylization 3.3.3 - Locale Bug  >> Darken5 <<
+	- Fixed bug with FFz only working with an English client. Bit of a earlier oops on my part when incorporating LibBabble-Faction-3.0
+
 24. November 2016 - FinalFantasylization 3.3.2 - Not Much to Say  >> Darken5 <<
 	- "Fixed?" bug with UnitGUID("target") returning "nil"
 	- Added "Raid" detection to combat music. (Still fires "DungeonBoss()" music, but better than no music) 
