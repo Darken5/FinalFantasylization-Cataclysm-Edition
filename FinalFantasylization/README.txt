@@ -166,8 +166,34 @@ Fix the Fanfare sound issue on world (sometimes doesn't play)
 Add more zone/subzone detections
 
 *********************
-29. July 2017 - FinalFantasylization: Cataclysm Edition - Day 1 >> Darken5 <<
+29. July 2017 - 8. August 2017 - FinalFantasylization: Cataclysm Edition - Day 1 - 10 aka the "Thank GOD thats over" week-ish >> Darken5 <<
+	Day 1
 	- Begun working on FFz for Cataclysm (and future expansions)
+	- Updated all libs from WotLK to Cataclysm
+	Day 2
+	- Testing FFz in WoW
+	Day 3
+	- Worked on debugging FFz to actually work in Cataclysm... little luck
+	- Continued testing FFz in WoW
+	- Almost nothing in FFz works at this point.
+	Day 4 - 7
+	- Continued debugging. More success
+		- Ended up being a problem with how I was loading files into WoW and some bits with the .xml files that Cataclysm changed that I had to account for.
+		- Finnaly got it to work for more than 5 seconds, still a ton of bugs, but progress.
+	Day 8
+	- YAY! It works a bit more like it's supposed to.
+		- Still a crapton of bugs mind you, but they are no longer game breaking ones.
+	- Began adding in new Cataclysm Zones (Gilneas City to be exact)
+	- Fixed Interface Buttons.
+	Day 9
+	- More testing
+	- Realized I wanted MORE out of FFz
+	- Brainstormed... (owwie, my head)
+	Day 10!!!!!!!!!
+	- Scrapped all of FFz:WotLK's Zone/SubZone detection code...
+		- Started from scratch with each Zone having its own .lua "Zone File"
+		- Every Subzone in each Zone will be included
+	- Scrapped much of the Soundpack code as it will have to be rebuilt alongside FFz's Zone Files
 
 -------------------------------------------------------------------------------------------------------
 20. August 2017 - FinalFantasylization 3.3.5 - New Subzones, and Many Fixes >> Darken5 and stevenm281 <<
