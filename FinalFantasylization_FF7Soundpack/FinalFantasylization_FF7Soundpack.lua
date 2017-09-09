@@ -1448,12 +1448,7 @@ FinalFantasylization_HostileSong()
 --'==========================================================================================
 --	Zone: Gilneas
 	function FinalFantasylization_EasternKingdomsGilneas()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	TOWNS:
 --	Alliance:
@@ -1476,75 +1471,36 @@ FinalFantasylization_HostileSong()
 --	SUBZONES:
 --	Aderic's Repose
 	function FinalFantasylization_SubzoneAdericsRepose()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_PlayMusic(S .. DeadSong);
+		FinalFantasylization_debugMsg("DeadSong")
 	end
 --	Allen Farmstead
 	function FinalFantasylization_SubzoneAllenFarmstead()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	The Bite
 	function FinalFantasylization_SubzoneTheBite()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	The Blackwald
 	function FinalFantasylization_SubzoneTheBlackwald()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	The Bradshaw Mill
 	function FinalFantasylization_SubzoneTheBradshawMill()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ContestedSong()
 	end
 --	Crowley Orchard
 	function FinalFantasylization_SubzoneCrowleyOrchard()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Crowley Stable Grounds
 	function FinalFantasylization_SubzoneCrowleyStableGrounds()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Duskmist Shore
 	function FinalFantasylization_SubzoneDuskmistShore()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Emberstone Mine
 	function FinalFantasylization_SubzoneEmberstoneMine()
@@ -1552,84 +1508,39 @@ FinalFantasylization_HostileSong()
 	end
 --	Emberstone Village
 	function FinalFantasylization_SubzoneEmberstoneVillage()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_HostileSong()
 	end
 --	Forsaken Forward Command
 	function FinalFantasylization_SubzoneForsakenForwardCommand()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Galewatch Lighthouse
 	function FinalFantasylization_SubzoneGalewatchLighthouse()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	The Greymane Wall
 	function FinalFantasylization_SubzoneTheGreymaneWall()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Hailwood Marsh
 	function FinalFantasylization_SubzoneHailwoodMarsh()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Hammond Farmstead
 	function FinalFantasylization_SubzoneHammondFarmstead()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Hayward Fishery
 	function FinalFantasylization_SubzoneHaywardFishery()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	The Headlands
 	function FinalFantasylization_SubzoneTheHeadlands()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	King's Gate
 	function FinalFantasylization_SubzoneKingsGate()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Koroth's Den
 	function FinalFantasylization_SubzoneKorothsDen()
@@ -1637,102 +1548,47 @@ FinalFantasylization_HostileSong()
 	end
 --	Livery Outpost
 	function FinalFantasylization_SubzoneLiveryOutpost()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Northern Headlands
 	function FinalFantasylization_SubzoneNorthernHeadlands()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Northgate River
 	function FinalFantasylization_SubzoneNorthgateRiver()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_LakeSong()
 	end
 --	Northgate Woods
 	function FinalFantasylization_SubzoneNorthgateWoods()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Queen's Gate
 	function FinalFantasylization_SubzoneQueensGate()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Rygna's Lair
 	function FinalFantasylization_SubzoneRygnasLair()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Stagecoach Crash Site
 	function FinalFantasylization_SubzoneStagecoachCrashSite()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Tal'doren
 	function FinalFantasylization_SubzoneTaldoren()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Tempest's Reach
 	function FinalFantasylization_SubzoneTempestsReach()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Wahl Cottage
 	function FinalFantasylization_SubzoneWahlCottage()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --	Wood's End Cabin
 	function FinalFantasylization_SubzoneWoodsEndCabin()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
+		FinalFantasylization_ForestSong()
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Gilneas City : Worgen

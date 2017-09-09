@@ -47,7 +47,7 @@ function FinalFantasylization_KalimdorZones_Durotar()
 --	Tiragarde Keep					FinalFantasylization_SubzoneTiragardeKeep()
 --	Tor'kren Farm					FinalFantasylization_SubzoneTorkrenFarm()
 	--'==========================================================================================
-	--' Mulgore: Tauren Starting Area: Valley of Trials
+	--' Mulgore: Orc Starting Area: Valley of Trials
 	--'==========================================================================================
 	if ( SubZoneName == SZ["Valley of Trials"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then

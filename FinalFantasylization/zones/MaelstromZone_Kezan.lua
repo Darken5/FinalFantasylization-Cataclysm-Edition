@@ -1,10 +1,9 @@
 function FinalFantasylization_MaelstromZones_Kezan()
 --'==========================================================================================
---' Maelstrom Zones: Kezan : Horde
+--' Maelstrom Zones: Kezan : Goblin
 --'==========================================================================================
 --	Zone: Kezan				FinalFantasylization_MaelstromKezan()
 --
---	TOWNS:
 --	Goblin Start:
 --		Bilgewater Port			FinalFantasylization_Goblin_Start_BilgewaterPort()
 --		Drudgetown				FinalFantasylization_Goblin_Start_Drudgetown()
