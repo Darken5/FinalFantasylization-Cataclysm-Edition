@@ -1164,6 +1164,8 @@ function FinalFantasylization_DoEmote(emote, msg)
 		elseif FinalFantasylization_DanceSong == "dwarfmale" then FinalFantasylization_DwarfMaleDanceSong();
 		elseif FinalFantasylization_DanceSong == "gnomefemale" then FinalFantasylization_GnomeFemaleDanceSong();
 		elseif FinalFantasylization_DanceSong == "gnomemale" then FinalFantasylization_GnomeMaleDanceSong();
+		elseif FinalFantasylization_DanceSong == "goblinfemale" then FinalFantasylization_GoblinFemaleDanceSong();
+		elseif FinalFantasylization_DanceSong == "goblinmale" then FinalFantasylization_GoblinMaleDanceSong();
 		elseif FinalFantasylization_DanceSong == "humanfemale" then FinalFantasylization_HumanFemaleDanceSong();
 		elseif FinalFantasylization_DanceSong == "humanmale" then FinalFantasylization_HumanMaleDanceSong();
 		elseif FinalFantasylization_DanceSong == "nightelffemale" then FinalFantasylization_NightElfFemaleDanceSong();
@@ -1176,6 +1178,8 @@ function FinalFantasylization_DoEmote(emote, msg)
 		elseif FinalFantasylization_DanceSong == "trollmale" then FinalFantasylization_TrollMaleDanceSong();
 		elseif FinalFantasylization_DanceSong == "undeadfemale" then FinalFantasylization_UndeadFemaleDanceSong();
 		elseif FinalFantasylization_DanceSong == "undeadmale" then FinalFantasylization_UndeadMaleDanceSong();
+		elseif FinalFantasylization_DanceSong == "worgenfemale" then FinalFantasylization_WorgenFemaleDanceSong();
+		elseif FinalFantasylization_DanceSong == "worgenmale" then FinalFantasylization_WorgenMaleDanceSong();
 		elseif FinalFantasylization_DanceSong == "druidbear" then FinalFantasylization_DruidBearDanceSong();
 		elseif FinalFantasylization_DanceSong == "druidcat" then FinalFantasylization_DruidCatDanceSong();
 		elseif FinalFantasylization_DanceSong == "druidowlbear" then FinalFantasylization_DruidOwlBearDanceSong();

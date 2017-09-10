@@ -121,6 +121,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		DwarfMaleDanceSong = "DwarfMale.mp3" -- 
 		GnomeFemaleDanceSong = "GnomeFemale.mp3" -- 
 		GnomeMaleDanceSong = "GnomeMale.mp3" -- 
+		GoblinFemaleDanceSong = "GoblinFemale.mp3" -- 
+		GoblinMaleDanceSong = "GoblinMale.mp3" -- 
 		HumanFemaleDanceSong = "HumanFemale.mp3" -- 
 		HumanMaleDanceSong = "HumanMale.mp3" -- 
 		NightElfFemaleDanceSong = "NightElfFemale.mp3" -- 
@@ -133,6 +135,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		TrollMaleDanceSong = "TrollMale.mp3" -- 
 		UndeadFemaleDanceSong = "UndeadFemale.mp3" -- 
 		UndeadMaleDanceSong = "UndeadMale.mp3" -- 
+		WorgenFemaleDanceSong = "WorgenFemale.mp3"
+		WorgenMaleDanceSong = "WorgenMale.mp3"
 		DruidBearDanceSong = "DruidBear.mp3" -- 
 		DruidCatDanceSong = "DruidCat.mp3" -- 
 		DruidOwlBearDanceSong = "DruidOwlBear.mp3" -- 
@@ -3683,6 +3687,14 @@ FinalFantasylization_HostileSong()
 		FinalFantasylization_PlayMusic( SS .. GnomeMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
+		function FinalFantasylization_GoblinFemaleDanceSong()
+		FinalFantasylization_PlayMusic( SS .. GoblinFemaleDanceSong);
+		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
+	end
+	function FinalFantasylization_GoblinMaleDanceSong()
+		FinalFantasylization_PlayMusic( SS .. GoblinMaleDanceSong);
+		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
+	end
 	function FinalFantasylization_HumanFemaleDanceSong()
 		FinalFantasylization_PlayMusic( SS .. HumanFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
@@ -3729,6 +3741,14 @@ FinalFantasylization_HostileSong()
 	end
 	function FinalFantasylization_UndeadMaleDanceSong()
 		FinalFantasylization_PlayMusic( SS .. UndeadMaleDanceSong);
+		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
+	end
+	function FinalFantasylization_WorgenFemaleDanceSong()
+		FinalFantasylization_PlayMusic( SS .. WorgenFemaleDanceSong);
+		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
+	end
+	function FinalFantasylization_WorgenMaleDanceSong()
+		FinalFantasylization_PlayMusic( SS .. WorgenMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
 	function FinalFantasylization_DruidBearDanceSong()
