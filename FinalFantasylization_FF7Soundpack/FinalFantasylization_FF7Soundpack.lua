@@ -1448,6 +1448,149 @@ FinalFantasylization_HostileSong()
 
 	end
 --'==========================================================================================
+--' Eastern Kingdoms Zones: Ghostlands : Horde
+--'==========================================================================================
+--	Zone: Ghostlands
+	function FinalFantasylization_EasternKingdomsGhostlands()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--	TOWNS:
+--	Horde:
+--		Farstrider Enclave
+	function FinalFantasylization_HordeTownFarstriderEnclave()
+		FinalFantasylization_HordeTowns()
+	end
+--		Sanctum of the Sun
+	function FinalFantasylization_HordeTownSanctumoftheSun()
+		FinalFantasylization_HordeTowns()
+	end
+--		Tranquillien
+	function FinalFantasylization_HordeTownTranquillien()
+		FinalFantasylization_HordeTowns()
+	end
+--	SUBZONES:
+--	Amani Catacombs
+	function FinalFantasylization_SubzoneAmaniCatacombs()
+
+	end
+--	Amani Pass
+	function FinalFantasylization_SubzoneAmaniPass()
+
+	end
+--	Andilien Estate
+	function FinalFantasylization_SubzoneAndilienEstate()
+
+	end
+--	An'daroth
+	function FinalFantasylization_SubzoneAndaroth()
+
+	end
+--	An'owyn
+	function FinalFantasylization_SubzoneAnowyn()
+
+	end
+--	An'telas
+	function FinalFantasylization_SubzoneAntelas()
+
+	end
+--	Bleeding Ziggurat
+	function FinalFantasylization_SubzoneBleedingZiggurat()
+
+	end
+--	Dawnstar Spire
+	function FinalFantasylization_SubzoneDawnstarSpire()
+
+	end
+--	*The Dead Scar
+	function FinalFantasylization_SubzoneTheDeadScar()
+
+	end
+--	Deatholme
+	function FinalFantasylization_SubzoneDeatholme()
+
+	end
+--	Elrendar Crossing
+	function FinalFantasylization_SubzoneElrendarCrossing()
+
+	end
+--	Elrendar River
+	function FinalFantasylization_SubzoneElrendarRiver()
+
+	end
+--	Goldenmist Village
+	function FinalFantasylization_SubzoneGoldenmistVillage()
+
+	end
+--	Hatchet Hills
+	function FinalFantasylization_SubzoneHatchetHills()
+
+	end
+--	Howling Ziggurat
+	function FinalFantasylization_SubzoneHowlingZiggurat()
+
+	end
+--	Isle of Tribulations
+	function FinalFantasylization_SubzoneIsleofTribulations()
+
+	end
+--	Lake Elrendar
+	function FinalFantasylization_SubzoneLakeElrendar()
+
+	end
+--	Sanctum of the Moon
+	function FinalFantasylization_SubzoneSanctumoftheMoon()
+
+	end
+--	Shalandis Isle
+	function FinalFantasylization_SubzoneShalandisIsle()
+
+	end
+--	Suncrown Village
+	function FinalFantasylization_SubzoneSuncrownVillage()
+
+	end
+--	Sungraze Peak
+	function FinalFantasylization_SubzoneSungrazePeak()
+
+	end
+--	Thalassian Pass
+	function FinalFantasylization_SubzoneThalassianPass()
+
+	end
+--	Tower of the Damned
+	function FinalFantasylization_SubzoneToweroftheDamned()
+
+	end
+--	Underlight Mines
+	function FinalFantasylization_SubzoneUnderlightMines()
+
+	end
+--	Windrunner Spire
+	function FinalFantasylization_SubzoneWindrunnerSpire()
+
+	end
+--	Windrunner Village
+	function FinalFantasylization_SubzoneWindrunnerVillage()
+
+	end
+--	Zeb'Nowa
+	function FinalFantasylization_SubzoneZebNowa()
+
+	end
+--	Zeb'Sora
+	function FinalFantasylization_SubzoneZebSora()
+
+	end
+--	Zeb'Tela
+	function FinalFantasylization_SubzoneZebTela()
+
+	end
+--'==========================================================================================
 --' Eastern Kingdoms Zones: Gilneas : Worgen
 --'==========================================================================================
 --	Zone: Gilneas
@@ -1599,7 +1742,7 @@ FinalFantasylization_HostileSong()
 --'==========================================================================================
 --	Zone: Gilneas City
 	function FinalFantasylization_EasternKingdomsGilneasCity()
-
+		FinalFantasylization_BattleGround()
 	end
 --	SUBZONES:
 --	Cathedral Quarter
@@ -1627,7 +1770,246 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_GilneasCity_SubzoneStonewardPrison()
 		FinalFantasylization_BattleGround()
 	end
-	
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Loch Modan : Alliance
+--'==========================================================================================
+--	Zone: Loch Modan
+	function FinalFantasylization_EasternKingdomsLochModan()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SwampSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--	TOWNS:
+--	Alliance:
+--		Algaz Station
+	function FinalFantasylization_AllianceTownAlgazStation()
+		FinalFantasylization_AllianceTowns()
+	end
+--		The Farstrider Lodge
+	function FinalFantasylization_AllianceTownTheFarstriderLodge()
+		FinalFantasylization_AllianceTowns()
+	end
+--		Thelsamar
+	function FinalFantasylization_AllianceTownThelsamar()
+		FinalFantasylization_AllianceTowns()
+	end
+--			Stoutlager Inn
+	function FinalFantasylization_AllianceTownStoutlagerInn()
+		FinalFantasylization_AllianceTowns()
+	end
+--	SUBZONES:
+--	Dun Algaz
+	function FinalFantasylization_SubzoneDunAlgaz()
+
+	end
+--	Grizzlepaw Ridge
+	function FinalFantasylization_SubzoneGrizzlepawRidge()
+
+	end
+--	Ironband's Excavation Site
+	function FinalFantasylization_SubzoneIronbandsExcavationSite()
+
+	end
+--		Ironwing Cavern
+	function FinalFantasylization_SubzoneIronwingCavern()
+
+	end
+--	The Loch
+	function FinalFantasylization_SubzoneTheLoch()
+
+	end
+--		Twilight Camp
+	function FinalFantasylization_SubzoneTwilightCamp()
+
+	end
+--	Mo'grosh Stronghold
+	function FinalFantasylization_SubzoneMogroshStronghold()
+
+	end
+--	North Gate Pass
+	function FinalFantasylization_SubzoneNorthGatePass()
+
+	end
+--	Silver Stream Mine
+	function FinalFantasylization_SubzoneSilverStreamMine()
+
+	end
+--	South Gate Pass
+	function FinalFantasylization_SubzoneSouthGatePass()
+
+	end
+--	Stonesplinter Valley
+	function FinalFantasylization_SubzoneStonesplinterValley()
+
+	end
+--	Stonewrought Dam
+	function FinalFantasylization_SubzoneStonewroughtDam()
+
+	end
+--	Valley of Kings
+	function FinalFantasylization_SubzoneValleyofKings()
+
+	end
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Redridge Mountains
+--'==========================================================================================
+--	Zone: Redridge Mountains
+	function FinalFantasylization_EasternKingdomsRedridgeMountains()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SandSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	TOWNS:
+--	Alliance:
+--		Camp Everstill
+	function FinalFantasylization_AllianceTownCampEverstill()
+		FinalFantasylization_AllianceTowns()
+	end
+--		Lakeshire
+	function FinalFantasylization_AllianceTownLakeshire()
+		FinalFantasylization_AllianceTowns()
+	end
+--			Lakeshire Inn
+	function FinalFantasylization_AllianceTownLakeshireInn()
+		FinalFantasylization_AllianceTowns()
+	end
+--			Lakeshire Town Hall
+	function FinalFantasylization_AllianceTownLakeshireTownHall()
+		FinalFantasylization_AllianceTowns()
+	end
+--	SUBZONES:
+--	Alther's Mill
+	function FinalFantasylization_SubzoneAlthersMill()
+
+	end
+--	Galardell Valley
+	function FinalFantasylization_SubzoneGalardellValley()
+
+	end
+--	Lake Everstill
+	function FinalFantasylization_SubzoneLakeEverstill()
+
+	end
+--	Lakeridge Highway
+	function FinalFantasylization_SubzoneLakeridgeHighway()
+
+	end
+--	Redridge Canyons
+	function FinalFantasylization_SubzoneRedridgeCanyons()
+
+	end
+--	Render's Camp
+	function FinalFantasylization_SubzoneRendersCamp()
+
+	end
+--		Render's Rock
+	function FinalFantasylization_SubzoneRendersRock()
+
+	end
+--	Render's Valley
+	function FinalFantasylization_SubzoneRendersValley()
+
+	end
+--	Redridge Highway
+	function FinalFantasylization_SubzoneRedridgeHighway()
+
+	end
+--	Rethban Caverns
+	function FinalFantasylization_SubzoneRethbanCaverns()
+
+	end
+--	Shalewind Canyon
+	function FinalFantasylization_SubzoneShalewindCanyon()
+
+	end
+--	Stonewatch
+	function FinalFantasylization_SubzoneStonewatch()
+
+	end
+--		Stonewatch Keep
+	function FinalFantasylization_SubzoneStonewatchKeep()
+
+	end
+--		Stonewatch Tower
+	function FinalFantasylization_SubzoneStonewatchTower()
+
+	end
+--	Stonewatch Falls
+	function FinalFantasylization_SubzoneStonewatchFalls()
+
+	end
+--	Three Corners
+	function FinalFantasylization_SubzoneThreeCorners()
+
+	end
+--	Tower of Ilgalar
+	function FinalFantasylization_SubzoneTowerofIlgalar()
+
+	end
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Ruins of Gilneas : Undead
+--'==========================================================================================
+--	Zone: Ruins of Gilneas
+	function FinalFantasylization_EasternKingdomsRuinsofGilneas()
+		FinalFantasylization_ForestSong()
+	end
+--	Undead:
+--		TOWN:
+--			Forsaken Forward Command
+	function FinalFantasylization_HordeTownForsakenForwardCommand()
+		FinalFantasylization_HordeTowns()
+	end
+--		SUBZONES:
+--		7th Legion Submarine
+	function FinalFantasylization_Subzone7thLegionSubmarine()
+
+	end
+--		Dreadwatch Outpost
+	function FinalFantasylization_SubzoneDreadwatchOutpost()
+
+	end
+--		Emberstone Mine
+	function FinalFantasylization_SubzoneEmberstoneMine()
+
+	end
+--		Emberstone Village
+	function FinalFantasylization_SubzoneEmberstoneVillage()
+
+	end
+--		Gilneas City
+	function FinalFantasylization_SubzoneGilneasCity()
+
+	end
+--			Light's Dawn Cathedral
+	function FinalFantasylization_SubzoneLightsDawnCathedral()
+
+	end
+--			Stoneward Prison
+	function FinalFantasylization_SubzoneStonewardPrison()
+
+	end
+--		The Greymane Wall
+	function FinalFantasylization_SubzoneTheGreymaneWall()
+
+	end
+--		Northern Headlands
+	function FinalFantasylization_SubzoneNorthernHeadlands()
+
+	end
+--		Rutsak's Guard
+	function FinalFantasylization_SubzoneRutsaksGuard()
+
+	end
+--		Tempest's Reach
+	function FinalFantasylization_SubzoneTempestsReach()
+
+	end	
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Silverpine Forest
 --'==========================================================================================
@@ -2039,7 +2421,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Stendel's Pond
 	function FinalFantasylization_SubzoneStendelsPond()
-	
+
 	end
 --	Westfall Lighthouse
 	function FinalFantasylization_SubzoneWestfallLighthouse()
@@ -2125,6 +2507,213 @@ FinalFantasylization_HostileSong()
 		FinalFantasylization_debugMsg("ExodarSong")
 	end
 
+--'==========================================================================================
+--' Kalimdor Zones: Azshara : Horde
+--'==========================================================================================
+--	Zone: Azshara
+	function FinalFantasylization_KalimdorAzshara()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	TOWNS:
+--	Horde:
+--		Bilgewater Harbor
+	function FinalFantasylization_HordeTownBilgewaterHarbor()
+		FinalFantasylization_HordeTowns()
+	end
+--		Gallywix Pleasure Palace
+	function FinalFantasylization_HordeTownGallywixPleasurePalace()
+		FinalFantasylization_HordeTowns()
+	end
+--		Northern Rocketway Exchange
+	function FinalFantasylization_HordeTownNorthernRocketwayExchange()
+		FinalFantasylization_HordeTowns()
+	end
+--		Northern Rocketway Terminus
+	function FinalFantasylization_HordeTownNorthernRocketwayTerminus()
+		FinalFantasylization_HordeTowns()
+	end
+--		Orgrimmar Rear Gate
+	function FinalFantasylization_HordeTownOrgrimmarRearGate()
+		FinalFantasylization_HordeTowns()
+	end
+--		Orgrimmar Rocketway Exchange
+	function FinalFantasylization_HordeTownOrgrimmarRocketwayExchange()
+		FinalFantasylization_HordeTowns()
+	end
+--		The Secret Lab
+	function FinalFantasylization_HordeTownTheSecretLab()
+		FinalFantasylization_HordeTowns()
+	end
+--		Southern Rocketway Terminus
+	function FinalFantasylization_HordeTownSouthernRocketwayTerminus()
+		FinalFantasylization_HordeTowns()
+	end
+--		Valormok
+	function FinalFantasylization_HordeTownValormok()
+		FinalFantasylization_HordeTowns()
+	end
+--	SUBZONES:
+--	The Ancient Grove
+	function FinalFantasylization_SubzoneTheAncientGrove()
+
+	end
+--	*Arcane Pinnacle
+	function FinalFantasylization_SubzoneArcanePinnacle()
+
+	end
+--	Bay of Storms
+	function FinalFantasylization_SubzoneBayofStorms()
+
+	end
+--		Hetaera's Clutch
+	function FinalFantasylization_SubzoneHetaerasClutch()
+
+	end
+--		Scalebeard's Cave
+	function FinalFantasylization_SubzoneScalebeardsCave()
+
+	end
+--	*Bear's Head
+	function FinalFantasylization_SubzoneBearsHead()
+
+	end
+--	Bitter Reaches
+	function FinalFantasylization_SubzoneBitterReaches()
+
+	end
+--	Blackmaw Hold
+	function FinalFantasylization_SubzoneBlackmawHold()
+
+	end
+--	*Darnassian Base Camp
+	function FinalFantasylization_SubzoneDarnassianBaseCamp()
+
+	end
+--	Forlorn Ridge
+	function FinalFantasylization_SubzoneForlornRidge()
+
+	end
+--	The Great Sea
+	function FinalFantasylization_SubzoneTheGreatSea()
+
+	end
+--	Haldarr Encampment
+	function FinalFantasylization_SubzoneHaldarrEncampment()
+
+	end
+--	Horizon Scout
+	function FinalFantasylization_SubzoneHorizonScout()
+
+	end
+--	*Hull of the Foebreaker
+	function FinalFantasylization_SubzoneHulloftheFoebreaker()
+
+	end
+--	Jagged Reef
+	function FinalFantasylization_SubzoneJaggedReef()
+
+	end
+--	Lake Mennar
+	function FinalFantasylization_SubzoneLakeMennar()
+
+	end
+--	Legash Encampment
+	function FinalFantasylization_SubzoneLegashEncampment()
+
+	end
+--	Mountainfoot Strip Mine
+	function FinalFantasylization_SubzoneMountainfootStripMine()
+
+	end
+--	Ravencrest Monument
+	function FinalFantasylization_SubzoneRavencrestMonument()
+
+	end
+--	Ruins of Arkkoran
+	function FinalFantasylization_SubzoneRuinsofArkkoran()
+
+	end
+--	Ruins of Eldarath
+	function FinalFantasylization_SubzoneRuinsofEldarath()
+
+	end
+--		Temple of Zin-Malor
+	function FinalFantasylization_SubzoneTempleofZinMalor()
+
+	end
+--	Ruins of Nordressa
+	function FinalFantasylization_SubzoneRuinsofNordressa()
+
+	end
+--	The Ruined Reaches
+	function FinalFantasylization_SubzoneTheRuinedReaches()
+
+	end
+--		Rethress Sanctum
+	function FinalFantasylization_SubzoneRethressSanctum()
+
+	end
+--	Sable Ridge
+	function FinalFantasylization_SubzoneSableRidge()
+
+	end
+--	Scalebeard's Cave
+	function FinalFantasylization_SubzoneScalebeardsCave()
+
+	end
+--	Shadowsong Shrine
+	function FinalFantasylization_SubzoneShadowsongShrine()
+
+	end
+--	The Shattered Strand
+	function FinalFantasylization_SubzoneTheShatteredStrand()
+
+	end
+--	Southfury River
+	function FinalFantasylization_SubzoneSouthfuryRiver()
+
+	end
+--	Southridge Beach
+	function FinalFantasylization_SubzoneSouthridgeBeach()
+
+	end
+--	Storm Cliffs
+	function FinalFantasylization_SubzoneStormCliffs()
+
+	end
+--	*Talrendis Point
+	function FinalFantasylization_SubzoneTalrendisPoint()
+
+	end
+--	Timbermaw Hold
+	function FinalFantasylization_SubzoneTimbermawHold()
+
+	end
+--	Tower of Eldara
+	function FinalFantasylization_SubzoneTowerofEldara()
+
+	end
+--	Trial of Fire
+	function FinalFantasylization_SubzoneTrialofFire()
+
+	end
+--	Trial of Frost
+	function FinalFantasylization_SubzoneTrialofFrost()
+
+	end
+--	Trial of Shadow
+	function FinalFantasylization_SubzoneTrialofShadow()
+
+	end
+--	Ursolan
+	function FinalFantasylization_SubzoneUrsolan()
+
+	end
 --'==========================================================================================
 --' Kalimdor Zones: Azuremyst Isle : Draenei
 --'==========================================================================================
@@ -2651,7 +3240,159 @@ FinalFantasylization_HostileSong()
 				FinalFantasylization_FriendlySong()
 			end
 	end
-	
+
+--'==========================================================================================
+--' Kalimdor Zones: Darkshore : Alliance
+--'==========================================================================================
+--	Zone: Darkshore
+	function FinalFantasylization_KalimdorDarkshore()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--	TOWNS:
+--	Alliance:
+--		Auberdine Refugee Camp
+	function FinalFantasylization_AllianceTownAuberdineRefugeeCamp()
+		FinalFantasylization_AllianceTowns()
+	end
+--		Grove of the Ancients
+	function FinalFantasylization_AllianceTownGroveoftheAncients()
+		FinalFantasylization_AllianceTowns()
+	end
+--		Lor'danel
+	function FinalFantasylization_AllianceTownLordanel()
+		FinalFantasylization_AllianceTowns()
+	end
+-- Horde:
+--		Shatterspear Vale
+	function FinalFantasylization_HordeTownShatterspearVale()
+		FinalFantasylization_HordeTowns()
+	end
+--		Shatterspear War Camp
+	function FinalFantasylization_HordeTownShatterspearWarCamp()
+		FinalFantasylization_HordeTowns()
+	end
+--	SUBZONES:
+--	Ameth'Aran
+	function FinalFantasylization_SubzoneAmethAran()
+
+	end
+--	Bashal'Aran
+	function FinalFantasylization_SubzoneBashalAran()
+
+	end
+--	Bashal'Aran Collapse
+	function FinalFantasylization_SubzoneBashalAranCollapse()
+
+	end
+--	Blackwood Camp
+	function FinalFantasylization_SubzoneBlackwoodCamp()
+
+	end
+--	Blackwood Den
+	function FinalFantasylization_SubzoneBlackwoodDen()
+
+	end
+--	Burning Strand
+	function FinalFantasylization_SubzoneBurningStrand()
+
+	end
+--	Cliffspring Falls
+	function FinalFantasylization_SubzoneCliffspringFalls()
+
+	end
+--	Cliffspring Hollow
+	function FinalFantasylization_SubzoneCliffspringHollow()
+
+	end
+--	Cliffspring River
+	function FinalFantasylization_SubzoneCliffspringRiver()
+
+	end
+--	Earthshatter Cavern
+	function FinalFantasylization_SubzoneEarthshatterCavern()
+
+	end
+--	The Eye of the Vortex
+	function FinalFantasylization_SubzoneTheEyeoftheVortex()
+
+	end
+--	The Long Wash
+	function FinalFantasylization_SubzoneTheLongWash()
+
+	end
+--	The Master's Glaive
+	function FinalFantasylization_SubzoneTheMastersGlaive()
+
+	end
+--	Maw of the Void
+	function FinalFantasylization_SubzoneMawoftheVoid()
+
+	end
+--	Mist's Edge
+	function FinalFantasylization_SubzoneMistsEdge()
+
+	end
+--	Moontouched Den
+	function FinalFantasylization_SubzoneMoontouchedDen()
+
+	end
+--	Nazj'vel
+	function FinalFantasylization_SubzoneNazjvel()
+
+	end
+--	Remtravel's Excavation
+	function FinalFantasylization_SubzoneRemtravelsExcavation()
+
+	end
+--	Ruins of Auberdine
+	function FinalFantasylization_SubzoneRuinsofAuberdine()
+
+	end
+--	Ruins of Lornesta
+	function FinalFantasylization_SubzoneRuinsofLornesta()
+
+	end
+--	Ruins of Mathystra
+	function FinalFantasylization_SubzoneRuinsofMathystra()
+
+	end
+--	Shatterspear Pass
+	function FinalFantasylization_SubzoneShatterspearPass()
+
+	end
+--	Tower of Althalaxx
+	function FinalFantasylization_SubzoneTowerofAlthalaxx()
+
+	end
+--	Twilight Shore
+	function FinalFantasylization_SubzoneTwilightShore()
+
+	end
+--	Twilight Vale
+	function FinalFantasylization_SubzoneTwilightVale()
+
+	end
+--	The Veiled Sea
+	function FinalFantasylization_SubzoneTheVeiledSea()
+
+	end
+--	Wildbend River
+	function FinalFantasylization_SubzoneWildbendRiver()
+
+	end
+--	Withering Thicket
+	function FinalFantasylization_SubzoneWitheringThicket()
+
+	end
+--	Wreckage of the Silver Dawning
+	function FinalFantasylization_SubzoneWreckageoftheSilverDawning()
+
+	end	
 --'==========================================================================================
 --' Kalimdor Zones: Durotar : Horde
 --'==========================================================================================
@@ -2928,6 +3669,119 @@ FinalFantasylization_HostileSong()
 	end
 
 --'==========================================================================================
+--' Kalimdor Zones: Northern Barrens : Horde
+--'==========================================================================================
+--	Zone: Northern Barrens
+	function FinalFantasylization_KalimdorNorthernBarrens()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SandSong()
+			else
+				FinalFantasylization_FriendlySong()
+			end
+	end
+--	TOWNS:
+--	Alliance:
+--		Honor's Stand
+	function FinalFantasylization_AllianceTownHonorsStand()
+		FinalFantasylization_AllianceTowns()
+	end
+--	Horde:
+--		The Crossroads
+	function FinalFantasylization_HordeTownTheCrossroads()
+		FinalFantasylization_HordeTowns()
+	end
+--		Far Watch Post
+	function FinalFantasylization_HordeTownFarWatchPost()
+		FinalFantasylization_HordeTowns()
+	end
+--		Grol'dom Farm
+	function FinalFantasylization_HordeTownGroldomFarm()
+		FinalFantasylization_HordeTowns()
+	end
+--		Mor'shan Base Camp
+	function FinalFantasylization_HordeTownMorshanBaseCamp()
+		FinalFantasylization_HordeTowns()
+	end
+--		The Mor'shan Rampart
+	function FinalFantasylization_HordeTownTheMorshanRampart()
+		FinalFantasylization_HordeTowns()
+	end
+--		Nozzlepot's Outpost
+	function FinalFantasylization_HordeTownNozzlepotsOutpost()
+		FinalFantasylization_HordeTowns()
+	end
+--	Neutral:
+--		Ratchet
+	function FinalFantasylization_NeutralTownRatchet()
+		FinalFantasylization_NeutralTowns()
+	end
+--	SUBZONES:		
+--	Boulder Lode Mine
+	function FinalFantasylization_SubzoneBoulderLodeMine()
+
+	end
+--	Dreadmist Den
+	function FinalFantasylization_SubzoneDreadmistDen()
+
+	end
+--	Dreadmist Peak
+	function FinalFantasylization_SubzoneDreadmistPeak()
+
+	end
+--	The Dry Hills
+	function FinalFantasylization_SubzoneTheDryHills()
+
+	end
+--	The Forgotten Pools
+	function FinalFantasylization_SubzoneTheForgottenPools()
+
+	end
+--	Fray Island
+	function FinalFantasylization_SubzoneFrayIsland()
+
+	end
+--	Gold Road
+	function FinalFantasylization_SubzoneGoldRoad()
+
+	end
+--	The Great Sea
+	function FinalFantasylization_SubzoneTheGreatSea()
+
+	end
+--	Lushwater Oasis
+	function FinalFantasylization_SubzoneLushwaterOasis()
+
+	end
+--	The Merchant Coast
+	function FinalFantasylization_SubzoneTheMerchantCoast()
+
+	end
+--	Shrine of the Fallen Warrior
+	function FinalFantasylization_SubzoneShrineoftheFallenWarrior()
+
+	end
+--	The Sludge Fen
+	function FinalFantasylization_SubzoneTheSludgeFen()
+
+	end
+--	Southern Gold Road
+	function FinalFantasylization_SubzoneSouthernGoldRoad()
+
+	end
+--	Southfury River
+	function FinalFantasylization_SubzoneSouthfuryRiver()
+
+	end
+--	Thorn Hill
+	function FinalFantasylization_SubzoneThornHill()
+
+	end
+--	The Tidus Stair
+	function FinalFantasylization_SubzoneTheTidusStair()
+
+	end
+--'==========================================================================================
 --' Kalimdor Zones: Teldrassil
 --'==========================================================================================
 --	Zone: Teldrassil
@@ -3081,7 +3935,153 @@ FinalFantasylization_HostileSong()
 --		The Pipe
 	function FinalFantasylization_Goblin_Start_ThePipe()
 
-	end	
+	end
+--'==========================================================================================
+--' Maelstrom Zones: Lost Isles : Goblin
+--'==========================================================================================
+--	Zone: Lost Isles
+	function FinalFantasylization_MaelstromLostIsles()
+
+	end
+--	Goblin Start:
+--	TOWNS:
+--	Alliance Beachhead
+	function FinalFantasylization_Goblin_Start_AllianceBeachhead()
+		FinalFantasylization_HordeTowns()
+	end
+--	Horde Base Camp
+	function FinalFantasylization_Goblin_Start_HordeBaseCamp()
+		FinalFantasylization_HordeTowns()
+	end
+--	Shipwreck Shore
+	function FinalFantasylization_Goblin_Start_ShipwreckShore()
+		FinalFantasylization_HordeTowns()
+	end
+--	Town-In-A-Box
+	function FinalFantasylization_Goblin_Start_TownInABox()
+		FinalFantasylization_HordeTowns()
+	end
+--	Warchief's Lookout
+	function FinalFantasylization_Goblin_Start_WarchiefsLookout()
+		FinalFantasylization_HordeTowns()
+	end
+--	Wild Overlook
+	function FinalFantasylization_Goblin_Start_WildOverlook()
+		FinalFantasylization_HordeTowns()
+	end
+--	SUBZONES:
+--	Bilgewater Lumber Yard
+	function FinalFantasylization_Goblin_Start_BilgewaterLumberYard()
+
+	end
+--	Dire Strait
+	function FinalFantasylization_Goblin_Start_DireStrait()
+
+	end
+--	Draka's Fury
+	function FinalFantasylization_Goblin_Start_DrakasFury()
+
+	end
+--	Gallywix Docks
+	function FinalFantasylization_Goblin_Start_GallywixDocks()
+
+	end
+--	Gallywix Labor Mine
+	function FinalFantasylization_Goblin_Start_GallywixLaborMine()
+
+	end
+--	The Great Sea
+	function FinalFantasylization_Goblin_Start_TheGreatSea()
+
+	end
+--	Kaja'mite Cavern
+	function FinalFantasylization_Goblin_Start_KajamiteCavern()
+
+	end
+--	KTC Oil Platform
+	function FinalFantasylization_Goblin_Start_KTCOilPlatform()
+
+	end
+--	Landing Site
+	function FinalFantasylization_Goblin_Start_LandingSite()
+
+	end
+--	Lost Caldera
+	function FinalFantasylization_Goblin_Start_LostCaldera()
+
+	end
+--	Lost Peak
+	function FinalFantasylization_Goblin_Start_LostPeak()
+
+	end
+--	Oomlot Village
+	function FinalFantasylization_Goblin_Start_OomlotVillage()
+
+	end
+--	Oostan
+	function FinalFantasylization_Goblin_Start_Oostan()
+
+	end
+--	Oostan Nord
+	function FinalFantasylization_Goblin_Start_OostanNord()
+
+	end
+--	Oostan Ost
+	function FinalFantasylization_Goblin_Start_OostanOst()
+
+	end
+--	Oostan Sor
+	function FinalFantasylization_Goblin_Start_OostanSor()
+
+	end
+--	Raptor Rise
+	function FinalFantasylization_Goblin_Start_RaptorRise()
+
+	end
+--	Ruins of Vashj'elan
+	function FinalFantasylization_Goblin_Start_RuinsofVashjelan()
+
+	end
+--	The Savage Glen
+	function FinalFantasylization_Goblin_Start_TheSavageGlen()
+
+	end
+--	Scorched Gully
+	function FinalFantasylization_Goblin_Start_ScorchedGully()
+
+	end
+--	Sky Falls
+	function FinalFantasylization_Goblin_Start_SkyFalls()
+
+	end
+--	The Slave Pits
+	function FinalFantasylization_Goblin_Start_TheSlavePits()
+
+	end
+--	Tranquil Coast
+	function FinalFantasylization_Goblin_Start_TranquilCoast()
+
+	end
+--	Vashj'elan Spawning Pool
+	function FinalFantasylization_Goblin_Start_VashjelanSpawningPool()
+
+	end
+--	Vengeance Wake
+	function FinalFantasylization_Goblin_Start_VengeanceWake()
+
+	end
+--	Verdant Highlands
+	function FinalFantasylization_Goblin_Start_VerdantHighlands()
+
+	end
+--	The Vicious Vale
+	function FinalFantasylization_Goblin_Start_TheViciousVale()
+
+	end
+--	Volcanoth's Lair
+	function FinalFantasylization_Goblin_Start_VolcanothsLair()
+
+	end
 
 	--#############
 	--## PVP ZONES
