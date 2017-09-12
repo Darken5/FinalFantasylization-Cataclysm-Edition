@@ -925,8 +925,8 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================	
 			elseif not ( IsResting() ) and ( ZoneName == Z["Kezan"] ) then				-- Kezan
 				FinalFantasylization_MaelstromZones_Kezan(SubZoneName)					--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Lost Isles"] ) then			-- Lost Isles
-				FinalFantasylization_MaelstromZones_LostIsles(SubZoneName)				--		_|_
+			elseif not ( IsResting() ) and ( ZoneName == Z["The Lost Isles"] ) then		-- The Lost Isles
+				FinalFantasylization_MaelstromZones_TheLostIsles(SubZoneName)			--		_|_
 
 			elseif not ( IsResting() ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")

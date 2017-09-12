@@ -3335,7 +3335,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Mist's Edge
 	function FinalFantasylization_SubzoneMistsEdge()
-
+		FinalFantasylization_WaterSong()
 	end
 --	Moontouched Den
 	function FinalFantasylization_SubzoneMoontouchedDen()

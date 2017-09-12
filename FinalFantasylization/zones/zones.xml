@@ -35,5 +35,5 @@
 	
 	<!--Maelstrom-->
 	<Script file="MaelstromZone_Kezan.lua"/>
-	<Script file="MaelstromZone_LostIsles.lua"/>
+	<Script file="MaelstromZone_TheLostIsles.lua"/>
 </Ui>
