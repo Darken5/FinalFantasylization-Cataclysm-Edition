@@ -9,9 +9,6 @@ function FinalFantasylization_KalimdorZones_Darkshore()
 --		Auberdine Refugee Camp		FinalFantasylization_AllianceTownAuberdineRefugeeCamp()
 --		Grove of the Ancients		FinalFantasylization_AllianceTownGroveoftheAncients()
 --		Lor'danel					FinalFantasylization_AllianceTownLordanel()
--- Horde:
---		Shatterspear Vale			FinalFantasylization_HordeTownShatterspearVale()
---		Shatterspear War Camp		FinalFantasylization_HordeTownShatterspearWarCamp()
 --
 --	SUBZONES:
 --	Ameth'Aran					FinalFantasylization_SubzoneAmethAran()
@@ -19,7 +16,7 @@ function FinalFantasylization_KalimdorZones_Darkshore()
 --	Bashal'Aran Collapse		FinalFantasylization_SubzoneBashalAranCollapse()
 --	Blackwood Camp				FinalFantasylization_SubzoneBlackwoodCamp()
 --	Blackwood Den				FinalFantasylization_SubzoneBlackwoodDen()
---	Burning Strand				FinalFantasylization_SubzoneBurningStrand()
+--	The Blazing Strand			FinalFantasylization_SubzoneTheBlazingStrand()
 --	Cliffspring Falls			FinalFantasylization_SubzoneCliffspringFalls()
 --	Cliffspring Hollow			FinalFantasylization_SubzoneCliffspringHollow()
 --	Cliffspring River			FinalFantasylization_SubzoneCliffspringRiver()
@@ -36,6 +33,8 @@ function FinalFantasylization_KalimdorZones_Darkshore()
 --	Ruins of Lornesta			FinalFantasylization_SubzoneRuinsofLornesta()
 --	Ruins of Mathystra			FinalFantasylization_SubzoneRuinsofMathystra()
 --	Shatterspear Pass			FinalFantasylization_SubzoneShatterspearPass()
+--	Shatterspear Vale			FinalFantasylization_SubzoneShatterspearVale()
+--	Shatterspear War Camp		FinalFantasylization_SubzoneShatterspearWarCamp()
 --	Tower of Althalaxx			FinalFantasylization_SubzoneTowerofAlthalaxx()
 --	Twilight Shore				FinalFantasylization_SubzoneTwilightShore()
 --	Twilight Vale				FinalFantasylization_SubzoneTwilightVale()
@@ -89,42 +88,6 @@ function FinalFantasylization_KalimdorZones_Darkshore()
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_AllianceTownLordanel()
 			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Darkshore Horde Town: Shatterspear Vale
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Shatterspear Vale"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownShatterspearVale()
-			elseif ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Darkshore Horde Town: Shatterspear War Camp
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Shatterspear War Camp"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownShatterspearWarCamp()
-			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -199,13 +162,13 @@ function FinalFantasylization_KalimdorZones_Darkshore()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Darkshore Subzone: Burning Strand
+	--' Darkshore Subzone: The Blazing Strand
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Burning Strand"] ) then
+	elseif ( SubZoneName == SZ["The Blazing Strand"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBurningStrand()
+			FinalFantasylization_SubzoneTheBlazingStrand()
 		else
 			return
 		end
@@ -414,6 +377,32 @@ function FinalFantasylization_KalimdorZones_Darkshore()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneShatterspearPass()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Darkshore Subzone: Shatterspear Vale
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Shatterspear Vale"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneShatterspearVale()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Darkshore Subzone: Shatterspear War Camp
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Shatterspear War Camp"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneShatterspearWarCamp()
 		else
 			return
 		end
