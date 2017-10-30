@@ -1165,7 +1165,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Northshire Vineyards			
 	function FinalFantasylization_Human_Start_NorthshireVineyards()
-FinalFantasylization_HostileSong();
+		FinalFantasylization_HostileSong();
 	end
 --	Alliance: 
 --		Eastvale Logging Camp
