@@ -173,7 +173,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayFile(S .. CombatSound );
 		FinalFantasylization_debugMsg("CombatSound")
 	end
-	function FinalFantasylization_LevelUpSong()
+	function FinalFantasylization_LevelUpSong();
 		FinalFantasylization_PlayFile(S .. LevelUpSong );
 		FinalFantasylization_debugMsg("LevelUpSong")
 	end
@@ -186,22 +186,22 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--## BATTLEGROUNDS
 	--########################
 	function FinalFantasylization_AlteracValleyBG()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 	function FinalFantasylization_ArathiBasinBG()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 	function FinalFantasylization_EyeoftheStormBG()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 	function FinalFantasylization_StrandsoftheAncientsBG()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 	function FinalFantasylization_WarsongGulchBG()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 	function FinalFantasylization_IsleOfConquestBG()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 --###########################################################################################
 --##   EASTERN KINGDOMS ZONES
@@ -417,25 +417,25 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsAbyssalDepths()
 		local x = math.random(1, 4);
 			if x == 1 then
-				FinalFantasylization_LakeSong()
+				FinalFantasylization_LakeSong();
 			elseif x == 2 then
-				FinalFantasylization_WaterSong()
+				FinalFantasylization_WaterSong();
 			elseif x == 3 then
-				FinalFantasylization_Swimming(0)
+				FinalFantasylization_Swimming(0);
 			else
-				FinalFantasylization_Swimming(1)
+				FinalFantasylization_Swimming(1);
 			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Darkbreak Cove
 	function FinalFantasylization_AllianceTownDarkbreakCove()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	Horde:
 --		Tenebrous Cavern
 	function FinalFantasylization_HordeTownTenebrousCavern()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	Abandoned Reef
@@ -521,19 +521,19 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsArathiHighlands()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_ContestedSong()
+				FinalFantasylization_ContestedSong();
 			end
 	end
 --	TOWNS:
 --	Alliance: Refuge Pointe
 	function FinalFantasylization_AllianceTownRefugePointe()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	Horde: Hammerfall
 	function FinalFantasylization_HordeTownHammerfall()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	Blackwater Shipwrecks
@@ -630,7 +630,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Witherbark Caverns
 	function FinalFantasylization_SubzoneWitherbarkCaverns()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	Witherbark Village
 	function FinalFantasylization_SubzoneWitherbarkVillage()
@@ -643,38 +643,38 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsBadlands()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_SandSong()
+				FinalFantasylization_SandSong();
 			else
-				FinalFantasylization_ContestedSong()
+				FinalFantasylization_ContestedSong();
 			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Dragon's Mouth
 	function FinalFantasylization_AllianceTownDragonsMouth()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Dustwind Dig
 	function FinalFantasylization_AllianceTownDustwindDig()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	Horde:
 --		Bloodwatcher Point
 	function FinalFantasylization_HordeTownBloodwatcherPoint()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		New Kargath
 	function FinalFantasylization_HordeTownNewKargath()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Neutral:
 --		Fuselight
 	function FinalFantasylization_NeutralTownFuselight()
-		FinalFantasylization_NeutralTowns()
+		FinalFantasylization_NeutralTowns();
 	end
 --		Fuselight-by-the-Sea
 	function FinalFantasylization_NeutralTownFuselightbytheSea()
-		FinalFantasylization_NeutralTowns()
+		FinalFantasylization_NeutralTowns();
 	end
 --	SUBZONES:
 --	Agmond's End
@@ -772,29 +772,29 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsBlastedLands()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_SandSong()
+				FinalFantasylization_SandSong();
 			else
-				FinalFantasylization_ContestedSong()
+				FinalFantasylization_ContestedSong();
 			end
 	end
 --	TOWNS:
 --	Alliance: 
 --		Nethergarde Keep
 	function FinalFantasylization_AllianceTownNethergardeKeep()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Surwich
 	function FinalFantasylization_AllianceTownSurwich()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	Horde:
 --		Dreadmaul Hold
 	function FinalFantasylization_HordeTownDreadmaulHold()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Sunveil Excursion
 	function FinalFantasylization_HordeTownSunveilExcursion()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	Altar of Storms
@@ -856,30 +856,30 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsBurningSteppes()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_ContestedSong()
+				FinalFantasylization_ContestedSong();
 			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Morgan's Vigil
 	function FinalFantasylization_AllianceTownMorgansVigil()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	Horde:
 --		Flame Crest
 	function FinalFantasylization_HordeTownFlameCrest()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Neutral:
 --		Chiselgrip
 	function FinalFantasylization_NeutralTownChiselgrip()
-		FinalFantasylization_NeutralTowns()
+		FinalFantasylization_NeutralTowns();
 	end
 --		Flamestar Post
 	function FinalFantasylization_NeutralTownFlamestarPost()
-		FinalFantasylization_NeutralTowns()
+		FinalFantasylization_NeutralTowns();
 	end
 --	SUBZONES:
 --	Altar of Storms
@@ -951,7 +951,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Deeprun Tram
 	function FinalFantasylization_EasternKingdoms_DeeprunTram()
-		FinalFantasylization_FriendlySong()
+		FinalFantasylization_FriendlySong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Dun Morogh : Alliance
@@ -960,9 +960,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsDunMorogh()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_SnowSong()
+				FinalFantasylization_SnowSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
@@ -973,15 +973,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Coldridge Pass
 	function FinalFantasylization_Dwarf_Start_ColdridgePass()
-		FinalFantasylization_SnowSong()
+		FinalFantasylization_SnowSong();
 	end
 --		Coldridge Valley
 	function FinalFantasylization_Dwarf_Start_ColdridgeValley()
-		FinalFantasylization_SnowSong()
+		FinalFantasylization_SnowSong();
 	end
 --		Whitebeard's Encampment
 	function FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
-		FinalFantasylization_SnowSong()
+		FinalFantasylization_SnowSong();
 	end
 --	Gnome Start:
 --		Gnomeregan
@@ -1018,11 +1018,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Iceflow Lake
 	function FinalFantasylization_Gnome_Start_IceflowLake()
-		FinalFantasylization_SnowSong()
+		FinalFantasylization_SnowSong();
 	end
 --		The Toxic Airfield
 	function FinalFantasylization_Gnome_Start_TheToxicAirfield()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Alliance:
 --		Brewnall Village
@@ -1128,53 +1128,53 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsElwynnForest()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Human Start:
 --		Northshire Abbey			
 	function FinalFantasylization_Human_Start_NorthshireAbbey()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Hall of Arms			
 	function FinalFantasylization_Human_Start_HallofArms()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Library Wing			
 	function FinalFantasylization_Human_Start_LibraryWing()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Main Hall			
 	function FinalFantasylization_Human_Start_MainHall()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Echo Ridge Mine			
 	function FinalFantasylization_Human_Start_EchoRidgeMine()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --		Northshire River			
 	function FinalFantasylization_Human_Start_NorthshireRiver()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --		Northshire Valley			
 	function FinalFantasylization_Human_Start_NorthshireValley()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --		Northshire Vineyards			
 	function FinalFantasylization_Human_Start_NorthshireVineyards()
-FinalFantasylization_HostileSong()
+FinalFantasylization_HostileSong();
 	end
 --	Alliance: 
 --		Eastvale Logging Camp
 	function FinalFantasylization_AllianceTownEastvaleLoggingCamp()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Goldshire
 	function FinalFantasylization_AllianceTownGoldshire()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Lion's Pride Inn	(Inn)
 	function FinalFantasylization_AllianceInnLionsPrideInn()
@@ -1183,80 +1183,80 @@ FinalFantasylization_HostileSong()
 --	SUBZONES:
 --		Brackwell Pumpkin Patch
 	function FinalFantasylization_SubzoneBrackwellPumpkinPatch()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Crystal Lake
 	function FinalFantasylization_SubzoneCrystalLake()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --		Fargodeep Mine
 	function FinalFantasylization_SubzoneFargodeepMine()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --		Forest's Edge
 	function FinalFantasylization_SubzoneForestsEdge()
 	local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --		Goldtooth's Den
 	function FinalFantasylization_SubzoneGoldtoothsDen()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --		Hogger Hill
 	function FinalFantasylization_SubzoneHoggerHill()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --		Jasperlode Mine
 	function FinalFantasylization_SubzoneJasperlodeMine()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --		Jerod's Landing
 	function FinalFantasylization_SubzoneJerodsLanding()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --		The Maclure Vineyards
 	function FinalFantasylization_SubzoneTheMaclureVineyards()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Mirror Lake
 	function FinalFantasylization_SubzoneMirrorLake()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --		Mirror Lake Orchard
 	function FinalFantasylization_SubzoneMirrorLakeOrchard()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --		Ridgepoint Tower
 	function FinalFantasylization_SubzoneRidgepointTower()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Stone Cairn Lake
 	function FinalFantasylization_SubzoneStoneCairnLake()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --			Heroes' Vigil
 	function FinalFantasylization_SubzoneHeroesVigil()
@@ -1268,15 +1268,15 @@ FinalFantasylization_HostileSong()
 	end
 --		The Stonefield Farm
 	function FinalFantasylization_SubzoneTheStonefieldFarm()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Tower of Azora
 	function FinalFantasylization_SubzoneTowerofAzora()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --		Westbrook Garrison
@@ -1291,16 +1291,16 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_EasternKingdomsEversongWoods()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Blood Elf Start:
 --		Sunstrider Isle
 	function FinalFantasylization_BloodElf_Start_SunstriderIsle()
-		FinalFantasylization_FriendlySong()
+		FinalFantasylization_FriendlySong();
 	end
 --			Falthrien Academy
 	function FinalFantasylization_BloodElf_Start_FalthrienAcademy()
@@ -1314,28 +1314,28 @@ FinalFantasylization_HostileSong()
 	end
 --			The Sunspire
 	function FinalFantasylization_BloodElf_Start_TheSunspire()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Horde:
 --		Fairbreeze Village
 	function FinalFantasylization_HordeTownFairbreezeVillage()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Falconwing Square
 	function FinalFantasylization_HordeTownFalconwingSquare()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Farstrider Retreat
 	function FinalFantasylization_HordeTownFarstriderRetreat()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Saltheril's Haven
 	function FinalFantasylization_HordeTownSaltherilsHaven()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Thuron's Livery
 	function FinalFantasylization_HordeTownThuronsLivery()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	Azurebreeze Coast
@@ -1344,7 +1344,7 @@ FinalFantasylization_HostileSong()
 	end
 --	The Dead Scar
 	function FinalFantasylization_SubzoneTheDeadScar()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Duskwither Grounds
 	function FinalFantasylization_SubzoneDuskwitherGrounds()
@@ -1401,7 +1401,7 @@ FinalFantasylization_HostileSong()
 	end
 --		Feth's Way
 	function FinalFantasylization_SubzoneFethsWay()
-
+		FinalFantasylization_PlagueSong();
 	end
 --		Skulking Row
 	function FinalFantasylization_SubzoneSkulkingRow()
@@ -1454,24 +1454,24 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_EasternKingdomsGhostlands()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Horde:
 --		Farstrider Enclave
 	function FinalFantasylization_HordeTownFarstriderEnclave()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Sanctum of the Sun
 	function FinalFantasylization_HordeTownSanctumoftheSun()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Tranquillien
 	function FinalFantasylization_HordeTownTranquillien()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	Amani Catacombs
@@ -1595,25 +1595,25 @@ FinalFantasylization_HostileSong()
 --'==========================================================================================
 --	Zone: Gilneas
 	function FinalFantasylization_EasternKingdomsGilneas()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	TOWNS:
 --	Alliance:
 --		Duskhaven
 	function FinalFantasylization_AllianceTownDuskhaven()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Greymane Manor
 	function FinalFantasylization_AllianceTownGreymaneManor()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Keel Harbor
 	function FinalFantasylization_AllianceTownKeelHarbor()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Stormglen Village
 	function FinalFantasylization_AllianceTownStormglenVillage()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Aderic's Repose
@@ -1623,139 +1623,139 @@ FinalFantasylization_HostileSong()
 	end
 --	Allen Farmstead
 	function FinalFantasylization_SubzoneAllenFarmstead()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	The Bite
 	function FinalFantasylization_SubzoneTheBite()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	The Blackwald
 	function FinalFantasylization_SubzoneTheBlackwald()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	The Bradshaw Mill
 	function FinalFantasylization_SubzoneTheBradshawMill()
-		FinalFantasylization_ContestedSong()
+		FinalFantasylization_ContestedSong();
 	end
 --	Crowley Orchard
 	function FinalFantasylization_SubzoneCrowleyOrchard()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Crowley Stable Grounds
 	function FinalFantasylization_SubzoneCrowleyStableGrounds()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Duskmist Shore
 	function FinalFantasylization_SubzoneDuskmistShore()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Emberstone Mine
 	function FinalFantasylization_SubzoneEmberstoneMine()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	Emberstone Village
 	function FinalFantasylization_SubzoneEmberstoneVillage()
-		FinalFantasylization_HostileSong()
+		FinalFantasylization_HostileSong();
 	end
 --	Forsaken Forward Command
 	function FinalFantasylization_SubzoneForsakenForwardCommand()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Galewatch Lighthouse
 	function FinalFantasylization_SubzoneGalewatchLighthouse()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	The Greymane Wall
 	function FinalFantasylization_SubzoneTheGreymaneWall()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Hailwood Marsh
 	function FinalFantasylization_SubzoneHailwoodMarsh()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Hammond Farmstead
 	function FinalFantasylization_SubzoneHammondFarmstead()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Hayward Fishery
 	function FinalFantasylization_SubzoneHaywardFishery()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	The Headlands
 	function FinalFantasylization_SubzoneTheHeadlands()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	King's Gate
 	function FinalFantasylization_SubzoneKingsGate()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Koroth's Den
 	function FinalFantasylization_SubzoneKorothsDen()
-		FinalFantasylization_HostileSong()
+		FinalFantasylization_HostileSong();
 	end
 --	Livery Outpost
 	function FinalFantasylization_SubzoneLiveryOutpost()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Northern Headlands
 	function FinalFantasylization_SubzoneNorthernHeadlands()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Northgate River
 	function FinalFantasylization_SubzoneNorthgateRiver()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --	Northgate Woods
 	function FinalFantasylization_SubzoneNorthgateWoods()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Queen's Gate
 	function FinalFantasylization_SubzoneQueensGate()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Rygna's Lair
 	function FinalFantasylization_SubzoneRygnasLair()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Stagecoach Crash Site
 	function FinalFantasylization_SubzoneStagecoachCrashSite()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Tal'doren
 	function FinalFantasylization_SubzoneTaldoren()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Tempest's Reach
 	function FinalFantasylization_SubzoneTempestsReach()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Wahl Cottage
 	function FinalFantasylization_SubzoneWahlCottage()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Wood's End Cabin
 	function FinalFantasylization_SubzoneWoodsEndCabin()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Gilneas City : Worgen
 --'==========================================================================================
 --	Zone: Gilneas City
 	function FinalFantasylization_EasternKingdomsGilneasCity()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 --	SUBZONES:
 --	Cathedral Quarter
 	function FinalFantasylization_GilneasCity_SubzoneCathedralQuarter()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 --		Light's Dawn Cathedral
 	function FinalFantasylization_GilneasCity_SubzoneLightsDawnCathedral()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 --	Greymane Court
 	function FinalFantasylization_GilneasCity_SubzoneGreymaneCourt()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 --	Merchant Square
 	function FinalFantasylization_GilneasCity_SubzoneMerchantSquare()
@@ -1764,11 +1764,11 @@ FinalFantasylization_HostileSong()
 	end
 --	Military District
 	function FinalFantasylization_GilneasCity_SubzoneMilitaryDistrict()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 --		Stoneward Prison
 	function FinalFantasylization_GilneasCity_SubzoneStonewardPrison()
-		FinalFantasylization_BattleGround()
+		FinalFantasylization_BattleGround();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Loch Modan : Alliance
@@ -1777,28 +1777,28 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_EasternKingdomsLochModan()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_SwampSong()
+				FinalFantasylization_SwampSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Algaz Station
 	function FinalFantasylization_AllianceTownAlgazStation()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		The Farstrider Lodge
 	function FinalFantasylization_AllianceTownTheFarstriderLodge()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Thelsamar
 	function FinalFantasylization_AllianceTownThelsamar()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Stoutlager Inn
 	function FinalFantasylization_AllianceTownStoutlagerInn()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Dun Algaz
@@ -1860,28 +1860,28 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_EasternKingdomsRedridgeMountains()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_SandSong()
+				FinalFantasylization_SandSong();
 			else
-				FinalFantasylization_ContestedSong()
+				FinalFantasylization_ContestedSong();
 			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Camp Everstill
 	function FinalFantasylization_AllianceTownCampEverstill()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Lakeshire
 	function FinalFantasylization_AllianceTownLakeshire()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Lakeshire Inn
 	function FinalFantasylization_AllianceTownLakeshireInn()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Lakeshire Town Hall
 	function FinalFantasylization_AllianceTownLakeshireTownHall()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Alther's Mill
@@ -1957,13 +1957,13 @@ FinalFantasylization_HostileSong()
 --'==========================================================================================
 --	Zone: Ruins of Gilneas
 	function FinalFantasylization_EasternKingdomsRuinsofGilneas()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Undead:
 --		TOWN:
 --			Forsaken Forward Command
 	function FinalFantasylization_HordeTownForsakenForwardCommand()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		SUBZONES:
 --		7th Legion Submarine
@@ -2017,28 +2017,28 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_EasternKingdomsSilverpineForest()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			end
 	end
 --	TOWNS:
 --	Horde:
 --		The Forsaken Front					
 	function FinalFantasylization_HordeTownTheForsakenFront()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Forsaken High Command				
 	function FinalFantasylization_HordeTownForsakenHighCommand()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Forsaken Rear Guard					
 	function FinalFantasylization_HordeTownForsakenRearGuard()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		The Sepulcher						
 	function FinalFantasylization_HordeTownTheSepulcher()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	7th Legion Base Camp				
@@ -2059,15 +2059,15 @@ FinalFantasylization_HostileSong()
 	end
 --	The Dead Field						
 	function FinalFantasylization_SubzoneTheDeadField()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	The Decrepit Fields					
 	function FinalFantasylization_SubzoneTheDecrepitFields()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Deep Elem Mine						
 	function FinalFantasylization_SubzoneDeepElemMine()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	Gilneas Liberation Front Base Camp	
 	function FinalFantasylization_SubzoneGilneasLiberationFrontBaseCamp()
@@ -2075,7 +2075,7 @@ FinalFantasylization_HostileSong()
 	end
 --	The Greymane Wall					
 	function FinalFantasylization_SubzoneTheGreymaneWall()
-		FinalFantasylization_SwampSong()
+		FinalFantasylization_SwampSong();
 	end
 --	The Ivar Patch						
 	function FinalFantasylization_SubzoneTheIvarPatch()
@@ -2083,7 +2083,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Lordamere Lake						
 	function FinalFantasylization_SubzoneLordamereLake()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --		The Dawning Isles					
 	function FinalFantasylization_SubzoneTheDawningIsles()
@@ -2099,7 +2099,7 @@ FinalFantasylization_HostileSong()
 	end
 --	North Tide's Beachhead				
 	function FinalFantasylization_SubzoneNorthTidesBeachhead()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	North Tide's Hollow					
 	function FinalFantasylization_SubzoneNorthTidesHollow()
@@ -2135,11 +2135,11 @@ FinalFantasylization_HostileSong()
 	end
 --	The Shining Strand					
 	function FinalFantasylization_SubzoneTheShiningStrand()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	The Skittering Dark					
 	function FinalFantasylization_SubzoneTheSkitteringDark()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	South Tide's Run					
 	function FinalFantasylization_SubzoneSouthTidesRun()
@@ -2156,66 +2156,66 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_EasternKingdomsTirisfalGlades()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			end
 	end
 --	TOWNS:
 --	Forsaken Start: 
 --		Deathknell
 	function FinalFantasylization_Forsaken_Start_Deathknell()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --			The Deathknell Graves
 	function FinalFantasylization_Forsaken_Start_TheDeathknellGraves()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --			Night Web's Hollow
 	function FinalFantasylization_Forsaken_Start_NightWebsHollow()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --			Rotbrain Encampment
 	function FinalFantasylization_Forsaken_Start_RotbrainEncampment()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --			Shadow Grave
 	function FinalFantasylization_Forsaken_Start_ShadowGrave()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Horde:
 --		Brill
 	function FinalFantasylization_HordeTownBrill()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --			Brill Town Hall
 	function FinalFantasylization_HordeTownBrillTownHall()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --			Gallows' End Tavern
 	function FinalFantasylization_HordeTownGallowsEndTavern()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Ruins of Lordaeron
 	function FinalFantasylization_HordeTownRuinsofLordaeron()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	Agamand Mills
 	function FinalFantasylization_SubzoneAgamandMills()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --		Agamand Family Crypt
 	function FinalFantasylization_SubzoneAgamandFamilyCrypt()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Balnir Farmstead
 	function FinalFantasylization_SubzoneBalnirFarmstead()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Brightwater Lake
 	function FinalFantasylization_SubzoneBrightwaterLake()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --		Gunther's Retreat
 	function FinalFantasylization_SubzoneGunthersRetreat()
@@ -2233,11 +2233,11 @@ FinalFantasylization_HostileSong()
 	end
 --	Cold Hearth Manor
 	function FinalFantasylization_SubzoneColdHearthManor()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Crusader Outpost
 	function FinalFantasylization_SubzoneCrusaderOutpost()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Death's Watch Waystation
 	function FinalFantasylization_SubzoneDeathsWatchWaystation()
@@ -2246,11 +2246,11 @@ FinalFantasylization_HostileSong()
 	end
 --	Faol's Rest
 	function FinalFantasylization_SubzoneFaolsRest()
-		FinalFantasylization_PlayerGhost()
+		FinalFantasylization_PlayerGhost();
 	end
 --	Garren's Haunt
 	function FinalFantasylization_SubzoneGarrensHaunt()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Nightmare Vale
 	function FinalFantasylization_SubzoneNightmareVale()
@@ -2278,7 +2278,7 @@ FinalFantasylization_HostileSong()
 	end
 --		Scarlet Palisade
 	function FinalFantasylization_SubzoneScarletPalisade()
-		FinalFantasylization_HostileTowns()
+		FinalFantasylization_HostileTowns();
 	end
 --	Scarlet Watchtower
 	function FinalFantasylization_SubzoneScarletWatchtower()
@@ -2286,32 +2286,32 @@ FinalFantasylization_HostileSong()
 	end
 --	Scarlet Watch Post
 	function FinalFantasylization_SubzoneScarletWatchPost()
-		FinalFantasylization_HostileTowns()
+		FinalFantasylization_HostileTowns();
 	end
 --	Solliden Farmstead
 	function FinalFantasylization_SubzoneSollidenFarmstead()
-		FinalFantasylization_HostileTowns()
+		FinalFantasylization_HostileTowns();
 	end
 --	Stillwater Pond
 	function FinalFantasylization_SubzoneStillwaterPond()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --	Venomweb Vale
 	function FinalFantasylization_SubzoneVenomwebVale()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			end
 	end
 --		Scarlet Encampment
 	function FinalFantasylization_SubzoneScarletEncampment()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			end
 	end
 --	Whispering Forest
@@ -2324,7 +2324,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Whispering Shore
 	function FinalFantasylization_SubzoneWhisperingShore()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 
 
@@ -2335,32 +2335,32 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_EasternKingdomsWestfall()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_SandSong()
+				FinalFantasylization_SandSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Moonbrook
 	function FinalFantasylization_AllianceTownMoonbrook()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Deadmines
 	function FinalFantasylization_SubzoneDeadmines()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --			Moonbrook Schoolhouse
 	function FinalFantasylization_AllianceTownMoonbrookSchoolhouse()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end	
 --		Sentinel Hill
 	function FinalFantasylization_AllianceTownSentinelHill()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --				Sentinel Tower
 	function FinalFantasylization_AllianceTownSentinelTower()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Alexston Farmstead
@@ -2393,15 +2393,15 @@ FinalFantasylization_HostileSong()
 	end
 --	Gold Coast Quarry
 	function FinalFantasylization_SubzoneGoldCoastQuarry()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	Jangolode Mine
 	function FinalFantasylization_SubzoneJangolodeMine()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	The Jansen Stead
 	function FinalFantasylization_SubzoneTheJansenStead()
-		FinalFantasylization_SandSong()
+		FinalFantasylization_SandSong();
 	end
 --	Longshore
 	function FinalFantasylization_SubzoneLongshore()
@@ -2514,48 +2514,48 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_KalimdorAzshara()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_ContestedSong()
+				FinalFantasylization_ContestedSong();
 			end
 	end
 --	TOWNS:
 --	Horde:
 --		Bilgewater Harbor
 	function FinalFantasylization_HordeTownBilgewaterHarbor()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Gallywix Pleasure Palace
 	function FinalFantasylization_HordeTownGallywixPleasurePalace()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Northern Rocketway Exchange
 	function FinalFantasylization_HordeTownNorthernRocketwayExchange()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Northern Rocketway Terminus
 	function FinalFantasylization_HordeTownNorthernRocketwayTerminus()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Orgrimmar Rear Gate
 	function FinalFantasylization_HordeTownOrgrimmarRearGate()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Orgrimmar Rocketway Exchange
 	function FinalFantasylization_HordeTownOrgrimmarRocketwayExchange()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		The Secret Lab
 	function FinalFantasylization_HordeTownTheSecretLab()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Southern Rocketway Terminus
 	function FinalFantasylization_HordeTownSouthernRocketwayTerminus()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Valormok
 	function FinalFantasylization_HordeTownValormok()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	The Ancient Grove
@@ -2721,253 +2721,253 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_KalimdorAzuremystIsle()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Draenei Start:
 --		Crash Site
 	function FinalFantasylization_Draenei_Start_CrashSite()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --			Ammen Fields
 	function FinalFantasylization_Draenei_Start_AmmenFields()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --			Ammen Vale
 	function FinalFantasylization_Draenei_Start_AmmenVale()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --			Nestlewood Hills
 	function FinalFantasylization_Draenei_Start_NestlewoodHills()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --			Nestlewood Thicket
 	function FinalFantasylization_Draenei_Start_NestlewoodThicket()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --			Shadow Ridge
 	function FinalFantasylization_Draenei_Start_ShadowRidge()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --			Silverline Lake
 	function FinalFantasylization_Draenei_Start_SilverlineLake()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Alliance:
 --		Azure Watch
 	function FinalFantasylization_AllianceTownAzureWatch()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Odesyus' Landing
 	function FinalFantasylization_AllianceTownOdesyusLanding()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Ammen Ford
 	function FinalFantasylization_SubzoneAmmenFord()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Bristlelimb Village
 	function FinalFantasylization_SubzoneBristlelimbVillage()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Emberglade
 	function FinalFantasylization_SubzoneEmberglade()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Fairbridge Strand
 	function FinalFantasylization_SubzoneFairbridgeStrand()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Geezle's Camp
 	function FinalFantasylization_SubzoneGeezlesCamp()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Menagerie Wreckage
 	function FinalFantasylization_SubzoneMenagerieWreckage()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Moongraze Woods
 	function FinalFantasylization_SubzoneMoongrazeWoods()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Moonwing Den
 	function FinalFantasylization_SubzoneMoonwingDen()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Pod Cluster
 	function FinalFantasylization_SubzonePodCluster()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Pod Wreckage
 	function FinalFantasylization_SubzonePodWreckage()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Sacred Grove
 	function FinalFantasylization_SubzoneTheSacredGrove()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Silting Shore
 	function FinalFantasylization_SubzoneSiltingShore()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Silvermyst Isle
 	function FinalFantasylization_SubzoneSilvermystIsle()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Stillpine Hold
 	function FinalFantasylization_SubzoneStillpineHold()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Veiled Sea
 	function FinalFantasylization_SubzoneTheVeiledSea()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Tides' Hollow
 	function FinalFantasylization_SubzoneTidesHollow()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Traitor's Cove
 	function FinalFantasylization_SubzoneTraitorsCove()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Valaar's Berth
 	function FinalFantasylization_SubzoneValaarsBerth()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Wildwind Path
 	function FinalFantasylization_SubzoneWildwindPath()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Wildwind Peak
 	function FinalFantasylization_SubzoneWildwindPeak()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Wrathscale Point
 	function FinalFantasylization_SubzoneWrathscalePoint()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --'==========================================================================================
@@ -2977,267 +2977,267 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_KalimdorBloodmystIsle()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Blood Watch
 	function FinalFantasylization_AllianceTownBloodWatch()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Kessel's Crossing
 	function FinalFantasylization_AllianceTownKesselsCrossing()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Vindicator's Rest
 	function FinalFantasylization_AllianceTownVindicatorsRest()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Amberweb Pass
 	function FinalFantasylization_SubzoneAmberwebPass()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Axxarien
 	function FinalFantasylization_SubzoneAxxarien()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Beryl Coast
 	function FinalFantasylization_SubzoneBerylCoast()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Blacksilt Shore
 	function FinalFantasylization_SubzoneBlacksiltShore()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Bladewood
 	function FinalFantasylization_SubzoneBladewood()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Bloodcurse Isle
 	function FinalFantasylization_SubzoneBloodcurseIsle()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Bloodcursed Reef
 	function FinalFantasylization_SubzoneTheBloodcursedReef()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Bloodwash
 	function FinalFantasylization_SubzoneTheBloodwash()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Bristlelimb Enclave
 	function FinalFantasylization_SubzoneBristlelimbEnclave()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Crimson Reach
 	function FinalFantasylization_SubzoneTheCrimsonReach()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Cryo-Core
 	function FinalFantasylization_SubzoneTheCryoCore()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Foul Pool
 	function FinalFantasylization_SubzoneTheFoulPool()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Hidden Reef
 	function FinalFantasylization_SubzoneTheHiddenReef()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Lost Fold
 	function FinalFantasylization_SubzoneTheLostFold()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Middenvale
 	function FinalFantasylization_SubzoneMiddenvale()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Mystwood
 	function FinalFantasylization_SubzoneMystwood()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Nazzivian
 	function FinalFantasylization_SubzoneNazzivian()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Ragefeather Ridge
 	function FinalFantasylization_SubzoneRagefeatherRidge()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Ruins of Loreth'Aran
 	function FinalFantasylization_SubzoneRuinsofLorethAran()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Talon Stand
 	function FinalFantasylization_SubzoneTalonStand()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Tel'athion's Camp
 	function FinalFantasylization_SubzoneTelathionsCamp()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Veiled Sea
 	function FinalFantasylization_SubzoneTheVeiledSea()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Vector Coil
 	function FinalFantasylization_SubzoneTheVectorCoil()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Veridian Point
 	function FinalFantasylization_SubzoneVeridianPoint()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	The Warp Piston
 	function FinalFantasylization_SubzoneTheWarpPiston()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Wrathscale Lair
 	function FinalFantasylization_SubzoneWrathscaleLair()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	Wyrmscar Island
 	function FinalFantasylization_SubzoneWyrmscarIsland()	
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_PlagueSong()
+				FinalFantasylization_PlagueSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 
@@ -3257,15 +3257,15 @@ FinalFantasylization_HostileSong()
 --	Alliance:
 --		Auberdine Refugee Camp
 	function FinalFantasylization_AllianceTownAuberdineRefugeeCamp()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Grove of the Ancients
 	function FinalFantasylization_AllianceTownGroveoftheAncients()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Lor'danel
 	function FinalFantasylization_AllianceTownLordanel()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Ameth'Aran
@@ -3459,15 +3459,15 @@ FinalFantasylization_HostileSong()
 --	Horde:
 --		Razor Hill
 	function FinalFantasylization_HordeTownRazorHill()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --			Razor Hill Barracks
 	function FinalFantasylization_HordeTownRazorHillBarracks()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Sen'jin Village
 	function FinalFantasylization_HordeTownSenjinVillage()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	Bladefist Bay
@@ -3492,7 +3492,7 @@ FinalFantasylization_HostileSong()
 	end
 --	Dustwind Cave
 	function FinalFantasylization_SubzoneDustwindCave()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
@@ -3566,9 +3566,9 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_KalimdorMulgore()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
@@ -3604,11 +3604,11 @@ FinalFantasylization_HostileSong()
 --	Horde:
 --		Bloodhoof Village
 	function FinalFantasylization_HordeTownBloodhoofVillage()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Camp Sungraze
 	function FinalFantasylization_HordeTownCampSungraze()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:		
 --	Bael'dun Digsite
@@ -3679,46 +3679,46 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_KalimdorNorthernBarrens()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_SandSong()
+				FinalFantasylization_SandSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Honor's Stand
 	function FinalFantasylization_AllianceTownHonorsStand()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	Horde:
 --		The Crossroads
 	function FinalFantasylization_HordeTownTheCrossroads()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Far Watch Post
 	function FinalFantasylization_HordeTownFarWatchPost()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Grol'dom Farm
 	function FinalFantasylization_HordeTownGroldomFarm()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Mor'shan Base Camp
 	function FinalFantasylization_HordeTownMorshanBaseCamp()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		The Mor'shan Rampart
 	function FinalFantasylization_HordeTownTheMorshanRampart()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --		Nozzlepot's Outpost
 	function FinalFantasylization_HordeTownNozzlepotsOutpost()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Neutral:
 --		Ratchet
 	function FinalFantasylization_NeutralTownRatchet()
-		FinalFantasylization_NeutralTowns()
+		FinalFantasylization_NeutralTowns();
 	end
 --	SUBZONES:		
 --	Boulder Lode Mine
@@ -3795,14 +3795,14 @@ FinalFantasylization_HostileSong()
 				FinalFantasylization_PlayMusic(S .. Alliance7Town);
 				FinalFantasylization_debugMsg("Alliance7Town")
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
 --	Night Elf Start:
 --		Shadowglen
 	function FinalFantasylization_NightElf_Start_Shadowglen()
-		FinalFantasylization_FriendlySong()
+		FinalFantasylization_FriendlySong();
 	end
 --			Aldrassil
 	function FinalFantasylization_NightElf_Start_Aldrassil()
@@ -3811,69 +3811,69 @@ FinalFantasylization_HostileSong()
 	end
 --			Shadowthread Cave
 	function FinalFantasylization_NightElf_Start_ShadowthreadCave()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	Alliance:
 --		Dolanaar
 	function FinalFantasylization_AllianceTownDolanaar()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Rut'theran Village
 	function FinalFantasylization_AllianceTownRuttheranVillage()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --		Wellspring Hovel
 	function FinalFantasylization_AllianceTownWellspringHovel()
-		FinalFantasylization_AllianceTowns()
+		FinalFantasylization_AllianceTowns();
 	end
 --	SUBZONES:
 --	Ban'ethil Hollow
 	function FinalFantasylization_SubzoneBanethilHollow()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --		Ban'ethil Barrow Den
 	function FinalFantasylization_SubzoneBanethilBarrowDen()
-		FinalFantasylization_SwampSong()
+		FinalFantasylization_SwampSong();
 	end
 --	The Cleft
 	function FinalFantasylization_SubzoneTheCleft()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Fel Rock
 	function FinalFantasylization_SubzoneFelRock()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	Gnarlpine Hold
 	function FinalFantasylization_SubzoneGnarlpineHold()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Lake Al'Ameth
 	function FinalFantasylization_SubzoneLakeAlAmeth()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --	The Oracle Glade
 	function FinalFantasylization_SubzoneTheOracleGlade()
-		FinalFantasylization_FriendlySong()
+		FinalFantasylization_FriendlySong();
 	end
 --	Pools of Arlithrien
 	function FinalFantasylization_SubzonePoolsofArlithrien()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --	Starbreeze Village
 	function FinalFantasylization_SubzoneStarbreezeVillage()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	The Veiled Sea
 	function FinalFantasylization_SubzoneTheVeiledSea()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Wellspring Lake
 	function FinalFantasylization_SubzoneWellspringLake()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 --	Wellspring River
 	function FinalFantasylization_SubzoneWellspringRiver()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end
 
 --###########################################################################################
@@ -3913,7 +3913,7 @@ FinalFantasylization_HostileSong()
 	end
 --		Kaja'mine
 	function FinalFantasylization_Goblin_Start_Kajamine()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --		Kajaro Field
 	function FinalFantasylization_Goblin_Start_KajaroField()
@@ -3951,27 +3951,27 @@ FinalFantasylization_HostileSong()
 --	TOWNS:
 --	Alliance Beachhead
 	function FinalFantasylization_Goblin_Start_AllianceBeachhead()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Horde Base Camp
 	function FinalFantasylization_Goblin_Start_HordeBaseCamp()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Shipwreck Shore
 	function FinalFantasylization_Goblin_Start_ShipwreckShore()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Town-In-A-Box
 	function FinalFantasylization_Goblin_Start_TownInABox()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Warchief's Lookout
 	function FinalFantasylization_Goblin_Start_WarchiefsLookout()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	Wild Overlook
 	function FinalFantasylization_Goblin_Start_WildOverlook()
-		FinalFantasylization_HordeTowns()
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
 --	Bilgewater Lumber Yard
@@ -4090,17 +4090,17 @@ FinalFantasylization_HostileSong()
 	--#############
 	--## PVP ZONES
 	--#############
-	function FinalFantasylization_FriendlySong()
+	function FinalFantasylization_FriendlySong();
 		FinalFantasylization_PlayMusic(S .. FriendlySong);
 		FinalFantasylization_debugMsg("FriendlySong")
 	end
 
-	function FinalFantasylization_ContestedSong()
+	function FinalFantasylization_ContestedSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 		FinalFantasylization_debugMsg("ContestedSong")
 	end
 
-	function FinalFantasylization_HostileSong()
+	function FinalFantasylization_HostileSong();
 		FinalFantasylization_PlayMusic(S .. HostileSong);
 		FinalFantasylization_debugMsg("HostileSong")
 	end
@@ -4108,43 +4108,43 @@ FinalFantasylization_HostileSong()
 	--#############
 	--## ZONE SONGS
 	--#############
-	function FinalFantasylization_SnowSong()
+	function FinalFantasylization_SnowSong();
 		FinalFantasylization_PlayMusic(S .. SnowSong);
 		FinalFantasylization_debugMsg("SnowSong")
 	end
-	function FinalFantasylization_ForestSong()
+	function FinalFantasylization_ForestSong();
 		FinalFantasylization_PlayMusic(S .. ForestSong);
 		FinalFantasylization_debugMsg("ForestSong")
 	end
-	function FinalFantasylization_SandSong()
+	function FinalFantasylization_SandSong();
 		FinalFantasylization_PlayMusic(S .. SandSong);
 		FinalFantasylization_debugMsg("SandSong")
 	end
-	function FinalFantasylization_PlagueSong()
+	function FinalFantasylization_PlagueSong();
 		FinalFantasylization_PlayMusic(S .. PlagueSong);
 		FinalFantasylization_debugMsg("PlagueSong")
 	end
-	function FinalFantasylization_SwampSong()
+	function FinalFantasylization_SwampSong();
 		FinalFantasylization_PlayMusic(S .. SwampSong);
 		FinalFantasylization_debugMsg("SwampSong")
 	end
-	function FinalFantasylization_BeachSong()
+	function FinalFantasylization_BeachSong();
 		FinalFantasylization_PlayMusic(S .. BeachSong);
 		FinalFantasylization_debugMsg("BeachSong")
 	end
-	function FinalFantasylization_LandSong()
+	function FinalFantasylization_LandSong();
 		FinalFantasylization_PlayMusic(S .. LandSong);
 		FinalFantasylization_debugMsg("LandSong")
 	end
-	function FinalFantasylization_LakeSong()
+	function FinalFantasylization_LakeSong();
 		FinalFantasylization_PlayMusic(S .. LakeSong);
 		FinalFantasylization_debugMsg("LakeSong")
 	end
-	function FinalFantasylization_WaterSong()
+	function FinalFantasylization_WaterSong();
 		FinalFantasylization_PlayMusic(S .. WaterSong);
 		FinalFantasylization_debugMsg("WaterSong")
 	end
-	function FinalFantasylization_CaveSong()
+	function FinalFantasylization_CaveSong();
 		FinalFantasylization_PlayMusic(S .. CaveSong);
 		FinalFantasylization_debugMsg("CaveSong")
 	end
@@ -4153,169 +4153,169 @@ FinalFantasylization_HostileSong()
 	--## DUNGEON SONGS
 	--################
 		-- Vanilla WoW Dungeons
-	function FinalFantasylization_Dungeon_RagefireChasmSong()
+	function FinalFantasylization_Dungeon_RagefireChasmSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_WailingCavernsSong()
+	function FinalFantasylization_Dungeon_WailingCavernsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_DeadminesSong()
+	function FinalFantasylization_Dungeon_DeadminesSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ShadowfangKeepSong()
+	function FinalFantasylization_Dungeon_ShadowfangKeepSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_BlackfathomDeepsSong()
+	function FinalFantasylization_Dungeon_BlackfathomDeepsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_StormwindStockadeSong()
+	function FinalFantasylization_Dungeon_StormwindStockadeSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_GnomereganSong()
+	function FinalFantasylization_Dungeon_GnomereganSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_RazorfenKraulSong()
+	function FinalFantasylization_Dungeon_RazorfenKraulSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ScarletMonasterySong()
+	function FinalFantasylization_Dungeon_ScarletMonasterySong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_RazorfenDownsSong()
+	function FinalFantasylization_Dungeon_RazorfenDownsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_UldamanSong()
+	function FinalFantasylization_Dungeon_UldamanSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ZulFarrakSong()
+	function FinalFantasylization_Dungeon_ZulFarrakSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_MaraudonSong()
+	function FinalFantasylization_Dungeon_MaraudonSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_TempleofAtalHakkarSong()
+	function FinalFantasylization_Dungeon_TempleofAtalHakkarSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_BlackrockDepthsSong()
+	function FinalFantasylization_Dungeon_BlackrockDepthsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_LowerBlackrockSpireSong()
+	function FinalFantasylization_Dungeon_LowerBlackrockSpireSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_UpperBlackrockSpireSong()
+	function FinalFantasylization_Dungeon_UpperBlackrockSpireSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_DireMaulSong()
+	function FinalFantasylization_Dungeon_DireMaulSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_StratholmeSong()
+	function FinalFantasylization_Dungeon_StratholmeSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ScholomanceSong()
+	function FinalFantasylization_Dungeon_ScholomanceSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
 		-- Burning Crusade Dungeons
-	function FinalFantasylization_Dungeon_HellfireRampartsSong()
+	function FinalFantasylization_Dungeon_HellfireRampartsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_BloodFurnaceSong()
+	function FinalFantasylization_Dungeon_BloodFurnaceSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_SlavePensSong()
+	function FinalFantasylization_Dungeon_SlavePensSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_UnderbogSong()
+	function FinalFantasylization_Dungeon_UnderbogSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ManaTombsSong()
+	function FinalFantasylization_Dungeon_ManaTombsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_AuchenaiCryptsSong()
+	function FinalFantasylization_Dungeon_AuchenaiCryptsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_SethekkHallsSong()
+	function FinalFantasylization_Dungeon_SethekkHallsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_SteamvaultSong()
+	function FinalFantasylization_Dungeon_SteamvaultSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ShatteredHallsSong()
+	function FinalFantasylization_Dungeon_ShatteredHallsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ShadowLabyrinthSong()
+	function FinalFantasylization_Dungeon_ShadowLabyrinthSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_EscapefromDurnholdeKeepSong()
+	function FinalFantasylization_Dungeon_EscapefromDurnholdeKeepSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_OpeningtheDarkPortalSong()
+	function FinalFantasylization_Dungeon_OpeningtheDarkPortalSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_BotanicaSong()
+	function FinalFantasylization_Dungeon_BotanicaSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ArcatrazSong()
+	function FinalFantasylization_Dungeon_ArcatrazSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_OpeningtheDarkPortalSong()
+	function FinalFantasylization_Dungeon_OpeningtheDarkPortalSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_MagistersTerraceSong()
+	function FinalFantasylization_Dungeon_MagistersTerraceSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
 		-- Wrath of the Lich King Dungeons	
-	function FinalFantasylization_Dungeon_UtgardeKeepSong()
+	function FinalFantasylization_Dungeon_UtgardeKeepSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_TheNexusSong()
+	function FinalFantasylization_Dungeon_TheNexusSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_AzjolNerubSong()
+	function FinalFantasylization_Dungeon_AzjolNerubSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_AhnkahetTheOldKingdomSong()
+	function FinalFantasylization_Dungeon_AhnkahetTheOldKingdomSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_DrakTharonKeepSong()
+	function FinalFantasylization_Dungeon_DrakTharonKeepSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_VioletHoldSong()
+	function FinalFantasylization_Dungeon_VioletHoldSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_GundrakSong()
+	function FinalFantasylization_Dungeon_GundrakSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_HallsofStoneSong()
+	function FinalFantasylization_Dungeon_HallsofStoneSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_TheOculusSong()
+	function FinalFantasylization_Dungeon_TheOculusSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_HallsofLightningSong()
+	function FinalFantasylization_Dungeon_HallsofLightningSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_UtgardePinnacleSong()
+	function FinalFantasylization_Dungeon_UtgardePinnacleSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_TheCullingofStratholmeSong()
+	function FinalFantasylization_Dungeon_TheCullingofStratholmeSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_TrialoftheChampionSong()
+	function FinalFantasylization_Dungeon_TrialoftheChampionSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_ForgeofSoulsSong()
+	function FinalFantasylization_Dungeon_ForgeofSoulsSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_PitofSaronSong()
+	function FinalFantasylization_Dungeon_PitofSaronSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
-	function FinalFantasylization_Dungeon_HallsofReflectionSong()
+	function FinalFantasylization_Dungeon_HallsofReflectionSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 	end
 
 	--#############
 	--## RAID SONGS
 	--#############
-	function FinalFantasylization_RaidSong()
+	function FinalFantasylization_RaidSong();
 		FinalFantasylization_PlayMusic(S .. ContestedSong);
 		FinalFantasylization_debugMsg("ContestedSong")
 	end
@@ -4381,11 +4381,11 @@ FinalFantasylization_HostileSong()
 	--#############
 	--## TOWN SONGS
 	--#############
-	function FinalFantasylization_HostileTowns()
+	function FinalFantasylization_HostileTowns();
 		FinalFantasylization_PlayMusic(S .. HostileSong);
 		FinalFantasylization_debugMsg("HostileSong")
 	end
-	function FinalFantasylization_NeutralTowns()
+	function FinalFantasylization_NeutralTowns();
 		local x = math.random(1, 20);
 			if x == 1 then
 				FinalFantasylization_PlayMusic(S .. Horde1Town);
@@ -4449,7 +4449,7 @@ FinalFantasylization_HostileSong()
 				FinalFantasylization_debugMsg("Alliance10Town")
 			end
 	end
-	function FinalFantasylization_AllianceTowns()
+	function FinalFantasylization_AllianceTowns();
 		local x = math.random(1, 10);
 			if x == 1 then
 				FinalFantasylization_PlayMusic(S .. Alliance1Town);
@@ -4483,7 +4483,7 @@ FinalFantasylization_HostileSong()
 				FinalFantasylization_debugMsg("Alliance10Town")
 			end
 	end
-	function FinalFantasylization_HordeTowns()
+	function FinalFantasylization_HordeTowns();
 		local x = math.random(1, 10);
 			if x == 1 then
 				FinalFantasylization_PlayMusic(S .. Horde1Town);
@@ -4521,7 +4521,7 @@ FinalFantasylization_HostileSong()
 	--###############
 	--## BATTLEGROUNDS
 	--###############
-	function FinalFantasylization_BattleGround()
+	function FinalFantasylization_BattleGround();
 		local x = math.random(1, 5);
 			if x == 1 then
 				FinalFantasylization_PlayMusic(S .. BattleGround1);
@@ -4659,119 +4659,119 @@ FinalFantasylization_HostileSong()
 	--###############
 	-- ## DANCE MUSIC
 	--###############
-	function FinalFantasylization_BloodElfFemaleDanceSong()
+	function FinalFantasylization_BloodElfFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. BloodElfFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_BloodElfMaleDanceSong()
+	function FinalFantasylization_BloodElfMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. BloodElfMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_DraeneiFemaleDanceSong()
+	function FinalFantasylization_DraeneiFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. DraeneiFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_DraeneiMaleDanceSong()
+	function FinalFantasylization_DraeneiMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. DraeneiMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_DwarfFemaleDanceSong()
+	function FinalFantasylization_DwarfFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. DwarfFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_DwarfMaleDanceSong()
+	function FinalFantasylization_DwarfMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. DwarfMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_GnomeFemaleDanceSong()
+	function FinalFantasylization_GnomeFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. GnomeFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_GnomeMaleDanceSong()
+	function FinalFantasylization_GnomeMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. GnomeMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-		function FinalFantasylization_GoblinFemaleDanceSong()
+		function FinalFantasylization_GoblinFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. GoblinFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_GoblinMaleDanceSong()
+	function FinalFantasylization_GoblinMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. GoblinMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_HumanFemaleDanceSong()
+	function FinalFantasylization_HumanFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. HumanFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_HumanMaleDanceSong()
+	function FinalFantasylization_HumanMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. HumanMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_NightElfFemaleDanceSong()
+	function FinalFantasylization_NightElfFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. NightElfFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_NightElfMaleDanceSong()
+	function FinalFantasylization_NightElfMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. NightElfMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_OrcFemaleDanceSong()
+	function FinalFantasylization_OrcFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. OrcFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_OrcMaleDanceSong()
+	function FinalFantasylization_OrcMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. OrcMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_TaurenFemaleDanceSong()
+	function FinalFantasylization_TaurenFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. TaurenFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_TaurenMaleDanceSong()
+	function FinalFantasylization_TaurenMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. TaurenMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_TrollFemaleDanceSong()
+	function FinalFantasylization_TrollFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. TrollFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_TrollMaleDanceSong()
+	function FinalFantasylization_TrollMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. TrollMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_UndeadFemaleDanceSong()
+	function FinalFantasylization_UndeadFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. UndeadFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_UndeadMaleDanceSong()
+	function FinalFantasylization_UndeadMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. UndeadMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_WorgenFemaleDanceSong()
+	function FinalFantasylization_WorgenFemaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. WorgenFemaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_WorgenMaleDanceSong()
+	function FinalFantasylization_WorgenMaleDanceSong();
 		FinalFantasylization_PlayMusic( SS .. WorgenMaleDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_DruidBearDanceSong()
+	function FinalFantasylization_DruidBearDanceSong();
 		FinalFantasylization_PlayMusic( SS .. DruidBearDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_DruidCatDanceSong()
+	function FinalFantasylization_DruidCatDanceSong();
 		FinalFantasylization_PlayMusic( SS .. DruidCatDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_DruidOwlBearDanceSong()
+	function FinalFantasylization_DruidOwlBearDanceSong();
 		FinalFantasylization_PlayMusic( SS .. DruidOwlBearDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_DruidTreeFormDanceSong()
+	function FinalFantasylization_DruidTreeFormDanceSong();
 		FinalFantasylization_PlayMusic( SS .. DruidTreeFormDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
-	function FinalFantasylization_WolfDanceSong()
+	function FinalFantasylization_WolfDanceSong();
 		FinalFantasylization_PlayMusic( SS .. WolfDanceSong);
 		FinalFantasylization_debugMsg("Look Ma I'm Dancin!  ")
 	end
