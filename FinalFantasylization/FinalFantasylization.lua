@@ -695,7 +695,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --'	World event: Player in Combat, Mounted
 --'==========================================================================================
-		if IsMounted("player") and FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
+		if IsMounted("player") and FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
 			if FinalFantasylization_PlayerIsEscape == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. MountedEscape)
 				FinalFantasylization_MountedEscape()
@@ -775,7 +775,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --'	World event: Player is Mounted in Hostile Zone
 --'==========================================================================================
-		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
+		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
 			if FinalFantasylization_PlayerIsHostileMounting == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HostileEscape)
 				FinalFantasylization_MountedEscape()
@@ -808,7 +808,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --'	World event: Player is Mounted.. Chocobo!
 --'==========================================================================================
-		if IsMounted("player") and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
+		if IsMounted("player") and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
 			if FinalFantasylization_PlayerIsMounting == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Mounted)
 				FinalFantasylization_ClearMusicState()
@@ -1280,16 +1280,18 @@ function FinalFantasylization_JumpOrAscendStart()
 --'	World event: Chocobo Kweh!!
 --'==========================================================================================	
 	if IsMounted("player") and FinalFantasylizationOptions.ChocoboKweh == true then
-		local mountcount = GetNumCompanions("MOUNT")
-		local mountName = nil
-		i = 1
-		repeat 
-			local creatureID, creatureName, spellID, icon, active, mountFlags = GetCompanionInfo("MOUNT", i)
-			i = i + 1
-			mountName = strlower(creatureName)
-		until ( active ~= nil ) 
-		if string.match(mountName,'strider') then
-			FinalFantasylization_ChocoboKweh();
+		if UnitAura("player", "Running Wild") == nil then
+			local mountcount = GetNumCompanions("MOUNT")
+			local mountName = nil
+			i = 1
+			repeat 
+				local creatureID, creatureName, spellID, icon, active, mountFlags = GetCompanionInfo("MOUNT", i)
+				i = i + 1
+				mountName = strlower(creatureName)
+			until ( active ~= nil ) 
+			if string.match(mountName,'strider') then
+				FinalFantasylization_ChocoboKweh();
+			end
 		end
 	end
 end

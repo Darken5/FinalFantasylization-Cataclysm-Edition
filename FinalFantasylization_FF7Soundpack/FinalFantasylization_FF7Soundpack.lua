@@ -3248,9 +3248,9 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_KalimdorDarkshore()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
@@ -3270,15 +3270,15 @@ FinalFantasylization_HostileSong()
 --	SUBZONES:
 --	Ameth'Aran
 	function FinalFantasylization_SubzoneAmethAran()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Bashal'Aran
 	function FinalFantasylization_SubzoneBashalAran()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Bashal'Aran Collapse
 	function FinalFantasylization_SubzoneBashalAranCollapse()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Blackwood Camp
 	function FinalFantasylization_SubzoneBlackwoodCamp()
@@ -3287,27 +3287,27 @@ FinalFantasylization_HostileSong()
 	end
 --	Blackwood Den
 	function FinalFantasylization_SubzoneBlackwoodDen()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Burning Strand
 	function FinalFantasylization_SubzoneTheBlazingStrand()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Cliffspring Falls
 	function FinalFantasylization_SubzoneCliffspringFalls()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Cliffspring Hollow
 	function FinalFantasylization_SubzoneCliffspringHollow()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	Cliffspring River
 	function FinalFantasylization_SubzoneCliffspringRiver()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Earthshatter Cavern
 	function FinalFantasylization_SubzoneEarthshatterCavern()
-		FinalFantasylization_CaveSong()
+		FinalFantasylization_CaveSong();
 	end
 --	The Eye of the Vortex
 	function FinalFantasylization_SubzoneTheEyeoftheVortex()
@@ -3316,19 +3316,19 @@ FinalFantasylization_HostileSong()
 	end
 --	The Long Wash
 	function FinalFantasylization_SubzoneTheLongWash()
-
+		FinalFantasylization_WaterSong();
 	end
 --	The Master's Glaive
 	function FinalFantasylization_SubzoneTheMastersGlaive()
-
+		FinalFantasylization_SwampSong();
 	end
 --	Maw of the Void
 	function FinalFantasylization_SubzoneMawoftheVoid()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Mist's Edge
 	function FinalFantasylization_SubzoneMistsEdge()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Moontouched Den
 	function FinalFantasylization_SubzoneMoontouchedDen()
@@ -3336,23 +3336,23 @@ FinalFantasylization_HostileSong()
 	end
 --	Nazj'vel
 	function FinalFantasylization_SubzoneNazjvel()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Remtravel's Excavation
 	function FinalFantasylization_SubzoneRemtravelsExcavation()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --	Ruins of Auberdine
 	function FinalFantasylization_SubzoneRuinsofAuberdine()
-		FinalFantasylization_SwampSong()
+		FinalFantasylization_SwampSong();
 	end
 --	Ruins of Lornesta
 	function FinalFantasylization_SubzoneRuinsofLornesta()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Ruins of Mathystra
 	function FinalFantasylization_SubzoneRuinsofMathystra()
-		FinalFantasylization_PlagueSong()
+		FinalFantasylization_PlagueSong();
 	end
 --	Shatterspear Pass
 	function FinalFantasylization_SubzoneShatterspearPass()
@@ -3371,31 +3371,31 @@ FinalFantasylization_HostileSong()
 	end
 --	Tower of Althalaxx
 	function FinalFantasylization_SubzoneTowerofAlthalaxx()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Twilight Shore
 	function FinalFantasylization_SubzoneTwilightShore()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Twilight Vale
 	function FinalFantasylization_SubzoneTwilightVale()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	The Veiled Sea
 	function FinalFantasylization_SubzoneTheVeiledSea()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Wildbend River
 	function FinalFantasylization_SubzoneWildbendRiver()
-		FinalFantasylization_WaterSong()
+		FinalFantasylization_WaterSong();
 	end
 --	Withering Thicket
 	function FinalFantasylization_SubzoneWitheringThicket()
-		FinalFantasylization_ForestSong()
+		FinalFantasylization_ForestSong();
 	end
 --	Wreckage of the Silver Dawning
 	function FinalFantasylization_SubzoneWreckageoftheSilverDawning()
-		FinalFantasylization_LakeSong()
+		FinalFantasylization_LakeSong();
 	end	
 --'==========================================================================================
 --' Kalimdor Zones: Durotar : Horde
@@ -3404,9 +3404,9 @@ FinalFantasylization_HostileSong()
 	function FinalFantasylization_KalimdorDurotar()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_LandSong()
+				FinalFantasylization_LandSong();
 			else
-				FinalFantasylization_FriendlySong()
+				FinalFantasylization_FriendlySong();
 			end
 	end
 --	TOWNS:
