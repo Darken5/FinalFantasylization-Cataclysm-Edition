@@ -898,6 +898,8 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' Kalimdor Zones
 --'==========================================================================================
+			elseif not ( IsResting() ) and ( ZoneName == Z["Ashenvale"] ) then			-- Ashenvale
+				FinalFantasylization_KalimdorZones_Ashenvale(SubZoneName)					--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Azshara"] ) then			-- Azshara
 				FinalFantasylization_KalimdorZones_Azshara(SubZoneName)					--		_|_
 			elseif not ( IsResting() ) and ( ZoneName == Z["Azuremyst Isle"] ) then		-- Azuremyst Isle

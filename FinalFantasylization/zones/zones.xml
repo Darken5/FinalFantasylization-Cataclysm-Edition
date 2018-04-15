@@ -22,6 +22,7 @@
 	<Script file="EasternKingdomsZone_Westfall.lua"/>
 
 	<!--Kalimdor-->
+	<Script file="KalimdorZone_Ashenvale.lua"/>
 	<Script file="KalimdorZone_Azshara.lua"/>
 	<Script file="KalimdorZone_AzuremystIsle.lua"/>
 	<Script file="KalimdorZone_BloodmystIsle.lua"/>

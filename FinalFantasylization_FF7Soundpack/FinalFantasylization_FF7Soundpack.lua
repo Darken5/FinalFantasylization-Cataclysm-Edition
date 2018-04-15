@@ -2506,7 +2506,237 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. ExodarSong);
 		FinalFantasylization_debugMsg("ExodarSong")
 	end
+--'==========================================================================================
+--' Kalimdor Zones: Ashenvale
+--'==========================================================================================
+--	Zone: Ashenvale
+	function FinalFantasylization_KalimdorAshenvale()
+		FinalFantasylization_ForestSong()
+	end
+--	TOWNS:
+--	Alliance:
+--		Astranaar
+	function FinalFantasylization_AllianceTownAstranaar()
 
+	end
+--		Blackfathom Camp
+	function FinalFantasylization_AllianceTownBlackfathomCamp()
+
+	end
+--		Bolyun's Camp
+	function FinalFantasylization_AllianceTownBolyunsCamp()
+
+	end
+--		Forest Song
+	function FinalFantasylization_AllianceTownForestSong()
+
+	end
+--		House of Edune
+	function FinalFantasylization_AllianceTownHouseofEdune()
+
+	end
+--		Maestra's Post
+	function FinalFantasylization_AllianceTownMaestrasPost()
+
+	end
+--		Orendil's Retreat
+	function FinalFantasylization_AllianceTownOrendilsRetreat()
+
+	end
+--		Raynewood Retreat
+	function FinalFantasylization_AllianceTownRaynewoodRetreat()
+
+	end
+--			Raynewood Tower
+		function FinalFantasylization_AllianceTownRaynewoodTower()
+
+	end
+--		Silverwing Outpost
+	function FinalFantasylization_AllianceTownSilverwingOutpost()
+
+	end
+--		Stardust Spire
+	function FinalFantasylization_AllianceTownStardustSpire()
+
+	end
+--		The Shrine of Aessina
+	function FinalFantasylization_AllianceTownTheShrineofAessina()
+
+	end
+--		Warsong Lumber Camp
+	function FinalFantasylization_AllianceTownWarsongLumberCamp()
+
+	end
+--	Horde:
+--		Hellscream's Watch
+	function FinalFantasylization_HordeTownHellscreamsWatch()
+
+	end
+--		Kargathia Keep
+	function FinalFantasylization_HordeTownKargathiaKeep()
+
+	end
+--		Silverwind Refuge
+	function FinalFantasylization_HordeTownSilverwindRefuge()
+
+	end
+--		The Skunkworks
+	function FinalFantasylization_HordeTownTheSkunkworks()
+
+	end
+--		Splintertree Post
+	function FinalFantasylization_HordeTownSplintertreePost()
+
+	end
+--		Warsong Labor Camp
+	function FinalFantasylization_HordeTownWarsongLaborCamp()
+
+	end
+--		Zoram'gar Outpost
+	function FinalFantasylization_HordeTownZoramgarOutpost()
+
+	end
+--	SUBZONES:	
+--	Bathran's Haunt
+	function FinalFantasylization_SubzoneBathransHaunt()
+
+	end
+--	Blackfathom Deeps
+	function FinalFantasylization_SubzoneBlackfathomDeeps()
+
+	end
+--	Bloodtooth Camp
+	function FinalFantasylization_SubzoneBloodtoothCamp()
+
+	end
+--	Bough Shadow
+	function FinalFantasylization_SubzoneBoughShadow()
+
+	end
+--	Demon Fall Canyon
+	function FinalFantasylization_SubzoneDemonFallCanyon()
+
+	end
+--		Demon Fall Ridge
+	function FinalFantasylization_SubzoneDemonFallRidge()
+
+	end
+--	The Dor'Danil Barrow Den
+	function FinalFantasylization_SubzoneTheDorDanilBarrowDen()
+
+	end
+--	Falfarren River
+	function FinalFantasylization_SubzoneFalfarrenRiver()
+
+	end
+--	Fallen Sky Lake
+	function FinalFantasylization_SubzoneFallenSkyLake()
+
+	end
+--	Felfire Hill
+	function FinalFantasylization_SubzoneFelfireHill()
+
+	end
+--	Fire Scar Shrine
+	function FinalFantasylization_SubzoneFireScarShrine()
+
+	end
+--	Greenpaw Village
+	function FinalFantasylization_SubzoneGreenpawVillage()
+
+	end
+--	The Howling Vale
+	function FinalFantasylization_SubzoneTheHowlingVale()
+
+	end
+--	Remains of Iris Lake
+	function FinalFantasylization_SubzoneRemainsofIrisLake()
+
+	end
+--	Lake Falathim
+	function FinalFantasylization_SubzoneLakeFalathim()
+
+	end
+--	Moonwell of Purity
+	function FinalFantasylization_SubzoneMoonwellofPurity()
+
+	end
+--	Moonwell of Cleansing
+	function FinalFantasylization_SubzoneMoonwellofCleansing()
+
+	end
+--	The Mor'shan Rampart
+	function FinalFantasylization_SubzoneTheMorshanRampart()
+
+	end
+--	Mystral Lake
+	function FinalFantasylization_SubzoneMystralLake()
+
+	end
+--	Night Run
+	function FinalFantasylization_SubzoneNightRun()
+
+	end
+--	Nightsong Woods
+	function FinalFantasylization_SubzoneNightsongWoods()
+
+	end
+--	The Ruins of Ordil'Aran
+	function FinalFantasylization_SubzoneTheRuinsofOrdilAran()
+
+	end
+--	The Ruins of Stardust
+	function FinalFantasylization_SubzoneTheRuinsofStardust()
+
+	end
+--	Satyrnaar
+	function FinalFantasylization_SubzoneSatyrnaar()
+
+	end
+--	The Shady Nook
+	function FinalFantasylization_SubzoneTheShadyNook()
+
+	end
+--	Silverwing Grove
+	function FinalFantasylization_SubzoneSilverwingGrove()
+
+	end
+--	Southfury River
+	function FinalFantasylization_SubzoneSouthfuryRiver()
+
+	end
+--	The Talondeep Path
+	function FinalFantasylization_SubzoneTheTalondeepPath()
+
+	end
+--		Talondeep Pass
+	function FinalFantasylization_SubzoneTalondeepPass()
+
+	end
+--	Thistlefur Village
+	function FinalFantasylization_SubzoneThistlefurVillage()
+
+	end
+--		Thistlefur Hold
+	function FinalFantasylization_SubzoneThistlefurHold()
+
+	end
+--	Thunder Peak
+	function FinalFantasylization_SubzoneThunderPeak()
+
+	end
+--	Xavian
+	function FinalFantasylization_SubzoneXavian()
+
+	end
+--	The Zoram Strand
+	function FinalFantasylization_SubzoneTheZoramStrand()
+
+	end
+--		Ruuzel's Isle
+	function FinalFantasylization_SubzoneRuuzelsIsle()
+
+	end
 --'==========================================================================================
 --' Kalimdor Zones: Azshara : Horde
 --'==========================================================================================
