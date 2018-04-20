@@ -19,7 +19,7 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 --	An'telas				FinalFantasylization_SubzoneAntelas()
 --	Bleeding Ziggurat		FinalFantasylization_SubzoneBleedingZiggurat()
 --	Dawnstar Spire			FinalFantasylization_SubzoneDawnstarSpire()
---	*The Dead Scar			FinalFantasylization_SubzoneTheDeadScar()
+--	*The Dead Scar			FinalFantasylization_SubzoneGhostlandsTheDeadScar()
 --	Deatholme				FinalFantasylization_SubzoneDeatholme()
 --	Elrendar Crossing		FinalFantasylization_SubzoneElrendarCrossing()
 --	Elrendar River			FinalFantasylization_SubzoneElrendarRiver()
@@ -205,7 +205,7 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheDeadScar()
+			FinalFantasylization_SubzoneGhostlandsTheDeadScar()
 		else
 			return
 		end

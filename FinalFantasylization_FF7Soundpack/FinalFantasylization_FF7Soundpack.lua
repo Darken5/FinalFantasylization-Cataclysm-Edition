@@ -1342,8 +1342,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneAzurebreezeCoast()
 
 	end
---	The Dead Scar
-	function FinalFantasylization_SubzoneTheDeadScar()
+--	*The Dead Scar
+	function FinalFantasylization_SubzoneEversongWoodsTheDeadScar()
 		FinalFantasylization_PlagueSong();
 	end
 --	Duskwither Grounds
@@ -1356,7 +1356,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	East Sanctum
 	function FinalFantasylization_SubzoneEastSanctum()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Elrendar Falls
 	function FinalFantasylization_SubzoneElrendarFalls()
@@ -1364,7 +1364,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Golden Strand
 	function FinalFantasylization_SubzoneGoldenStrand()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Goldenbough Pass
 	function FinalFantasylization_SubzoneGoldenboughPass()
@@ -1384,7 +1384,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	North Sanctum
 	function FinalFantasylization_SubzoneNorthSanctum()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Ruins of Silvermoon
 	function FinalFantasylization_SubzoneRuinsofSilvermoon()
@@ -1437,11 +1437,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Tranquil Shore
 	function FinalFantasylization_SubzoneTranquilShore()
-
+		FinalFantasylization_WaterSong();
 	end
 --	West Sanctum
 	function FinalFantasylization_SubzoneWestSanctum()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Zeb'Watha
 	function FinalFantasylization_SubzoneZebWatha()
@@ -1507,8 +1507,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 --	*The Dead Scar
-	function FinalFantasylization_SubzoneTheDeadScar()
-
+	function FinalFantasylization_SubzoneGhostlandsTheDeadScar()
+		FinalFantasylization_PlagueSong();
 	end
 --	Deatholme
 	function FinalFantasylization_SubzoneDeatholme()
@@ -1544,7 +1544,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Sanctum of the Moon
 	function FinalFantasylization_SubzoneSanctumoftheMoon()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Shalandis Isle
 	function FinalFantasylization_SubzoneShalandisIsle()
@@ -2511,231 +2511,236 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Ashenvale
 	function FinalFantasylization_KalimdorAshenvale()
-		FinalFantasylization_ForestSong()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	TOWNS:
 --	Alliance:
 --		Astranaar
 	function FinalFantasylization_AllianceTownAstranaar()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Blackfathom Camp
 	function FinalFantasylization_AllianceTownBlackfathomCamp()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Bolyun's Camp
 	function FinalFantasylization_AllianceTownBolyunsCamp()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Forest Song
 	function FinalFantasylization_AllianceTownForestSong()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		House of Edune
 	function FinalFantasylization_AllianceTownHouseofEdune()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Maestra's Post
 	function FinalFantasylization_AllianceTownMaestrasPost()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Orendil's Retreat
 	function FinalFantasylization_AllianceTownOrendilsRetreat()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Raynewood Retreat
 	function FinalFantasylization_AllianceTownRaynewoodRetreat()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --			Raynewood Tower
 		function FinalFantasylization_AllianceTownRaynewoodTower()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Silverwing Outpost
 	function FinalFantasylization_AllianceTownSilverwingOutpost()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Stardust Spire
 	function FinalFantasylization_AllianceTownStardustSpire()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		The Shrine of Aessina
 	function FinalFantasylization_AllianceTownTheShrineofAessina()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --		Warsong Lumber Camp
 	function FinalFantasylization_AllianceTownWarsongLumberCamp()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	Horde:
 --		Hellscream's Watch
 	function FinalFantasylization_HordeTownHellscreamsWatch()
-
+		FinalFantasylization_HordeTowns();
 	end
 --		Kargathia Keep
 	function FinalFantasylization_HordeTownKargathiaKeep()
-
+		FinalFantasylization_HordeTowns();
 	end
 --		Silverwind Refuge
 	function FinalFantasylization_HordeTownSilverwindRefuge()
-
+		FinalFantasylization_HordeTowns();
 	end
 --		The Skunkworks
 	function FinalFantasylization_HordeTownTheSkunkworks()
-
+		FinalFantasylization_HordeTowns();
 	end
 --		Splintertree Post
 	function FinalFantasylization_HordeTownSplintertreePost()
-
+		FinalFantasylization_HordeTowns();
 	end
 --		Warsong Labor Camp
 	function FinalFantasylization_HordeTownWarsongLaborCamp()
-
+		FinalFantasylization_HordeTowns();
 	end
 --		Zoram'gar Outpost
 	function FinalFantasylization_HordeTownZoramgarOutpost()
-
+		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:	
 --	Bathran's Haunt
 	function FinalFantasylization_SubzoneBathransHaunt()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Blackfathom Deeps
 	function FinalFantasylization_SubzoneBlackfathomDeeps()
-
+		FinalFantasylization_WaterSong();					-- Test This
 	end
 --	Bloodtooth Camp
 	function FinalFantasylization_SubzoneBloodtoothCamp()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Bough Shadow
 	function FinalFantasylization_SubzoneBoughShadow()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Demon Fall Canyon
 	function FinalFantasylization_SubzoneDemonFallCanyon()
-
+		FinalFantasylization_PlagueSong();
 	end
 --		Demon Fall Ridge
 	function FinalFantasylization_SubzoneDemonFallRidge()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	The Dor'Danil Barrow Den
 	function FinalFantasylization_SubzoneTheDorDanilBarrowDen()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Falfarren River
 	function FinalFantasylization_SubzoneFalfarrenRiver()
-
+		FinalFantasylization_LakeSong();					-- Test This
 	end
 --	Fallen Sky Lake
 	function FinalFantasylization_SubzoneFallenSkyLake()
-
+		FinalFantasylization_LakeSong();					-- Test This
 	end
 --	Felfire Hill
 	function FinalFantasylization_SubzoneFelfireHill()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Fire Scar Shrine
 	function FinalFantasylization_SubzoneFireScarShrine()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Greenpaw Village
 	function FinalFantasylization_SubzoneGreenpawVillage()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	The Howling Vale
 	function FinalFantasylization_SubzoneTheHowlingVale()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Remains of Iris Lake
 	function FinalFantasylization_SubzoneRemainsofIrisLake()
-
+		FinalFantasylization_LakeSong();					-- Test This
 	end
 --	Lake Falathim
 	function FinalFantasylization_SubzoneLakeFalathim()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Moonwell of Purity
 	function FinalFantasylization_SubzoneMoonwellofPurity()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Moonwell of Cleansing
 	function FinalFantasylization_SubzoneMoonwellofCleansing()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	The Mor'shan Rampart
 	function FinalFantasylization_SubzoneTheMorshanRampart()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Mystral Lake
 	function FinalFantasylization_SubzoneMystralLake()
-
+		FinalFantasylization_LakeSong();					-- Test This
 	end
 --	Night Run
 	function FinalFantasylization_SubzoneNightRun()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Nightsong Woods
 	function FinalFantasylization_SubzoneNightsongWoods()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	The Ruins of Ordil'Aran
 	function FinalFantasylization_SubzoneTheRuinsofOrdilAran()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	The Ruins of Stardust
 	function FinalFantasylization_SubzoneTheRuinsofStardust()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Satyrnaar
 	function FinalFantasylization_SubzoneSatyrnaar()
-
+		FinalFantasylization_PlagueSong();					-- Test This
 	end
 --	The Shady Nook
 	function FinalFantasylization_SubzoneTheShadyNook()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Silverwing Grove
 	function FinalFantasylization_SubzoneSilverwingGrove()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Southfury River
 	function FinalFantasylization_SubzoneSouthfuryRiver()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	The Talondeep Path
 	function FinalFantasylization_SubzoneTheTalondeepPath()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --		Talondeep Pass
 	function FinalFantasylization_SubzoneTalondeepPass()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Thistlefur Village
 	function FinalFantasylization_SubzoneThistlefurVillage()
-
+		FinalFantasylization_ForestSong();
 	end
 --		Thistlefur Hold
 	function FinalFantasylization_SubzoneThistlefurHold()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Thunder Peak
 	function FinalFantasylization_SubzoneThunderPeak()
-
+		FinalFantasylization_ForestSong();					-- Test This
 	end
 --	Xavian
 	function FinalFantasylization_SubzoneXavian()
-
+		FinalFantasylization_PlagueSong();					-- Test This
 	end
 --	The Zoram Strand
 	function FinalFantasylization_SubzoneTheZoramStrand()
-
+		FinalFantasylization_WaterSong();
 	end
 --		Ruuzel's Isle
 	function FinalFantasylization_SubzoneRuuzelsIsle()
-
+		FinalFantasylization_WaterSong();
 	end
 --'==========================================================================================
 --' Kalimdor Zones: Azshara : Horde

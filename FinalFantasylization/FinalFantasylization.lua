@@ -853,83 +853,118 @@ function FinalFantasylization_GetMusic()
 --' Eastern Kingdoms Zones
 --'==========================================================================================
 		if not ( ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) or ( FinalFantasylization_PlayerIsSwimming == true ) ) then
-			if not ( IsResting() ) and ( ZoneName == Z["Abyssal Depths"] ) then			-- Abyssal Depths
-				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)	--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Arathi Highlands"] ) then	-- Arathi Highlands
-				FinalFantasylization_EasternKingdomsZones_ArathiHighlands(SubZoneName)	--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Badlands"] ) then			-- Badlands
-				FinalFantasylization_EasternKingdomsZones_Badlands(SubZoneName)			--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Blasted Lands"] ) then		-- Blasted Lands
-				FinalFantasylization_EasternKingdomsZones_BlastedLands(SubZoneName)		--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Burning Steppes"] ) then	-- Burning Steppes
-				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)	--		_|_
-			elseif ( MinimapZoneName == Z["Deeprun Tram"] ) then						-- Deeprun Tram
-				FinalFantasylization_EasternKingdomsZones_DeeprunTram()					--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Dun Morogh"] ) then			-- Dun Morogh
-				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)		--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Elwynn Forest"] ) then		-- Elwynn Forest
-				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)		--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Eversong Woods"] ) then		-- Eversong Woods
-				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)	--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Ghostlands"] ) then			-- Ghostlands
-				FinalFantasylization_EasternKingdomsZones_Ghostlands(SubZoneName)		--		_|_	
-			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas"] ) then			-- Gilneas
-				FinalFantasylization_EasternKingdomsZones_Gilneas(SubZoneName)			--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Gilneas City"] ) then		-- Gilneas City
-				FinalFantasylization_EasternKingdomsZones_GilneasCity(SubZoneName)		--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Loch Modan"] ) then			-- Loch Modan
-				FinalFantasylization_EasternKingdomsZones_LochModan(SubZoneName)		--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Redridge Mountains"] ) then	-- Redridge Mountains
-				FinalFantasylization_EasternKingdomsZones_RedridgeMountains(SubZoneName)--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Ruins of Gilneas"] ) then	-- Ruins of Gilneas
-				FinalFantasylization_EasternKingdomsZones_RuinsofGilneas(SubZoneName)	--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Silverpine Forest"] ) then	-- Silverpine Forest
-				FinalFantasylization_EasternKingdomsZones_SilverpineForest(SubZoneName)	--		_|_
-			elseif ( ZoneName == Z["Stormwind City"] ) then								-- Stormwind City
-				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)	--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Tirisfal Glades"] ) then	-- Tirisfal Glades
-				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)	--		_|_
-			elseif ( ZoneName == Z["Undercity"] ) then									-- Undercity
-				FinalFantasylization_EasternKingdomsZones_Undercity(SubZoneName)		--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Westfall"] ) then			-- Westfall
-				FinalFantasylization_EasternKingdomsZones_Westfall(SubZoneName)			--		_|_
+		-- Abyssal Depths
+			if not ( IsResting() ) and ( MapID == 614 ) then
+				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)
+		-- Arathi Highlands
+			elseif not ( IsResting() ) and ( MapID == 16 ) then
+				FinalFantasylization_EasternKingdomsZones_ArathiHighlands(SubZoneName)
+		-- Badlands
+			elseif not ( IsResting() ) and ( MapID == 17 ) then
+				FinalFantasylization_EasternKingdomsZones_Badlands(SubZoneName)
+		-- Blasted Lands
+			elseif not ( IsResting() ) and ( MapID == 19 ) then
+				FinalFantasylization_EasternKingdomsZones_BlastedLands(SubZoneName)
+		-- Burning Steppes
+			elseif not ( IsResting() ) and ( MapID == 29 ) then
+				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)
+		-- Deeprun Tram
+			elseif ( MinimapZoneName == Z["Deeprun Tram"] ) then
+				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
+		-- Dun Morogh
+			elseif not ( IsResting() ) and ( MapID == 27 ) then
+				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)
+		-- Elwynn Forest
+			elseif not ( IsResting() ) and ( MapID == 30 ) then
+				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)
+		-- Eversong Woods
+			elseif not ( IsResting() ) and ( MapID == 462  ) then
+				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)
+		-- Ghostlands
+			elseif not ( IsResting() ) and ( MapID == 463 ) then
+				FinalFantasylization_EasternKingdomsZones_Ghostlands(SubZoneName)
+		-- Gilneas
+			elseif not ( IsResting() ) and ( MapID == 545 ) then
+				FinalFantasylization_EasternKingdomsZones_Gilneas(SubZoneName)
+		-- Gilneas City
+			elseif not ( IsResting() ) and ( MapID == 611 ) then
+				FinalFantasylization_EasternKingdomsZones_GilneasCity(SubZoneName)
+		-- Loch Modan
+			elseif not ( IsResting() ) and ( MapID == 35 ) then
+				FinalFantasylization_EasternKingdomsZones_LochModan(SubZoneName)
+		-- Redridge Mountains
+			elseif not ( IsResting() ) and ( MapID == 36 ) then
+				FinalFantasylization_EasternKingdomsZones_RedridgeMountains(SubZoneName)
+		-- Ruins of Gilneas
+			elseif not ( IsResting() ) and ( MapID == 684 ) then
+				FinalFantasylization_EasternKingdomsZones_RuinsofGilneas(SubZoneName)
+		-- Silverpine Forest
+			elseif not ( IsResting() ) and ( MapID == 21 ) then
+				FinalFantasylization_EasternKingdomsZones_SilverpineForest(SubZoneName)
+		-- Stormwind City
+			elseif ( MapID == 301 ) then
+				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)
+		-- Tirisfal Glades
+			elseif not ( IsResting() ) and ( MapID == 20 ) then
+				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)
+		-- Undercity
+			elseif ( MapID == 382 ) then
+				FinalFantasylization_EasternKingdomsZones_Undercity(SubZoneName)
+		-- Westfall
+			elseif not ( IsResting() ) and ( MapID == 39 ) then
+				FinalFantasylization_EasternKingdomsZones_Westfall(SubZoneName)
 
 
 --'==========================================================================================
 --' Kalimdor Zones
 --'==========================================================================================
-			elseif not ( IsResting() ) and ( ZoneName == Z["Ashenvale"] ) then			-- Ashenvale
-				FinalFantasylization_KalimdorZones_Ashenvale(SubZoneName)					--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Azshara"] ) then			-- Azshara
-				FinalFantasylization_KalimdorZones_Azshara(SubZoneName)					--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Azuremyst Isle"] ) then		-- Azuremyst Isle
-				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)			--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Bloodmyst Isle"] ) then		-- Bloodmyst Isle
-				FinalFantasylization_KalimdorZones_BloodmystIsle(SubZoneName)			--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Darkshore"] ) then			-- Darkshore
-				FinalFantasylization_KalimdorZones_Darkshore(SubZoneName)				--		_|_
-			elseif ( ZoneName == Z["Darnassus"] ) then									-- Darnassus
-				FinalFantasylization_KalimdorZones_Darnassus(SubZoneName)				--		_|_	
-			elseif not ( IsResting() ) and ( ZoneName == Z["Durotar"] ) then			-- Durotar
-				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)					--		_|_
-			elseif ( ZoneName == Z["The Exodar"] ) then									-- The Exodar
-				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)				--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Mulgore"] ) then			-- Mulgore
-				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)					--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Northern Barrens"] ) then	-- Northern Barrens
-				FinalFantasylization_KalimdorZones_NorthernBarrens(SubZoneName)			--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["Teldrassil"] ) then			-- Teldrassil
-				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)				--		_|_
+		-- Ashenvale
+			elseif not ( IsResting() ) and ( MapID == 43 ) then
+				FinalFantasylization_KalimdorZones_Ashenvale(SubZoneName)
+		-- Azshara
+			elseif not ( IsResting() ) and ( MapID == 181 ) then
+				FinalFantasylization_KalimdorZones_Azshara(SubZoneName)
+		-- Azuremyst Isle
+			elseif not ( IsResting() ) and ( MapID == 464 ) then
+				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)
+		-- Bloodmyst Isle
+			elseif not ( IsResting() ) and ( MapID == 476 ) then
+				FinalFantasylization_KalimdorZones_BloodmystIsle(SubZoneName)
+		-- Darkshore
+			elseif not ( IsResting() ) and ( MapID == 42 ) then
+				FinalFantasylization_KalimdorZones_Darkshore(SubZoneName)
+		-- Darnassus
+			elseif ( MapID == 381 ) then
+				FinalFantasylization_KalimdorZones_Darnassus(SubZoneName)
+		-- Durotar
+			elseif not ( IsResting() ) and ( MapID == 4 ) then
+				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
+		-- The Exodar
+			elseif ( MapID == 471 ) then
+				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
+		-- Mulgore
+			elseif not ( IsResting() ) and ( MapID == 9 ) then
+				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)
+		-- Northern Barrens
+			elseif not ( IsResting() ) and ( MapID == 11 ) then
+				FinalFantasylization_KalimdorZones_NorthernBarrens(SubZoneName)
+		-- Teldrassil
+			elseif not ( IsResting() ) and ( MapID == 41 ) then
+				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
 
 
 --'==========================================================================================
 --' Maelstrom Zones
---'==========================================================================================	
-			elseif not ( IsResting() ) and ( ZoneName == Z["Kezan"] ) then				-- Kezan
-				FinalFantasylization_MaelstromZones_Kezan(SubZoneName)					--		_|_
-			elseif not ( IsResting() ) and ( ZoneName == Z["The Lost Isles"] ) then		-- The Lost Isles
-				FinalFantasylization_MaelstromZones_TheLostIsles(SubZoneName)			--		_|_
+--'==========================================================================================
+		-- Kezan
+			elseif not ( IsResting() ) and ( MapID == 605 ) then
+				FinalFantasylization_MaelstromZones_Kezan(SubZoneName)
+		-- The Lost Isles
+			elseif not ( IsResting() ) and ( MapID == 544 ) then
+				FinalFantasylization_MaelstromZones_TheLostIsles(SubZoneName)
 
+
+	-- Debug: Zone Catch-all
 			elseif not ( IsResting() ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")
 			end
@@ -1057,7 +1092,9 @@ function FinalFantasylization_GetMusic()
 					FinalFantasylization_Dungeon_PitofSaronSong()
 				elseif ( ZoneName == SZ["Halls of Reflection"] ) then		-- Halls of Reflection Instance
 					FinalFantasylization_Dungeon_HallsofReflectionSong()
--- More Instances go here					
+-- More Instances go here
+
+		-- Debug: Instance Catch-all
 				else
 					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Instance not in FinalFantasylization")
 				end

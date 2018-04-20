@@ -19,7 +19,7 @@ function FinalFantasylization_EasternKingdomsZones_EversongWoods()
 --
 --	SUBZONES:
 --	Azurebreeze Coast			FinalFantasylization_SubzoneAzurebreezeCoast()
---	The Dead Scar				FinalFantasylization_SubzoneTheDeadScar()
+--	*The Dead Scar				FinalFantasylization_SubzoneEversongWoodsTheDeadScar()
 --	Duskwither Grounds			FinalFantasylization_SubzoneDuskwitherGrounds()
 --	Duskwither Spire			FinalFantasylization_SubzoneDuskwitherSpire()
 --	East Sanctum				FinalFantasylization_SubzoneEastSanctum()
@@ -212,7 +212,7 @@ function FinalFantasylization_EasternKingdomsZones_EversongWoods()
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheDeadScar()
+			FinalFantasylization_SubzoneEversongWoodsTheDeadScar()
 		else
 			return
 		end
