@@ -9,11 +9,8 @@ local block = 0
 local FinalFantasylization_UpdateInterval = 1.5 
 
 -- LibBabble Zone and SubZone code --
-BZ = LibStub("LibBabble-Zone-3.0")
 BSZ = LibStub("LibBabble-SubZone-3.0")
 BF = LibStub("LibBabble-Faction-3.0")
-Z = BZ:GetLookupTable()
-ZR = BZ:GetReverseLookupTable()
 SZ = BSZ:GetLookupTable()
 SZR = BSZ:GetReverseLookupTable()
 F = BF:GetLookupTable()
@@ -824,7 +821,8 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 		if IsSwimming() ~= nil and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Swim == true then
 			if FinalFantasylization_PlayerIsSwimming == false then
-				if ( ZoneName == Z["Undercity"] ) or ( ZoneName == Z["Tirisfal Glades"] ) or ( SubZoneName == SZ["The Sludge Fen"] ) or ( SubZoneName == SZ["Blackwolf River"] ) then
+				if ( MapID == 382 ) or ( MapID == 20 ) or ( SubZoneName == SZ["The Sludge Fen"] ) or ( SubZoneName == SZ["Blackwolf River"] ) then
+				-- 382 = Undercity, 20 = Tirisfal Glades
 					FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming2)
 					FinalFantasylization_Swimming(1)
 				else
@@ -869,7 +867,7 @@ function FinalFantasylization_GetMusic()
 			elseif not ( IsResting() ) and ( MapID == 29 ) then
 				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)
 		-- Deeprun Tram
-			elseif ( MinimapZoneName == Z["Deeprun Tram"] ) then
+			elseif ( MinimapZoneName == SZ["Deeprun Tram"] ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
 		-- Dun Morogh
 			elseif not ( IsResting() ) and ( MapID == 27 ) then
@@ -1014,10 +1012,14 @@ function FinalFantasylization_GetMusic()
 					FinalFantasylization_Dungeon_TempleofAtalHakkarSong()
 				elseif ( ZoneName == SZ["Blackrock Depths"] ) then			-- Blackrock Depths Instance
 					FinalFantasylization_Dungeon_BlackrockDepthsSong()
-				elseif ( ZoneName == Z["Lower Blackrock Spire"] ) then		-- Lower Blackrock Spire Instance
-					FinalFantasylization_Dungeon_LowerBlackrockSpireSong()
-				elseif ( ZoneName == Z["Upper Blackrock Spire"] ) then		-- Upper Blackrock Spire Instance
-					FinalFantasylization_Dungeon_UpperBlackrockSpireSong()
+
+
+--				elseif ( ZoneName == Z["Lower Blackrock Spire"] ) then		-- Lower Blackrock Spire Instance
+--					FinalFantasylization_Dungeon_LowerBlackrockSpireSong()
+--				elseif ( ZoneName == Z["Upper Blackrock Spire"] ) then		-- Upper Blackrock Spire Instance
+--					FinalFantasylization_Dungeon_UpperBlackrockSpireSong()
+
+
 				elseif ( ZoneName == SZ["Dire Maul"] ) then					-- Dire Maul Instance
 					FinalFantasylization_Dungeon_DireMaulSong()
 				elseif ( ZoneName == SZ["Stratholme"] ) then				-- Stratholme Instance
@@ -1121,17 +1123,17 @@ function FinalFantasylization_GetMusic()
 
 			elseif instanceType == "pvp" and FinalFantasylization_InInstance == false and FinalFantasylizationOptions.Battleground == true then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerInBattleground.. ZoneName)
-				if ( ZoneName == Z["Alterac Valley"] ) then				-- Alterac Valley Battleground
+				if ( ZoneName == SZ["Alterac Valley"] ) then				-- Alterac Valley Battleground
 					FinalFantasylization_AlteracValleyBG()
-				elseif ( ZoneName == Z["Arathi Basin"] ) then			-- Arathi Basin Battleground
+				elseif ( ZoneName == SZ["Arathi Basin"] ) then			-- Arathi Basin Battleground
 					FinalFantasylization_ArathiBasinBG()
-				elseif ( ZoneName == Z["Eye of the Storm"] ) then		-- Eye of the Storm Battleground
+				elseif ( ZoneName == SZ["Eye of the Storm"] ) then		-- Eye of the Storm Battleground
 					FinalFantasylization_EyeoftheStormBG()
-				elseif ( ZoneName == Z["Strand of the Ancients"] ) then	-- Strand of the Ancients Battleground
+				elseif ( ZoneName == SZ["Strand of the Ancients"] ) then	-- Strand of the Ancients Battleground
 					FinalFantasylization_StrandsoftheAncientsBG()
-				elseif ( ZoneName == Z["Warsong Gulch"] ) then			-- Warsong Gulch Battleground
+				elseif ( ZoneName == SZ["Warsong Gulch"] ) then			-- Warsong Gulch Battleground
 					FinalFantasylization_WarsongGulchBG()
-				elseif ( ZoneName == Z["Isle of Conquest"] ) then		-- Isle of Conquest Battleground
+				elseif ( ZoneName == SZ["Isle of Conquest"] ) then		-- Isle of Conquest Battleground
 					FinalFantasylization_IsleOfConquestBG()
 				else
 					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Battleground not in FinalFantasylization")
