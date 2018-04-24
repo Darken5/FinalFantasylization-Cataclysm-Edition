@@ -1404,23 +1404,23 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Azurebreeze Coast
 	function FinalFantasylization_SubzoneAzurebreezeCoast()
-
+		FinalFantasylization_WaterSong();
 	end
 --	*The Dead Scar
 	function FinalFantasylization_SubzoneEversongWoodsTheDeadScar()
-		FinalFantasylization_PlagueSong();
+		FinalFantasylization_SwampSong();
 	end
 --	Duskwither Grounds
 	function FinalFantasylization_SubzoneDuskwitherGrounds()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Duskwither Spire
 	function FinalFantasylization_SubzoneDuskwitherSpire()
-
+		FinalFantasylization_ForestSong();
 	end
 --	East Sanctum
 	function FinalFantasylization_SubzoneEastSanctum()
-		FinalFantasylization_PlagueSong();
+		FinalFantasylization_SwampSong();
 	end
 --	Elrendar Falls
 	function FinalFantasylization_SubzoneElrendarFalls()
@@ -1456,7 +1456,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Commons Hall
 	function FinalFantasylization_SubzoneCommonsHall()
-
+		FinalFantasylization_PlagueSong();
 	end
 --		Dawning Lane
 	function FinalFantasylization_SubzoneDawningLane()
@@ -1473,11 +1473,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Runestone Falithas
 	function FinalFantasylization_SubzoneRunestoneFalithas()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Runestone Shan'dor
 	function FinalFantasylization_SubzoneRunestoneShandor()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Sunsail Anchorage
 	function FinalFantasylization_SubzoneSunsailAnchorage()
@@ -1485,19 +1485,20 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Scorched Grove
 	function FinalFantasylization_SubzoneTheScorchedGrove()
-		FinalFantasylization_PlagueSong();
+		FinalFantasylization_SwampSong();
 	end
 --	The Shepherd's Gate
 	function FinalFantasylization_SubzoneTheShepherdsGate()
-
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
 --	Stillwhisper Pond
 	function FinalFantasylization_SubzoneStillwhisperPond()
-
+		FinalFantasylization_LakeSong();
 	end
 --	Tor'Watha
 	function FinalFantasylization_SubzoneTorWatha()
-
+		FinalFantasylization_LandSong();
 	end
 --	Tranquil Shore
 	function FinalFantasylization_SubzoneTranquilShore()
@@ -1509,7 +1510,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Zeb'Watha
 	function FinalFantasylization_SubzoneZebWatha()
-
+		FinalFantasylization_LandSong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Ghostlands : Horde
