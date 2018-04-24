@@ -899,6 +899,9 @@ function FinalFantasylization_GetMusic()
 		-- Silverpine Forest
 			elseif not ( IsResting() ) and ( MapID == 21 ) then
 				FinalFantasylization_EasternKingdomsZones_SilverpineForest(SubZoneName)
+		-- Silvermoon City
+			elseif ( MapID == 480 ) then
+				FinalFantasylization_EasternKingdomsZones_SilvermoonCity(SubZoneName)
 		-- Stormwind City
 			elseif ( MapID == 301 ) then
 				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)

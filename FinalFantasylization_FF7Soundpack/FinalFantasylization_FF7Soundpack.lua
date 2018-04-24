@@ -207,6 +207,70 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --##   EASTERN KINGDOMS ZONES
 --###########################################################################################
 --'==========================================================================================
+--' Eastern Kingdoms Capital: Silvermoon City : Horde
+--'==========================================================================================
+--	Zone: SilvermoonCity
+	function FinalFantasylization_EasternKingdoms_SilvermoonCity()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--	SUBZONES:
+--	The Bazaar
+	function FinalFantasylization_SilvermoonCity_SubzoneTheBazaar()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		The Sanctum
+	function FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--	Court of the Sun
+	function FinalFantasylization_SilvermoonCity_SubzoneCourtoftheSun()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Sunfury Spire
+	function FinalFantasylization_SilvermoonCity_SubzoneSunfurySpire()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--			Inner Sanctum
+	function FinalFantasylization_SilvermoonCity_SubzoneInnerSanctum()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--	Farstriders' Square
+	function FinalFantasylization_SilvermoonCity_SubzoneFarstridersSquare()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--	Murder Row
+	function FinalFantasylization_SilvermoonCity_SubzoneMurderRow()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		The Sanctum
+	function FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--	The Royal Exchange
+	function FinalFantasylization_SilvermoonCity_SubzoneTheRoyalExchange()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--	The Shepherd's Gate
+	function FinalFantasylization_SilvermoonCity_SubzoneTheShepherdsGate()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--	Walk of Elders
+	function FinalFantasylization_SilvermoonCity_SubzoneWalkofElders()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--'==========================================================================================
 --' Eastern Kingdoms Capital: Stormwind City : Alliance
 --'==========================================================================================
 --	Zone: Stormwind City
@@ -452,7 +516,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Cerebrillum
 	function FinalFantasylization_SubzoneTheCerebrillum()
-	
+
 	end
 --	Coldlight Chasm
 	function FinalFantasylization_SubzoneColdlightChasm()
@@ -1356,11 +1420,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	East Sanctum
 	function FinalFantasylization_SubzoneEastSanctum()
-		FinalFantasylization_ForestSong();
+		FinalFantasylization_PlagueSong();
 	end
 --	Elrendar Falls
 	function FinalFantasylization_SubzoneElrendarFalls()
-
+		FinalFantasylization_LakeSong();
 	end
 --	Golden Strand
 	function FinalFantasylization_SubzoneGoldenStrand()
@@ -1368,7 +1432,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Goldenbough Pass
 	function FinalFantasylization_SubzoneGoldenboughPass()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Huntress of the Sun
 	function FinalFantasylization_SubzoneHuntressoftheSun()
@@ -1376,11 +1440,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Lake Elrendar
 	function FinalFantasylization_SubzoneLakeElrendar()
-
+		FinalFantasylization_LakeSong();
 	end
 --	The Living Wood
 	function FinalFantasylization_SubzoneTheLivingWood()
-
+		FinalFantasylization_ForestSong();
 	end
 --	North Sanctum
 	function FinalFantasylization_SubzoneNorthSanctum()
@@ -1417,11 +1481,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Sunsail Anchorage
 	function FinalFantasylization_SubzoneSunsailAnchorage()
-
+		FinalFantasylization_LakeSong();
 	end
 --	The Scorched Grove
 	function FinalFantasylization_SubzoneTheScorchedGrove()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	The Shepherd's Gate
 	function FinalFantasylization_SubzoneTheShepherdsGate()

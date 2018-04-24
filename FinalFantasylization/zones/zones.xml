@@ -15,6 +15,7 @@
 	<Script file="EasternKingdomsZone_LochModan.lua"/>
 	<Script file="EasternKingdomsZone_RedridgeMountains.lua"/>
 	<Script file="EasternKingdomsZone_RuinsofGilneas.lua"/>
+	<Script file="EasternKingdomsZone_SilvermoonCity.lua"/>
 	<Script file="EasternKingdomsZone_SilverpineForest.lua"/>
 	<Script file="EasternKingdomsZone_StormwindCity.lua"/>
 	<Script file="EasternKingdomsZone_TirisfalGlades.lua"/>	
