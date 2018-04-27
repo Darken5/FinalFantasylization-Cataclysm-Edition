@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 --'==========================================================================================
 --	Zone: Ghostlands		FinalFantasylization_EasternKingdomsGhostlands()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsGhostlandsResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsGhostlandsSwimming()
+--
 --	TOWNS:
 --	Horde:
 --		Farstrider Enclave		FinalFantasylization_HordeTownFarstriderEnclave()
@@ -12,6 +16,7 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 --
 --	SUBZONES:
 --	Amani Catacombs			FinalFantasylization_SubzoneAmaniCatacombs()
+--	Amani Mountains			FinalFantasylization_SubzoneAmaniMountains()
 --	Amani Pass				FinalFantasylization_SubzoneAmaniPass()
 --	Andilien Estate			FinalFantasylization_SubzoneAndilienEstate()
 --	An'daroth				FinalFantasylization_SubzoneAndaroth()
@@ -33,6 +38,7 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 --	Suncrown Village		FinalFantasylization_SubzoneSuncrownVillage()
 --	Sungraze Peak			FinalFantasylization_SubzoneSungrazePeak()
 --	Thalassian Pass			FinalFantasylization_SubzoneThalassianPass()
+--	Thalassian Range		FinalFantasylization_SubzoneThalassianRange()
 --	Tower of the Damned		FinalFantasylization_SubzoneToweroftheDamned()
 --	Underlight Mines		FinalFantasylization_SubzoneUnderlightMines()
 --	Windrunner Spire		FinalFantasylization_SubzoneWindrunnerSpire()
@@ -40,10 +46,46 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 --	Zeb'Nowa				FinalFantasylization_SubzoneZebNowa()
 --	Zeb'Sora				FinalFantasylization_SubzoneZebSora()
 --	Zeb'Tela				FinalFantasylization_SubzoneZebTela()
+
+--'==========================================================================================
+--'	Zone Event: Player is Swimming
+--'==========================================================================================
+	if IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsGhostlandsSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+--'==========================================================================================
+--'	Zone Event: Player is Resting
+--'==========================================================================================
+	elseif ( IsResting() ) and ( factionEnglish == "Alliance" ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsGhostlandsResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	elseif ( IsResting() ) and ( factionEnglish == "Horde" ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsGhostlandsResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
 	--'==========================================================================================
 	--' Ghostlands Horde Town: Farstrider Enclave
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Farstrider Enclave"] ) then
+	elseif ( SubZoneName == SZ["Farstrider Enclave"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
@@ -102,6 +144,19 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneAmaniCatacombs()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Ghostlands Subzone: Amani Mountains
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Amani Mountains"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneAmaniMountains()
 		else
 			return
 		end
@@ -375,6 +430,19 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneThalassianPass()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Ghostlands Subzone: Thalassian Range
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Thalassian Range"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneThalassianRange()
 		else
 			return
 		end

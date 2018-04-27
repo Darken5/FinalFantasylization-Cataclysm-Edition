@@ -124,7 +124,7 @@ function FinalFantasylization_OnLoad()
 end
 
 ------------------------------------------------------------
--- FinalFantasylization events
+-- FinalFantasylization Events
 ------------------------------------------------------------
 -- Called when an event that FinalFantasylization cares about is fired.
 local startingFunc
@@ -201,9 +201,7 @@ function FinalFantasylization_ClearMusicState()
 	-- Zone
 	FinalFantasylization_CurrentZone = nil
 	-- General Events --
-	FinalFantasylization_PlayerIsSwimming = false
 	FinalFantasylization_PlayerIsWorlding = false
-	FinalFantasylization_PlayerIsResting = false
 	FinalFantasylization_PlayerIsSleeping = false
 	FinalFantasylization_PlayerIsCombat = false
 	FinalFantasylization_PlayerIsFlying = false
@@ -641,7 +639,7 @@ function FinalFantasylization_GetMusic()
 --###########################################################################################
 		
 --'==========================================================================================
---'	World event: Player is Ghost
+--'	World Event: Player is Ghost
 --'==========================================================================================
 		if ( UnitIsGhost("player") ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Dead == true then
 			if FinalFantasylization_PlayerIsGhosting == false then
@@ -655,7 +653,7 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_PlayerIsGhosting = false
 		end
 --'==========================================================================================
---'	World event: Player is Dead
+--'	World Event: Player is Dead
 --'==========================================================================================
 		if ( UnitIsDead("player") ) and FinalFantasylizationOptions.Dead == true then
 			if FinalFantasylization_PlayerIsDead == false then
@@ -670,7 +668,7 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_PlayerIsDead = false
 		end
 --'==========================================================================================
---'	World event: Player is On Taxi "Horde and Alliance Varyiant"
+--'	World Event: Player is On Taxi "Horde and Alliance Varyiant"
 --'==========================================================================================
 		if ( UnitOnTaxi("player") ) and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true then
 			if FinalFantasylization_PlayerIsTaxi == false then
@@ -690,7 +688,7 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_PlayerIsTaxi = false
 		end
 --'==========================================================================================
---'	World event: Player in Combat, Mounted
+--'	World Event: Player in Combat, Mounted
 --'==========================================================================================
 		if IsMounted("player") and FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
 			if FinalFantasylization_PlayerIsEscape == false then
@@ -703,7 +701,7 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_PlayerIsEscape = false
 		end
 --'==========================================================================================
---'	World event: Player in Combat
+--'	World Event: Player in Combat
 --'==========================================================================================
 		if FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Combat == true and UnitAffectingCombat("player") then
 			--FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. InCombat)
@@ -770,7 +768,7 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_PlayerIsBattling = false
 		end
 --'==========================================================================================
---'	World event: Player is Mounted in Hostile Zone
+--'	World Event: Player is Mounted in Hostile Zone
 --'==========================================================================================
 		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
 			if FinalFantasylization_PlayerIsHostileMounting == false then
@@ -783,7 +781,7 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_PlayerIsHostileMounting = false
 		end
 --'==========================================================================================
---'	World event: Player on Flying Mount "Horde and Alliance Varyiant"
+--'	World Event: Player on Flying Mount "Horde and Alliance Varyiant"
 --'==========================================================================================
 		if IsFlying() and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true then
 			if FinalFantasylization_PlayerIsFlying == false then
@@ -803,7 +801,7 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_PlayerIsFlying = false 
 		end
 --'==========================================================================================
---'	World event: Player is Mounted.. Chocobo!
+--'	World Event: Player is Mounted.. Chocobo!
 --'==========================================================================================
 		if IsMounted("player") and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
 			if FinalFantasylization_PlayerIsMounting == false then
@@ -816,30 +814,7 @@ function FinalFantasylization_GetMusic()
 		else			
 			FinalFantasylization_PlayerIsMounting = false
 		end
---'==========================================================================================
---'	World event: Player is Swimming 
---'==========================================================================================
-		if IsSwimming() ~= nil and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Swim == true then
-			if FinalFantasylization_PlayerIsSwimming == false then
-				if ( MapID == 382 ) or ( MapID == 20 ) or ( SubZoneName == SZ["The Sludge Fen"] ) or ( SubZoneName == SZ["Blackwolf River"] ) then
-				-- 382 = Undercity, 20 = Tirisfal Glades
-					FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming2)
-					FinalFantasylization_Swimming(1)
-				else
-					FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming)
-					FinalFantasylization_Swimming()
-				end
-			end
-			FinalFantasylization_IsPlaying = true
-			FinalFantasylization_PlayerIsSwimming = true
-		elseif IsSwimming() == nil and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Swim == true then
-				if FinalFantasylization_PlayerIsSwimming == true then
-					FinalFantasylization_PlayerIsSwimming = false
-					FinalFantasylization_ClearMusicState()
-				end
-		else
-			FinalFantasylization_PlayerIsSwimming = false
-		end
+
 --###########################################################################################
 --###########################################################################################
 --##
@@ -850,7 +825,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' Eastern Kingdoms Zones
 --'==========================================================================================
-		if not ( ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) or ( FinalFantasylization_PlayerIsSwimming == true ) ) then
+		if not ( ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) ) then
 		-- Abyssal Depths
 			if not ( IsResting() ) and ( MapID == 614 ) then
 				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)
@@ -879,7 +854,7 @@ function FinalFantasylization_GetMusic()
 			elseif not ( IsResting() ) and ( MapID == 462  ) then
 				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)
 		-- Ghostlands
-			elseif not ( IsResting() ) and ( MapID == 463 ) then
+			elseif ( MapID == 463 ) then
 				FinalFantasylization_EasternKingdomsZones_Ghostlands(SubZoneName)
 		-- Gilneas
 			elseif not ( IsResting() ) and ( MapID == 545 ) then
@@ -1147,6 +1122,8 @@ function FinalFantasylization_GetMusic()
 		else
 			FinalFantasylization_InInstance = false
 		end
+	end
+end
 
 --###########################################################################################
 --###########################################################################################
@@ -1155,33 +1132,9 @@ function FinalFantasylization_GetMusic()
 --##
 --###########################################################################################
 --###########################################################################################
-	
+
 --'==========================================================================================
---'	World event: Player is Resting
---'==========================================================================================
-		if ( IsResting() ) and ( factionEnglish == "Alliance" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
-			if FinalFantasylization_PlayerIsResting == false then
-				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
-				FinalFantasylization_Sleeping()
-				FinalFantasylization_IsPlaying = true
-				FinalFantasylization_PlayerIsResting = true
-				FinalFantasylization_CurrentZone = "Sleeping"
-			end
-		elseif ( IsResting() ) and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
-			if FinalFantasylization_PlayerIsResting == false then
-				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
-				FinalFantasylization_Sleeping()
-				FinalFantasylization_IsPlaying = true
-				FinalFantasylization_PlayerIsResting = true
-				FinalFantasylization_CurrentZone = "Sleeping"
-			end
-		else
-			FinalFantasylization_PlayerIsResting = false
-		end	
-	end
-end
---'==========================================================================================
---'	World event: /DANCE
+--'	World Event: /DANCE
 --'==========================================================================================
 function FinalFantasylization_DoEmote(emote, msg)
 	FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. 'FinalFantasylization_DoEmote: '..emote);
@@ -1321,7 +1274,7 @@ function FinalFantasylization_JumpOrAscendStart()
 		FinalFantasylization_StopDanceSong();
 	end
 --'==========================================================================================
---'	World event: Chocobo Kweh!!
+--'	World Event: Chocobo Kweh!!
 --'==========================================================================================	
 	if IsMounted("player") and FinalFantasylizationOptions.ChocoboKweh == true then
 		if UnitAura("player", "Running Wild") == nil then

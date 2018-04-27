@@ -1517,12 +1517,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Ghostlands
 	function FinalFantasylization_EasternKingdomsGhostlands()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
+		FinalFantasylization_PlagueSong();
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsGhostlandsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsGhostlandsSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Horde:
@@ -1541,119 +1545,128 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Amani Catacombs
 	function FinalFantasylization_SubzoneAmaniCatacombs()
-
+		FinalFantasylization_LandSong();
+	end
+--	Amani Mountains
+	function FinalFantasylization_SubzoneAmaniMountains()
+		FinalFantasylization_LandSong();
 	end
 --	Amani Pass
 	function FinalFantasylization_SubzoneAmaniPass()
-
+		FinalFantasylization_LandSong();
 	end
 --	Andilien Estate
 	function FinalFantasylization_SubzoneAndilienEstate()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	An'daroth
 	function FinalFantasylization_SubzoneAndaroth()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	An'owyn
 	function FinalFantasylization_SubzoneAnowyn()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	An'telas
 	function FinalFantasylization_SubzoneAntelas()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Bleeding Ziggurat
 	function FinalFantasylization_SubzoneBleedingZiggurat()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Dawnstar Spire
 	function FinalFantasylization_SubzoneDawnstarSpire()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	*The Dead Scar
 	function FinalFantasylization_SubzoneGhostlandsTheDeadScar()
-		FinalFantasylization_PlagueSong();
+		FinalFantasylization_SwampSong();
 	end
 --	Deatholme
 	function FinalFantasylization_SubzoneDeatholme()
-
+		FinalFantasylization_SwampSong();
 	end
 --	Elrendar Crossing
 	function FinalFantasylization_SubzoneElrendarCrossing()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Elrendar River
 	function FinalFantasylization_SubzoneElrendarRiver()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Goldenmist Village
 	function FinalFantasylization_SubzoneGoldenmistVillage()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Hatchet Hills
 	function FinalFantasylization_SubzoneHatchetHills()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Howling Ziggurat
 	function FinalFantasylization_SubzoneHowlingZiggurat()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Isle of Tribulations
 	function FinalFantasylization_SubzoneIsleofTribulations()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Lake Elrendar
 	function FinalFantasylization_SubzoneLakeElrendar()
-
+		FinalFantasylization_LakeSong();
 	end
 --	Sanctum of the Moon
 	function FinalFantasylization_SubzoneSanctumoftheMoon()
-		FinalFantasylization_ForestSong();
+		FinalFantasylization_PlagueSong();
 	end
 --	Shalandis Isle
 	function FinalFantasylization_SubzoneShalandisIsle()
-
+		FinalFantasylization_PlayMusic(S .. DarnassusSong);
+		FinalFantasylization_debugMsg("DarnassusSong")
 	end
 --	Suncrown Village
 	function FinalFantasylization_SubzoneSuncrownVillage()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Sungraze Peak
 	function FinalFantasylization_SubzoneSungrazePeak()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Thalassian Pass
 	function FinalFantasylization_SubzoneThalassianPass()
-
+		FinalFantasylization_PlagueSong();
+	end
+--	Thalassian Range
+	function FinalFantasylization_SubzoneThalassianRange()
+		FinalFantasylization_PlagueSong();
 	end
 --	Tower of the Damned
 	function FinalFantasylization_SubzoneToweroftheDamned()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Underlight Mines
 	function FinalFantasylization_SubzoneUnderlightMines()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Windrunner Spire
 	function FinalFantasylization_SubzoneWindrunnerSpire()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Windrunner Village
 	function FinalFantasylization_SubzoneWindrunnerVillage()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Zeb'Nowa
 	function FinalFantasylization_SubzoneZebNowa()
-
+		FinalFantasylization_LandSong();
 	end
 --	Zeb'Sora
 	function FinalFantasylization_SubzoneZebSora()
-
+		FinalFantasylization_LandSong();
 	end
 --	Zeb'Tela
 	function FinalFantasylization_SubzoneZebTela()
-
+		FinalFantasylization_LandSong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Gilneas : Worgen
@@ -4866,12 +4879,14 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--#############
 	function FinalFantasylization_Swimming(Zone)
 		if Zone == 1 then
-			FinalFantasylization_PlayMusic(S .. DarkSwimSong);  -- alt Swim song
-			FinalFantasylization_debugMsg("DarkSwimSong") -- alt Swim song
-			return
-		else
+			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming)
 			FinalFantasylization_PlayMusic(S .. SwimSong);  -- Normal Swim song
 			FinalFantasylization_debugMsg("SwimSong") -- Normal Swim song
+			return
+		elseif Zone == 2 then
+			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming2)
+			FinalFantasylization_PlayMusic(S .. DarkSwimSong);  -- alt Swim song
+			FinalFantasylization_debugMsg("DarkSwimSong") -- alt Swim song
 		end
 	end
 
