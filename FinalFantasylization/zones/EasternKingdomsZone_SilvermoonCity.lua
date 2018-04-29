@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_SilvermoonCity()
 --'==========================================================================================
 --	Zone: SilvermoonCity		FinalFantasylization_EasternKingdoms_SilvermoonCity()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdoms_SilvermoonCityResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdoms_SilvermoonCitySwimming()
+--
 --	SUBZONES:
 --	The Bazaar				FinalFantasylization_SilvermoonCity_SubzoneTheBazaar()
 --		The Sanctum				FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
@@ -16,14 +20,40 @@ function FinalFantasylization_EasternKingdomsZones_SilvermoonCity()
 --	The Royal Exchange		FinalFantasylization_SilvermoonCity_SubzoneTheRoyalExchange()
 --	The Shepherd's Gate		FinalFantasylization_SilvermoonCity_SubzoneTheShepherdsGate()
 --	Walk of Elders			FinalFantasylization_SilvermoonCity_SubzoneWalkofElders()
+
 	--'==========================================================================================
 	--' Silvermoon City: Horde Check
 	--'==========================================================================================
 	if ( factionEnglish == "Horde" ) then
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting - (Will only play if Capital Music is OFF)
+	--'==========================================================================================
+		if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and FinalFantasylizationOptions.Capital == false then ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+			if FinalFantasylization_CurrentZone ~= "Sleeping" then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+				FinalFantasylization_CurrentZone = "Sleeping"
+				FinalFantasylization_EasternKingdoms_SilvermoonCityResting()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+			if FinalFantasylization_CurrentZone ~= "Swimming" then
+				FinalFantasylization_CurrentZone = "Swimming"
+				FinalFantasylization_EasternKingdoms_SilvermoonCitySwimming()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
 	--' Silvermoon City: The Bazaar
 	--'==========================================================================================
-		if ( SubZoneName == SZ["The Bazaar"] ) then
+		elseif ( SubZoneName == SZ["The Bazaar"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)

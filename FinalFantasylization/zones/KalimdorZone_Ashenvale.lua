@@ -4,6 +4,10 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 --'==========================================================================================
 --	Zone: Ashenvale			FinalFantasylization_KalimdorAshenvale()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_KalimdorAshenvaleResting()
+--		Player is Swimming		FinalFantasylization_KalimdorAshenvaleSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Astranaar				FinalFantasylization_AllianceTownAstranaar()
@@ -66,9 +70,38 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 --	The Zoram Strand			FinalFantasylization_SubzoneTheZoramStrand()
 --		Ruuzel's Isle				FinalFantasylization_SubzoneRuuzelsIsle()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_KalimdorAshenvaleResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_KalimdorAshenvaleSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Ashenvale Alliance Town: Astranaar
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Astranaar"] ) then
+	elseif ( SubZoneName == SZ["Astranaar"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

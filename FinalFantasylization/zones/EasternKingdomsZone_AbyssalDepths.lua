@@ -4,6 +4,9 @@ function FinalFantasylization_EasternKingdomsZones_AbyssalDepths()
 --'==========================================================================================
 --	Zone: Abyssal Depths	FinalFantasylization_EasternKingdomsAbyssalDepths()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsAbyssalDepthsResting()
+--
 --	TOWNS:
 --	Alliance:
 --		Darkbreak Cove			FinalFantasylization_AllianceTownDarkbreakCove()
@@ -31,9 +34,26 @@ function FinalFantasylization_EasternKingdomsZones_AbyssalDepths()
 --	Underlight Canyon		FinalFantasylization_SubzoneUnderlightCanyon()
 --	The Undershell			FinalFantasylization_SubzoneTheUndershell()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsArathiHighlandsResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Abyssal Depths Alliance Town: Darkbreak Cove
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Darkbreak Cove"] ) then
+	elseif ( SubZoneName == SZ["Darkbreak Cove"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

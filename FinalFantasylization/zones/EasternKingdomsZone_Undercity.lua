@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 --'==========================================================================================
 --	Zone: Undercity			FinalFantasylization_EasternKingdoms_Undercity()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdoms_UndercityResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdoms_UndercitySwimming()
+--
 --	SUBZONES:
 --	Apothecarium			FinalFantasylization_Undercity_SubzoneTheApothecarium()
 --	Canals					FinalFantasylization_Undercity_SubzoneCanals()
@@ -19,9 +23,34 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 	--'==========================================================================================
 	if ( factionEnglish == "Horde" ) then
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting - (Will only play if Capital Music is OFF)
+	--'==========================================================================================
+		if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and FinalFantasylizationOptions.Capital == false then ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+			if FinalFantasylization_CurrentZone ~= "Sleeping" then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+				FinalFantasylization_CurrentZone = "Sleeping"
+				FinalFantasylization_EasternKingdoms_UndercityResting()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+			if FinalFantasylization_CurrentZone ~= "Swimming" then
+				FinalFantasylization_CurrentZone = "Swimming"
+				FinalFantasylization_EasternKingdoms_UndercitySwimming()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
 	--' Undercity: The Apothecarium
 	--'==========================================================================================
-		if ( SubZoneName == SZ["The Apothecarium"] ) then
+		elseif ( SubZoneName == SZ["The Apothecarium"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)

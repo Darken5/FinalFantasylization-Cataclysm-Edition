@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_Gilneas()
 --'==========================================================================================
 --	Zone: Gilneas				FinalFantasylization_EasternKingdomsGilneas()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsGilneasResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsGilneasSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Duskhaven					FinalFantasylization_AllianceTownDuskhaven()
@@ -43,9 +47,38 @@ function FinalFantasylization_EasternKingdomsZones_Gilneas()
 --	Wahl Cottage				FinalFantasylization_SubzoneWahlCottage()
 --	Wood's End Cabin			FinalFantasylization_SubzoneWoodsEndCabin()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsGilneasResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsGilneasSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Gilneas Alliance Town: Duskhaven
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Duskhaven"] ) then
+	elseif ( SubZoneName == SZ["Duskhaven"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

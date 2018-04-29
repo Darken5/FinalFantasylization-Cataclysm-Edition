@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 --'==========================================================================================
 --	Zone: Badlands				FinalFantasylization_EasternKingdomsBadlands()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsBadlandsResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsBadlandsSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Dragon's Mouth				FinalFantasylization_AllianceTownDragonsMouth()
@@ -39,9 +43,38 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 --		Uldaman Entrance			FinalFantasylization_SubzoneUldamanEntrance()
 --	Valley of Fangs				FinalFantasylization_SubzoneValleyofFangs()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsBadlandsResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsBadlandsSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Badlands Alliance Town: Dragon's Mouth
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Dragon's Mouth"] ) then
+	elseif ( SubZoneName == SZ["Dragon's Mouth"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

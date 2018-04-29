@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_StormwindCity()
 --'==========================================================================================
 --	Zone: Stormwind City		FinalFantasylization_EasternKingdoms_StormwindCity()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdoms_StormwindCityResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdoms_StormwindCitySwimming()
+--
 --	SUBZONES:
 --	The Canals							FinalFantasylization_StormwindCity_SubzoneTheCanals()
 --	Cathedral Square					FinalFantasylization_StormwindCity_SubzoneCathedralSquare()
@@ -38,9 +42,34 @@ function FinalFantasylization_EasternKingdomsZones_StormwindCity()
 	--'==========================================================================================
 	if ( factionEnglish == "Alliance" ) then
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting - (Will only play if Capital Music is OFF)
+	--'==========================================================================================
+		if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and FinalFantasylizationOptions.Capital == false then ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+			if FinalFantasylization_CurrentZone ~= "Sleeping" then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+				FinalFantasylization_CurrentZone = "Sleeping"
+				FinalFantasylization_EasternKingdoms_StormwindCityResting()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+			if FinalFantasylization_CurrentZone ~= "Swimming" then
+				FinalFantasylization_CurrentZone = "Swimming"
+				FinalFantasylization_EasternKingdoms_StormwindCitySwimming()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
 	--' Stormwind City: The Canals
 	--'==========================================================================================
-		if ( SubZoneName == SZ["The Canals"] ) then
+		elseif ( SubZoneName == SZ["The Canals"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)

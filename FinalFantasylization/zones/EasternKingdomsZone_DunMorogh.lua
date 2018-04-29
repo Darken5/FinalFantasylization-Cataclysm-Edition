@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 --'==========================================================================================
 --	Zone: Dun Morogh				FinalFantasylization_EasternKingdomsDunMorogh()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsDunMoroghResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsDunMoroghSwimming()
+--
 --	TOWNS:
 --	Dwarf Start:
 --		Anvilmar						FinalFantasylization_Dwarf_Start_Anvilmar()
@@ -48,9 +52,38 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 --		South Gate Outpost				FinalFantasylization_SubzoneSouthGateOutpost()
 --	The Tundrid Hills				FinalFantasylization_SubzoneTheTundridHills()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsDunMoroghResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsDunMoroghSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Dun Morogh: Dwarf Starting Area: Anvilmar
 	--'==========================================================================================
-	if ( MinimapZoneName == SZ["Anvilmar"] ) then
+	elseif ( MinimapZoneName == SZ["Anvilmar"] ) then
 		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
 			FinalFantasylization_CurrentZone = MinimapZoneName
 			if ( factionEnglish == "Alliance" ) then

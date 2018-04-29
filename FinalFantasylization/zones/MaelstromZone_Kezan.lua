@@ -2,7 +2,11 @@ function FinalFantasylization_MaelstromZones_Kezan()
 --'==========================================================================================
 --' Maelstrom Zones: Kezan : Goblin
 --'==========================================================================================
---	Zone: Kezan				FinalFantasylization_MaelstromKezan()
+--	Zone: Kezan				FinalFantasylization_Maelstrom_Kezan()
+--
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_Maelstrom_KezanResting()
+--		Player is Swimming		FinalFantasylization_Maelstrom_KezanSwimming()
 --
 --	Goblin Start:
 --		Bilgewater Port			FinalFantasylization_Goblin_Start_BilgewaterPort()
@@ -18,9 +22,34 @@ function FinalFantasylization_MaelstromZones_Kezan()
 --		Swindle Street			FinalFantasylization_Goblin_Start_SwindleStreet()
 --		The Pipe				FinalFantasylization_Goblin_Start_ThePipe()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true then ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_Maelstrom_KezanResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_Maelstrom_KezanSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Kezan: Goblin Starting Area: Bilgewater Port
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Bilgewater Port"] ) then
+	elseif ( SubZoneName == SZ["Bilgewater Port"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName

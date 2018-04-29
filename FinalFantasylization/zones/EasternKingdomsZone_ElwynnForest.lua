@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 --'==========================================================================================
 --	Zone: Elwynn Forest			FinalFantasylization_EasternKingdomsElwynnForest()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsElwynnForestResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsElwynnForestSwimming()
+--
 --	TOWNS:
 --	Human Start:
 --		Northshire Abbey			FinalFantasylization_Human_Start_NorthshireAbbey()
@@ -39,9 +43,38 @@ function FinalFantasylization_EasternKingdomsZones_ElwynnForest()
 --	Tower of Azora				FinalFantasylization_SubzoneTowerofAzora()
 --	Westbrook Garrison			FinalFantasylization_SubzoneWestbrookGarrison()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsElwynnForestResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsElwynnForestSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Elwynn Forest: Human Starting Area: Northshire Abbey
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Northshire Abbey"] ) then
+	elseif ( SubZoneName == SZ["Northshire Abbey"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

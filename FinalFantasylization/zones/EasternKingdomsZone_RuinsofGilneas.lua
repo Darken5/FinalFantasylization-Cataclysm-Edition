@@ -4,7 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_RuinsofGilneas()
 --'==========================================================================================
 --	Zone: Ruins of Gilneas				FinalFantasylization_EasternKingdomsRuinsofGilneas()
 --
---	
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsRuinsofGilneasResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsRuinsofGilneasSwimming()
+--
 --	Undead:
 --		TOWN:
 --			Forsaken Forward Command		FinalFantasylization_HordeTownForsakenForwardCommand()
@@ -22,9 +25,38 @@ function FinalFantasylization_EasternKingdomsZones_RuinsofGilneas()
 --		Rutsak's Guard					FinalFantasylization_SubzoneRutsaksGuard()
 --		Tempest's Reach					FinalFantasylization_SubzoneTempestsReach()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsRuinsofGilneasResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsRuinsofGilneasSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Ruins of Gilneas Horde Town: Forsaken Forward Command
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Forsaken Forward Command"] ) then
+	elseif ( SubZoneName == SZ["Forsaken Forward Command"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then

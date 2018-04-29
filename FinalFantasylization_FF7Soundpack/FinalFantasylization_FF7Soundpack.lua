@@ -214,6 +214,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdoms_SilvermoonCityResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdoms_SilvermoonCitySwimming()
+		FinalFantasylization_Swimming(1)
+	end
 --	SUBZONES:
 --	The Bazaar
 	function FinalFantasylization_SilvermoonCity_SubzoneTheBazaar()
@@ -277,6 +286,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdoms_StormwindCity()
 		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
 		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdoms_StormwindCityResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdoms_StormwindCitySwimming()
+		FinalFantasylization_Swimming(1)
 	end
 --	SUBZONES:
 --	The Canals
@@ -427,6 +445,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdoms_UndercityResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdoms_UndercitySwimming()
+		FinalFantasylization_Swimming(2)
+	end
 --	SUBZONES:
 --	Apothecarium
 	function FinalFantasylization_Undercity_SubzoneTheApothecarium()
@@ -489,6 +516,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_Swimming(1);
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsAbyssalDepthsResting()
+		FinalFantasylization_Sleeping()
 	end
 --	TOWNS:
 --	Alliance:
@@ -589,6 +621,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_ContestedSong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsArathiHighlandsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsArathiHighlandsSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Alliance: Refuge Pointe
@@ -711,6 +752,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_ContestedSong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsBadlandsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsBadlandsSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Alliance:
@@ -841,6 +891,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_ContestedSong();
 			end
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsBlastedLandsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsBlastedLandsSwimming()
+		FinalFantasylization_Swimming(2)
+	end
 --	TOWNS:
 --	Alliance: 
 --		Nethergarde Keep
@@ -924,6 +983,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_ContestedSong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsBurningSteppesResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsBurningSteppesSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Alliance:
@@ -1028,6 +1096,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_FriendlySong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsDunMoroghResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsDunMoroghSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Dwarf Start:
@@ -1197,6 +1274,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong();
 			end
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsElwynnForestResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsElwynnForestSwimming()
+		FinalFantasylization_Swimming(1)
+	end
 --	TOWNS:
 --	Human Start:
 --		Northshire Abbey			
@@ -1359,6 +1445,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_FriendlySong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsEversongWoodsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsEversongWoodsSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Blood Elf Start:
@@ -1675,6 +1770,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsGilneas()
 		FinalFantasylization_ForestSong();
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsGilneasResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsGilneasSwimming()
+		FinalFantasylization_Swimming(2)
+	end
 --	TOWNS:
 --	Alliance:
 --		Duskhaven
@@ -1822,6 +1926,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsGilneasCity()
 		FinalFantasylization_BattleGround();
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsGilneasCityResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsGilneasCitySwimming()
+		FinalFantasylization_Swimming(2)
+	end
 --	SUBZONES:
 --	Cathedral Quarter
 	function FinalFantasylization_GilneasCity_SubzoneCathedralQuarter()
@@ -1859,6 +1972,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_FriendlySong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsLochModanResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsLochModanSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Alliance:
@@ -1942,6 +2064,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_ContestedSong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsRedridgeMountainsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsRedridgeMountainsSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Alliance:
@@ -2037,6 +2168,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsRuinsofGilneas()
 		FinalFantasylization_ForestSong();
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsRuinsofGilneasResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsRuinsofGilneasSwimming()
+		FinalFantasylization_Swimming(2)
+	end
 --	Undead:
 --		TOWN:
 --			Forsaken Forward Command
@@ -2099,6 +2239,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_PlagueSong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsSilverpineForestResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsSilverpineForestSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Horde:
@@ -2238,6 +2387,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_PlagueSong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsTirisfalGladesResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsTirisfalGladesSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Forsaken Start: 
@@ -2418,6 +2576,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong();
 			end
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsWestfallResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsWestfallSwimming()
+		FinalFantasylization_Swimming(1)
+	end
 --	TOWNS:
 --	Alliance:
 --		Moonbrook
@@ -2519,6 +2686,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. DarnassusSong);
 		FinalFantasylization_debugMsg("DarnassusSong")
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_Kalimdor_DarnassusResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_Kalimdor_DarnassusSwimming()
+		FinalFantasylization_Swimming(1)
+	end
 --	SUBZONES:
 --	Cenarion Enclave
 	function FinalFantasylization_Darnassus_SubzoneCenarionEnclave()
@@ -2563,6 +2739,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. ExodarSong);
 		FinalFantasylization_debugMsg("ExodarSong")
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_Kalimdor_TheExodarResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_Kalimdor_TheExodarSwimming()
+		FinalFantasylization_Swimming(1)
+	end
 --	SUBZONES:
 --	The Crystal Hall
 	function FinalFantasylization_TheExodar_SubzoneTheCrystalHall()
@@ -2595,6 +2780,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_ContestedSong()
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorAshenvaleResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorAshenvaleSwimming()
+		FinalFantasylization_Swimming(1)
 	end
 --	TOWNS:
 --	Alliance:
@@ -2832,6 +3026,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_ContestedSong();
 			end
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorAzsharaResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorAzsharaSwimming()
+		FinalFantasylization_Swimming(1)
+	end
 --	TOWNS:
 --	Horde:
 --		Bilgewater Harbor
@@ -3038,6 +3241,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_FriendlySong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorAzuremystIsleResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorAzuremystIsleSwimming()
+		FinalFantasylization_Swimming(1)
 	end
 --	TOWNS:
 --	Draenei Start:
@@ -3294,6 +3506,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_FriendlySong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorBloodmystIsleResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorBloodmystIsleSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Alliance:
@@ -3566,6 +3787,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong();
 			end
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorDarkshoreResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorDarkshoreSwimming()
+		FinalFantasylization_Swimming(2)
+	end
 --	TOWNS:
 --	Alliance:
 --		Auberdine Refugee Camp
@@ -3721,6 +3951,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_FriendlySong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorDurotarResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorDurotarSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Orc Start:
@@ -3884,6 +4123,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong();
 			end
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorMulgoreResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorMulgoreSwimming()
+		FinalFantasylization_Swimming(1)
+	end
 --	TOWNS:
 --	Tauren Start:
 --		Red Cloud Mesa
@@ -3996,6 +4244,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			else
 				FinalFantasylization_FriendlySong();
 			end
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorNorthernBarrensResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorNorthernBarrensSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Alliance:
@@ -4111,6 +4368,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong();
 			end
 	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_KalimdorTeldrassilResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorTeldrassilSwimming()
+		FinalFantasylization_Swimming(1)
+	end
 --	TOWNS:
 --	Night Elf Start:
 --		Shadowglen
@@ -4196,9 +4462,18 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --' Maelstrom Zones: Kezan : Horde
 --'==========================================================================================
 --	Zone: Kezan
-	function FinalFantasylization_MaelstromKezan()
+	function FinalFantasylization_Maelstrom_Kezan()
 		FinalFantasylization_PlayMusic(S .. Alliance1Town);
 		FinalFantasylization_debugMsg("Alliance1Town")
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_Maelstrom_KezanResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_Maelstrom_KezanSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
 --	Goblin Start:
@@ -4259,6 +4534,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Zone: Lost Isles
 	function FinalFantasylization_MaelstromLostIsles()
 
+	end
+--	Zone Event:
+--		Player is Resting
+	function FinalFantasylization_MaelstromTheLostIslesResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_MaelstromTheLostIslesSwimming()
+		FinalFantasylization_Swimming(2)
 	end
 --	Goblin Start:
 --	TOWNS:

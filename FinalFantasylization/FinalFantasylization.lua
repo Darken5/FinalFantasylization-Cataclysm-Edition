@@ -827,52 +827,52 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 		if not ( ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) ) then
 		-- Abyssal Depths
-			if not ( IsResting() ) and ( MapID == 614 ) then
+			if ( MapID == 614 ) then
 				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)
 		-- Arathi Highlands
-			elseif not ( IsResting() ) and ( MapID == 16 ) then
+			elseif ( MapID == 16 ) then
 				FinalFantasylization_EasternKingdomsZones_ArathiHighlands(SubZoneName)
 		-- Badlands
-			elseif not ( IsResting() ) and ( MapID == 17 ) then
+			elseif ( MapID == 17 ) then
 				FinalFantasylization_EasternKingdomsZones_Badlands(SubZoneName)
 		-- Blasted Lands
-			elseif not ( IsResting() ) and ( MapID == 19 ) then
+			elseif ( MapID == 19 ) then
 				FinalFantasylization_EasternKingdomsZones_BlastedLands(SubZoneName)
 		-- Burning Steppes
-			elseif not ( IsResting() ) and ( MapID == 29 ) then
+			elseif ( MapID == 29 ) then
 				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)
 		-- Deeprun Tram
 			elseif ( MinimapZoneName == SZ["Deeprun Tram"] ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
 		-- Dun Morogh
-			elseif not ( IsResting() ) and ( MapID == 27 ) then
+			elseif ( MapID == 27 ) then
 				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)
 		-- Elwynn Forest
-			elseif not ( IsResting() ) and ( MapID == 30 ) then
+			elseif ( MapID == 30 ) then
 				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)
 		-- Eversong Woods
-			elseif not ( IsResting() ) and ( MapID == 462  ) then
+			elseif ( MapID == 462  ) then
 				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)
 		-- Ghostlands
 			elseif ( MapID == 463 ) then
 				FinalFantasylization_EasternKingdomsZones_Ghostlands(SubZoneName)
 		-- Gilneas
-			elseif not ( IsResting() ) and ( MapID == 545 ) then
+			elseif ( MapID == 545 ) then
 				FinalFantasylization_EasternKingdomsZones_Gilneas(SubZoneName)
 		-- Gilneas City
-			elseif not ( IsResting() ) and ( MapID == 611 ) then
+			elseif ( MapID == 611 ) then
 				FinalFantasylization_EasternKingdomsZones_GilneasCity(SubZoneName)
 		-- Loch Modan
-			elseif not ( IsResting() ) and ( MapID == 35 ) then
+			elseif ( MapID == 35 ) then
 				FinalFantasylization_EasternKingdomsZones_LochModan(SubZoneName)
 		-- Redridge Mountains
-			elseif not ( IsResting() ) and ( MapID == 36 ) then
+			elseif ( MapID == 36 ) then
 				FinalFantasylization_EasternKingdomsZones_RedridgeMountains(SubZoneName)
 		-- Ruins of Gilneas
-			elseif not ( IsResting() ) and ( MapID == 684 ) then
+			elseif ( MapID == 684 ) then
 				FinalFantasylization_EasternKingdomsZones_RuinsofGilneas(SubZoneName)
 		-- Silverpine Forest
-			elseif not ( IsResting() ) and ( MapID == 21 ) then
+			elseif ( MapID == 21 ) then
 				FinalFantasylization_EasternKingdomsZones_SilverpineForest(SubZoneName)
 		-- Silvermoon City
 			elseif ( MapID == 480 ) then
@@ -881,13 +881,13 @@ function FinalFantasylization_GetMusic()
 			elseif ( MapID == 301 ) then
 				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)
 		-- Tirisfal Glades
-			elseif not ( IsResting() ) and ( MapID == 20 ) then
+			elseif ( MapID == 20 ) then
 				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)
 		-- Undercity
 			elseif ( MapID == 382 ) then
 				FinalFantasylization_EasternKingdomsZones_Undercity(SubZoneName)
 		-- Westfall
-			elseif not ( IsResting() ) and ( MapID == 39 ) then
+			elseif ( MapID == 39 ) then
 				FinalFantasylization_EasternKingdomsZones_Westfall(SubZoneName)
 
 
@@ -895,37 +895,37 @@ function FinalFantasylization_GetMusic()
 --' Kalimdor Zones
 --'==========================================================================================
 		-- Ashenvale
-			elseif not ( IsResting() ) and ( MapID == 43 ) then
+			elseif ( MapID == 43 ) then
 				FinalFantasylization_KalimdorZones_Ashenvale(SubZoneName)
 		-- Azshara
-			elseif not ( IsResting() ) and ( MapID == 181 ) then
+			elseif ( MapID == 181 ) then
 				FinalFantasylization_KalimdorZones_Azshara(SubZoneName)
 		-- Azuremyst Isle
-			elseif not ( IsResting() ) and ( MapID == 464 ) then
+			elseif ( MapID == 464 ) then
 				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)
 		-- Bloodmyst Isle
-			elseif not ( IsResting() ) and ( MapID == 476 ) then
+			elseif ( MapID == 476 ) then
 				FinalFantasylization_KalimdorZones_BloodmystIsle(SubZoneName)
 		-- Darkshore
-			elseif not ( IsResting() ) and ( MapID == 42 ) then
+			elseif ( MapID == 42 ) then
 				FinalFantasylization_KalimdorZones_Darkshore(SubZoneName)
 		-- Darnassus
 			elseif ( MapID == 381 ) then
 				FinalFantasylization_KalimdorZones_Darnassus(SubZoneName)
 		-- Durotar
-			elseif not ( IsResting() ) and ( MapID == 4 ) then
+			elseif ( MapID == 4 ) then
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
 		-- The Exodar
 			elseif ( MapID == 471 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
 		-- Mulgore
-			elseif not ( IsResting() ) and ( MapID == 9 ) then
+			elseif ( MapID == 9 ) then
 				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)
 		-- Northern Barrens
-			elseif not ( IsResting() ) and ( MapID == 11 ) then
+			elseif ( MapID == 11 ) then
 				FinalFantasylization_KalimdorZones_NorthernBarrens(SubZoneName)
 		-- Teldrassil
-			elseif not ( IsResting() ) and ( MapID == 41 ) then
+			elseif ( MapID == 41 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
 
 
@@ -933,10 +933,10 @@ function FinalFantasylization_GetMusic()
 --' Maelstrom Zones
 --'==========================================================================================
 		-- Kezan
-			elseif not ( IsResting() ) and ( MapID == 605 ) then
+			elseif ( MapID == 605 ) then
 				FinalFantasylization_MaelstromZones_Kezan(SubZoneName)
 		-- The Lost Isles
-			elseif not ( IsResting() ) and ( MapID == 544 ) then
+			elseif ( MapID == 544 ) then
 				FinalFantasylization_MaelstromZones_TheLostIsles(SubZoneName)
 
 

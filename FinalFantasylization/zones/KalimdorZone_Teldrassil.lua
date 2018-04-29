@@ -4,6 +4,10 @@ function FinalFantasylization_KalimdorZones_Teldrassil()
 --'==========================================================================================
 --	Zone: Teldrassil			FinalFantasylization_KalimdorTeldrassil()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_KalimdorTeldrassilResting()
+--		Player is Swimming		FinalFantasylization_KalimdorTeldrassilSwimming()
+--
 --	TOWNS:
 --	Night Elf Start:
 --		Shadowglen					FinalFantasylization_NightElf_Start_Shadowglen()
@@ -28,9 +32,38 @@ function FinalFantasylization_KalimdorZones_Teldrassil()
 --	Wellspring Lake				FinalFantasylization_SubzoneWellspringLake()
 --	Wellspring River			FinalFantasylization_SubzoneWellspringRiver()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_KalimdorTeldrassilResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_KalimdorTeldrassilSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Teldrassil: Night Elf Starting Area: Shadowglen
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Shadowglen"] ) then
+	elseif ( SubZoneName == SZ["Shadowglen"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

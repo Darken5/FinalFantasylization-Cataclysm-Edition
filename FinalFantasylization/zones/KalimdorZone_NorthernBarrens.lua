@@ -4,6 +4,10 @@ function FinalFantasylization_KalimdorZones_NorthernBarrens()
 --'==========================================================================================
 --	Zone: Northern Barrens			FinalFantasylization_KalimdorNorthernBarrens()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_KalimdorNorthernBarrensResting()
+--		Player is Swimming		FinalFantasylization_KalimdorNorthernBarrensSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Honor's Stand					FinalFantasylization_AllianceTownHonorsStand()
@@ -35,9 +39,38 @@ function FinalFantasylization_KalimdorZones_NorthernBarrens()
 --	Thorn Hill						FinalFantasylization_SubzoneThornHill()
 --	The Tidus Stair					FinalFantasylization_SubzoneTheTidusStair()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_KalimdorNorthernBarrensResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_KalimdorNorthernBarrensSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Northern Barrens Alliance Town: Honor's Stand
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Honor's Stand"] ) then
+	elseif ( SubZoneName == SZ["Honor's Stand"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

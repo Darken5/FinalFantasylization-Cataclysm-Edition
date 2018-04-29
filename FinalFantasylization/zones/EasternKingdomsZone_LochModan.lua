@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_LochModan()
 --'==========================================================================================
 --	Zone: Loch Modan			FinalFantasylization_EasternKingdomsLochModan()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsLochModanResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsLochModanSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Algaz Station				FinalFantasylization_AllianceTownAlgazStation()
@@ -26,9 +30,38 @@ function FinalFantasylization_EasternKingdomsZones_LochModan()
 --	Stonewrought Dam			FinalFantasylization_SubzoneStonewroughtDam()
 --	Valley of Kings				FinalFantasylization_SubzoneValleyofKings()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsLochModanResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsLochModanSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Loch Modan Alliance Town: Algaz Station
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Algaz Station"] ) then
+	elseif ( SubZoneName == SZ["Algaz Station"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

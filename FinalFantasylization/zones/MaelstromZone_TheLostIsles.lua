@@ -4,6 +4,10 @@ function FinalFantasylization_MaelstromZones_TheLostIsles()
 --'==========================================================================================
 --	Zone: The Lost Isles			FinalFantasylization_MaelstromTheLostIsles()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_MaelstromTheLostIslesResting()
+--		Player is Swimming		FinalFantasylization_MaelstromTheLostIslesSwimming()
+--
 --	Goblin Start:
 --	TOWNS:
 --	Alliance Beachhead				FinalFantasylization_Goblin_Start_AllianceBeachhead()
@@ -43,9 +47,38 @@ function FinalFantasylization_MaelstromZones_TheLostIsles()
 --	The Vicious Vale			FinalFantasylization_Goblin_Start_TheViciousVale()
 --	Volcanoth's Lair			FinalFantasylization_Goblin_Start_VolcanothsLair()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_MaelstromTheLostIslesResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_MaelstromTheLostIslesSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' The Lost Isles: Goblin Starting Town: Alliance Beachhead
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Alliance Beachhead"] ) then
+	elseif ( SubZoneName == SZ["Alliance Beachhead"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName

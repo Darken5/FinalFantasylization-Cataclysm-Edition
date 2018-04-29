@@ -46,37 +46,30 @@ function FinalFantasylization_EasternKingdomsZones_Ghostlands()
 --	Zeb'Nowa				FinalFantasylization_SubzoneZebNowa()
 --	Zeb'Sora				FinalFantasylization_SubzoneZebSora()
 --	Zeb'Tela				FinalFantasylization_SubzoneZebTela()
-
---'==========================================================================================
---'	Zone Event: Player is Swimming
---'==========================================================================================
-	if IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsGhostlandsResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
 		if FinalFantasylization_CurrentZone ~= "Swimming" then
 			FinalFantasylization_CurrentZone = "Swimming"
 			FinalFantasylization_EasternKingdomsGhostlandsSwimming()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
---'==========================================================================================
---'	Zone Event: Player is Resting
---'==========================================================================================
-	elseif ( IsResting() ) and ( factionEnglish == "Alliance" ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
-		if FinalFantasylization_CurrentZone ~= "Sleeping" then
-			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
-			FinalFantasylization_CurrentZone = "Sleeping"
-			FinalFantasylization_EasternKingdomsGhostlandsResting()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	elseif ( IsResting() ) and ( factionEnglish == "Horde" ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
-		if FinalFantasylization_CurrentZone ~= "Sleeping" then
-			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
-			FinalFantasylization_CurrentZone = "Sleeping"
-			FinalFantasylization_EasternKingdomsGhostlandsResting()
 		else
 			return
 		end

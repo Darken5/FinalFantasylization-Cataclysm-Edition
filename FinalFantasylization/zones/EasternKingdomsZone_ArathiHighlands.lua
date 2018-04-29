@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 --'==========================================================================================
 --	Zone: Arathi Highlands		FinalFantasylization_EasternKingdomsArathiHighlands()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsArathiHighlandsResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsArathiHighlandsSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Refuge Pointe		FinalFantasylization_AllianceTownRefugePointe()
@@ -37,9 +41,38 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 --	Witherbark Caverns			FinalFantasylization_SubzoneWitherbarkCaverns()
 --	Witherbark Village			FinalFantasylization_SubzoneWitherbarkVillage()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsArathiHighlandsResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsArathiHighlandsSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Arathi Highlands Alliance Town: Refuge Pointe
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Refuge Pointe"] ) then
+	elseif ( SubZoneName == SZ["Refuge Pointe"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

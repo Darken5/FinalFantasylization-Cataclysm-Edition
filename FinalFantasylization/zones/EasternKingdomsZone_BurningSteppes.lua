@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_BurningSteppes()
 --'==========================================================================================
 --	Zone: Burning Steppes		FinalFantasylization_EasternKingdomsBurningSteppes()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsBurningSteppesResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsBurningSteppesSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Morgan's Vigil				FinalFantasylization_AllianceTownMorgansVigil()
@@ -31,9 +35,38 @@ function FinalFantasylization_EasternKingdomsZones_BurningSteppes()
 --	Valley of Ashes				FinalFantasylization_SubzoneValleyofAshes()
 --	The Whelping Downs			FinalFantasylization_SubzoneTheWhelpingDowns()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsBurningSteppesResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsBurningSteppesSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Burning Steppes Alliance Town: Morgan's Vigil
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Morgan's Vigil"] ) then
+	elseif ( SubZoneName == SZ["Morgan's Vigil"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

@@ -4,6 +4,10 @@ function FinalFantasylization_KalimdorZones_Darkshore()
 --'==========================================================================================
 --	Zone: Darkshore				FinalFantasylization_KalimdorDarkshore()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_KalimdorDarkshoreResting()
+--		Player is Swimming		FinalFantasylization_KalimdorDarkshoreSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Auberdine Refugee Camp		FinalFantasylization_AllianceTownAuberdineRefugeeCamp()
@@ -43,9 +47,38 @@ function FinalFantasylization_KalimdorZones_Darkshore()
 --	Withering Thicket			FinalFantasylization_SubzoneWitheringThicket()
 --	Wreckage of the Silver Dawning		FinalFantasylization_SubzoneWreckageoftheSilverDawning()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_KalimdorDarkshoreResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_KalimdorDarkshoreSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Darkshore Alliance Town: Auberdine Refugee Camp
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Auberdine Refugee Camp"] ) then
+	elseif ( SubZoneName == SZ["Auberdine Refugee Camp"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

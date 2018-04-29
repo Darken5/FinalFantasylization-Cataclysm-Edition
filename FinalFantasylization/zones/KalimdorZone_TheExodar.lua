@@ -4,6 +4,10 @@ function FinalFantasylization_KalimdorZones_TheExodar()
 --'==========================================================================================
 --	Zone: The Exodar		FinalFantasylization_Kalimdor_TheExodar()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_Kalimdor_TheExodarResting()
+--		Player is Swimming		FinalFantasylization_Kalimdor_TheExodarSwimming()
+--
 --	SUBZONES:
 --	The Crystal Hall		FinalFantasylization_TheExodar_SubzoneTheCrystalHall()
 --	Seat of the Naaru		FinalFantasylization_TheExodar_SubzoneSeatoftheNaaru()
@@ -14,9 +18,34 @@ function FinalFantasylization_KalimdorZones_TheExodar()
 	--'==========================================================================================
 	if ( factionEnglish == "Alliance" ) then
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting - (Will only play if Capital Music is OFF)
+	--'==========================================================================================
+		if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and FinalFantasylizationOptions.Capital == false then ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+			if FinalFantasylization_CurrentZone ~= "Sleeping" then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+				FinalFantasylization_CurrentZone = "Sleeping"
+				FinalFantasylization_Kalimdor_TheExodarResting()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+			if FinalFantasylization_CurrentZone ~= "Swimming" then
+				FinalFantasylization_CurrentZone = "Swimming"
+				FinalFantasylization_Kalimdor_TheExodarSwimming()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
 	--' The Exodar: The Crystal Hall
 	--'==========================================================================================
-		if ( SubZoneName == SZ["The Crystal Hall"] ) then
+		elseif ( SubZoneName == SZ["The Crystal Hall"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)

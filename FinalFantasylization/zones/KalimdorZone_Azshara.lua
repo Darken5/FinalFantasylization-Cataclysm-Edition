@@ -4,6 +4,10 @@ function FinalFantasylization_KalimdorZones_Azshara()
 --'==========================================================================================
 --	Zone: Azshara				FinalFantasylization_KalimdorAzshara()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_KalimdorAzsharaResting()
+--		Player is Swimming		FinalFantasylization_KalimdorAzsharaSwimming()
+--
 --	TOWNS:
 --	Horde:
 --		Bilgewater Harbor				FinalFantasylization_HordeTownBilgewaterHarbor()
@@ -57,9 +61,38 @@ function FinalFantasylization_KalimdorZones_Azshara()
 --	Trial of Shadow				FinalFantasylization_SubzoneTrialofShadow()
 --	Ursolan						FinalFantasylization_SubzoneUrsolan()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_KalimdorAzsharaResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_KalimdorAzsharaSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Azshara Horde Town: Bilgewater Harbor in Bay of Storms
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Bilgewater Harbor"] ) then
+	elseif ( SubZoneName == SZ["Bilgewater Harbor"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
