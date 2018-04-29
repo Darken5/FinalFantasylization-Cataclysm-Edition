@@ -24,7 +24,7 @@ function FinalFantasylization_MaelstromZones_Kezan()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
-	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true then ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
 		if FinalFantasylization_CurrentZone ~= "Sleeping" then
 			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 			FinalFantasylization_CurrentZone = "Sleeping"

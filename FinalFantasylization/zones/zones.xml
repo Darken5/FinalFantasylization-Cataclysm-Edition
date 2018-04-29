@@ -12,6 +12,7 @@
 	<Script file="EasternKingdomsZone_Ghostlands.lua"/>
 	<Script file="EasternKingdomsZone_Gilneas.lua"/>
 	<Script file="EasternKingdomsZone_GilneasCity.lua"/>
+	<Script file="EasternKingdomsZone_HillsbradFoothills.lua"/>
 	<Script file="EasternKingdomsZone_LochModan.lua"/>
 	<Script file="EasternKingdomsZone_RedridgeMountains.lua"/>
 	<Script file="EasternKingdomsZone_RuinsofGilneas.lua"/>

@@ -862,6 +862,9 @@ function FinalFantasylization_GetMusic()
 		-- Gilneas City
 			elseif ( MapID == 611 ) then
 				FinalFantasylization_EasternKingdomsZones_GilneasCity(SubZoneName)
+		-- Hillsbrad Foothills
+			elseif ( MapID == 24 ) then
+				FinalFantasylization_EasternKingdomsZones_HillsbradFoothills(SubZoneName)
 		-- Loch Modan
 			elseif ( MapID == 35 ) then
 				FinalFantasylization_EasternKingdomsZones_LochModan(SubZoneName)

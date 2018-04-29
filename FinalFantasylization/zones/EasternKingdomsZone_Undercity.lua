@@ -25,7 +25,7 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting - (Will only play if Capital Music is OFF)
 	--'==========================================================================================
-		if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and FinalFantasylizationOptions.Capital == false then ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and FinalFantasylizationOptions.Capital == false and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
 			if FinalFantasylization_CurrentZone ~= "Sleeping" then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 				FinalFantasylization_CurrentZone = "Sleeping"
