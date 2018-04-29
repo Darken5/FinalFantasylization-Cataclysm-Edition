@@ -865,6 +865,9 @@ function FinalFantasylization_GetMusic()
 		-- Hillsbrad Foothills
 			elseif ( MapID == 24 ) then
 				FinalFantasylization_EasternKingdomsZones_HillsbradFoothills(SubZoneName)
+		-- Ironforge
+			elseif ( MapID == 341 ) then
+				FinalFantasylization_EasternKingdomsZones_Ironforge(SubZoneName)
 		-- Loch Modan
 			elseif ( MapID == 35 ) then
 				FinalFantasylization_EasternKingdomsZones_LochModan(SubZoneName)

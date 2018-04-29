@@ -207,6 +207,94 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --##   EASTERN KINGDOMS ZONES
 --###########################################################################################
 --'==========================================================================================
+--' Eastern Kingdoms Capital: Ironforge : Alliance
+--'==========================================================================================
+--	Zone: Ironforge
+	function FinalFantasylization_EasternKingdoms_Ironforge()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdoms_IronforgeResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdoms_IronforgeSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	SUBZONES:
+--	The Commons
+	function FinalFantasylization_Ironforge_SubzoneTheCommons()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--		Vault of Ironforge
+	function FinalFantasylization_Ironforge_SubzoneVaultofIronforge()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	The Forlorn Cavern
+	function FinalFantasylization_Ironforge_SubzoneTheForlornCavern()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	The Gates of Ironforge
+	function FinalFantasylization_Ironforge_SubzoneTheGatesofIronforge()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	The Great Forge
+	function FinalFantasylization_Ironforge_SubzoneTheGreatForge()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--		The High Seat
+	function FinalFantasylization_Ironforge_SubzoneTheHighSeat()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	Hall of Explorers
+	function FinalFantasylization_Ironforge_SubzoneHallofExplorers()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--		The Library
+	function FinalFantasylization_Ironforge_SubzoneTheLibrary()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	The Military Ward
+	function FinalFantasylization_Ironforge_SubzoneTheMilitaryWard()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--		Hall of Arms
+	function FinalFantasylization_Ironforge_SubzoneHallofArms()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	The Mystic Ward
+	function FinalFantasylization_Ironforge_SubzoneTheMysticWard()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--		Hall of Mysteries
+	function FinalFantasylization_Ironforge_SubzoneHallofMysteries()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	Tinker Town
+	function FinalFantasylization_Ironforge_SubzoneTinkerTown()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--		Deeprun Tram
+	function FinalFantasylization_Ironforge_SubzoneDeeprunTram()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--'==========================================================================================
 --' Eastern Kingdoms Capital: Silvermoon City : Horde
 --'==========================================================================================
 --	Zone: SilvermoonCity
@@ -1960,6 +2048,105 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --		Stoneward Prison
 	function FinalFantasylization_GilneasCity_SubzoneStonewardPrison()
 		FinalFantasylization_BattleGround();
+	end
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Hillsbrad Foothills
+--'==========================================================================================
+--	Zone: Hillsbrad Foothills
+	function FinalFantasylization_EasternKingdomsHillsbradFoothills()
+
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsHillsbradFoothillsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsHillsbradFoothillsSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Horde:
+--		Eastpoint Tower
+	function FinalFantasylization_HordeTownEastpointTower()
+		FinalFantasylization_HordeTowns();
+	end
+--		Ruins of Southshore
+	function FinalFantasylization_HordeTownRuinsofSouthshore()
+		FinalFantasylization_HordeTowns();
+	end
+--		Southpoint Gate
+	function FinalFantasylization_HordeTownSouthpointGate()
+		FinalFantasylization_HordeTowns();
+	end
+--		Strahnbrad
+	function FinalFantasylization_HordeTownStrahnbrad()
+		FinalFantasylization_HordeTowns();
+	end
+--		Tarren Mill
+	function FinalFantasylization_HordeTownTarrenMill()
+		FinalFantasylization_HordeTowns();
+	end
+--		The Sludge Fields
+	function FinalFantasylization_HordeTownTheSludgeFields()
+		FinalFantasylization_HordeTowns();
+	end
+--	SUBZONES:
+--	Azurelode Mine
+	function FinalFantasylization_SubzoneAzurelodeMine()
+
+	end
+--	Dalaran Crater
+	function FinalFantasylization_SubzoneDalaranCrater()
+
+	end
+--	Darrow Hill
+	function FinalFantasylization_SubzoneDarrowHill()
+
+	end
+--	Dun Garok
+	function FinalFantasylization_SubzoneDunGarok()
+
+	end
+--	Durnholde Keep
+	function FinalFantasylization_SubzoneDurnholdeKeep()
+
+	end
+--	Eastern Strand
+	function FinalFantasylization_SubzoneEasternStrand()
+
+	end
+--	Sludgeguard Tower
+	function FinalFantasylization_SubzoneSludgeguardTower()
+
+	end
+--	Nethander Stead
+	function FinalFantasylization_SubzoneNethanderStead()
+
+	end
+--	Purgation Isle
+	function FinalFantasylization_SubzonePurgationIsle()
+
+	end
+--	Ruins of Alterac
+	function FinalFantasylization_SubzoneRuinsofAlterac()
+
+	end
+--	Southpoint Tower
+	function FinalFantasylization_SubzoneSouthpointTower()
+
+	end
+--	Thoradin's Wall
+	function FinalFantasylization_SubzoneThoradinsWall()
+
+	end
+--	The Uplands
+	function FinalFantasylization_SubzoneTheUplands()
+
+	end
+--	Western Strand
+	function FinalFantasylization_SubzoneWesternStrand()
+
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Loch Modan : Alliance

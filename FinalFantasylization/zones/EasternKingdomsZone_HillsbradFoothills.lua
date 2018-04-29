@@ -2,7 +2,7 @@ function FinalFantasylization_EasternKingdomsZones_HillsbradFoothills()
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Hillsbrad Foothills
 --'==========================================================================================
---	Zone: Hillsbrad Foothills
+--	Zone: Hillsbrad Foothills	FinalFantasylization_EasternKingdomsHillsbradFoothills()
 --
 --	Zone Events:
 --		Player is Resting		FinalFantasylization_EasternKingdomsHillsbradFoothillsResting()
@@ -31,7 +31,7 @@ function FinalFantasylization_EasternKingdomsZones_HillsbradFoothills()
 --	Southpoint Tower	FinalFantasylization_SubzoneSouthpointTower()
 --	Thoradin's Wall		FinalFantasylization_SubzoneThoradinsWall()
 --	The Uplands			FinalFantasylization_SubzoneTheUplands()
---	Western Strand
+--	Western Strand		FinalFantasylization_SubzoneWesternStrand()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
