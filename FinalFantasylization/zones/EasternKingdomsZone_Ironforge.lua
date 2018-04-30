@@ -1,27 +1,32 @@
-function FinalFantasylization_EasternKingdomsZones_Undercity()
+function FinalFantasylization_EasternKingdomsZones_Ironforge()
 --'==========================================================================================
---' Eastern Kingdoms Capital: Undercity : Horde
+--' Eastern Kingdoms Capital: Ironforge : Alliance
 --'==========================================================================================
---	Zone: Undercity			FinalFantasylization_EasternKingdoms_Undercity()
+--	Zone: Ironforge		FinalFantasylization_EasternKingdoms_Ironforge()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_EasternKingdoms_UndercityResting()
---		Player is Swimming		FinalFantasylization_EasternKingdoms_UndercitySwimming()
+--		Player is Resting		FinalFantasylization_EasternKingdoms_IronforgeResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdoms_IronforgeSwimming()
 --
 --	SUBZONES:
---	Apothecarium			FinalFantasylization_Undercity_SubzoneTheApothecarium()
---	Canals					FinalFantasylization_Undercity_SubzoneCanals()
---	Magic Quarter			FinalFantasylization_Undercity_SubzoneMagicQuarter()
---	Rogues' Quarter			FinalFantasylization_Undercity_SubzoneRoguesQuarter()
---	Royal Quarter			FinalFantasylization_Undercity_SubzoneRoyalQuarter()
---	Ruins of Lordaeron		FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
---	Sewers					FinalFantasylization_Undercity_SubzoneSewers()
---	Trade Quarter			FinalFantasylization_Undercity_SubzoneTradeQuarter()
---	War Quarter				FinalFantasylization_Undercity_SubzoneWarQuarter()
+--	The Commons					FinalFantasylization_Ironforge_SubzoneTheCommons()
+--		Vault of Ironforge			FinalFantasylization_Ironforge_SubzoneVaultofIronforge()
+--	The Forlorn Cavern			FinalFantasylization_Ironforge_SubzoneTheForlornCavern()
+--	The Gates of Ironforge		FinalFantasylization_Ironforge_SubzoneTheGatesofIronforge()
+--	The Great Forge				FinalFantasylization_Ironforge_SubzoneTheGreatForge()
+--		The High Seat				FinalFantasylization_Ironforge_SubzoneTheHighSeat()
+--	Hall of Explorers			FinalFantasylization_Ironforge_SubzoneHallofExplorers()
+--		The Library					FinalFantasylization_Ironforge_SubzoneTheLibrary()
+--	The Military Ward			FinalFantasylization_Ironforge_SubzoneTheMilitaryWard()
+--		Hall of Arms				FinalFantasylization_Ironforge_SubzoneHallofArms()
+--	The Mystic Ward				FinalFantasylization_Ironforge_SubzoneTheMysticWard()
+--		Hall of Mysteries			FinalFantasylization_Ironforge_SubzoneHallofMysteries()
+--	Tinker Town					FinalFantasylization_Ironforge_SubzoneTinkerTown()
+--		Deeprun Tram				FinalFantasylization_Ironforge_SubzoneDeeprunTram()
 	--'==========================================================================================
-	--' Undercity: Horde Check
+	--' Ironforge: Alliance Check
 	--'==========================================================================================
-	if ( factionEnglish == "Horde" ) then
+	if ( factionEnglish == "Alliance" ) then
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting - (Will only play if Capital Music is OFF)
 	--'==========================================================================================
@@ -29,7 +34,7 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 			if FinalFantasylization_CurrentZone ~= "Sleeping" then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 				FinalFantasylization_CurrentZone = "Sleeping"
-				FinalFantasylization_EasternKingdoms_UndercityResting()
+				FinalFantasylization_EasternKingdoms_IronforgeResting()
 			else
 				return
 			end
@@ -41,146 +46,211 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
 			if FinalFantasylization_CurrentZone ~= "Swimming" then
 				FinalFantasylization_CurrentZone = "Swimming"
-				FinalFantasylization_EasternKingdoms_UndercitySwimming()
+				FinalFantasylization_EasternKingdoms_IronforgeSwimming()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: The Apothecarium
+	--' Ironforge: The Commons
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["The Apothecarium"] ) then
+		elseif ( SubZoneName == SZ["The Commons"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneTheApothecarium()
+				FinalFantasylization_Ironforge_SubzoneTheCommons()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Canals
+	--' Ironforge: Vault of Ironforge
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Canals"] ) then
+		elseif ( SubZoneName == SZ["Vault of Ironforge"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneCanals()
+				FinalFantasylization_Ironforge_SubzoneVaultofIronforge()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Magic Quarter
+	--' Ironforge: The Forlorn Cavern
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Magic Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Forlorn Cavern"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneMagicQuarter()
+				FinalFantasylization_Ironforge_SubzoneTheForlornCavern()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Rogues' Quarter
+	--' Ironforge: The Gates of Ironforge
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Rogues' Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Gates of Ironforge"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRoguesQuarter()
+				FinalFantasylization_Ironforge_SubzoneTheGatesofIronforge()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Royal Quarter
+	--' Ironforge: The Great Forge
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Royal Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Great Forge"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRoyalQuarter()
+				FinalFantasylization_Ironforge_SubzoneTheGreatForge()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Ruins of Lordaeron
+	--' Ironforge: The High Seat
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Ruins of Lordaeron"] ) then
+		elseif ( SubZoneName == SZ["The High Seat"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
+				FinalFantasylization_Ironforge_SubzoneTheHighSeat()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Sewers
+	--' Ironforge: Hall of Explorers
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Sewers"] ) then
+		elseif ( SubZoneName == SZ["Hall of Explorers"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneSewers()
+				FinalFantasylization_Ironforge_SubzoneHallofExplorers()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Trade Quarter
+	--' Ironforge: The Library
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Trade Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Library"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneTradeQuarter()
+				FinalFantasylization_Ironforge_SubzoneTheLibrary()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: War Quarter
+	--' Ironforge: The Military Ward
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["War Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Military Ward"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneWarQuarter()
+				FinalFantasylization_Ironforge_SubzoneTheMilitaryWard()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity END
+	--' Ironforge: Hall of Arms
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Hall of Arms"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Ironforge_SubzoneHallofArms()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Ironforge: The Mystic Ward
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["The Mystic Ward"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Ironforge_SubzoneTheMysticWard()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Ironforge: Hall of Mysteries
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Hall of Mysteries"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Ironforge_SubzoneHallofMysteries()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Ironforge: Tinker Town
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Tinker Town"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Ironforge_SubzoneTinkerTown()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Ironforge: Deeprun Tram
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Deeprun Tram"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Ironforge_SubzoneDeeprunTram()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Ironforge END
 	--'==========================================================================================
 		else
 			if FinalFantasylization_CurrentZone ~= ZoneName then
 				FinalFantasylization_CurrentZone = ZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_EasternKingdoms_Undercity()
+				FinalFantasylization_EasternKingdoms_Ironforge()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 		end
 	--'==========================================================================================
-	--' Undercity: Alliance Check
+	--' Ironforge: Horde Check
 	--'==========================================================================================
-	elseif ( factionEnglish == "Alliance" ) then
+	elseif ( factionEnglish == "Horde" ) then
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)

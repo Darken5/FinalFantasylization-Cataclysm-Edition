@@ -9,8 +9,15 @@
 	<Script file="EasternKingdomsZone_DunMorogh.lua"/>
 	<Script file="EasternKingdomsZone_ElwynnForest.lua"/>
 	<Script file="EasternKingdomsZone_EversongWoods.lua"/>
+	<Script file="EasternKingdomsZone_Ghostlands.lua"/>
 	<Script file="EasternKingdomsZone_Gilneas.lua"/>
 	<Script file="EasternKingdomsZone_GilneasCity.lua"/>
+	<Script file="EasternKingdomsZone_HillsbradFoothills.lua"/>
+	<Script file="EasternKingdomsZone_Ironforge.lua"/>
+	<Script file="EasternKingdomsZone_LochModan.lua"/>
+	<Script file="EasternKingdomsZone_RedridgeMountains.lua"/>
+	<Script file="EasternKingdomsZone_RuinsofGilneas.lua"/>
+	<Script file="EasternKingdomsZone_SilvermoonCity.lua"/>
 	<Script file="EasternKingdomsZone_SilverpineForest.lua"/>
 	<Script file="EasternKingdomsZone_StormwindCity.lua"/>
 	<Script file="EasternKingdomsZone_TirisfalGlades.lua"/>	
@@ -18,14 +25,21 @@
 	<Script file="EasternKingdomsZone_Westfall.lua"/>
 
 	<!--Kalimdor-->
+	<Script file="KalimdorZone_Ashenvale.lua"/>
+	<Script file="KalimdorZone_Azshara.lua"/>
 	<Script file="KalimdorZone_AzuremystIsle.lua"/>
 	<Script file="KalimdorZone_BloodmystIsle.lua"/>
+	<Script file="KalimdorZone_Darkshore.lua"/>
 	<Script file="KalimdorZone_Darnassus.lua"/>
 	<Script file="KalimdorZone_Durotar.lua"/>
 	<Script file="KalimdorZone_TheExodar.lua"/>
 	<Script file="KalimdorZone_Mulgore.lua"/>
+	<Script file="KalimdorZone_NorthernBarrens.lua"/>
+	<Script file="KalimdorZone_Orgrimmar.lua"/>
 	<Script file="KalimdorZone_Teldrassil.lua"/>
+	<Script file="KalimdorZone_ThunderBluff.lua"/>
 	
 	<!--Maelstrom-->
 	<Script file="MaelstromZone_Kezan.lua"/>
+	<Script file="MaelstromZone_TheLostIsles.lua"/>
 </Ui>

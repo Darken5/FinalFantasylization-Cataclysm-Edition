@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_TirisfalGlades()
 --'==========================================================================================
 --	Zone: Tirisfal Glades			FinalFantasylization_EasternKingdomsTirisfalGlades()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsTirisfalGladesResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsTirisfalGladesSwimming()
+--
 --	TOWNS:
 --	Forsaken Start:
 --		Deathknell						FinalFantasylization_Forsaken_Start_Deathknell()
@@ -47,9 +51,38 @@ function FinalFantasylization_EasternKingdomsZones_TirisfalGlades()
 --	Whispering Gardens				FinalFantasylization_SubzoneWhisperingGardens()
 --	Whispering Shore				FinalFantasylization_SubzoneWhisperingShore()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsTirisfalGladesResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsTirisfalGladesSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Tirisfal Glades: Forsaken Starting Area: Deathknell
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Deathknell"] ) then
+	elseif ( SubZoneName == SZ["Deathknell"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then

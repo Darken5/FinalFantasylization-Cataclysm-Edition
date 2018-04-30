@@ -1,51 +1,51 @@
-function FinalFantasylization_EasternKingdomsZones_Gilneas()
+function FinalFantasylization_MaelstromZones_TheLostIsles()
 --'==========================================================================================
---' Eastern Kingdoms Zones: Gilneas : Worgen
+--' Maelstrom Zones: The Lost Isles : Goblin
 --'==========================================================================================
---	Zone: Gilneas				FinalFantasylization_EasternKingdomsGilneas()
+--	Zone: The Lost Isles			FinalFantasylization_MaelstromTheLostIsles()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_EasternKingdomsGilneasResting()
---		Player is Swimming		FinalFantasylization_EasternKingdomsGilneasSwimming()
+--		Player is Resting		FinalFantasylization_MaelstromTheLostIslesResting()
+--		Player is Swimming		FinalFantasylization_MaelstromTheLostIslesSwimming()
 --
+--	Goblin Start:
 --	TOWNS:
---	Alliance:
---		Duskhaven					FinalFantasylization_AllianceTownDuskhaven()
---		Greymane Manor				FinalFantasylization_AllianceTownGreymaneManor()
---		Keel Harbor					FinalFantasylization_AllianceTownKeelHarbor()
---		Stormglen Village			FinalFantasylization_AllianceTownStormglenVillage()
+--	Alliance Beachhead				FinalFantasylization_Goblin_Start_AllianceBeachhead()
+--	Horde Base Camp					FinalFantasylization_Goblin_Start_HordeBaseCamp()
+--	Shipwreck Shore					FinalFantasylization_Goblin_Start_ShipwreckShore()
+--	Town-In-A-Box					FinalFantasylization_Goblin_Start_TownInABox()
+--	Warchief's Lookout				FinalFantasylization_Goblin_Start_WarchiefsLookout()
+--	Wild Overlook					FinalFantasylization_Goblin_Start_WildOverlook()
 --
 --	SUBZONES:
---	Aderic's Repose				FinalFantasylization_SubzoneAdericsRepose()
---	Allen Farmstead				FinalFantasylization_SubzoneAllenFarmstead()
---	The Bite					FinalFantasylization_SubzoneTheBite()
---	The Blackwald				FinalFantasylization_SubzoneTheBlackwald()
---	The Bradshaw Mill			FinalFantasylization_SubzoneTheBradshawMill()
---	Crowley Orchard				FinalFantasylization_SubzoneCrowleyOrchard()
---	Crowley Stable Grounds		FinalFantasylization_SubzoneCrowleyStableGrounds()
---	Duskmist Shore				FinalFantasylization_SubzoneDuskmistShore()
---	Emberstone Mine				FinalFantasylization_SubzoneEmberstoneMine()
---	Emberstone Village			FinalFantasylization_SubzoneEmberstoneVillage()
---	Forsaken Forward Command	FinalFantasylization_SubzoneForsakenForwardCommand()
---	Galewatch Lighthouse		FinalFantasylization_SubzoneGalewatchLighthouse()
---	The Greymane Wall			FinalFantasylization_SubzoneTheGreymaneWall()
---	Hailwood Marsh				FinalFantasylization_SubzoneHailwoodMarsh()
---	Hammond Farmstead			FinalFantasylization_SubzoneHammondFarmstead()
---	Hayward Fishery				FinalFantasylization_SubzoneHaywardFishery()
---	The Headlands				FinalFantasylization_SubzoneTheHeadlands()
---	King's Gate					FinalFantasylization_SubzoneKingsGate()
---	Koroth's Den				FinalFantasylization_SubzoneKorothsDen()
---	Livery Outpost				FinalFantasylization_SubzoneLiveryOutpost()
---	Northern Headlands			FinalFantasylization_SubzoneNorthernHeadlands()
---	Northgate River				FinalFantasylization_SubzoneNorthgateRiver()
---	Northgate Woods				FinalFantasylization_SubzoneNorthgateWoods()
---	Queen's Gate				FinalFantasylization_SubzoneQueensGate()
---	Rygna's Lair				FinalFantasylization_SubzoneRygnasLair()
---	Stagecoach Crash Site		FinalFantasylization_SubzoneStagecoachCrashSite()
---	Tal'doren					FinalFantasylization_SubzoneTaldoren()
---	Tempest's Reach				FinalFantasylization_SubzoneTempestsReach()
---	Wahl Cottage				FinalFantasylization_SubzoneWahlCottage()
---	Wood's End Cabin			FinalFantasylization_SubzoneWoodsEndCabin()
+--	Bilgewater Lumber Yard		FinalFantasylization_Goblin_Start_BilgewaterLumberYard()
+--	Dire Strait					FinalFantasylization_Goblin_Start_DireStrait()
+--	Draka's Fury				FinalFantasylization_Goblin_Start_DrakasFury()
+--	Gallywix Docks				FinalFantasylization_Goblin_Start_GallywixDocks()
+--	Gallywix Labor Mine			FinalFantasylization_Goblin_Start_GallywixLaborMine()
+--	The Great Sea				FinalFantasylization_Goblin_Start_TheGreatSea()
+--	Kaja'mite Cavern			FinalFantasylization_Goblin_Start_KajamiteCavern()
+--	KTC Oil Platform			FinalFantasylization_Goblin_Start_KTCOilPlatform()
+--	Landing Site				FinalFantasylization_Goblin_Start_LandingSite()
+--	Lost Caldera				FinalFantasylization_Goblin_Start_LostCaldera()
+--	Lost Peak					FinalFantasylization_Goblin_Start_LostPeak()
+--	Oomlot Village				FinalFantasylization_Goblin_Start_OomlotVillage()
+--	Oostan						FinalFantasylization_Goblin_Start_Oostan()
+--	Oostan Nord					FinalFantasylization_Goblin_Start_OostanNord()
+--	Oostan Ost					FinalFantasylization_Goblin_Start_OostanOst()
+--	Oostan Sor					FinalFantasylization_Goblin_Start_OostanSor()
+--	Raptor Rise					FinalFantasylization_Goblin_Start_RaptorRise()
+--	Ruins of Vashj'elan			FinalFantasylization_Goblin_Start_RuinsofVashjelan()
+--	The Savage Glen				FinalFantasylization_Goblin_Start_TheSavageGlen()
+--	Scorched Gully				FinalFantasylization_Goblin_Start_ScorchedGully()
+--	Sky Falls					FinalFantasylization_Goblin_Start_SkyFalls()
+--	The Slave Pits				FinalFantasylization_Goblin_Start_TheSlavePits()
+--	Tranquil Coast				FinalFantasylization_Goblin_Start_TranquilCoast()
+--	Vashj'elan Spawning Pool	FinalFantasylization_Goblin_Start_VashjelanSpawningPool()
+--	Vengeance Wake				FinalFantasylization_Goblin_Start_VengeanceWake()
+--	Verdant Highlands			FinalFantasylization_Goblin_Start_VerdantHighlands()
+--	The Vicious Vale			FinalFantasylization_Goblin_Start_TheViciousVale()
+--	Volcanoth's Lair			FinalFantasylization_Goblin_Start_VolcanothsLair()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -57,7 +57,7 @@ function FinalFantasylization_EasternKingdomsZones_Gilneas()
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 			end
 			FinalFantasylization_CurrentZone = "Sleeping"
-			FinalFantasylization_EasternKingdomsGilneasResting()
+			FinalFantasylization_MaelstromTheLostIslesResting()
 		else
 			return
 		end
@@ -69,482 +69,462 @@ function FinalFantasylization_EasternKingdomsZones_Gilneas()
 	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
 		if FinalFantasylization_CurrentZone ~= "Swimming" then
 			FinalFantasylization_CurrentZone = "Swimming"
-			FinalFantasylization_EasternKingdomsGilneasSwimming()
+			FinalFantasylization_MaelstromTheLostIslesSwimming()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Alliance Town: Duskhaven
+	--' The Lost Isles: Goblin Starting Town: Alliance Beachhead
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Duskhaven"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownDuskhaven()
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Gilneas Alliance Town: Greymane Manor
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Greymane Manor"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownGreymaneManor()
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Gilneas Alliance Town: Keel Harbor
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Keel Harbor"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownKeelHarbor()
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Gilneas Alliance Town: Stormglen Village
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Stormglen Village"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownStormglenVillage()
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Gilneas Subzone: Aderic's Repose
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Aderic's Repose"] ) then
+	elseif ( SubZoneName == SZ["Alliance Beachhead"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneAdericsRepose()
+			FinalFantasylization_Goblin_Start_AllianceBeachhead()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Allen Farmstead
+	--' The Lost Isles: Goblin Starting Town: Horde Base Camp
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Allen Farmstead"] ) then
+	elseif ( SubZoneName == SZ["Horde Base Camp"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneAllenFarmstead()
+			FinalFantasylization_Goblin_Start_HordeBaseCamp()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: The Bite
+	--' The Lost Isles: Goblin Starting Town: Shipwreck Shore
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Bite"] ) then
+	elseif ( SubZoneName == SZ["Shipwreck Shore"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheBite()
+			FinalFantasylization_Goblin_Start_ShipwreckShore()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: The Blackwald
+	--' The Lost Isles: Goblin Starting Town: Town-In-A-Box
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Blackwald"] ) then
+	elseif ( SubZoneName == SZ["Town-In-A-Box"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheBlackwald()
+			FinalFantasylization_Goblin_Start_TownInABox()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: The Bradshaw Mill
+	--' The Lost Isles: Goblin Starting Town: Warchief's Lookout
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Bradshaw Mill"] ) then
+	elseif ( SubZoneName == SZ["Warchief's Lookout"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheBradshawMill()
+			FinalFantasylization_Goblin_Start_WarchiefsLookout()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Crowley Orchard
+	--' The Lost Isles: Goblin Starting Town: Wild Overlook
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Crowley Orchard"] ) then
+	elseif ( SubZoneName == SZ["Wild Overlook"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneCrowleyOrchard()
+			FinalFantasylization_Goblin_Start_WildOverlook()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Crowley Stable Grounds
+	--' The Lost Isles: Goblin Starting Area: Bilgewater Lumber Yard
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Crowley Stable Grounds"] ) then
+	elseif ( SubZoneName == SZ["Bilgewater Lumber Yard"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneCrowleyStableGrounds()
+			FinalFantasylization_Goblin_Start_BilgewaterLumberYard()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Duskmist Shore
+	--' The Lost Isles: Goblin Starting Area: Dire Strait
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Duskmist Shore"] ) then
+	elseif ( SubZoneName == SZ["Dire Strait"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDuskmistShore()
+			FinalFantasylization_Goblin_Start_DireStrait()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Emberstone Mine
+	--' The Lost Isles: Goblin Starting Area: Draka's Fury
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Emberstone Mine"] ) then
+	elseif ( SubZoneName == SZ["Draka's Fury"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneEmberstoneMine()
+			FinalFantasylization_Goblin_Start_DrakasFury()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Emberstone Village
+	--' The Lost Isles: Goblin Starting Area: Gallywix Docks
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Emberstone Village"] ) then
+	elseif ( SubZoneName == SZ["Gallywix Docks"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneEmberstoneVillage()
+			FinalFantasylization_Goblin_Start_GallywixDocks()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Forsaken Forward Command
+	--' The Lost Isles: Goblin Starting Area: Gallywix Labor Mine
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Forsaken Forward Command"] ) then
+	elseif ( SubZoneName == SZ["Gallywix Labor Mine"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneForsakenForwardCommand()
+			FinalFantasylization_Goblin_Start_GallywixLaborMine()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Galewatch Lighthouse
+	--' The Lost Isles: Goblin Starting Area: The Great Sea
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Galewatch Lighthouse"] ) then
+	elseif ( SubZoneName == SZ["The Great Sea"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneGalewatchLighthouse()
+			FinalFantasylization_Goblin_Start_TheGreatSea()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: The Greymane Wall
+	--' The Lost Isles: Goblin Starting Area: Kaja'mite Cavern
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Greymane Wall"] ) then
+	elseif ( SubZoneName == SZ["Kaja'mite Cavern"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheGreymaneWall()
+			FinalFantasylization_Goblin_Start_KajamiteCavern()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Hailwood Marsh
+	--' The Lost Isles: Goblin Starting Area: KTC Oil Platform
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Hailwood Marsh"] ) then
+	elseif ( SubZoneName == SZ["KTC Oil Platform"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneHailwoodMarsh()
+			FinalFantasylization_Goblin_Start_KTCOilPlatform()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Hammond Farmstead
+	--' The Lost Isles: Goblin Starting Area: Landing Site
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Hammond Farmstead"] ) then
+	elseif ( SubZoneName == SZ["Landing Site"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneHammondFarmstead()
+			FinalFantasylization_Goblin_Start_LandingSite()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Hayward Fishery
+	--' The Lost Isles: Goblin Starting Area: Lost Caldera
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Hayward Fishery"] ) then
+	elseif ( SubZoneName == SZ["Lost Caldera"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneHaywardFishery()
+			FinalFantasylization_Goblin_Start_LostCaldera()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: The Headlands
+	--' The Lost Isles: Goblin Starting Area: Lost Peak
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Headlands"] ) then
+	elseif ( SubZoneName == SZ["Lost Peak"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheHeadlands()
+			FinalFantasylization_Goblin_Start_LostPeak()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: King's Gate
+	--' The Lost Isles: Goblin Starting Area: Oomlot Village
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["King's Gate"] ) then
+	elseif ( SubZoneName == SZ["Oomlot Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneKingsGate()
+			FinalFantasylization_Goblin_Start_OomlotVillage()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Koroth's Den
+	--' The Lost Isles: Goblin Starting Area: Oostan
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Koroth's Den"] ) then
+	elseif ( SubZoneName == SZ["Oostan"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneKorothsDen()
+			FinalFantasylization_Goblin_Start_Oostan()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Livery Outpost
+	--' The Lost Isles: Goblin Starting Area: Oostan Nord
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Livery Outpost"] ) then
+	elseif ( SubZoneName == SZ["Oostan Nord"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneLiveryOutpost()
+			FinalFantasylization_Goblin_Start_OostanNord()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Northern Headlands
+	--' The Lost Isles: Goblin Starting Area: Oostan Ost
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Northern Headlands"] ) then
+	elseif ( SubZoneName == SZ["Oostan Ost"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneNorthernHeadlands()
+			FinalFantasylization_Goblin_Start_OostanOst()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Northgate River
+	--' The Lost Isles: Goblin Starting Area: Oostan Sor
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Northgate River"] ) then
+	elseif ( SubZoneName == SZ["Oostan Sor"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneNorthgateRiver()
+			FinalFantasylization_Goblin_Start_OostanSor()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Northgate Woods
+	--' The Lost Isles: Goblin Starting Area: Raptor Rise
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Northgate Woods"] ) then
+	elseif ( SubZoneName == SZ["Raptor Rise"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneNorthgateWoods()
+			FinalFantasylization_Goblin_Start_RaptorRise()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Queen's Gate
+	--' The Lost Isles: Goblin Starting Area: Ruins of Vashj'elan
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Queen's Gate"] ) then
+	elseif ( SubZoneName == SZ["Ruins of Vashj'elan"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneQueensGate()
+			FinalFantasylization_Goblin_Start_RuinsofVashjelan()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Rygna's Lair
+	--' The Lost Isles: Goblin Starting Area: The Savage Glen
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Rygna's Lair"] ) then
+	elseif ( SubZoneName == SZ["The Savage Glen"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRygnasLair()
+			FinalFantasylization_Goblin_Start_TheSavageGlen()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Stagecoach Crash Site
+	--' The Lost Isles: Goblin Starting Area: Scorched Gully
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Stagecoach Crash Site"] ) then
+	elseif ( SubZoneName == SZ["Scorched Gully"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneStagecoachCrashSite()
+			FinalFantasylization_Goblin_Start_ScorchedGully()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Tal'doren
+	--' The Lost Isles: Goblin Starting Area: Sky Falls
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Tal'doren"] ) then
+	elseif ( SubZoneName == SZ["Sky Falls"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTaldoren()
+			FinalFantasylization_Goblin_Start_SkyFalls()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Tempest's Reach
+	--' The Lost Isles: Goblin Starting Area: The Slave Pits
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Tempest's Reach"] ) then
+	elseif ( SubZoneName == SZ["The Slave Pits"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTempestsReach()
+			FinalFantasylization_Goblin_Start_TheSlavePits()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Wahl Cottage
+	--' The Lost Isles: Goblin Starting Area: Tranquil Coast
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Wahl Cottage"] ) then
+	elseif ( SubZoneName == SZ["Tranquil Coast"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneWahlCottage()
+			FinalFantasylization_Goblin_Start_TranquilCoast()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas Subzone: Wood's End Cabin
+	--' The Lost Isles: Goblin Starting Area: Vashj'elan Spawning Pool
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Wood's End Cabin"] ) then
+	elseif ( SubZoneName == SZ["Vashj'elan Spawning Pool"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneWoodsEndCabin()
+			FinalFantasylization_Goblin_Start_VashjelanSpawningPool()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Gilneas END
+	--' The Lost Isles: Goblin Starting Area: Vengeance Wake
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Vengeance Wake"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Goblin_Start_VengeanceWake()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' The Lost Isles: Goblin Starting Area: Verdant Highlands
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Verdant Highlands"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Goblin_Start_VerdantHighlands()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' The Lost Isles: Goblin Starting Area: The Vicious Vale
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Vicious Vale"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Goblin_Start_TheViciousVale()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' The Lost Isles: Goblin Starting Area: Volcanoth's Lair
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Volcanoth's Lair"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_Goblin_Start_VolcanothsLair()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' The Lost Isles END
 	--'==========================================================================================
 	else
 		if FinalFantasylization_CurrentZone ~= ZoneName then
-			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
-			FinalFantasylization_EasternKingdomsGilneas()
+			FinalFantasylization_CurrentZone = ZoneName
+			FinalFantasylization_MaelstromTheLostIsles()
 			FinalFantasylization_IsPlaying = true
 		else
 			return

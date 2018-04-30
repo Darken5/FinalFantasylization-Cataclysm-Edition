@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 --'==========================================================================================
 --	Zone: Blasted Lands				FinalFantasylization_EasternKingdomsBlastedLands()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsBlastedLandsResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsBlastedLandsSwimming()
+--
 --	TOWNS:
 --	Alliance: 
 --		Nethergarde Keep				FinalFantasylization_AllianceTownNethergardeKeep()
@@ -27,9 +31,38 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 --	The Tainted Forest				FinalFantasylization_SubzoneTheTaintedForest()
 --		Maldraz							FinalFantasylization_SubzoneMaldraz()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsBlastedLandsResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsBlastedLandsSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Blasted Lands Alliance Town: Nethergarde Keep
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Nethergarde Keep"] ) then
+	elseif ( SubZoneName == SZ["Nethergarde Keep"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then

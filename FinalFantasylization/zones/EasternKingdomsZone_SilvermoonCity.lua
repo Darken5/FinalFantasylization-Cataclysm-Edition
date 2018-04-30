@@ -1,25 +1,28 @@
-function FinalFantasylization_EasternKingdomsZones_Undercity()
+function FinalFantasylization_EasternKingdomsZones_SilvermoonCity()
 --'==========================================================================================
---' Eastern Kingdoms Capital: Undercity : Horde
+--' Eastern Kingdoms Capital: Silvermoon City : Horde
 --'==========================================================================================
---	Zone: Undercity			FinalFantasylization_EasternKingdoms_Undercity()
+--	Zone: SilvermoonCity		FinalFantasylization_EasternKingdoms_SilvermoonCity()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_EasternKingdoms_UndercityResting()
---		Player is Swimming		FinalFantasylization_EasternKingdoms_UndercitySwimming()
+--		Player is Resting		FinalFantasylization_EasternKingdoms_SilvermoonCityResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdoms_SilvermoonCitySwimming()
 --
 --	SUBZONES:
---	Apothecarium			FinalFantasylization_Undercity_SubzoneTheApothecarium()
---	Canals					FinalFantasylization_Undercity_SubzoneCanals()
---	Magic Quarter			FinalFantasylization_Undercity_SubzoneMagicQuarter()
---	Rogues' Quarter			FinalFantasylization_Undercity_SubzoneRoguesQuarter()
---	Royal Quarter			FinalFantasylization_Undercity_SubzoneRoyalQuarter()
---	Ruins of Lordaeron		FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
---	Sewers					FinalFantasylization_Undercity_SubzoneSewers()
---	Trade Quarter			FinalFantasylization_Undercity_SubzoneTradeQuarter()
---	War Quarter				FinalFantasylization_Undercity_SubzoneWarQuarter()
+--	The Bazaar				FinalFantasylization_SilvermoonCity_SubzoneTheBazaar()
+--		The Sanctum				FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
+--	Court of the Sun		FinalFantasylization_SilvermoonCity_SubzoneCourtoftheSun()
+--		Sunfury Spire			FinalFantasylization_SilvermoonCity_SubzoneSunfurySpire()
+--			Inner Sanctum			FinalFantasylization_SilvermoonCity_SubzoneInnerSanctum()
+--	Farstriders' Square		FinalFantasylization_SilvermoonCity_SubzoneFarstridersSquare()
+--	Murder Row				FinalFantasylization_SilvermoonCity_SubzoneMurderRow()
+--		The Sanctum				FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
+--	The Royal Exchange		FinalFantasylization_SilvermoonCity_SubzoneTheRoyalExchange()
+--	The Shepherd's Gate		FinalFantasylization_SilvermoonCity_SubzoneTheShepherdsGate()
+--	Walk of Elders			FinalFantasylization_SilvermoonCity_SubzoneWalkofElders()
+
 	--'==========================================================================================
-	--' Undercity: Horde Check
+	--' Silvermoon City: Horde Check
 	--'==========================================================================================
 	if ( factionEnglish == "Horde" ) then
 	--'==========================================================================================
@@ -29,7 +32,7 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 			if FinalFantasylization_CurrentZone ~= "Sleeping" then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 				FinalFantasylization_CurrentZone = "Sleeping"
-				FinalFantasylization_EasternKingdoms_UndercityResting()
+				FinalFantasylization_EasternKingdoms_SilvermoonCityResting()
 			else
 				return
 			end
@@ -41,144 +44,170 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
 			if FinalFantasylization_CurrentZone ~= "Swimming" then
 				FinalFantasylization_CurrentZone = "Swimming"
-				FinalFantasylization_EasternKingdoms_UndercitySwimming()
+				FinalFantasylization_EasternKingdoms_SilvermoonCitySwimming()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: The Apothecarium
+	--' Silvermoon City: The Bazaar
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["The Apothecarium"] ) then
+		elseif ( SubZoneName == SZ["The Bazaar"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneTheApothecarium()
+				FinalFantasylization_SilvermoonCity_SubzoneTheBazaar()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Canals
+	--' Silvermoon City: The Sanctum
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Canals"] ) then
+		elseif ( SubZoneName == SZ["The Sanctum"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneCanals()
+				FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Magic Quarter
+	--' Silvermoon City: Court of the Sun
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Magic Quarter"] ) then
+		elseif ( SubZoneName == SZ["Court of the Sun"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneMagicQuarter()
+				FinalFantasylization_SilvermoonCity_SubzoneCourtoftheSun()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Rogues' Quarter
+	--' Silvermoon City: Sunfury Spire
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Rogues' Quarter"] ) then
+		elseif ( SubZoneName == SZ["Sunfury Spire"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRoguesQuarter()
+				FinalFantasylization_SilvermoonCity_SubzoneSunfurySpire()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Royal Quarter
+	--' Silvermoon City: Inner Sanctum
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Royal Quarter"] ) then
+		elseif ( SubZoneName == SZ["Inner Sanctum"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRoyalQuarter()
+				FinalFantasylization_SilvermoonCity_SubzoneInnerSanctum()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Ruins of Lordaeron
+	--' Silvermoon City: Farstriders' Square
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Ruins of Lordaeron"] ) then
+		elseif ( SubZoneName == SZ["Farstriders' Square"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
+				FinalFantasylization_SilvermoonCity_SubzoneFarstridersSquare()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Sewers
+	--' Silvermoon City: Murder Row
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Sewers"] ) then
+		elseif ( SubZoneName == SZ["Murder Row"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneSewers()
+				FinalFantasylization_SilvermoonCity_SubzoneMurderRow()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Trade Quarter
+	--' Silvermoon City: The Sanctum
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Trade Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Sanctum"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneTradeQuarter()
+				FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: War Quarter
+	--' Silvermoon City: The Royal Exchange
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["War Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Royal Exchange"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneWarQuarter()
+				FinalFantasylization_SilvermoonCity_SubzoneTheRoyalExchange()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity END
+	--' Silvermoon City: The Shepherd's Gate
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["The Shepherd's Gate"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_SilvermoonCity_SubzoneTheShepherdsGate()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Silvermoon City: Walk of Elders
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Walk of Elders"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_SilvermoonCity_SubzoneWalkofElders()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Silvermoon City END
 	--'==========================================================================================
 		else
 			if FinalFantasylization_CurrentZone ~= ZoneName then
 				FinalFantasylization_CurrentZone = ZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_EasternKingdoms_Undercity()
+				FinalFantasylization_EasternKingdoms_SilvermoonCity()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 		end
 	--'==========================================================================================
-	--' Undercity: Alliance Check
+	--' Silvermoon City: Alliance Check
 	--'==========================================================================================
 	elseif ( factionEnglish == "Alliance" ) then
 		if FinalFantasylization_CurrentZone ~= ZoneName then

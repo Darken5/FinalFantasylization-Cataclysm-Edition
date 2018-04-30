@@ -4,6 +4,10 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 --'==========================================================================================
 --	Zone: Westfall				FinalFantasylization_EasternKingdomsWestfall()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsWestfallResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsWestfallSwimming()
+--
 --	TOWNS:
 --	Alliance:
 --		Moonbrook					FinalFantasylization_AllianceTownMoonbrook()
@@ -29,10 +33,39 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 --	Saldean's Farm				FinalFantasylization_SubzoneSaldeansFarm()
 --	Stendel's Pond				FinalFantasylization_SubzoneStendelsPond()
 --	Westfall Lighthouse			FinalFantasylization_SubzoneWestfallLighthouse()
-		--'==========================================================================================
+	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsWestfallResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsWestfallSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Westfall Alliance Town: Moonbrook
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Moonbrook"] ) then
+	elseif ( SubZoneName == SZ["Moonbrook"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 		elseif ( factionEnglish == "Alliance" ) then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)

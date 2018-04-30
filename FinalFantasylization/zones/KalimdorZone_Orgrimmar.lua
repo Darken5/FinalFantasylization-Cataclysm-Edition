@@ -1,25 +1,28 @@
-function FinalFantasylization_EasternKingdomsZones_Undercity()
+function FinalFantasylization_KalimdorZones_Orgrimmar()
 --'==========================================================================================
---' Eastern Kingdoms Capital: Undercity : Horde
+--' Kalimdor Capital: Orgrimmar : Horde
 --'==========================================================================================
---	Zone: Undercity			FinalFantasylization_EasternKingdoms_Undercity()
+--	Zone: Orgrimmar		FinalFantasylization_Kalimdor_Orgrimmar()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_EasternKingdoms_UndercityResting()
---		Player is Swimming		FinalFantasylization_EasternKingdoms_UndercitySwimming()
+--		Player is Resting		FinalFantasylization_Kalimdor_OrgrimmarResting()
+--		Player is Swimming		FinalFantasylization_Kalimdor_OrgrimmarSwimming()
 --
 --	SUBZONES:
---	Apothecarium			FinalFantasylization_Undercity_SubzoneTheApothecarium()
---	Canals					FinalFantasylization_Undercity_SubzoneCanals()
---	Magic Quarter			FinalFantasylization_Undercity_SubzoneMagicQuarter()
---	Rogues' Quarter			FinalFantasylization_Undercity_SubzoneRoguesQuarter()
---	Royal Quarter			FinalFantasylization_Undercity_SubzoneRoyalQuarter()
---	Ruins of Lordaeron		FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
---	Sewers					FinalFantasylization_Undercity_SubzoneSewers()
---	Trade Quarter			FinalFantasylization_Undercity_SubzoneTradeQuarter()
---	War Quarter				FinalFantasylization_Undercity_SubzoneWarQuarter()
+--	Cleft of Shadow			FinalFantasylization_Orgrimmar_SubzoneCleftofShadow()
+--		Ragefire Chasm			FinalFantasylization_Orgrimmar_SubzoneRagefireChasm()
+--	The Drag				FinalFantasylization_Orgrimmar_SubzoneTheDrag()
+--	Goblin Slums			FinalFantasylization_Orgrimmar_SubzoneGoblinSlums()
+--	Hall of Legends			FinalFantasylization_Orgrimmar_SubzoneHallofLegends()
+--	Valley of Honor			FinalFantasylization_Orgrimmar_SubzoneValleyofHonor()
+--		Hall of the Brave		FinalFantasylization_Orgrimmar_SubzoneHalloftheBrave()
+--		The Ring of Valor		FinalFantasylization_Orgrimmar_SubzoneTheRingofValor()
+--	Valley of Spirits		FinalFantasylization_Orgrimmar_SubzoneValleyofSpirits()
+--	Valley of Strength		FinalFantasylization_Orgrimmar_SubzoneValleyofStrength()
+--		Grommash Hold			FinalFantasylization_Orgrimmar_SubzoneGrommashHold()
+--	Valley of Wisdom		FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
 	--'==========================================================================================
-	--' Undercity: Horde Check
+	--' Orgrimmar: Horde Check
 	--'==========================================================================================
 	if ( factionEnglish == "Horde" ) then
 	--'==========================================================================================
@@ -29,7 +32,7 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 			if FinalFantasylization_CurrentZone ~= "Sleeping" then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 				FinalFantasylization_CurrentZone = "Sleeping"
-				FinalFantasylization_EasternKingdoms_UndercityResting()
+				FinalFantasylization_Kalimdor_OrgrimmarResting()
 			else
 				return
 			end
@@ -41,144 +44,183 @@ function FinalFantasylization_EasternKingdomsZones_Undercity()
 		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
 			if FinalFantasylization_CurrentZone ~= "Swimming" then
 				FinalFantasylization_CurrentZone = "Swimming"
-				FinalFantasylization_EasternKingdoms_UndercitySwimming()
+				FinalFantasylization_Kalimdor_OrgrimmarSwimming()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: The Apothecarium
+	--' Orgrimmar: Cleft of Shadow
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["The Apothecarium"] ) then
+		elseif ( SubZoneName == SZ["Cleft of Shadow"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneTheApothecarium()
+				FinalFantasylization_Orgrimmar_SubzoneCleftofShadow()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Canals
+	--' Orgrimmar: Ragefire Chasm
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Canals"] ) then
+		elseif ( SubZoneName == SZ["Ragefire Chasm"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneCanals()
+				FinalFantasylization_Orgrimmar_SubzoneRagefireChasm()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Magic Quarter
+	--' Orgrimmar: The Drag
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Magic Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Drag"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneMagicQuarter()
+				FinalFantasylization_Orgrimmar_SubzoneTheDrag()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Rogues' Quarter
+	--' Orgrimmar: Goblin Slums
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Rogues' Quarter"] ) then
+		elseif ( SubZoneName == SZ["Goblin Slums"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRoguesQuarter()
+				FinalFantasylization_Orgrimmar_SubzoneGoblinSlums()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Royal Quarter
+	--' Orgrimmar: Hall of Legends
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Royal Quarter"] ) then
+		elseif ( SubZoneName == SZ["Hall of Legends"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRoyalQuarter()
+				FinalFantasylization_Orgrimmar_SubzoneHallofLegends()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Ruins of Lordaeron
+	--' Orgrimmar: Valley of Honor
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Ruins of Lordaeron"] ) then
+		elseif ( SubZoneName == SZ["Valley of Honor"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
+				FinalFantasylization_Orgrimmar_SubzoneValleyofHonor()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Sewers
+	--' Orgrimmar: Hall of the Brave
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Sewers"] ) then
+		elseif ( SubZoneName == SZ["Hall of the Brave"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneSewers()
+				FinalFantasylization_Orgrimmar_SubzoneHalloftheBrave()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: Trade Quarter
+	--' Orgrimmar: The Ring of Valor
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Trade Quarter"] ) then
+		elseif ( SubZoneName == SZ["The Ring of Valor"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneTradeQuarter()
+				FinalFantasylization_Orgrimmar_SubzoneTheRingofValor()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity: War Quarter
+	--' Orgrimmar: Valley of Spirits
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["War Quarter"] ) then
+		elseif ( SubZoneName == SZ["Valley of Spirits"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Undercity_SubzoneWarQuarter()
+				FinalFantasylization_Orgrimmar_SubzoneValleyofSpirits()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Undercity END
+	--' Orgrimmar: Valley of Strength
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Valley of Strength"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneValleyofStrength()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Orgrimmar: Grommash Hold
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Grommash Hold"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneGrommashHold()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Orgrimmar: Valley of Wisdom
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Valley of Wisdom"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Orgrimmar END
 	--'==========================================================================================
 		else
 			if FinalFantasylization_CurrentZone ~= ZoneName then
 				FinalFantasylization_CurrentZone = ZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_EasternKingdoms_Undercity()
+				FinalFantasylization_Kalimdor_Orgrimmar()
 			else
 				return
 			end
 			FinalFantasylization_IsPlaying = true
 		end
 	--'==========================================================================================
-	--' Undercity: Alliance Check
+	--' Orgrimmar: Alliance Check
 	--'==========================================================================================
 	elseif ( factionEnglish == "Alliance" ) then
 		if FinalFantasylization_CurrentZone ~= ZoneName then

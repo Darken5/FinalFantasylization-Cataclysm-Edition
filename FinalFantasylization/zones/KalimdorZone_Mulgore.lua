@@ -4,6 +4,10 @@ function FinalFantasylization_KalimdorZones_Mulgore()
 --'==========================================================================================
 --	Zone: Mulgore				FinalFantasylization_KalimdorMulgore()
 --
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_KalimdorMulgoreResting()
+--		Player is Swimming		FinalFantasylization_KalimdorMulgoreSwimming()
+--
 --	TOWNS:
 --	Tauren Start:
 --		Red Cloud Mesa				FinalFantasylization_Tauren_Start_RedCloudMesa()
@@ -34,9 +38,38 @@ function FinalFantasylization_KalimdorZones_Mulgore()
 --	Windfury Ridge				FinalFantasylization_SubzoneWindfuryRidge()
 --	Winterhoof Water Well		FinalFantasylization_SubzoneWinterhoofWaterWell()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_KalimdorMulgoreResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_KalimdorMulgoreSwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Mulgore: Tauren Starting Area: Red Cloud Mesa
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Red Cloud Mesa"] ) then
+	elseif ( SubZoneName == SZ["Red Cloud Mesa"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName

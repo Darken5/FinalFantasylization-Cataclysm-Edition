@@ -3,6 +3,10 @@ function FinalFantasylization_EasternKingdomsZones_GilneasCity()
 --' Eastern Kingdoms Zones: Gilneas City : Worgen
 --'==========================================================================================
 --	Zone: Gilneas City				FinalFantasylization_EasternKingdomsGilneasCity()
+--
+--	Zone Events:
+--		Player is Resting		FinalFantasylization_EasternKingdomsGilneasCityResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsGilneasCitySwimming()
 --	
 --	SUBZONES:
 --	Cathedral Quarter 				FinalFantasylization_GilneasCity_SubzoneCathedralQuarter()
@@ -12,9 +16,38 @@ function FinalFantasylization_EasternKingdomsZones_GilneasCity()
 --	Military District 				FinalFantasylization_GilneasCity_SubzoneMilitaryDistrict()
 --		Stoneward Prison			FinalFantasylization_GilneasCity_SubzoneStonewardPrison()
 	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_EasternKingdomsGilneasCityResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--'	Zone Event: Player is Swimming
+	--'==========================================================================================
+	elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		if FinalFantasylization_CurrentZone ~= "Swimming" then
+			FinalFantasylization_CurrentZone = "Swimming"
+			FinalFantasylization_EasternKingdomsGilneasCitySwimming()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Gilneas City: Cathedral Quarter
 	--'==========================================================================================
-	if ( SubZoneName == SZ["Cathedral Quarter"] ) then
+	elseif ( SubZoneName == SZ["Cathedral Quarter"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
