@@ -2054,7 +2054,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Hillsbrad Foothills
 	function FinalFantasylization_EasternKingdomsHillsbradFoothills()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Zone Events:
 --		Player is Resting
@@ -2996,11 +3001,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Hall of Legends
 	function FinalFantasylization_Orgrimmar_SubzoneHallofLegends()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	Orgrimmar Skyway
-	function FinalFantasylization_Orgrimmar_SubzoneOrgrimmarSkyway()
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
 		FinalFantasylization_debugMsg("OrgrimmarSong")
 	end

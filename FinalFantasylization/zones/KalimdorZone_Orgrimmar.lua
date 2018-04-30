@@ -14,7 +14,6 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 --	The Drag				FinalFantasylization_Orgrimmar_SubzoneTheDrag()
 --	Goblin Slums			FinalFantasylization_Orgrimmar_SubzoneGoblinSlums()
 --	Hall of Legends			FinalFantasylization_Orgrimmar_SubzoneHallofLegends()
---	Orgrimmar Skyway		FinalFantasylization_Orgrimmar_SubzoneOrgrimmarSkyway()
 --	Valley of Honor			FinalFantasylization_Orgrimmar_SubzoneValleyofHonor()
 --		Hall of the Brave		FinalFantasylization_Orgrimmar_SubzoneHalloftheBrave()
 --		The Ring of Valor		FinalFantasylization_Orgrimmar_SubzoneTheRingofValor()
@@ -33,7 +32,7 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 			if FinalFantasylization_CurrentZone ~= "Sleeping" then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 				FinalFantasylization_CurrentZone = "Sleeping"
-				FinalFantasylization_EasternKingdoms_OrgrimmarResting()
+				FinalFantasylization_Kalimdor_OrgrimmarResting()
 			else
 				return
 			end
@@ -45,7 +44,7 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
 			if FinalFantasylization_CurrentZone ~= "Swimming" then
 				FinalFantasylization_CurrentZone = "Swimming"
-				FinalFantasylization_EasternKingdoms_OrgrimmarSwimming()
+				FinalFantasylization_Kalimdor_OrgrimmarSwimming()
 			else
 				return
 			end
@@ -111,19 +110,6 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Orgrimmar_SubzoneHallofLegends()
-			else
-				return
-			end
-			FinalFantasylization_IsPlaying = true
-			return
-	--'==========================================================================================
-	--' Orgrimmar: Orgrimmar Skyway
-	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Orgrimmar Skyway"] ) then
-			if FinalFantasylization_CurrentZone ~= SubZoneName then
-				FinalFantasylization_CurrentZone = SubZoneName
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Orgrimmar_SubzoneOrgrimmarSkyway()
 			else
 				return
 			end
@@ -227,7 +213,7 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 			if FinalFantasylization_CurrentZone ~= ZoneName then
 				FinalFantasylization_CurrentZone = ZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_EasternKingdoms_Orgrimmar()
+				FinalFantasylization_Kalimdor_Orgrimmar()
 			else
 				return
 			end
