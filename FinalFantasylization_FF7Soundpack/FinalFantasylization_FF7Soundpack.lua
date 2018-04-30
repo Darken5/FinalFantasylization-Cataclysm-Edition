@@ -2957,6 +2957,143 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_debugMsg("ExodarSong")
 	end
 --'==========================================================================================
+--' Kalimdor Capital: Orgrimmar : Horde
+--'==========================================================================================
+--	Zone: Orgrimmar
+	function FinalFantasylization_Kalimdor_Orgrimmar()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_Kalimdor_OrgrimmarResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_Kalimdor_OrgrimmarSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	SUBZONES:
+--	Cleft of Shadow
+	function FinalFantasylization_Orgrimmar_SubzoneCleftofShadow()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		Ragefire Chasm
+	function FinalFantasylization_Orgrimmar_SubzoneRagefireChasm()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	The Drag
+	function FinalFantasylization_Orgrimmar_SubzoneTheDrag()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	Goblin Slums
+	function FinalFantasylization_Orgrimmar_SubzoneGoblinSlums()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	Hall of Legends
+	function FinalFantasylization_Orgrimmar_SubzoneHallofLegends()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	Orgrimmar Skyway
+	function FinalFantasylization_Orgrimmar_SubzoneOrgrimmarSkyway()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	Valley of Honor
+	function FinalFantasylization_Orgrimmar_SubzoneValleyofHonor()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		Hall of the Brave
+	function FinalFantasylization_Orgrimmar_SubzoneHalloftheBrave()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		The Ring of Valor
+	function FinalFantasylization_Orgrimmar_SubzoneTheRingofValor()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	Valley of Spirits
+	function FinalFantasylization_Orgrimmar_SubzoneValleyofSpirits()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	Valley of Strength
+	function FinalFantasylization_Orgrimmar_SubzoneValleyofStrength()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		Grommash Hold
+	function FinalFantasylization_Orgrimmar_SubzoneGrommashHold()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--	Valley of Wisdom
+	function FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--'==========================================================================================
+--' Kalimdor Capital: Thunder Bluff : Horde
+--'==========================================================================================
+--	Zone: Thunder Bluff
+	function FinalFantasylization_Kalimdor_ThunderBluff()
+		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
+		FinalFantasylization_debugMsg("ThunderBluffSong")
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_Kalimdor_ThunderBluffResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_Kalimdor_ThunderBluffSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	SUBZONES:
+--	Elder Rise
+	function FinalFantasylization_ThunderBluff_SubzoneElderRise()
+		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
+		FinalFantasylization_debugMsg("ThunderBluffSong")
+	end
+--	High Rise
+	function FinalFantasylization_ThunderBluff_SubzoneHighRise()
+		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
+		FinalFantasylization_debugMsg("ThunderBluffSong")
+	end
+--	Hunter Rise
+	function FinalFantasylization_ThunderBluff_SubzoneHunterRise()
+		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
+		FinalFantasylization_debugMsg("ThunderBluffSong")
+	end
+--	Lower Rise
+	function FinalFantasylization_ThunderBluff_SubzoneLowerRise()
+		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
+		FinalFantasylization_debugMsg("ThunderBluffSong")
+	end
+--	Middle Rise
+	function FinalFantasylization_ThunderBluff_SubzoneMiddleRise()
+		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
+		FinalFantasylization_debugMsg("ThunderBluffSong")
+	end
+--	Spirit Rise
+	function FinalFantasylization_ThunderBluff_SubzoneSpiritRise()
+		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
+		FinalFantasylization_debugMsg("ThunderBluffSong")
+	end
+--		Pools of Vision
+	function FinalFantasylization_ThunderBluff_SubzonePoolsofVision()
+		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
+		FinalFantasylization_debugMsg("ThunderBluffSong")
+	end
+
+--'==========================================================================================
 --' Kalimdor Zones: Ashenvale
 --'==========================================================================================
 --	Zone: Ashenvale

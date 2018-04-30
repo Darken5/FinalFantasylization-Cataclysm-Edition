@@ -35,7 +35,9 @@
 	<Script file="KalimdorZone_TheExodar.lua"/>
 	<Script file="KalimdorZone_Mulgore.lua"/>
 	<Script file="KalimdorZone_NorthernBarrens.lua"/>
+	<Script file="KalimdorZone_Orgrimmar.lua"/>
 	<Script file="KalimdorZone_Teldrassil.lua"/>
+	<Script file="KalimdorZone_ThunderBluff.lua"/>
 	
 	<!--Maelstrom-->
 	<Script file="MaelstromZone_Kezan.lua"/>

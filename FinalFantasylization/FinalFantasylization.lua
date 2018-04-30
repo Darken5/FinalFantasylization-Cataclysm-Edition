@@ -930,9 +930,15 @@ function FinalFantasylization_GetMusic()
 		-- Northern Barrens
 			elseif ( MapID == 11 ) then
 				FinalFantasylization_KalimdorZones_NorthernBarrens(SubZoneName)
+		-- Orgrimmar
+			elseif ( MapID == 321 ) then
+				FinalFantasylization_KalimdorZones_Orgrimmar(SubZoneName)
 		-- Teldrassil
 			elseif ( MapID == 41 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
+		-- Thunder Bluff
+			elseif ( MapID == 362 ) then
+				FinalFantasylization_KalimdorZones_ThunderBluff(SubZoneName)
 
 
 --'==========================================================================================
