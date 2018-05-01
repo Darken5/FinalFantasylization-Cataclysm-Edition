@@ -847,6 +847,9 @@ function FinalFantasylization_GetMusic()
 		-- Dun Morogh
 			elseif ( MapID == 27 ) then
 				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)
+		-- Duskwood
+			elseif ( MapID == 34 ) then
+				FinalFantasylization_EasternKingdomsZones_Duskwood(SubZoneName)
 		-- Elwynn Forest
 			elseif ( MapID == 30 ) then
 				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)

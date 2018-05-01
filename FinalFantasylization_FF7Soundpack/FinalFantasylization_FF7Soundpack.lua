@@ -1347,8 +1347,103 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	The Tundrid Hills
 	function FinalFantasylization_SubzoneTheTundridHills()
 
-	end	
-	
+	end
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Duskwood
+--'==========================================================================================
+--	Zone: Duskwood
+	function FinalFantasylization_EasternKingdomsDuskwood()
+
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsDuskwoodResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsDuskwoodSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--	TOWNS:
+--	Alliance:
+--	Darkshire
+	function FinalFantasylization_AllianceTownDarkshire()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Darkshire Town Hall
+	function FinalFantasylization_AllianceTownDarkshireTownHall()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Scarlet Raven Tavern
+	function FinalFantasylization_AllianceTownScarletRavenTavern()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Raven Hill
+	function FinalFantasylization_AllianceTownRavenHill()
+		FinalFantasylization_AllianceTowns();
+	end
+--	SUBZONES:
+--	Addle's Stead
+	function FinalFantasylization_SubzoneAddlesStead()
+
+	end
+--	Beggar's Haunt
+	function FinalFantasylization_SubzoneBeggarsHaunt()
+
+	end
+--	Brightwood Grove
+	function FinalFantasylization_SubzoneBrightwoodGrove()
+
+	end
+--	The Darkened Bank
+	function FinalFantasylization_SubzoneTheDarkenedBank()
+
+	end
+--	Forlorn Rowe
+	function FinalFantasylization_SubzoneForlornRowe()
+
+	end
+--	The Hushed Bank
+	function FinalFantasylization_SubzoneTheHushedBank()
+
+	end
+--	Manor Mistmantle
+	function FinalFantasylization_SubzoneManorMistmantle()
+
+	end
+--	Raven Hill Cemetery
+	function FinalFantasylization_SubzoneRavenHillCemetery()
+
+	end
+--		Dawning Woods Catacombs
+	function FinalFantasylization_SubzoneDawningWoodsCatacombs()
+
+	end
+--	Roland's Doom
+	function FinalFantasylization_SubzoneRolandsDoom()
+
+	end
+--	The Rotting Orchard
+	function FinalFantasylization_SubzoneTheRottingOrchard()
+
+	end
+--	The Tranquil Gardens Cemetery
+	function FinalFantasylization_SubzoneTheTranquilGardensCemetery()
+
+	end
+--	Twilight Grove
+	function FinalFantasylization_SubzoneTwilightGrove()
+
+	end
+--	Vul'Gol Ogre Mound
+	function FinalFantasylization_SubzoneVulGolOgreMound()
+
+	end
+--	The Yorgen Farmstead
+	function FinalFantasylization_SubzoneTheYorgenFarmstead()	
+
+	end
+
 
 --'==========================================================================================
 --' Eastern Kingdoms Zone: Elwynn Forest - Alliance
@@ -2103,7 +2198,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Dalaran Crater
 	function FinalFantasylization_SubzoneDalaranCrater()
-
+		FinalFantasylization_ContestedSong()
 	end
 --	Darrow Hill
 	function FinalFantasylization_SubzoneDarrowHill()
@@ -2443,135 +2538,136 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	TOWNS:
 --	Horde:
---		The Forsaken Front					
+--		The Forsaken Front
 	function FinalFantasylization_HordeTownTheForsakenFront()
 		FinalFantasylization_HordeTowns();
 	end
---		Forsaken High Command				
+--		Forsaken High Command
 	function FinalFantasylization_HordeTownForsakenHighCommand()
 		FinalFantasylization_HordeTowns();
 	end
---		Forsaken Rear Guard					
+--		Forsaken Rear Guard
 	function FinalFantasylization_HordeTownForsakenRearGuard()
 		FinalFantasylization_HordeTowns();
 	end
---		The Sepulcher						
+--		The Sepulcher
 	function FinalFantasylization_HordeTownTheSepulcher()
 		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
---	7th Legion Base Camp				
+--	7th Legion Base Camp
 	function FinalFantasylization_Subzone7thLegionBaseCamp()
 
 	end
---	Ambermill *							
+--	Ambermill *
 	function FinalFantasylization_SubzoneAmbermill()
-
+		FinalFantasylization_PlayMusic(S .. Alliance10Town);
+		FinalFantasylization_debugMsg("Alliance10Town")
 	end
---	The Battlefront						
+--	The Battlefront
 	function FinalFantasylization_SubzoneTheBattlefront()
 
 	end
---	Beren's Peril						
+--	Beren's Peril
 	function FinalFantasylization_SubzoneBerensPeril()
 
 	end
---	The Dead Field						
+--	The Dead Field
 	function FinalFantasylization_SubzoneTheDeadField()
 		FinalFantasylization_PlagueSong();
 	end
---	The Decrepit Fields					
+--	The Decrepit Fields
 	function FinalFantasylization_SubzoneTheDecrepitFields()
 		FinalFantasylization_PlagueSong();
 	end
---	Deep Elem Mine						
+--	Deep Elem Mine
 	function FinalFantasylization_SubzoneDeepElemMine()
 		FinalFantasylization_CaveSong();
 	end
---	Gilneas Liberation Front Base Camp	
+--	Gilneas Liberation Front Base Camp
 	function FinalFantasylization_SubzoneGilneasLiberationFrontBaseCamp()
 
 	end
---	The Greymane Wall					
+--	The Greymane Wall
 	function FinalFantasylization_SubzoneTheGreymaneWall()
 		FinalFantasylization_SwampSong();
 	end
---	The Ivar Patch						
+--	The Ivar Patch
 	function FinalFantasylization_SubzoneTheIvarPatch()
 
 	end
---	Lordamere Lake						
+--	Lordamere Lake
 	function FinalFantasylization_SubzoneLordamereLake()
 		FinalFantasylization_LakeSong();
 	end
---		The Dawning Isles					
+--		The Dawning Isles
 	function FinalFantasylization_SubzoneTheDawningIsles()
 
 	end
---		Fenris Isle							
+--		Fenris Isle
 	function FinalFantasylization_SubzoneFenrisIsle()
 
 	end
---			Fenris Keep							
+--			Fenris Keep
 	function FinalFantasylization_SubzoneFenrisKeep()
 
 	end
---	North Tide's Beachhead				
+--	North Tide's Beachhead
 	function FinalFantasylization_SubzoneNorthTidesBeachhead()
 		FinalFantasylization_WaterSong();
 	end
---	North Tide's Hollow					
+--	North Tide's Hollow
 	function FinalFantasylization_SubzoneNorthTidesHollow()
 
 	end
---	North Tide's Run					
+--	North Tide's Run
 	function FinalFantasylization_SubzoneNorthTidesRun()
 
 	end
---	Olsen's Farthing					
+--	Olsen's Farthing
 	function FinalFantasylization_SubzoneOlsensFarthing()
 
 	end
---	Pyrewood Village					
+--	Pyrewood Village
 	function FinalFantasylization_SubzonePyrewoodVillage()
 
 	end
---		Pyrewood Chapel						
+--		Pyrewood Chapel
 	function FinalFantasylization_SubzonePyrewoodChapel()
 
 	end
---		Pyrewood Inn *						
+--		Pyrewood Inn *
 	function FinalFantasylization_SubzonePyrewoodInn()
 
 	end
---		Pyrewood Town Hall					
+--		Pyrewood Town Hall
 	function FinalFantasylization_SubzonePyrewoodTownHall()
 
 	end
---	Shadowfang Keep						
+--	Shadowfang Keep
 	function FinalFantasylization_SubzoneShadowfangKeep()
 
 	end
---	The Shining Strand					
+--	The Shining Strand
 	function FinalFantasylization_SubzoneTheShiningStrand()
 		FinalFantasylization_PlagueSong();
 	end
---	The Skittering Dark					
+--	The Skittering Dark
 	function FinalFantasylization_SubzoneTheSkitteringDark()
 		FinalFantasylization_PlagueSong();
 	end
---	South Tide's Run					
+--	South Tide's Run
 	function FinalFantasylization_SubzoneSouthTidesRun()
 
 	end
---	Valgan's Field						
+--	Valgan's Field
 	function FinalFantasylization_SubzoneValgansField()	
 
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zone: Tirisfal Glades - Horde
 --'==========================================================================================
---	Zone: Tirisfal Glades	
+--	Zone: Tirisfal Glades
 	function FinalFantasylization_EasternKingdomsTirisfalGlades()
 		local x = math.random(1, 2);
 			if x == 1 then
