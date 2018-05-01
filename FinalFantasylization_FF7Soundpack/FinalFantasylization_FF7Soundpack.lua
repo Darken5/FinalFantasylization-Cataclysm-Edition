@@ -2886,7 +2886,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --			Moonbrook Schoolhouse
 	function FinalFantasylization_AllianceTownMoonbrookSchoolhouse()
 		FinalFantasylization_AllianceTowns();
-	end	
+	end
 --		Sentinel Hill
 	function FinalFantasylization_AllianceTownSentinelHill()
 		FinalFantasylization_AllianceTowns();
@@ -2958,6 +2958,134 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Westfall Lighthouse
 	function FinalFantasylization_SubzoneWestfallLighthouse()
+	
+	end
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Wetlands : Alliance
+--'==========================================================================================
+--	Zone: Wetlands
+	function FinalFantasylization_EasternKingdomsWetlands()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SwampSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsWetlandsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsWetlandsSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Alliance:
+--		Dun Modr
+	function FinalFantasylization_AllianceTownDunModr()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Greenwarden's Grove
+	function FinalFantasylization_AllianceTownGreenwardensGrove()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Menethil Harbor
+	function FinalFantasylization_AllianceTownMenethilHarbor()
+		FinalFantasylization_AllianceTowns();
+	end
+--			Deepwater Tavern
+	function FinalFantasylization_AllianceTownDeepwaterTavern()
+		FinalFantasylization_AllianceTowns();
+	end
+--			Menethil Keep
+	function FinalFantasylization_AllianceTownMenethilKeep()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Slabchisel's Survey
+	function FinalFantasylization_AllianceTownSlabchiselsSurvey()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Whelgar's Retreat
+	function FinalFantasylization_AllianceTownWhelgarsRetreat()
+		FinalFantasylization_AllianceTowns();
+	end
+--	SUBZONES:
+--	Angerfang Encampment
+	function FinalFantasylization_SubzoneAngerfangEncampment()
+	
+	end
+--	Baradin Bay
+	function FinalFantasylization_SubzoneBaradinBay()
+	
+	end
+--	Black Channel Marsh
+	function FinalFantasylization_SubzoneBlackChannelMarsh()
+	
+	end
+--	Bluegill Marsh
+	function FinalFantasylization_SubzoneBluegillMarsh()
+	
+	end
+--	Direforge Hill
+	function FinalFantasylization_SubzoneDireforgeHill()
+	
+	end
+--	Dun Algaz
+	function FinalFantasylization_SubzoneDunAlgaz()
+	
+	end
+--	The Great Sea
+	function FinalFantasylization_SubzoneTheGreatSea()
+	
+	end
+--	The Green Belt
+	function FinalFantasylization_SubzoneTheGreenBelt()
+	
+	end
+--	Ironbeard's Tomb
+	function FinalFantasylization_SubzoneIronbeardsTomb()
+	
+	end
+--	The Lost Fleet
+	function FinalFantasylization_SubzoneTheLostFleet()
+	
+	end
+--	Menethil Bay
+	function FinalFantasylization_SubzoneMenethilBay()
+	
+	end
+--	Mosshide Fen
+	function FinalFantasylization_SubzoneMosshideFen()
+	
+	end
+--	Raptor Ridge
+	function FinalFantasylization_SubzoneRaptorRidge()
+	
+	end
+--	Saltspray Glen
+	function FinalFantasylization_SubzoneSaltsprayGlen()
+	
+	end
+--	Sundown Marsh
+	function FinalFantasylization_SubzoneSundownMarsh()
+	
+	end
+--		Swiftgear Station
+	function FinalFantasylization_SubzoneSwiftgearStation()
+	
+	end
+--	Thandol Span
+	function FinalFantasylization_SubzoneThandolSpan()
+	
+	end
+--	Thelgen Rock
+	function FinalFantasylization_SubzoneThelgenRock()
+	
+	end
+--	Whelgar's Excavation Site
+	function FinalFantasylization_SubzoneWhelgarsExcavationSite()
 	
 	end
 	

@@ -898,6 +898,9 @@ function FinalFantasylization_GetMusic()
 		-- Westfall
 			elseif ( MapID == 39 ) then
 				FinalFantasylization_EasternKingdomsZones_Westfall(SubZoneName)
+		-- Wetlands
+			elseif ( MapID == 40 ) then
+				FinalFantasylization_EasternKingdomsZones_Wetlands(SubZoneName)
 
 
 --'==========================================================================================
