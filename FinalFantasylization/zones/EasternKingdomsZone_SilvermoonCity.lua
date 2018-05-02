@@ -41,7 +41,7 @@ function FinalFantasylization_EasternKingdomsZones_SilvermoonCity()
 	--'==========================================================================================
 	--'	Zone Event: Player is Swimming
 	--'==========================================================================================
-		elseif IsSwimming() ~= nil and FinalFantasylizationOptions.Swim == true then
+		elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
 			if FinalFantasylization_CurrentZone ~= "Swimming" then
 				FinalFantasylization_CurrentZone = "Swimming"
 				FinalFantasylization_EasternKingdoms_SilvermoonCitySwimming()

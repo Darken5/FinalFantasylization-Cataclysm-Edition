@@ -584,9 +584,7 @@ function FinalFantasylization_PlayMusic( file )
 		if( file ~= nil ) then
 			if Current_Song ~= file then
 				Current_Song = file
-				PlaySound("GAMEHIGHLIGHTFRIENDLYUNIT")
-				PlayMusic( file )
-				PlaySound("GAMEHIGHLIGHTFRIENDLYUNIT")
+				PlayMusic( file, "Master" )
 			end
 		end
 	end
@@ -595,9 +593,7 @@ end
 function FinalFantasylization_PlayFile( file )
 	if( FinalFantasylizationOptions.Enabled == true ) and ( FinalFantasylizationOptions.Sound == true ) then
 		if( file ~= nil ) then
-			--PlaySound("GAMEHIGHLIGHTFRIENDLYUNIT")
-			PlaySoundFile( file )
-			--PlaySound("GAMEHIGHLIGHTFRIENDLYUNIT")
+			PlaySoundFile( file, "Master" )
 		end
 	end
 end
