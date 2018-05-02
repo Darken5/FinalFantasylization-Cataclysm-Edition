@@ -2341,6 +2341,140 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 --'==========================================================================================
+--' Eastern Kingdoms Zones: Northern Stranglethorn
+--'==========================================================================================
+--	Zone: Northern Stranglethorn
+	function FinalFantasylization_EasternKingdomsNorthernStranglethorn()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsNorthernStranglethornResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsNorthernStranglethornSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--	TOWNS:
+--	Alliance:
+--		Fort Livingston
+	function FinalFantasylization_AllianceTownFortLivingston()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Rebel Camp
+	function FinalFantasylization_AllianceTownRebelCamp()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Bambala
+	function FinalFantasylization_HordeTownBambala()
+		FinalFantasylization_HordeTowns();
+	end
+--		Grom'gol Base Camp
+	function FinalFantasylization_HordeTownGromgolBaseCamp()
+		FinalFantasylization_HordeTowns();
+	end
+--	Neutral:
+--		Nesingwary's Expedition
+	function FinalFantasylization_NeutralTownNesingwarysExpedition()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Bal'lal Ruins
+	function FinalFantasylization_SubzoneBallalRuins()
+
+	end
+--	Balia'mah Ruins
+	function FinalFantasylization_SubzoneBaliamahRuins()
+
+	end
+--	The Great Sea
+	function FinalFantasylization_SubzoneTheGreatSea()
+
+	end
+--	Kal'ai Ruins
+	function FinalFantasylization_SubzoneKalaiRuins()
+
+	end
+--	Kurzen's Compound
+	function FinalFantasylization_SubzoneKurzensCompound()
+
+	end
+--	Lake Nazferiti
+	function FinalFantasylization_SubzoneLakeNazferiti()
+
+	end
+--	Mizjah Ruins
+	function FinalFantasylization_SubzoneMizjahRuins()
+
+	end
+--	Mosh'Ogg Ogre Mound
+	function FinalFantasylization_SubzoneMoshOggOgreMound()
+
+	end
+--	Nazferiti River
+	function FinalFantasylization_SubzoneNazferitiRiver()
+
+	end
+--	Ruins of Zul'Kunda
+	function FinalFantasylization_SubzoneRuinsofZulKunda()
+
+	end
+--	Ruins of Zul'Mamwe
+	function FinalFantasylization_SubzoneRuinsofZulMamwe()
+
+	end
+--	The Savage Coast
+	function FinalFantasylization_SubzoneTheSavageCoast()
+
+	end
+--	The Stockpile
+	function FinalFantasylization_SubzoneTheStockpile()
+
+	end
+--	The Sundering
+	function FinalFantasylization_SubzoneTheSundering()
+
+	end
+--	Tkashi Ruins
+	function FinalFantasylization_SubzoneTkashiRuins()
+
+	end
+--	Venture Company Base Camp
+	function FinalFantasylization_SubzoneVentureCompanyBaseCamp()
+
+	end
+--	Venture Co. Operations Center
+	function FinalFantasylization_SubzoneVentureCoOperationsCenter()
+
+	end
+--	The Vile Reef
+	function FinalFantasylization_SubzoneTheVileReef()
+
+	end
+--	Yojamba Isle
+	function FinalFantasylization_SubzoneYojambaIsle()
+
+	end
+--	Ziata'jai Ruins
+	function FinalFantasylization_SubzoneZiatajaiRuins()
+
+	end
+--	Zul'Gurub
+	function FinalFantasylization_SubzoneZulGurub()
+
+	end
+--	Zuuldaia Ruins
+	function FinalFantasylization_SubzoneZuuldaiaRuins()
+
+	end
+--'==========================================================================================
 --' Eastern Kingdoms Zones: Redridge Mountains
 --'==========================================================================================
 --	Zone: Redridge Mountains

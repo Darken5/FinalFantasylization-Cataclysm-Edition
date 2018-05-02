@@ -9,7 +9,7 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 --		Player is Swimming		FinalFantasylization_EasternKingdomsBlastedLandsSwimming()
 --
 --	TOWNS:
---	Alliance: 
+--	Alliance:
 --		Nethergarde Keep				FinalFantasylization_AllianceTownNethergardeKeep()
 --		Surwich							FinalFantasylization_AllianceTownSurwich()
 --	Horde:

@@ -874,6 +874,9 @@ function FinalFantasylization_GetMusic()
 		-- Loch Modan
 			elseif ( MapID == 35 ) then
 				FinalFantasylization_EasternKingdomsZones_LochModan(SubZoneName)
+		-- Northern Stranglethorn
+			elseif ( MapID == 37 ) then
+				FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn(SubZoneName)
 		-- Redridge Mountains
 			elseif ( MapID == 36 ) then
 				FinalFantasylization_EasternKingdomsZones_RedridgeMountains(SubZoneName)
