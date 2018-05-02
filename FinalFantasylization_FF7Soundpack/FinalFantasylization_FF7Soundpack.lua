@@ -5038,6 +5038,159 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 --'==========================================================================================
+--' Kalimdor Zones: Stonetalon Mountains
+--'==========================================================================================
+--	Zone: Stonetalon Mountains
+	function FinalFantasylization_KalimdorStonetalonMountains()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_LandSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorStonetalonMountainsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorStonetalonMountainsSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--	TOWNS:
+--	Alliance:
+--		Farwatcher's Glen
+	function FinalFantasylization_AllianceTownFarwatchersGlen()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Mirkfallon Post
+	function FinalFantasylization_AllianceTownMirkfallonPost()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Northwatch Expedition Base Camp
+	function FinalFantasylization_AllianceTownNorthwatchExpeditionBaseCamp()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Thal'darah Overlook
+	function FinalFantasylization_AllianceTownThaldarahOverlook()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Windshear Hold
+	function FinalFantasylization_AllianceTownWindshearHold()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Cliffwalker Post
+	function FinalFantasylization_HordeTownCliffwalkerPost()
+		FinalFantasylization_HordeTowns();
+	end
+--		Krom'gar Fortress
+	function FinalFantasylization_HordeTownKromgarFortress()
+		FinalFantasylization_HordeTowns();
+	end
+--		Malaka'Jin
+	function FinalFantasylization_HordeTownMalakaJin()
+		FinalFantasylization_HordeTowns();
+	end
+--		Sludgewerks
+	function FinalFantasylization_HordeTownSludgewerks()
+		FinalFantasylization_HordeTowns();
+	end
+--		Sun Rock Retreat
+	function FinalFantasylization_HordeTownSunRockRetreat()
+		FinalFantasylization_HordeTowns();
+	end
+--	SUBZONES:	
+--	Battlescar Valley
+	function FinalFantasylization_SubzoneBattlescarValley()
+
+	end
+--	Boulderslide Ravine
+	function FinalFantasylization_SubzoneBoulderslideRavine()
+
+	end
+--		Boulderslide Cavern
+	function FinalFantasylization_SubzoneBoulderslideCavern()
+
+	end
+--	Camp Aparaje
+	function FinalFantasylization_SubzoneCampAparaje()
+
+	end
+--	The Charred Vale
+	function FinalFantasylization_SubzoneTheCharredVale()
+
+	end
+--	The Fold
+	function FinalFantasylization_SubzoneTheFold()
+
+	end
+--	Greatwood Vale
+	function FinalFantasylization_SubzoneGreatwoodVale()
+
+	end
+--	Grimtotem Post
+	function FinalFantasylization_SubzoneGrimtotemPost()
+
+	end
+--	Mirkfallon Lake
+	function FinalFantasylization_SubzoneMirkfallonLake()
+
+	end
+--	Sishir Canyon
+	function FinalFantasylization_SubzoneSishirCanyon()
+
+	end
+--		Ruins of Eldre'thar
+	function FinalFantasylization_SubzoneRuinsofEldrethar()
+
+	end
+--	Stonetalon Peak
+	function FinalFantasylization_SubzoneStonetalonPeak()
+
+	end
+--	The Talon Den
+	function FinalFantasylization_SubzoneTheTalonDen()
+
+	end
+--	Talondeep Pass
+	function FinalFantasylization_SubzoneTalondeepPass()
+
+	end
+--	Thal'darah Grove
+	function FinalFantasylization_SubzoneThaldarahGrove()
+
+	end
+--	Trueshot Point
+	function FinalFantasylization_SubzoneTrueshotPoint()
+
+	end
+--	Unearthed Ground
+	function FinalFantasylization_SubzoneUnearthedGround()
+
+	end
+--	Webwinder Path
+	function FinalFantasylization_SubzoneWebwinderPath()
+
+	end
+--	Windshear Crag
+	function FinalFantasylization_SubzoneWindshearCrag()
+
+	end
+--		Blackwolf River
+	function FinalFantasylization_SubzoneBlackwolfRiver()
+
+	end
+--		Cragpool Lake
+	function FinalFantasylization_SubzoneCragpoolLake()
+
+	end
+--		Windshear Mine
+	function FinalFantasylization_SubzoneWindshearMine()
+
+	end
+--'==========================================================================================
 --' Kalimdor Zones: Teldrassil
 --'==========================================================================================
 --	Zone: Teldrassil
