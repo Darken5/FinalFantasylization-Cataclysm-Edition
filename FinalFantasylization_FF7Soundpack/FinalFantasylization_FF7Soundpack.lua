@@ -1174,6 +1174,116 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_FriendlySong();
 	end
 --'==========================================================================================
+--' Eastern Kingdoms Zones: Cape of Stranglethorn
+--'==========================================================================================
+--	Zone: Cape of Stranglethorn
+	function FinalFantasylization_EasternKingdomsCapeofStranglethorn()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsCapeofStranglethornResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsCapeofStranglethornSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Alliance:
+--		Explorers' League Digsite
+	function FinalFantasylization_AllianceTownExplorersLeagueDigsite()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Hardwrench Hideaway
+	function FinalFantasylization_HordeTownHardwrenchHideaway()
+		FinalFantasylization_HordeTowns();
+	end
+--	Neutral:
+--		Booty Bay
+	function FinalFantasylization_NeutralTownBootyBay()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Blackwater Cove
+	function FinalFantasylization_SubzoneBlackwaterCove()
+	
+	end
+--	Brashtide Attack Fleet
+	function FinalFantasylization_SubzoneBrashtideAttackFleet()
+	
+	end
+--	The Crimson Veil
+	function FinalFantasylization_SubzoneTheCrimsonVeil()
+	
+	end
+--	The Crystal Shore
+	function FinalFantasylization_SubzoneTheCrystalShore()
+	
+	end
+--	Crystalvein Mine
+	function FinalFantasylization_SubzoneCrystalveinMine()
+	
+	end
+--	The Damsel's Luck
+	function FinalFantasylization_SubzoneTheDamselsLuck()
+	
+	end
+--	Gurubashi Arena
+	function FinalFantasylization_SubzoneGurubashiArena()
+	
+	end
+--		Battle Ring
+	function FinalFantasylization_SubzoneBattleRing()
+	
+	end
+--	Jaguero Isle
+	function FinalFantasylization_SubzoneJagueroIsle()
+	
+	end
+--	Janeiro's Point
+	function FinalFantasylization_SubzoneJaneirosPoint()
+	
+	end
+--	Mistvale Valley
+	function FinalFantasylization_SubzoneMistvaleValley()
+	
+	end
+--	Nek'mani Wellspring
+	function FinalFantasylization_SubzoneNekmaniWellspring()
+	
+	end
+--	The Riptide
+	function FinalFantasylization_SubzoneTheRiptide()
+	
+	end
+--	Ruins of Aboraz
+	function FinalFantasylization_SubzoneRuinsofAboraz()
+	
+	end
+--	Ruins of Jubuwal
+	function FinalFantasylization_SubzoneRuinsofJubuwal()
+	
+	end
+--	Southern Savage Coast
+	function FinalFantasylization_SubzoneSouthernSavageCoast()
+	
+	end
+--	Spirit Den
+	function FinalFantasylization_SubzoneSpiritDen()
+	
+	end
+--	Wild Shore
+	function FinalFantasylization_SubzoneWildShore()
+	
+	end
+--'==========================================================================================
 --' Eastern Kingdoms Zones: Dun Morogh : Alliance
 --'==========================================================================================
 --	Zone: Dun Morogh
@@ -2194,7 +2304,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Azurelode Mine
 	function FinalFantasylization_SubzoneAzurelodeMine()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Dalaran Crater
 	function FinalFantasylization_SubzoneDalaranCrater()

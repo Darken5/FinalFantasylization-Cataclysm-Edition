@@ -837,6 +837,9 @@ function FinalFantasylization_GetMusic()
 		-- Burning Steppes
 			elseif ( MapID == 29 ) then
 				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)
+		-- Cape of Stranglethorn
+			elseif ( MapID == 673 ) then
+				FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn(SubZoneName)
 		-- Deeprun Tram
 			elseif ( MinimapZoneName == SZ["Deeprun Tram"] ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
