@@ -5297,14 +5297,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Player is Swimming
 	function FinalFantasylization_KalimdorNorthernBarrensSwimming()
-		FinalFantasylization_Swimming(2)
+		FinalFantasylization_Swimming(1)
 	end
 --	TOWNS:
---	Alliance:
---		Honor's Stand
-	function FinalFantasylization_AllianceTownHonorsStand()
-		FinalFantasylization_AllianceTowns();
-	end
 --	Horde:
 --		The Crossroads
 	function FinalFantasylization_HordeTownTheCrossroads()
@@ -5398,6 +5393,151 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Tidus Stair
 	function FinalFantasylization_SubzoneTheTidusStair()
+
+	end
+--'==========================================================================================
+--' Kalimdor Zones: Southern Barrens
+--'==========================================================================================
+--	Zone: Southern Barrens
+	function FinalFantasylization_KalimdorSouthernBarrens()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SandSong();
+			else
+				FinalFantasylization_FriendlySong();
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorSouthernBarrensResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorSouthernBarrensSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Alliance:
+--		Fort Triumph
+	function FinalFantasylization_AllianceTownFortTriumph()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Forward Command
+	function FinalFantasylization_AllianceTownForwardCommand()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Honor's Stand
+	function FinalFantasylization_AllianceTownHonorsStand()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Northwatch Hold
+	function FinalFantasylization_AllianceTownNorthwatchHold()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Teegan's Expedition
+	function FinalFantasylization_AllianceTownTeegansExpedition()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Camp Una'fe	
+	function FinalFantasylization_HordeTownCampUnafe()
+		FinalFantasylization_HordeTowns();
+	end
+--		Desolation Hold
+	function FinalFantasylization_HordeTownDesolationHold()
+		FinalFantasylization_HordeTowns();
+	end
+--		Hunter's Hill
+	function FinalFantasylization_HordeTownHuntersHill()
+		FinalFantasylization_HordeTowns();
+	end
+--		Vendetta Point
+	function FinalFantasylization_HordeTownVendettaPoint()
+		FinalFantasylization_HordeTowns();
+	end
+--	SUBZONES:
+--	Agama'gor
+	function FinalFantasylization_SubzoneAgamagor()
+
+	end
+--	Bael'dun Keep
+	function FinalFantasylization_SubzoneBaeldunKeep()
+
+	end
+--	Bael Modan
+	function FinalFantasylization_SubzoneBaelModan()
+
+	end
+--	Battlescar
+	function FinalFantasylization_SubzoneBattlescar()
+
+	end
+--	Blackthorn Ridge
+	function FinalFantasylization_SubzoneBlackthornRidge()
+
+	end
+--	Bramblescar
+	function FinalFantasylization_SubzoneBramblescar()
+
+	end
+--	Field of Giants
+	function FinalFantasylization_SubzoneFieldofGiants()
+
+	end
+--	Fields of Blood
+	function FinalFantasylization_SubzoneFieldsofBlood()
+
+	end
+--	Frazzlecraz Motherlode
+	function FinalFantasylization_SubzoneFrazzlecrazMotherlode()
+
+	end
+--	The Great Divide
+	function FinalFantasylization_SubzoneTheGreatDivide()
+
+	end
+--	The Great Gate
+	function FinalFantasylization_SubzoneTheGreatGate()
+
+	end
+--	The Great Sea
+	function FinalFantasylization_SubzoneTheGreatSea()
+
+	end
+--	The High Road
+	function FinalFantasylization_SubzoneTheHighRoad()
+
+	end
+--	The Merchant Coast
+	function FinalFantasylization_SubzoneTheMerchantCoast()
+
+	end
+--	The Overgrowth
+	function FinalFantasylization_SubzoneTheOvergrowth()
+
+	end
+--	Raptor Grounds
+	function FinalFantasylization_SubzoneRaptorGrounds()
+
+	end
+--	Razorfen Kraul
+	function FinalFantasylization_SubzoneRazorfenKraul()
+
+	end
+--	Ruins of Taurajo
+	function FinalFantasylization_SubzoneRuinsofTaurajo()
+
+	end
+--	Southern Gold Road
+	function FinalFantasylization_SubzoneSouthernGoldRoad()
+
+	end
+--	Spearhead
+	function FinalFantasylization_SubzoneSpearhead()
+
+	end
+--	The Stagnant Oasis
+	function FinalFantasylization_SubzoneTheStagnantOasis()
 
 	end
 --'==========================================================================================

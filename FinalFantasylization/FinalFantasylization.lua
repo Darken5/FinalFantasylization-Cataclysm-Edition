@@ -947,6 +947,9 @@ function FinalFantasylization_GetMusic()
 		-- Orgrimmar
 			elseif ( MapID == 321 ) then
 				FinalFantasylization_KalimdorZones_Orgrimmar(SubZoneName)
+		-- Southern Barrens
+			elseif ( MapID == 607 ) then
+				FinalFantasylization_KalimdorZones_SouthernBarrens(SubZoneName)
 		-- Stonetalon Mountains
 			elseif ( MapID == 81 ) then
 				FinalFantasylization_KalimdorZones_StonetalonMountains(SubZoneName)
