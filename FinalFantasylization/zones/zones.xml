@@ -36,6 +36,7 @@
 	<Script file="KalimdorZone_BloodmystIsle.lua"/>
 	<Script file="KalimdorZone_Darkshore.lua"/>
 	<Script file="KalimdorZone_Darnassus.lua"/>
+	<Script file="KalimdorZone_Desolace.lua"/>
 	<Script file="KalimdorZone_Durotar.lua"/>
 	<Script file="KalimdorZone_TheExodar.lua"/>
 	<Script file="KalimdorZone_Mulgore.lua"/>

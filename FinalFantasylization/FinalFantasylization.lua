@@ -926,6 +926,9 @@ function FinalFantasylization_GetMusic()
 		-- Darnassus
 			elseif ( MapID == 381 ) then
 				FinalFantasylization_KalimdorZones_Darnassus(SubZoneName)
+		-- Desolace
+			elseif ( MapID == 101 ) then
+				FinalFantasylization_KalimdorZones_Desolace(SubZoneName)
 		-- Durotar
 			elseif ( MapID == 4 ) then
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)

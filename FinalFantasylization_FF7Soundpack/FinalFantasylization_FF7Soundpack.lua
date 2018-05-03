@@ -4733,6 +4733,146 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_LakeSong();
 	end	
 --'==========================================================================================
+--' Kalimdor Zones: Desolace
+--'==========================================================================================
+--	Zone: Desolace
+	function FinalFantasylization_KalimdorDesolace()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SandSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorDesolaceResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorDesolaceSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--	TOWNS:
+--	Alliance:
+--		Nijel's Point
+	function FinalFantasylization_AllianceTownNijelsPoint()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Thargad's Camp
+	function FinalFantasylization_AllianceTownThargadsCamp()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Furien's Post
+	function FinalFantasylization_HordeTownFuriensPost()
+		FinalFantasylization_HordeTowns();
+	end
+--		Shadowprey Village
+	function FinalFantasylization_HordeTownShadowpreyVillage()
+		FinalFantasylization_HordeTowns();
+	end
+--	Neutral
+--		Ethel Rethor
+	function FinalFantasylization_NeutralTownEthelRethor()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Karnum's Glade
+	function FinalFantasylization_NeutralTownKarnumsGlade()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Thunk's Abode
+	function FinalFantasylization_NeutralTownThunksAbode()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Bolgan's Hole
+	function FinalFantasylization_SubzoneBolgansHole()
+
+	end
+--	Cenarion Wildlands
+	function FinalFantasylization_SubzoneCenarionWildlands()
+
+	end
+--	Gelkis Village
+	function FinalFantasylization_SubzoneGelkisVillage()
+
+	end
+--	Ghost Walker Post
+	function FinalFantasylization_SubzoneGhostWalkerPost()
+
+	end
+--	Kodo Graveyard
+	function FinalFantasylization_SubzoneKodoGraveyard()
+
+	end
+--	Magram Territory
+	function FinalFantasylization_SubzoneMagramTerritory()
+
+	end
+--	Kormek's Hut
+	function FinalFantasylization_SubzoneKormeksHut()
+
+	end
+--	Shok'thokar
+	function FinalFantasylization_SubzoneShokthokar()
+
+	end
+--	Mannoroc Coven
+	function FinalFantasylization_SubzoneMannorocCoven()
+
+	end
+--	Ranazjar Isle
+	function FinalFantasylization_SubzoneRanazjarIsle()
+
+	end
+--	Sar'theris Strand
+	function FinalFantasylization_SubzoneSartherisStrand()
+
+	end
+--	Sargeron
+	function FinalFantasylization_SubzoneSargeron()
+
+	end
+--	Scrabblescrew's Camp
+	function FinalFantasylization_SubzoneScrabblescrewsCamp()
+
+	end
+--	Shadowbreak Ravine
+	function FinalFantasylization_SubzoneShadowbreakRavine()
+
+	end
+--	Slitherblade Shore
+	function FinalFantasylization_SubzoneSlitherbladeShore()
+
+	end
+--	Tethris Aran
+	function FinalFantasylization_SubzoneTethrisAran()
+
+	end
+--	Thunder Axe Fortress
+	function FinalFantasylization_SubzoneThunderAxeFortress()
+
+	end
+--	Valley of Bones
+	function FinalFantasylization_SubzoneValleyofBones()
+
+	end
+
+	end
+--	Valley of Spears
+	function FinalFantasylization_SubzoneValleyofSpears()
+
+	end
+--		Maraudon
+	function FinalFantasylization_SubzoneMaraudon()
+
+	end
+--	The Veiled Sea
+	function FinalFantasylization_SubzoneTheVeiledSea()
+
+	end
+--'==========================================================================================
 --' Kalimdor Zones: Durotar : Horde
 --'==========================================================================================
 --	Zone: Durotar
