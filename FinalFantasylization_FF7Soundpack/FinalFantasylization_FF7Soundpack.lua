@@ -2359,6 +2359,119 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 --'==========================================================================================
+--' Eastern Kingdoms Zones: The Hinterlands
+--'==========================================================================================
+--	Zone: The Hinterlands
+	function FinalFantasylization_EasternKingdomsTheHinterlands()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsTheHinterlandsResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsTheHinterlandsSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Alliance:
+--		Aerie Peak
+	function FinalFantasylization_AllianceTownAeriePeak()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Stormfeather Outpost
+	function FinalFantasylization_AllianceTownStormfeatherOutpost()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde
+--		Hiri'watha Research Station
+	function FinalFantasylization_HordeTownHiriwathaResearchStation()
+		FinalFantasylization_HordeTowns();
+	end
+--		Revantusk Village
+	function FinalFantasylization_HordeTownRevantuskVillage()
+		FinalFantasylization_HordeTowns();
+	end
+--	SUBZONES:
+--	Wildhammer Keep
+	function FinalFantasylization_SubzoneWildhammerKeep()
+
+	end
+--	Agol'watha
+	function FinalFantasylization_SubzoneAgolwatha()
+
+	end
+--	Altar of Zul
+	function FinalFantasylization_SubzoneAltarofZulp()
+
+	end
+--	Bogen's Ledge
+	function FinalFantasylization_SubzoneBogensLedge()
+
+	end
+--	The Creeping Ruin
+	function FinalFantasylization_SubzoneTheCreepingRuin()
+
+	end
+--	Featherbeard's Hovel
+	function FinalFantasylization_SubzoneFeatherbeardsHovel()
+
+	end
+--	The Forbidding Sea
+	function FinalFantasylization_SubzoneTheForbiddingSea()
+
+	end
+--	Jintha'Alor
+	function FinalFantasylization_SubzoneJinthaAlor()
+
+	end
+--	Overlook Cliffs
+	function FinalFantasylization_SubzoneOverlookCliffs()
+
+	end
+--	Plaguemist Ravine
+	function FinalFantasylization_SubzonePlaguemistRavine()
+
+	end
+--	Quel'Danil Lodge
+	function FinalFantasylization_SubzoneQuelDanilLodge()
+
+	end
+--	Seradane
+	function FinalFantasylization_SubzoneSeradane()
+
+	end
+--	Shaol'watha
+	function FinalFantasylization_SubzoneShaolwatha()
+
+	end
+--	Shadra'Alor
+	function FinalFantasylization_SubzoneShadraAlor()
+
+	end
+--	Shindigger's Camp
+	function FinalFantasylization_SubzoneShindiggersCamp()
+
+	end
+--	Skulk Rock
+	function FinalFantasylization_SubzoneSkulkRock()
+
+	end
+--	Valorwind Lake
+	function FinalFantasylization_SubzoneValorwindLake()
+
+	end
+--	Zun'watha
+	function FinalFantasylization_SubzoneZunwatha()
+
+	end
+--'==========================================================================================
 --' Eastern Kingdoms Zones: Loch Modan : Alliance
 --'==========================================================================================
 --	Zone: Loch Modan
