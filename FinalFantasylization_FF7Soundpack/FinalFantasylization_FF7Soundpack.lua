@@ -4971,8 +4971,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneValleyofBones()
 
 	end
-
-	end
 --	Valley of Spears
 	function FinalFantasylization_SubzoneValleyofSpears()
 
