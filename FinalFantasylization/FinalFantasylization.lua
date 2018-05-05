@@ -1306,10 +1306,12 @@ function FinalFantasylization_JumpOrAscendStart()
 		FinalFantasylization_StopDanceSong();
 	end
 --'==========================================================================================
---'	World Event: Chocobo Kweh!!
+--'	World Event: Worgen Howl / Chocobo Kweh!! 
 --'==========================================================================================	
 	if IsMounted("player") and FinalFantasylizationOptions.ChocoboKweh == true then
-		if UnitAura("player", "Running Wild") == nil then
+		if UnitAura("player", "Running Wild") ~= nil then
+			FinalFantasylization_WorgenHowl();
+		else
 			local mountcount = GetNumCompanions("MOUNT")
 			local mountName = nil
 			i = 1

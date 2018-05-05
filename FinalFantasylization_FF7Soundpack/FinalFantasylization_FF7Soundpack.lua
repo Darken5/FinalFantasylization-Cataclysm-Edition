@@ -144,6 +144,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		WolfDanceSong = "Wolf.mp3" -- 
 
 		-- Misc Events --
+		WorgenHowl = "Howl.mp3" -- Worgen Howl Sound
 		ChocoboKweh = "kweh.mp3" -- Chocobo Kweh Sound
 		SwimSong = "SwimSong.mp3" -- 
 		DarkSwimSong = "DarkSwimSong.mp3"
@@ -180,6 +181,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_ChocoboKweh()
 		FinalFantasylization_PlayFile( S ..  ChocoboKweh );
 		FinalFantasylization_debugMsg("Chocobo Kweh!")
+	end
+	function FinalFantasylization_WorgenHowl()
+		FinalFantasylization_PlayFile( S ..  WorgenHowl );
+		FinalFantasylization_debugMsg("Worgen Howl!")
 	end
 	
 	--########################
@@ -5002,7 +5007,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Player is Swimming
 	function FinalFantasylization_KalimdorDurotarSwimming()
-		FinalFantasylization_Swimming(2)
+		FinalFantasylization_Swimming(1)
 	end
 --	TOWNS:
 --	Orc Start:
@@ -5012,11 +5017,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --			Burning Blade Coven
 	function FinalFantasylization_Orc_Start_BurningBladeCoven()
-
+		FinalFantasylization_CaveSong();
 	end
 --			The Den
 	function FinalFantasylization_Orc_Start_TheDen()
-
+		FinalFantasylization_HordeTowns();
 	end
 --	Troll Start:
 --		Echo Isles
@@ -5091,7 +5096,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Hidden Path
 	function FinalFantasylization_SubzoneHiddenPath()
@@ -5103,7 +5108,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Northwatch Foothold
 	function FinalFantasylization_SubzoneNorthwatchFoothold()
-
+		FinalFantasylization_LandSong();
 	end
 --	Razormane Grounds
 	function FinalFantasylization_SubzoneRazormaneGrounds()
@@ -5131,11 +5136,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Southfury River
 	function FinalFantasylization_SubzoneSouthfuryRiver()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Southfury Watershed
 	function FinalFantasylization_SubzoneSouthfuryWatershed()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Spirit Rock
 	function FinalFantasylization_SubzoneSpiritRock()
@@ -6087,170 +6092,222 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--################
 		-- Vanilla WoW Dungeons
 	function FinalFantasylization_Dungeon_RagefireChasmSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_WailingCavernsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_DeadminesSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ShadowfangKeepSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_BlackfathomDeepsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_StormwindStockadeSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_GnomereganSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_RazorfenKraulSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ScarletMonasterySong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_RazorfenDownsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_UldamanSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ZulFarrakSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_MaraudonSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_TempleofAtalHakkarSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_BlackrockDepthsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_LowerBlackrockSpireSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_UpperBlackrockSpireSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_DireMaulSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_StratholmeSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ScholomanceSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 		-- Burning Crusade Dungeons
 	function FinalFantasylization_Dungeon_HellfireRampartsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_BloodFurnaceSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_SlavePensSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_UnderbogSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ManaTombsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_AuchenaiCryptsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_SethekkHallsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_SteamvaultSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ShatteredHallsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ShadowLabyrinthSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_EscapefromDurnholdeKeepSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_OpeningtheDarkPortalSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_BotanicaSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ArcatrazSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_OpeningtheDarkPortalSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_MagistersTerraceSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 		-- Wrath of the Lich King Dungeons	
 	function FinalFantasylization_Dungeon_UtgardeKeepSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_TheNexusSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_AzjolNerubSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_AhnkahetTheOldKingdomSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_DrakTharonKeepSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_VioletHoldSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_GundrakSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_HallsofStoneSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_TheOculusSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_HallsofLightningSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_UtgardePinnacleSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_TheCullingofStratholmeSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_TrialoftheChampionSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_ForgeofSoulsSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_PitofSaronSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 	function FinalFantasylization_Dungeon_HallsofReflectionSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 
 	--#############
 	--## RAID SONGS
 	--#############
 	function FinalFantasylization_RaidSong()
-		FinalFantasylization_PlayMusic(S .. ContestedSong);
-		FinalFantasylization_debugMsg("ContestedSong")
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 
 	--#############
