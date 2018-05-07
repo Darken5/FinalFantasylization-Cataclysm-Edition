@@ -1309,8 +1309,11 @@ function FinalFantasylization_JumpOrAscendStart()
 --'	World Event: Worgen Howl / Chocobo Kweh!! 
 --'==========================================================================================	
 	if IsMounted("player") and FinalFantasylizationOptions.ChocoboKweh == true then
+		currentSpeed, runSpeed, flightSpeed, swimSpeed = GetUnitSpeed("player");
 		if UnitAura("player", "Running Wild") ~= nil then
-			FinalFantasylization_WorgenHowl();
+			if currentSpeed == 0 then
+				FinalFantasylization_WorgenHowl();
+			end
 		else
 			local mountcount = GetNumCompanions("MOUNT")
 			local mountName = nil
