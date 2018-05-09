@@ -5170,7 +5170,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_ContestedSong()
 			end
 	end
---
 --	Zone Events:
 --		Player is Resting
 	function FinalFantasylization_KalimdorDustwallowMarshResting()
@@ -5180,7 +5179,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_KalimdorDustwallowMarshSwimming()
 		FinalFantasylization_Swimming(2)
 	end
---
 --	TOWNS:
 --	Alliance:
 --		Theramore Isle
@@ -5201,7 +5199,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_NeutralTownMudsprocket()
 		FinalFantasylization_NeutralTowns();
 	end
---
 --	SUBZONES:
 --	Alcaz Island
 	function FinalFantasylization_SubzoneAlcazIsland()
@@ -5304,7 +5301,176 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 --		Onyxia's Lair
-	function FinalFantasylization_SubzoneOnyxias
+	function FinalFantasylization_SubzoneOnyxiasLair()
+
+	end
+--'==========================================================================================
+--' Kalimdor Zones: Feralas
+--'==========================================================================================
+--	Zone: Feralas
+	function FinalFantasylization_KalimdorFeralas()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorFeralasResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorFeralasSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Alliance:
+--		Dreamer's Rest
+	function FinalFantasylization_AllianceTownDreamersRest()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Feathermoon Stronghold
+	function FinalFantasylization_AllianceTownFeathermoonStronghold()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Shadebough
+	function FinalFantasylization_AllianceTownShadebough()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Tower of Estulan
+	function FinalFantasylization_AllianceTownTowerofEstulan()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Camp Ataya
+	function FinalFantasylization_HordeTownCampAtaya()
+		FinalFantasylization_HordeTowns();
+	end
+--		Camp Mojache
+	function FinalFantasylization_HordeTownCampMojache()
+		FinalFantasylization_HordeTowns();
+	end
+--		Stonemaul Hold
+	function FinalFantasylization_HordeTownStonemaulHold()
+		FinalFantasylization_HordeTowns();
+	end
+--	SUBZONES:
+--	Darkmist Ruins
+	function FinalFantasylization_SubzoneDarkmistRuins()
+
+	end
+--	Dire Maul
+	function FinalFantasylization_SubzoneDireMaul()
+
+	end
+--	Dream Bough
+	function FinalFantasylization_SubzoneDreamBough()
+
+	end
+--	The Emerald Summit
+	function FinalFantasylization_SubzoneTheEmeraldSummit()
+
+	end
+--	Feral Scar Vale
+	function FinalFantasylization_SubzoneFeralScarVale()
+
+	end
+--	The Forgotten Coast
+	function FinalFantasylization_SubzoneTheForgottenCoast()
+
+	end
+--	Frayfeather Highlands
+	function FinalFantasylization_SubzoneFrayfeatherHighlands()
+
+	end
+--	Gordunni Outpost
+	function FinalFantasylization_SubzoneGordunniOutpost()
+
+	end
+--	Grimtotem Compound
+	function FinalFantasylization_SubzoneGrimtotemCompound()
+
+	end
+--	High Wilderness
+	function FinalFantasylization_SubzoneHighWilderness()
+
+	end
+--	Jademir Lake
+	function FinalFantasylization_SubzoneJademirLake()
+
+	end
+--	Lake Dumont
+	function FinalFantasylization_SubzoneLakeDumont()
+
+	end
+--	Lariss Pavilion
+	function FinalFantasylization_SubzoneLarissPavilion()
+
+	end
+--	Lower Wilds
+	function FinalFantasylization_SubzoneLowerWilds()
+
+	end
+--	New Thalanaar
+	function FinalFantasylization_SubzoneNewThalanaar()
+
+	end
+--	Oneiros
+	function FinalFantasylization_SubzoneOneirosd()
+
+	end
+--	Rage Scar Hold
+	function FinalFantasylization_SubzoneRageScarHold()
+
+	end
+--	Ruins of Isildien
+	function FinalFantasylization_SubzoneRuinsofIsildien()
+
+	end
+--	Ruins of Ravenwind
+	function FinalFantasylization_SubzoneRuinsofRavenwind()
+
+	end
+--	Ruins of Solarsal
+	function FinalFantasylization_SubzoneRuinsofSolarsal()
+
+	end
+--	Sardor Isle
+	function FinalFantasylization_SubzoneSardorIsle()
+
+	end
+--	Ruins of Feathermoon
+	function FinalFantasylization_SubzoneRuinsofFeathermoon()
+
+	end
+--	The Steam Pools
+	function FinalFantasylization_SubzoneTheSteamPools()
+
+	end
+--	The Twin Colossals
+	function FinalFantasylization_SubzoneTheTwinColossals()
+
+	end
+--	Verdantis River
+	function FinalFantasylization_SubzoneVerdantisRiver()
+
+	end
+--	Wildwind Lake
+	function FinalFantasylization_SubzoneWildwindLake()
+
+	end
+--	Woodpaw Den
+	function FinalFantasylization_SubzoneWoodpawDen()
+
+	end
+--	Woodpaw Hills
+	function FinalFantasylization_SubzoneWoodpawHills()
+
+	end
+--	The Writhing Deep
+	function FinalFantasylization_SubzoneTheWrithingDeep()
 
 	end
 --'==========================================================================================

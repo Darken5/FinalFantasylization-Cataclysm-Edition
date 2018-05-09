@@ -941,6 +941,9 @@ function FinalFantasylization_GetMusic()
 		-- The Exodar
 			elseif ( MapID == 471 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
+		-- Feralas
+			elseif ( MapID == 121 ) then
+				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
 		-- Mulgore
 			elseif ( MapID == 9 ) then
 				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)
