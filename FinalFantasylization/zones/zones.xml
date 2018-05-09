@@ -39,6 +39,7 @@
 	<Script file="KalimdorZone_Darnassus.lua"/>
 	<Script file="KalimdorZone_Desolace.lua"/>
 	<Script file="KalimdorZone_Durotar.lua"/>
+	<Script file="KalimdorZone_DustwallowMarsh.lua"/>
 	<Script file="KalimdorZone_TheExodar.lua"/>
 	<Script file="KalimdorZone_Mulgore.lua"/>
 	<Script file="KalimdorZone_NorthernBarrens.lua"/>

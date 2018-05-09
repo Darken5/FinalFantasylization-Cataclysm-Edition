@@ -5158,7 +5158,155 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTorkrenFarm()
 
 	end
+--'==========================================================================================
+--' Kalimdor Zones: Dustwallow Marsh
+--'==========================================================================================
+--	Zone: Dustwallow Marsh
+	function FinalFantasylization_KalimdorDustwallowMarsh()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SwampSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorDustwallowMarshResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorDustwallowMarshSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--
+--	TOWNS:
+--	Alliance:
+--		Theramore Isle
+	function FinalFantasylization_AllianceTownTheramoreIsle()
+		FinalFantasylization_AllianceTowns();
+	end
+--			Foothold Citadel
+	function FinalFantasylization_AllianceTownFootholdCitadel()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Brackenwall Village
+	function FinalFantasylization_HordeTownBrackenwallVillage()
+		FinalFantasylization_HordeTowns();
+	end
+--	Neutral
+--		Mudsprocket
+	function FinalFantasylization_NeutralTownMudsprocket()
+		FinalFantasylization_NeutralTowns();
+	end
+--
+--	SUBZONES:
+--	Alcaz Island
+	function FinalFantasylization_SubzoneAlcazIsland()
 
+	end
+--	Blackhoof Village
+	function FinalFantasylization_SubzoneBlackhoofVillage()
+
+	end
+--	Bloodfen Burrow
+	function FinalFantasylization_SubzoneBloodfenBurrow()
+
+	end
+--	Bluefen
+	function FinalFantasylization_SubzoneBluefen()
+
+	end
+--	Darkmist Cavern
+	function FinalFantasylization_SubzoneDarkmistCavern()
+
+	end
+--	The Dragonmurk
+	function FinalFantasylization_SubzoneTheDragonmurk()
+
+	end
+--		The Den of Flame
+	function FinalFantasylization_SubzoneTheDenofFlame()
+
+	end
+--		Stonemaul Ruins
+	function FinalFantasylization_SubzoneStonemaulRuins()
+
+	end
+--	Dreadmurk Shore
+	function FinalFantasylization_SubzoneDreadmurkShore()
+
+	end
+--	Dustwallow Bay
+	function FinalFantasylization_SubzoneDustwallowBay()
+
+	end
+--		Nat's Landing
+	function FinalFantasylization_SubzoneNatsLanding()
+
+	end
+--		Tidefury Cove
+	function FinalFantasylization_SubzoneTidefuryCove()
+
+	end
+--	The Great Sea
+	function FinalFantasylization_SubzoneTheGreatSea()
+
+	end
+--	Lost Point
+	function FinalFantasylization_SubzoneLostPoint()
+
+	end
+--	North Point Tower
+	function FinalFantasylization_SubzoneNorthPointTower()
+
+	end
+--	The Quagmire
+	function FinalFantasylization_SubzoneTheQuagmire()
+
+	end
+--		Beezil's Wreck
+	function FinalFantasylization_SubzoneBeezilsWreck()
+
+	end
+--		Direhorn Post
+	function FinalFantasylization_SubzoneDirehornPost()
+
+	end
+--		Tabetha's Farm
+	function FinalFantasylization_SubzoneTabethasFarm()
+
+	end
+--	Sentry Point
+	function FinalFantasylization_SubzoneSentryPoint()
+
+	end
+--	Shady Rest Inn
+	function FinalFantasylization_SubzoneShadyRestInn()
+
+	end
+--	Witch Hill
+	function FinalFantasylization_SubzoneWitchHill()
+
+	end
+--		Swamplight Manor
+	function FinalFantasylization_SubzoneSwamplightManor()
+
+	end
+--	Wyrmbog
+	function FinalFantasylization_SubzoneWyrmbog()
+
+	end
+--		Emberstrife's Den
+	function FinalFantasylization_SubzoneEmberstrifesDen()
+
+	end
+--		Onyxia's Lair
+	function FinalFantasylization_SubzoneOnyxias
+
+	end
 --'==========================================================================================
 --' Kalimdor Zones: Mulgore : Horde
 --'==========================================================================================
