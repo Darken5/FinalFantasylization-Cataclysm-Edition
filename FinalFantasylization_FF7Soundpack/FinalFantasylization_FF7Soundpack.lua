@@ -3790,15 +3790,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Blackfathom Deeps
 	function FinalFantasylization_SubzoneBlackfathomDeeps()
-		FinalFantasylization_WaterSong();					-- Test This
+		FinalFantasylization_WaterSong();
 	end
 --	Bloodtooth Camp
 	function FinalFantasylization_SubzoneBloodtoothCamp()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Bough Shadow
 	function FinalFantasylization_SubzoneBoughShadow()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Demon Fall Canyon
 	function FinalFantasylization_SubzoneDemonFallCanyon()
@@ -3810,15 +3810,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Dor'Danil Barrow Den
 	function FinalFantasylization_SubzoneTheDorDanilBarrowDen()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Falfarren River
 	function FinalFantasylization_SubzoneFalfarrenRiver()
-		FinalFantasylization_LakeSong();					-- Test This
+		FinalFantasylization_LakeSong();
 	end
 --	Fallen Sky Lake
 	function FinalFantasylization_SubzoneFallenSkyLake()
-		FinalFantasylization_LakeSong();					-- Test This
+		FinalFantasylization_LakeSong();
 	end
 --	Felfire Hill
 	function FinalFantasylization_SubzoneFelfireHill()
@@ -3826,19 +3826,19 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Fire Scar Shrine
 	function FinalFantasylization_SubzoneFireScarShrine()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Greenpaw Village
 	function FinalFantasylization_SubzoneGreenpawVillage()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	The Howling Vale
 	function FinalFantasylization_SubzoneTheHowlingVale()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Remains of Iris Lake
 	function FinalFantasylization_SubzoneRemainsofIrisLake()
-		FinalFantasylization_LakeSong();					-- Test This
+		FinalFantasylization_LakeSong();
 	end
 --	Lake Falathim
 	function FinalFantasylization_SubzoneLakeFalathim()
@@ -3846,27 +3846,27 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Moonwell of Purity
 	function FinalFantasylization_SubzoneMoonwellofPurity()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Moonwell of Cleansing
 	function FinalFantasylization_SubzoneMoonwellofCleansing()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	The Mor'shan Rampart
 	function FinalFantasylization_SubzoneTheMorshanRampart()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Mystral Lake
 	function FinalFantasylization_SubzoneMystralLake()
-		FinalFantasylization_LakeSong();					-- Test This
+		FinalFantasylization_LakeSong();
 	end
 --	Night Run
 	function FinalFantasylization_SubzoneNightRun()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Nightsong Woods
 	function FinalFantasylization_SubzoneNightsongWoods()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	The Ruins of Ordil'Aran
 	function FinalFantasylization_SubzoneTheRuinsofOrdilAran()
@@ -3874,31 +3874,31 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Ruins of Stardust
 	function FinalFantasylization_SubzoneTheRuinsofStardust()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Satyrnaar
 	function FinalFantasylization_SubzoneSatyrnaar()
-		FinalFantasylization_PlagueSong();					-- Test This
+		FinalFantasylization_PlagueSong();
 	end
 --	The Shady Nook
 	function FinalFantasylization_SubzoneTheShadyNook()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Silverwing Grove
 	function FinalFantasylization_SubzoneSilverwingGrove()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Southfury River
 	function FinalFantasylization_SubzoneSouthfuryRiver()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_WaterSong();
 	end
 --	The Talondeep Path
 	function FinalFantasylization_SubzoneTheTalondeepPath()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --		Talondeep Pass
 	function FinalFantasylization_SubzoneTalondeepPass()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Thistlefur Village
 	function FinalFantasylization_SubzoneThistlefurVillage()
@@ -3906,15 +3906,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Thistlefur Hold
 	function FinalFantasylization_SubzoneThistlefurHold()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Thunder Peak
 	function FinalFantasylization_SubzoneThunderPeak()
-		FinalFantasylization_ForestSong();					-- Test This
+		FinalFantasylization_ForestSong();
 	end
 --	Xavian
 	function FinalFantasylization_SubzoneXavian()
-		FinalFantasylization_PlagueSong();					-- Test This
+		FinalFantasylization_PlagueSong();
 	end
 --	The Zoram Strand
 	function FinalFantasylization_SubzoneTheZoramStrand()
@@ -5072,7 +5072,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Bladefist Bay
 	function FinalFantasylization_SubzoneBladefistBay()
-
+		FinalFantasylization_LandSong();
 	end
 --	Darkspear Strand
 	function FinalFantasylization_SubzoneDarkspearStrand()
@@ -5080,15 +5080,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Deadeye Shore
 	function FinalFantasylization_SubzoneDeadeyeShore()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Dranosh'ar Blockade
 	function FinalFantasylization_SubzoneTheDranosharBlockade()
-
+		FinalFantasylization_PlayMusic(S .. BattleGround5);
+		FinalFantasylization_debugMsg("BattleGround5")
 	end
 --	Drygulch Ravine
 	function FinalFantasylization_SubzoneDrygulchRavine()
-
+		FinalFantasylization_LandSong();
 	end
 --	Dustwind Cave
 	function FinalFantasylization_SubzoneDustwindCave()
@@ -5100,11 +5101,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Hidden Path
 	function FinalFantasylization_SubzoneHiddenPath()
-
+		FinalFantasylization_LandSong();
 	end
 --	Jaggedswine Farm
 	function FinalFantasylization_SubzoneJaggedswineFarm()
-
+		FinalFantasylization_LandSong();
 	end
 --	Northwatch Foothold
 	function FinalFantasylization_SubzoneNorthwatchFoothold()
@@ -5112,27 +5113,28 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Razormane Grounds
 	function FinalFantasylization_SubzoneRazormaneGrounds()
-
+		FinalFantasylization_PlayMusic(S .. Alliance8Town);
+		FinalFantasylization_debugMsg("Alliance8Town")
 	end
 --	Razorwind Canyon
 	function FinalFantasylization_SubzoneRazorwindCanyon()
-
+		FinalFantasylization_LandSong();
 	end
 --	Rocktusk Farm
 	function FinalFantasylization_SubzoneRocktuskFarm()
-
+		FinalFantasylization_LandSong();
 	end
 --	Scuttle Coast
 	function FinalFantasylization_SubzoneScuttleCoast()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Shrine of the Dormant Flame
 	function FinalFantasylization_SubzoneShrineoftheDormantFlame()
-
+		FinalFantasylization_LandSong();
 	end
 --	Skull Rock
 	function FinalFantasylization_SubzoneSkullRock()
-
+		FinalFantasylization_LandSong();
 	end
 --	Southfury River
 	function FinalFantasylization_SubzoneSouthfuryRiver()
@@ -5144,19 +5146,20 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Spirit Rock
 	function FinalFantasylization_SubzoneSpiritRock()
-
+		FinalFantasylization_LandSong();
 	end
 --	Thunder Ridge
 	function FinalFantasylization_SubzoneThunderRidge()
-
+		FinalFantasylization_LandSong();
 	end
 --	Tiragarde Keep
 	function FinalFantasylization_SubzoneTiragardeKeep()
-
+		FinalFantasylization_PlayMusic(S .. Alliance8Town);
+		FinalFantasylization_debugMsg("Alliance8Town")
 	end
 --	Tor'kren Farm
 	function FinalFantasylization_SubzoneTorkrenFarm()
-
+		FinalFantasylization_LandSong();
 	end
 
 --'==========================================================================================
@@ -5388,7 +5391,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Southfury River
 	function FinalFantasylization_SubzoneSouthfuryRiver()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Thorn Hill
 	function FinalFantasylization_SubzoneThornHill()

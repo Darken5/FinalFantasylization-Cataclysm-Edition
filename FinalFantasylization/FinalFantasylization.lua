@@ -396,18 +396,18 @@ function FinalFantasylization_Command(Command)
 		ZoneText = GetZoneText()
 		local inInstance, instanceType = IsInInstance();
 		local classification = UnitClassification("target"); --'classification: "worldboss", "rareelite", "elite", "rare", "normal" or "trivial"
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage1..FFZlib.Color.Crimson.."|"..realm.."|")
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage2..FFZlib.Color.Crimson.."|"..factionEnglish.."|")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage1..FFZlib.Color.Crimson.."| "..realm.." |")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage2..FFZlib.Color.Crimson.."| "..factionEnglish.." |")
 			if ZoneName2 ~= nil then
-				FFZlib.Message(FFZlib.Color.Grey..TestMessage3..FFZlib.Color.Crimson.."|"..ZoneName.. "| or |"..ZoneName2.."|")
+				FFZlib.Message(FFZlib.Color.Grey..TestMessage3..FFZlib.Color.Crimson.."| "..ZoneName.. " | or | "..ZoneName2.." |")
 			else
-				FFZlib.Message(FFZlib.Color.Grey..TestMessage3..FFZlib.Color.Crimson.."|"..ZoneName.. "|, ZoneName2 = nil")
+				FFZlib.Message(FFZlib.Color.Grey..TestMessage3..FFZlib.Color.Crimson.."| "..ZoneName.. " |, ZoneName2 = nil")
 			end
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage8..FFZlib.Color.Crimson.."|"..areaID.."|")
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage4..FFZlib.Color.Crimson.."|"..instanceType.."|")
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage5..FFZlib.Color.Crimson.."|"..SubZoneName.."|")
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage6..FFZlib.Color.Crimson.."|"..MinimapZoneName.."|")
-			FFZlib.Message(FFZlib.Color.Grey..TestMessage7..FFZlib.Color.Crimson.."|"..classification.."|")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage8..FFZlib.Color.Crimson.."| "..areaID.." |")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage4..FFZlib.Color.Crimson.."| "..instanceType.." |")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage5..FFZlib.Color.Crimson.."| "..SubZoneName.." |")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage6..FFZlib.Color.Crimson.."| "..MinimapZoneName.." |")
+			FFZlib.Message(FFZlib.Color.Grey..TestMessage7..FFZlib.Color.Crimson.."| "..classification.." |")
 	else
 		FinalFantasylizationUsage()
 	end
@@ -703,7 +703,7 @@ function FinalFantasylization_GetMusic()
 			--FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. InCombat)
 			local inInstance, instanceType = IsInInstance();
 			if FinalFantasylization_PlayerIsBattling == false then
-				if UnitExists("target") ~= nil then
+				if UnitExists("target") then
 					local GUID = UnitGUID("target")
 					local name = UnitName("target")
 					local mobID = tonumber(GUID:sub(9, 12), 16)

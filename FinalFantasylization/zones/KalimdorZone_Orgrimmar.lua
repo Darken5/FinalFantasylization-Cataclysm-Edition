@@ -212,7 +212,7 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 		else
 			if FinalFantasylization_CurrentZone ~= ZoneName then
 				FinalFantasylization_CurrentZone = ZoneName
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. ZoneName)
 				FinalFantasylization_Kalimdor_Orgrimmar()
 			else
 				return
