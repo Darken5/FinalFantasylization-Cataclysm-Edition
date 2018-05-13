@@ -935,8 +935,14 @@ function FinalFantasylization_GetMusic()
 		-- Durotar
 			elseif ( MapID == 4 ) then
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
+		-- Dustwallow Marsh
+			elseif ( MapID == 141 ) then
+				FinalFantasylization_KalimdorZones_DustwallowMarsh(SubZoneName)
 		-- The Exodar
 			elseif ( MapID == 471 ) then
+				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
+		-- Feralas
+			elseif ( MapID == 121 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
 		-- Mulgore
 			elseif ( MapID == 9 ) then
