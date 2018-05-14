@@ -20,6 +20,7 @@
 	<Script file="EasternKingdomsZone_Ironforge.lua"/>
 	<Script file="EasternKingdomsZone_LochModan.lua"/>
 	<Script file="EasternKingdomsZone_NorthernStranglethorn.lua"/>
+	<Script file="EasternKingdomsZone_PlaguelandsTheScarletEnclave.lua"/>
 	<Script file="EasternKingdomsZone_RedridgeMountains.lua"/>
 	<Script file="EasternKingdomsZone_RuinsofGilneas.lua"/>
 	<Script file="EasternKingdomsZone_SilvermoonCity.lua"/>

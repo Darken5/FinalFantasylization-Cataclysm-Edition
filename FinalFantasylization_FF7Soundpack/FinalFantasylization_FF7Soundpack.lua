@@ -2703,6 +2703,147 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 --'==========================================================================================
+--' Eastern Kingdoms Zones: Plaguelands: The Scarlet Enclave : Death Knight Start
+--'==========================================================================================
+--	Zone: Plaguelands: The Scarlet Enclave
+	function FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclave()
+		FinalFantasylization_BattleGround();
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--	SUBZONES:
+--		Acherus: The Ebon Hold
+	function FinalFantasylization_DeathKnight_Start_AcherusTheEbonHold()
+
+	end
+--			Hall of Command
+	function FinalFantasylization_DeathKnight_Start_HallofCommand()
+
+	end
+--			The Heart of Acherus
+	function FinalFantasylization_DeathKnight_Start_TheHeartofAcherus()
+
+	end
+--		Browman Mill
+	function FinalFantasylization_DeathKnight_Start_BrowmanMill()
+
+	end
+--		Crypt of Remembrance
+	function FinalFantasylization_DeathKnight_Start_CryptofRemembrance()
+
+	end
+--		Death's Breach
+	function FinalFantasylization_DeathKnight_Start_DeathsBreach()
+
+	end
+--		Havenshire
+	function FinalFantasylization_DeathKnight_Start_Havenshire()
+
+	end
+--			Havenshire Farms
+	function FinalFantasylization_DeathKnight_Start_HavenshireFarms()
+
+	end
+--			Havenshire Lumber Mill
+	function FinalFantasylization_DeathKnight_Start_HavenshireLumberMill()
+
+	end
+--			Havenshire Mine
+	function FinalFantasylization_DeathKnight_Start_HavenshireMine()
+
+	end
+--			Havenshire Stables
+	function FinalFantasylization_DeathKnight_Start_HavenshireStables()
+
+	end
+--		King's Harbor
+	function FinalFantasylization_DeathKnight_Start_KingsHarbor()
+
+	end
+--		Light's Hope Chapel
+	function FinalFantasylization_DeathKnight_Start_LightsHopeChapel()
+
+	end
+--		Light's Point
+	function FinalFantasylization_DeathKnight_Start_LightsPoint()
+
+	end
+--			Light's Point Tower
+	function FinalFantasylization_DeathKnight_Start_LightsPointTower()
+
+	end
+--		New Avalon
+	function FinalFantasylization_DeathKnight_Start_NewAvalon()
+
+	end
+--			Chapel of the Crimson Flame
+	function FinalFantasylization_DeathKnight_Start_ChapeloftheCrimsonFlame()
+
+	end
+--			New Avalon Forge
+	function FinalFantasylization_DeathKnight_Start_NewAvalonForge()
+
+	end
+--			New Avalon Orchard
+	function FinalFantasylization_DeathKnight_Start_NewAvalonOrchard()
+
+	end
+--			New Avalon Town Hall
+	function FinalFantasylization_DeathKnight_Start_NewAvalonTownHall()
+
+	end
+--			Scarlet Hold
+	function FinalFantasylization_DeathKnight_Start_ScarletHold()
+
+	end
+--			Scarlet Tavern
+	function FinalFantasylization_DeathKnight_Start_ScarletTavern()
+
+	end
+--		The Noxious Glade
+	function FinalFantasylization_DeathKnight_Start_TheNoxiousGlade()
+
+	end
+--		The Pestilent Scar
+	function FinalFantasylization_DeathKnight_Start_ThePestilentScar()
+
+	end
+--		The Scarlet Overlook
+	function FinalFantasylization_DeathKnight_Start_TheScarletOverlook()
+
+	end
+--		Tyr's Hand
+	function FinalFantasylization_DeathKnight_Start_TyrsHand()
+
+	end
+--			The Scarlet Basilica
+	function FinalFantasylization_DeathKnight_Start_TheScarletBasilica()
+
+	end
+--			Tyr's Hand Abbey
+	function FinalFantasylization_DeathKnight_Start_TyrsHandAbbey()
+
+	end
+--				Hall of Arms
+	function FinalFantasylization_DeathKnight_Start_HallofArms()
+
+	end
+--				Library Wing
+	function FinalFantasylization_DeathKnight_Start_LibraryWing()
+
+	end
+--				Main Hall
+	function FinalFantasylization_DeathKnight_Start_MainHall()
+
+	end
+--'==========================================================================================
 --' Eastern Kingdoms Zones: Redridge Mountains
 --'==========================================================================================
 --	Zone: Redridge Mountains
@@ -5617,7 +5758,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Player is Swimming
 	function FinalFantasylization_KalimdorNorthernBarrensSwimming()
-		FinalFantasylization_Swimming(1)
+		if ( SubZoneName == SZ["The Sludge Fen"] ) then
+			FinalFantasylization_Swimming(2)
+		else
+			FinalFantasylization_Swimming(1)
+		end
 	end
 --	TOWNS:
 --	Horde:
@@ -5653,55 +5798,57 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:		
 --	Boulder Lode Mine
 	function FinalFantasylization_SubzoneBoulderLodeMine()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Dreadmist Den
 	function FinalFantasylization_SubzoneDreadmistDen()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Dreadmist Peak
 	function FinalFantasylization_SubzoneDreadmistPeak()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	The Dry Hills
 	function FinalFantasylization_SubzoneTheDryHills()
-
+		FinalFantasylization_SandSong();
 	end
 --	The Forgotten Pools
 	function FinalFantasylization_SubzoneTheForgottenPools()
-
+		FinalFantasylization_LakeSong();
 	end
 --	Fray Island
 	function FinalFantasylization_SubzoneFrayIsland()
-
+		FinalFantasylization_PlayMusic(S .. Alliance5Town);
+		FinalFantasylization_debugMsg("Alliance5Town")
 	end
 --	Gold Road
 	function FinalFantasylization_SubzoneGoldRoad()
-
+		FinalFantasylization_SandSong();
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Lushwater Oasis
 	function FinalFantasylization_SubzoneLushwaterOasis()
-
+		FinalFantasylization_LakeSong();
 	end
 --	The Merchant Coast
 	function FinalFantasylization_SubzoneTheMerchantCoast()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Shrine of the Fallen Warrior
 	function FinalFantasylization_SubzoneShrineoftheFallenWarrior()
-
+		FinalFantasylization_PlayMusic(S .. Alliance4Town);
+		FinalFantasylization_debugMsg("Alliance4Town")
 	end
 --	The Sludge Fen
 	function FinalFantasylization_SubzoneTheSludgeFen()
-
+		FinalFantasylization_SwampSong();
 	end
 --	Southern Gold Road
 	function FinalFantasylization_SubzoneSouthernGoldRoad()
-
+		FinalFantasylization_SandSong();
 	end
 --	Southfury River
 	function FinalFantasylization_SubzoneSouthfuryRiver()
@@ -5709,11 +5856,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Thorn Hill
 	function FinalFantasylization_SubzoneThornHill()
-
+		FinalFantasylization_CaveSong();
 	end
 --	The Tidus Stair
 	function FinalFantasylization_SubzoneTheTidusStair()
-
+		FinalFantasylization_SandSong();
 	end
 --'==========================================================================================
 --' Kalimdor Zones: Southern Barrens
@@ -5830,7 +5977,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Merchant Coast
 	function FinalFantasylization_SubzoneTheMerchantCoast()
-
+		FinalFantasylization_WaterSong();
 	end
 --	The Overgrowth
 	function FinalFantasylization_SubzoneTheOvergrowth()

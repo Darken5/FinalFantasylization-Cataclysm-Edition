@@ -879,6 +879,9 @@ function FinalFantasylization_GetMusic()
 		-- Northern Stranglethorn
 			elseif ( MapID == 37 ) then
 				FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn(SubZoneName)
+		-- Plaguelands: The Scarlet Enclave
+			elseif ( MapID == 502 ) then
+				FinalFantasylization_EasternKingdomsZones_PlaguelandsTheScarletEnclave(SubZoneName)
 		-- Redridge Mountains
 			elseif ( MapID == 36 ) then
 				FinalFantasylization_EasternKingdomsZones_RedridgeMountains(SubZoneName)
@@ -979,7 +982,7 @@ function FinalFantasylization_GetMusic()
 
 
 	-- Debug: Zone Catch-all
-			elseif not ( IsResting() ) then
+			else
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")
 			end
 		end
