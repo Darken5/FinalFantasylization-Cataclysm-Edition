@@ -5,7 +5,6 @@ function FinalFantasylization_EasternKingdomsZones_PlaguelandsTheScarletEnclave(
 --	Zone: Plaguelands: The Scarlet Enclave				FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclave()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveResting()
 --		Player is Swimming		FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveSwimming()
 --
 --	SUBZONES:
@@ -32,8 +31,8 @@ function FinalFantasylization_EasternKingdomsZones_PlaguelandsTheScarletEnclave(
 --			Scarlet Hold					FinalFantasylization_DeathKnight_Start_ScarletHold()
 --			Scarlet Tavern					FinalFantasylization_DeathKnight_Start_ScarletTavern()
 --		The Noxious Glade				FinalFantasylization_DeathKnight_Start_TheNoxiousGlade()
---		The Pestilent Scar				FinalFantasylization_DeathKnight_Start_ThePestilentScar()
---		The Scarlet Overlook			FinalFantasylization_DeathKnight_Start_TheScarletOverlook()
+--		Pestilent Scar				FinalFantasylization_DeathKnight_Start_PestilentScar()
+--		Scarlet Overlook			FinalFantasylization_DeathKnight_Start_ScarletOverlook()
 --		Tyr's Hand						FinalFantasylization_DeathKnight_Start_TyrsHand()
 --			The Scarlet Basilica			FinalFantasylization_DeathKnight_Start_TheScarletBasilica()
 --			Tyr's Hand Abbey				FinalFantasylization_DeathKnight_Start_TyrsHandAbbey()
@@ -41,26 +40,9 @@ function FinalFantasylization_EasternKingdomsZones_PlaguelandsTheScarletEnclave(
 --				Library Wing					FinalFantasylization_DeathKnight_Start_LibraryWing()
 --				Main Hall						FinalFantasylization_DeathKnight_Start_MainHall()
 	--'==========================================================================================
-	--'	Zone Event: Player is Resting
-	--'==========================================================================================
-	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
-		if FinalFantasylization_CurrentZone ~= "Sleeping" then
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
-			end
-			FinalFantasylization_CurrentZone = "Sleeping"
-			FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveResting()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--'	Zone Event: Player is Swimming
 	--'==========================================================================================
-	elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
+	if IsSwimming() and FinalFantasylizationOptions.Swim == true then
 		if FinalFantasylization_CurrentZone ~= "Swimming" then
 			FinalFantasylization_CurrentZone = "Swimming"
 			FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveSwimming()
@@ -369,26 +351,26 @@ function FinalFantasylization_EasternKingdomsZones_PlaguelandsTheScarletEnclave(
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Plaguelands: The Scarlet Enclave - Death Knight Starting Area - The Pestilent Scar
+	--' Plaguelands: The Scarlet Enclave - Death Knight Starting Area - Pestilent Scar
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Pestilent Scar"] ) then
+	elseif ( SubZoneName == SZ["Pestilent Scar"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_DeathKnight_Start_ThePestilentScar()
+			FinalFantasylization_DeathKnight_Start_PestilentScar()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Plaguelands: The Scarlet Enclave - Death Knight Starting Area - The Scarlet Overlook
+	--' Plaguelands: The Scarlet Enclave - Death Knight Starting Area - Scarlet Overlook
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Scarlet Overlook"] ) then
+	elseif ( SubZoneName == SZ["Scarlet Overlook"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_DeathKnight_Start_TheScarletOverlook()
+			FinalFantasylization_DeathKnight_Start_ScarletOverlook()
 		else
 			return
 		end

@@ -2710,10 +2710,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_BattleGround();
 	end
 --	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveResting()
-		FinalFantasylization_Sleeping()
-	end
 --		Player is Swimming
 	function FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveSwimming()
 		FinalFantasylization_Swimming(2)
@@ -2721,14 +2717,19 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --		Acherus: The Ebon Hold
 	function FinalFantasylization_DeathKnight_Start_AcherusTheEbonHold()
-
+			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
+			FinalFantasylization_debugMsg("EbonHoldSong")
 	end
 --			Hall of Command
 	function FinalFantasylization_DeathKnight_Start_HallofCommand()
+			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
+			FinalFantasylization_debugMsg("EbonHoldSong")
 
 	end
 --			The Heart of Acherus
 	function FinalFantasylization_DeathKnight_Start_TheHeartofAcherus()
+			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
+			FinalFantasylization_debugMsg("EbonHoldSong")
 
 	end
 --		Browman Mill
@@ -2741,7 +2742,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Death's Breach
 	function FinalFantasylization_DeathKnight_Start_DeathsBreach()
-
+		FinalFantasylization_SwampSong();
 	end
 --		Havenshire
 	function FinalFantasylization_DeathKnight_Start_Havenshire()
@@ -2812,11 +2813,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 --		The Pestilent Scar
-	function FinalFantasylization_DeathKnight_Start_ThePestilentScar()
+	function FinalFantasylization_DeathKnight_Start_PestilentScar()
 
 	end
 --		The Scarlet Overlook
-	function FinalFantasylization_DeathKnight_Start_TheScarletOverlook()
+	function FinalFantasylization_DeathKnight_Start_ScarletOverlook()
 
 	end
 --		Tyr's Hand
