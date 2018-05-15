@@ -31,6 +31,7 @@ function FinalFantasylization_EasternKingdomsZones_PlaguelandsTheScarletEnclave(
 --			Scarlet Hold					FinalFantasylization_DeathKnight_Start_ScarletHold()
 --			Scarlet Tavern					FinalFantasylization_DeathKnight_Start_ScarletTavern()
 --		The Noxious Glade				FinalFantasylization_DeathKnight_Start_TheNoxiousGlade()
+--		The Noxious Pass				FinalFantasylization_DeathKnight_Start_TheNoxiousPass()
 --		Pestilent Scar				FinalFantasylization_DeathKnight_Start_PestilentScar()
 --		Scarlet Overlook			FinalFantasylization_DeathKnight_Start_ScarletOverlook()
 --		Tyr's Hand						FinalFantasylization_DeathKnight_Start_TyrsHand()
@@ -345,6 +346,19 @@ function FinalFantasylization_EasternKingdomsZones_PlaguelandsTheScarletEnclave(
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_DeathKnight_Start_TheNoxiousGlade()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Plaguelands: The Scarlet Enclave - Death Knight Starting Area - The Noxious Pass
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Noxious Pass"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_DeathKnight_Start_TheNoxiousPass()
 		else
 			return
 		end

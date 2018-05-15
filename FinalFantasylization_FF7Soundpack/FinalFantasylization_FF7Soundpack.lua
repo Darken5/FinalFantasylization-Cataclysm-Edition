@@ -2724,21 +2724,20 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_DeathKnight_Start_HallofCommand()
 			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
 			FinalFantasylization_debugMsg("EbonHoldSong")
-
 	end
 --			The Heart of Acherus
 	function FinalFantasylization_DeathKnight_Start_TheHeartofAcherus()
 			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
 			FinalFantasylization_debugMsg("EbonHoldSong")
-
 	end
 --		Browman Mill
 	function FinalFantasylization_DeathKnight_Start_BrowmanMill()
-
+		FinalFantasylization_BattleGround();
 	end
 --		Crypt of Remembrance
 	function FinalFantasylization_DeathKnight_Start_CryptofRemembrance()
-
+			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
+			FinalFantasylization_debugMsg("EbonHoldSong")
 	end
 --		Death's Breach
 	function FinalFantasylization_DeathKnight_Start_DeathsBreach()
@@ -2746,103 +2745,107 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Havenshire
 	function FinalFantasylization_DeathKnight_Start_Havenshire()
-
+		FinalFantasylization_BattleGround();
 	end
 --			Havenshire Farms
 	function FinalFantasylization_DeathKnight_Start_HavenshireFarms()
-
+		FinalFantasylization_BattleGround();
 	end
 --			Havenshire Lumber Mill
 	function FinalFantasylization_DeathKnight_Start_HavenshireLumberMill()
-
+		FinalFantasylization_BattleGround();
 	end
 --			Havenshire Mine
 	function FinalFantasylization_DeathKnight_Start_HavenshireMine()
-
+		FinalFantasylization_CaveSong();
 	end
 --			Havenshire Stables
 	function FinalFantasylization_DeathKnight_Start_HavenshireStables()
-
+		FinalFantasylization_BattleGround();
 	end
 --		King's Harbor
 	function FinalFantasylization_DeathKnight_Start_KingsHarbor()
-
+		FinalFantasylization_BattleGround();
 	end
 --		Light's Hope Chapel
 	function FinalFantasylization_DeathKnight_Start_LightsHopeChapel()
-
+		FinalFantasylization_BattleGround();
 	end
 --		Light's Point
 	function FinalFantasylization_DeathKnight_Start_LightsPoint()
-
+		FinalFantasylization_BattleGround();
 	end
 --			Light's Point Tower
 	function FinalFantasylization_DeathKnight_Start_LightsPointTower()
-
+		FinalFantasylization_BattleGround();
 	end
 --		New Avalon
 	function FinalFantasylization_DeathKnight_Start_NewAvalon()
-
+		FinalFantasylization_BattleGround();
 	end
 --			Chapel of the Crimson Flame
 	function FinalFantasylization_DeathKnight_Start_ChapeloftheCrimsonFlame()
-
+		FinalFantasylization_BattleGround();
 	end
 --			New Avalon Forge
 	function FinalFantasylization_DeathKnight_Start_NewAvalonForge()
-
+		FinalFantasylization_BattleGround();
 	end
 --			New Avalon Orchard
 	function FinalFantasylization_DeathKnight_Start_NewAvalonOrchard()
-
+		FinalFantasylization_BattleGround();
 	end
 --			New Avalon Town Hall
 	function FinalFantasylization_DeathKnight_Start_NewAvalonTownHall()
-
+		FinalFantasylization_BattleGround();
 	end
 --			Scarlet Hold
 	function FinalFantasylization_DeathKnight_Start_ScarletHold()
-
+		FinalFantasylization_BattleGround();
 	end
 --			Scarlet Tavern
 	function FinalFantasylization_DeathKnight_Start_ScarletTavern()
-
+		FinalFantasylization_BattleGround();
 	end
 --		The Noxious Glade
 	function FinalFantasylization_DeathKnight_Start_TheNoxiousGlade()
-
+		FinalFantasylization_BattleGround();
+	end
+--		The Noxious Pass
+	function FinalFantasylization_DeathKnight_Start_TheNoxiousPass()
+		FinalFantasylization_BattleGround();
 	end
 --		The Pestilent Scar
 	function FinalFantasylization_DeathKnight_Start_PestilentScar()
-
+		FinalFantasylization_BattleGround();
 	end
 --		The Scarlet Overlook
 	function FinalFantasylization_DeathKnight_Start_ScarletOverlook()
-
+		FinalFantasylization_BattleGround();
 	end
 --		Tyr's Hand
 	function FinalFantasylization_DeathKnight_Start_TyrsHand()
-
+		FinalFantasylization_BattleGround();
 	end
 --			The Scarlet Basilica
 	function FinalFantasylization_DeathKnight_Start_TheScarletBasilica()
-
+		FinalFantasylization_BattleGround();
 	end
 --			Tyr's Hand Abbey
 	function FinalFantasylization_DeathKnight_Start_TyrsHandAbbey()
-
+		FinalFantasylization_BattleGround();
 	end
 --				Hall of Arms
 	function FinalFantasylization_DeathKnight_Start_HallofArms()
-
+		FinalFantasylization_BattleGround();
 	end
 --				Library Wing
 	function FinalFantasylization_DeathKnight_Start_LibraryWing()
-
+		FinalFantasylization_BattleGround();
 	end
 --				Main Hall
 	function FinalFantasylization_DeathKnight_Start_MainHall()
-
+		FinalFantasylization_BattleGround();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Redridge Mountains
