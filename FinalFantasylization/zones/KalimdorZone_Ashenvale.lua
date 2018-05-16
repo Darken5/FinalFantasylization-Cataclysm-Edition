@@ -22,7 +22,6 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 --		Silverwing Outpost		FinalFantasylization_AllianceTownSilverwingOutpost()
 --		Stardust Spire			FinalFantasylization_AllianceTownStardustSpire()
 --		The Shrine of Aessina	FinalFantasylization_AllianceTownTheShrineofAessina()
---		Warsong Lumber Camp		FinalFantasylization_AllianceTownWarsongLumberCamp()
 --
 --	Horde:
 --		Hellscream's Watch		FinalFantasylization_HordeTownHellscreamsWatch()
@@ -30,6 +29,7 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 --		Silverwind Refuge		FinalFantasylization_HordeTownSilverwindRefuge()
 --		The Skunkworks			FinalFantasylization_HordeTownTheSkunkworks()
 --		Splintertree Post		FinalFantasylization_HordeTownSplintertreePost()
+--			Splintertree Mine		FinalFantasylization_HordeTownSplintertreeMine()
 --		Warsong Labor Camp		FinalFantasylization_HordeTownWarsongLaborCamp()
 --		Zoram'gar Outpost		FinalFantasylization_HordeTownZoramgarOutpost()
 --
@@ -66,6 +66,7 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 --	Thistlefur Village			FinalFantasylization_SubzoneThistlefurVillage()
 --		Thistlefur Hold				FinalFantasylization_SubzoneThistlefurHold()
 --	Thunder Peak				FinalFantasylization_SubzoneThunderPeak()
+--	Warsong Lumber Camp			FinalFantasylization_SubzoneWarsongLumberCamp()
 --	Xavian						FinalFantasylization_SubzoneXavian()
 --	The Zoram Strand			FinalFantasylization_SubzoneTheZoramStrand()
 --		Ruuzel's Isle				FinalFantasylization_SubzoneRuuzelsIsle()
@@ -315,24 +316,6 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Ashenvale Alliance Town: Warsong Lumber Camp
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Warsong Lumber Camp"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownWarsongLumberCamp()
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Ashenvale Horde Town: Hellscream's Watch
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Hellscream's Watch"] ) then
@@ -423,6 +406,24 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Ashenvale Horde Town: Splintertree Mine
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Splintertree Mine"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_HordeTownSplintertreeMine()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Ashenvale Horde Town: Warsong Labor Camp
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Warsong Labor Camp"] ) then
@@ -474,9 +475,9 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 	--'==========================================================================================
 	--' Ashenvale Subzone: Blackfathom Deeps
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Blackfathom Deeps"] ) then
+	elseif ( MiniMapZoneName == SZ["Blackfathom Deeps"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MiniMapZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneBlackfathomDeeps()
 		else
@@ -869,6 +870,19 @@ function FinalFantasylization_KalimdorZones_Ashenvale()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneThunderPeak()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Ashenvale Subzone: Warsong Lumber Camp
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Warsong Lumber Camp"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWarsongLumberCamp()
 		else
 			return
 		end

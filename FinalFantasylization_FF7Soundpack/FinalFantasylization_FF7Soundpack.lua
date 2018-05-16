@@ -3895,10 +3895,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_AllianceTownTheShrineofAessina()
 		FinalFantasylization_AllianceTowns();
 	end
---		Warsong Lumber Camp
-	function FinalFantasylization_AllianceTownWarsongLumberCamp()
-		FinalFantasylization_ContestedSong();
-	end
 --	Horde:
 --		Hellscream's Watch
 	function FinalFantasylization_HordeTownHellscreamsWatch()
@@ -3919,6 +3915,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --		Splintertree Post
 	function FinalFantasylization_HordeTownSplintertreePost()
 		FinalFantasylization_HordeTowns();
+	end
+--			Splintertree Mine
+	function FinalFantasylization_HordeTownSplintertreeMine()
+		FinalFantasylization_CaveSong();
 	end
 --		Warsong Labor Camp
 	function FinalFantasylization_HordeTownWarsongLaborCamp()
@@ -3955,7 +3955,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Dor'Danil Barrow Den
 	function FinalFantasylization_SubzoneTheDorDanilBarrowDen()
-		FinalFantasylization_ForestSong();
+		FinalFantasylization_CaveSong();
 	end
 --	Falfarren River
 	function FinalFantasylization_SubzoneFalfarrenRiver()
@@ -4056,6 +4056,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Thunder Peak
 	function FinalFantasylization_SubzoneThunderPeak()
 		FinalFantasylization_ForestSong();
+	end
+--	Warsong Lumber Camp
+	function FinalFantasylization_SubzoneWarsongLumberCamp()
+		FinalFantasylization_BattleGround();
 	end
 --	Xavian
 	function FinalFantasylization_SubzoneXavian()
@@ -6063,12 +6067,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_HordeTownKromgarFortress()
 		FinalFantasylization_HordeTowns();
 	end
---		Malaka'Jin
-	function FinalFantasylization_HordeTownMalakaJin()
+--		Malaka'jin
+	function FinalFantasylization_HordeTownMalakajin()
 		FinalFantasylization_HordeTowns();
 	end
---		Sludgewerks
-	function FinalFantasylization_HordeTownSludgewerks()
+--		The Sludgewerks
+	function FinalFantasylization_HordeTownTheSludgewerks()
 		FinalFantasylization_HordeTowns();
 	end
 --		Sun Rock Retreat
@@ -6140,8 +6144,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTrueshotPoint()
 
 	end
---	Unearthed Ground
-	function FinalFantasylization_SubzoneUnearthedGround()
+--	Unearthed Grounds
+	function FinalFantasylization_SubzoneUnearthedGrounds()
 
 	end
 --	Webwinder Path

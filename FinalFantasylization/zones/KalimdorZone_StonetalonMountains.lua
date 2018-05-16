@@ -18,7 +18,7 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 --	Horde:
 --		Cliffwalker Post		FinalFantasylization_HordeTownCliffwalkerPost()
 --		Krom'gar Fortress		FinalFantasylization_HordeTownKromgarFortress()
---		Malaka'Jin				FinalFantasylization_HordeTownMalakaJin()
+--		Malaka'jin				FinalFantasylization_HordeTownMalakajin()
 --		Sludgewerks				FinalFantasylization_HordeTownSludgewerks()
 --		Sun Rock Retreat		FinalFantasylization_HordeTownSunRockRetreat()
 --
@@ -201,14 +201,14 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Stonetalon Mountains Horde Town: Malaka'Jin
+	--' Stonetalon Mountains Horde Town: Malaka'jin
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Malaka'Jin"] ) then
+	elseif ( SubZoneName == SZ["Malaka'jin"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownMalakaJin()
+				FinalFantasylization_HordeTownMalakajin()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -219,14 +219,14 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Stonetalon Mountains Horde Town: Sludgewerks
+	--' Stonetalon Mountains Horde Town: The Sludgewerks
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Sludgewerks"] ) then
+	elseif ( SubZoneName == SZ["The Sludgewerks"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownSludgewerks()
+				FinalFantasylization_HordeTownTheSludgewerks()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -463,13 +463,13 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Stonetalon Mountains Subzone: Unearthed Ground
+	--' Stonetalon Mountains Subzone: Unearthed Grounds
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Unearthed Ground"] ) then
+	elseif ( SubZoneName == SZ["Unearthed Grounds"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneUnearthedGround()
+			FinalFantasylization_SubzoneUnearthedGrounds()
 		else
 			return
 		end
