@@ -5931,10 +5931,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
---	Agama'gor
-	function FinalFantasylization_SubzoneAgamagor()
-
-	end
 --	Bael'dun Keep
 	function FinalFantasylization_SubzoneBaeldunKeep()
 
@@ -5977,11 +5973,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
-
+		FinalFantasylization_WaterSong();
 	end
 --	The High Road
 	function FinalFantasylization_SubzoneTheHighRoad()
-
+		FinalFantasylization_LandSong();
 	end
 --	The Merchant Coast
 	function FinalFantasylization_SubzoneTheMerchantCoast()
@@ -6063,6 +6059,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_HordeTownCliffwalkerPost()
 		FinalFantasylization_HordeTowns();
 	end
+--		The Fold
+	function FinalFantasylization_HordeTownTheFold()
+		FinalFantasylization_HordeTowns();
+	end
 --		Krom'gar Fortress
 	function FinalFantasylization_HordeTownKromgarFortress()
 		FinalFantasylization_HordeTowns();
@@ -6082,43 +6082,43 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:	
 --	Battlescar Valley
 	function FinalFantasylization_SubzoneBattlescarValley()
-
+		FinalFantasylization_LandSong()
 	end
 --	Boulderslide Ravine
 	function FinalFantasylization_SubzoneBoulderslideRavine()
-
+		FinalFantasylization_ForestSong()
 	end
 --		Boulderslide Cavern
 	function FinalFantasylization_SubzoneBoulderslideCavern()
-
+		FinalFantasylization_CaveSong()
 	end
 --	Camp Aparaje
 	function FinalFantasylization_SubzoneCampAparaje()
-
+		FinalFantasylization_ForestSong()
 	end
 --	The Charred Vale
 	function FinalFantasylization_SubzoneTheCharredVale()
-
+		FinalFantasylization_LandSong()
 	end
---	The Fold
-	function FinalFantasylization_SubzoneTheFold()
-
+--	The Deep Reaches
+	function FinalFantasylization_SubzoneTheDeepReaches()
+		FinalFantasylization_CaveSong()
 	end
 --	Greatwood Vale
 	function FinalFantasylization_SubzoneGreatwoodVale()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Grimtotem Post
 	function FinalFantasylization_SubzoneGrimtotemPost()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Mirkfallon Lake
 	function FinalFantasylization_SubzoneMirkfallonLake()
-
+		FinalFantasylization_LakeSong()
 	end
 --	Sishir Canyon
 	function FinalFantasylization_SubzoneSishirCanyon()
-
+		FinalFantasylization_LandSong()
 	end
 --		Ruins of Eldre'thar
 	function FinalFantasylization_SubzoneRuinsofEldrethar()
@@ -6126,7 +6126,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Stonetalon Peak
 	function FinalFantasylization_SubzoneStonetalonPeak()
-
+		FinalFantasylization_LandSong()
 	end
 --	The Talon Den
 	function FinalFantasylization_SubzoneTheTalonDen()
@@ -6134,11 +6134,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Talondeep Pass
 	function FinalFantasylization_SubzoneTalondeepPass()
-
+		FinalFantasylization_LandSong()
 	end
 --	Thal'darah Grove
 	function FinalFantasylization_SubzoneThaldarahGrove()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Trueshot Point
 	function FinalFantasylization_SubzoneTrueshotPoint()
@@ -6146,27 +6146,39 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Unearthed Grounds
 	function FinalFantasylization_SubzoneUnearthedGrounds()
-
+		FinalFantasylization_LandSong()
+	end
+--	Webwinder Hollow
+	function FinalFantasylization_SubzoneWebwinderHollow()
+		FinalFantasylization_PlagueSong()
 	end
 --	Webwinder Path
 	function FinalFantasylization_SubzoneWebwinderPath()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Windshear Crag
 	function FinalFantasylization_SubzoneWindshearCrag()
-
+		FinalFantasylization_LandSong()
 	end
 --		Blackwolf River
 	function FinalFantasylization_SubzoneBlackwolfRiver()
-
+		FinalFantasylization_LakeSong()
 	end
 --		Cragpool Lake
 	function FinalFantasylization_SubzoneCragpoolLake()
-
+		FinalFantasylization_LakeSong()
+	end
+--		Windshear Heights
+	function FinalFantasylization_SubzoneWindshearHeights()
+		FinalFantasylization_LandSong()
 	end
 --		Windshear Mine
 	function FinalFantasylization_SubzoneWindshearMine()
-
+		FinalFantasylization_CaveSong()
+	end
+--		Windshear Valley
+	function FinalFantasylization_SubzoneWindshearValley()
+		FinalFantasylization_LandSong()
 	end
 --'==========================================================================================
 --' Kalimdor Zones: Teldrassil

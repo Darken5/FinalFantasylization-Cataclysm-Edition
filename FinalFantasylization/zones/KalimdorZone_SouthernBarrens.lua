@@ -22,7 +22,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --		Vendetta Point		FinalFantasylization_HordeTownVendettaPoint()
 --
 --	SUBZONES:
---	Agama'gor				FinalFantasylization_SubzoneAgamagor()
 --	Bael'dun Keep			FinalFantasylization_SubzoneBaeldunKeep()
 --	Bael Modan				FinalFantasylization_SubzoneBaelModan()
 --	Battlescar				FinalFantasylization_SubzoneBattlescar()
@@ -229,19 +228,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Southern Barrens Subzone: Agama'gor
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Agama'gor"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneAgamagor()
 		else
 			return
 		end

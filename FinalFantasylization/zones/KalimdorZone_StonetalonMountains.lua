@@ -17,6 +17,7 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 --		Windshear Hold						FinalFantasylization_AllianceTownWindshearHold()
 --	Horde:
 --		Cliffwalker Post		FinalFantasylization_HordeTownCliffwalkerPost()
+--		The Fold				FinalFantasylization_HordeTownTheFold()
 --		Krom'gar Fortress		FinalFantasylization_HordeTownKromgarFortress()
 --		Malaka'jin				FinalFantasylization_HordeTownMalakajin()
 --		Sludgewerks				FinalFantasylization_HordeTownSludgewerks()
@@ -28,7 +29,7 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 --		Boulderslide Cavern			FinalFantasylization_SubzoneBoulderslideCavern()
 --	Camp Aparaje				FinalFantasylization_SubzoneCampAparaje()
 --	The Charred Vale			FinalFantasylization_SubzoneTheCharredVale()
---	The Fold					FinalFantasylization_SubzoneTheFold()
+--	The Deep Reaches			FinalFantasylization_SubzoneTheDeepReaches()
 --	Greatwood Vale				FinalFantasylization_SubzoneGreatwoodVale()
 --	Grimtotem Post				FinalFantasylization_SubzoneGrimtotemPost()
 --	Mirkfallon Lake				FinalFantasylization_SubzoneMirkfallonLake()
@@ -40,11 +41,14 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 --	Thal'darah Grove			FinalFantasylization_SubzoneThaldarahGrove()
 --	Trueshot Point				FinalFantasylization_SubzoneTrueshotPoint()
 --	Unearthed Ground			FinalFantasylization_SubzoneUnearthedGround()
+--	Webwinder Hollow			FinalFantasylization_SubzoneWebwinderHollow()
 --	Webwinder Path				FinalFantasylization_SubzoneWebwinderPath()
 --	Windshear Crag				FinalFantasylization_SubzoneWindshearCrag()
 --		Blackwolf River				FinalFantasylization_SubzoneBlackwolfRiver()
 --		Cragpool Lake				FinalFantasylization_SubzoneCragpoolLake()
+--		Windshear Heights			FinalFantasylization_SubzoneWindshearHeights()
 --		Windshear Mine				FinalFantasylization_SubzoneWindshearMine()
+--		Windshear Valley			FinalFantasylization_SubzoneWindshearValley()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -173,6 +177,24 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_HordeTownCliffwalkerPost()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Stonetalon Mountains Horde Town: The Fold
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Fold"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_HordeTownTheFold()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -320,13 +342,13 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Stonetalon Mountains Subzone: The Fold
+	--' Stonetalon Mountains Subzone: The Deep Reaches
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Fold"] ) then
+	elseif ( SubZoneName == SZ["The Deep Reaches"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheFold()
+			FinalFantasylization_SubzoneTheDeepReaches()
 		else
 			return
 		end
@@ -476,6 +498,19 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Stonetalon Mountains Subzone: Webwinder Hollow
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Webwinder Hollow"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWebwinderHollow()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Stonetalon Mountains Subzone: Webwinder Path
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Webwinder Path"] ) then
@@ -528,6 +563,19 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Stonetalon Mountains Subzone: Windshear Heights
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Windshear Heights"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWindshearHeights()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Stonetalon Mountains Subzone: Windshear Mine
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Windshear Mine"] ) then
@@ -535,6 +583,19 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneWindshearMine()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Stonetalon Mountains Subzone: Windshear Valley
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Windshear Valley"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWindshearValley()
 		else
 			return
 		end
