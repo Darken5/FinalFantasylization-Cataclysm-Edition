@@ -25,9 +25,7 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --	Bael'dun Keep			FinalFantasylization_SubzoneBaeldunKeep()
 --	Bael Modan				FinalFantasylization_SubzoneBaelModan()
 --	Battlescar				FinalFantasylization_SubzoneBattlescar()
---	Blackthorn Ridge		FinalFantasylization_SubzoneBlackthornRidge()
 --	Bramblescar				FinalFantasylization_SubzoneBramblescar()
---	Field of Giants			FinalFantasylization_SubzoneFieldofGiants()
 --	Fields of Blood			FinalFantasylization_SubzoneFieldsofBlood()
 --	Frazzlecraz Motherlode	FinalFantasylization_SubzoneFrazzlecrazMotherlode()
 --	The Great Divide		FinalFantasylization_SubzoneTheGreatDivide()
@@ -36,7 +34,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --	The High Road			FinalFantasylization_SubzoneTheHighRoad()
 --	The Merchant Coast		FinalFantasylization_SubzoneTheMerchantCoast()
 --	The Overgrowth			FinalFantasylization_SubzoneTheOvergrowth()
---	Raptor Grounds			FinalFantasylization_SubzoneRaptorGrounds()
 --	Razorfen Kraul			FinalFantasylization_SubzoneRazorfenKraul()
 --	Ruins of Taurajo		FinalFantasylization_SubzoneRuinsofTaurajo()
 --	Southern Gold Road		FinalFantasylization_SubzoneSouthernGoldRoad()
@@ -273,19 +270,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Southern Barrens Subzone: Blackthorn Ridge
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Blackthorn Ridge"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBlackthornRidge()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Southern Barrens Subzone: Bramblescar
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Bramblescar"] ) then
@@ -293,19 +277,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneBramblescar()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Southern Barrens Subzone: Field of Giants
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Field of Giants"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFieldofGiants()
 		else
 			return
 		end
@@ -410,19 +381,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheOvergrowth()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Southern Barrens Subzone: Raptor Grounds
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Raptor Grounds"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRaptorGrounds()
 		else
 			return
 		end

@@ -1,4 +1,3 @@
-@@ -1,606 +0,0 @@
 function FinalFantasylization_EasternKingdomsZones_TirisfalGlades()
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Tirisfal Glades : Horde

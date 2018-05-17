@@ -6122,7 +6122,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Ruins of Eldre'thar
 	function FinalFantasylization_SubzoneRuinsofEldrethar()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Stonetalon Peak
 	function FinalFantasylization_SubzoneStonetalonPeak()
@@ -6130,7 +6130,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Talon Den
 	function FinalFantasylization_SubzoneTheTalonDen()
-
+		FinalFantasylization_CaveSong()
 	end
 --	Talondeep Pass
 	function FinalFantasylization_SubzoneTalondeepPass()
@@ -6142,7 +6142,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Trueshot Point
 	function FinalFantasylization_SubzoneTrueshotPoint()
-
+		FinalFantasylization_LandSong()
 	end
 --	Unearthed Grounds
 	function FinalFantasylization_SubzoneUnearthedGrounds()
