@@ -78,7 +78,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		BeachSong = "BeachSong.mp3" -- 
 		LakeSong = "LakeSong.mp3" -- 
 		WaterSong = "WaterSong.mp3" -- 
-		CaveSong = "Horde4Town.mp3"
+		CaveSong = "Horde4Town.mp3" --
+		WarySong = "WarySong.mp3" --
 
 		-- Battlegrounds Events --
 		BattleGround1 = "BattleGround1.mp3" -- 
@@ -5926,37 +5927,41 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_HordeTownHuntersHill()
 		FinalFantasylization_HordeTowns();
 	end
+--		Overgrown Camp
+	function FFinalFantasylization_HordeTownOvergrownCamp()
+		FinalFantasylization_HordeTowns();
+	end
 --		Vendetta Point
 	function FinalFantasylization_HordeTownVendettaPoint()
 		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
---	Bael'dun Keep
+--	Bael Modan
+	function FinalFantasylization_SubzoneBaelModan()
+
+	end
+--		Bael'dun Keep
 	function FinalFantasylization_SubzoneBaeldunKeep()
 
 	end
---	Bael Modan
-	function FinalFantasylization_SubzoneBaelModan()
+--		Bael Modan Excavation
+	function FinalFantasylization_SubzoneBaelModanExcavation()
 
 	end
 --	Battlescar
 	function FinalFantasylization_SubzoneBattlescar()
 
 	end
---	Blackthorn Ridge
-	function FinalFantasylization_SubzoneBlackthornRidge()
-
-	end
 --	Bramblescar
 	function FinalFantasylization_SubzoneBramblescar()
 
 	end
---	Field of Giants
-	function FinalFantasylization_SubzoneFieldofGiants()
-
-	end
 --	Fields of Blood
 	function FinalFantasylization_SubzoneFieldsofBlood()
+		FinalFantasylization_LandSong();
+	end
+--	Firestone Point
+	function FinalFantasylization_SubzoneFirestonePoint()
 
 	end
 --	Frazzlecraz Motherlode
@@ -5969,7 +5974,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Great Gate
 	function FinalFantasylization_SubzoneTheGreatGate()
-
+		FinalFantasylization_PlayMusic(S .. BattleGround3);
+		FinalFantasylization_debugMsg("BattleGround3")
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
@@ -5985,11 +5991,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Overgrowth
 	function FinalFantasylization_SubzoneTheOvergrowth()
-
+		FinalFantasylization_WarySong()
 	end
---	Raptor Grounds
-	function FinalFantasylization_SubzoneRaptorGrounds()
-
+--		The Nightmare Scar
+	function FinalFantasylization_SubzoneTheNightmareScar()
+		FinalFantasylization_WarySong()
 	end
 --	Razorfen Kraul
 	function FinalFantasylization_SubzoneRazorfenKraul()
@@ -5997,7 +6003,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Ruins of Taurajo
 	function FinalFantasylization_SubzoneRuinsofTaurajo()
-
+		FinalFantasylization_PlayMusic(S .. DeadSong);
+		FinalFantasylization_debugMsg("DeadSong")
 	end
 --	Southern Gold Road
 	function FinalFantasylization_SubzoneSouthernGoldRoad()
@@ -6569,6 +6576,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_CaveSong()
 		FinalFantasylization_PlayMusic(S .. CaveSong);
 		FinalFantasylization_debugMsg("CaveSong")
+	end
+	function FinalFantasylization_WarySong()
+		FinalFantasylization_PlayMusic(S .. WarySong);
+		FinalFantasylization_debugMsg("WarySong")
 	end
 
 	--################
