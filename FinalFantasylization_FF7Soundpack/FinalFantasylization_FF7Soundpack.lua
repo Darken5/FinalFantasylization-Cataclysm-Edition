@@ -1783,7 +1783,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneMirrorLake()
 		FinalFantasylization_LakeSong();
 	end
---		Mirror Lake Orchard
+--			Mirror Lake Orchard
 	function FinalFantasylization_SubzoneMirrorLakeOrchard()
 		local x = math.random(1, 2);
 			if x == 1 then
@@ -4212,10 +4212,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_HordeTownNorthernRocketwayExchange()
 		FinalFantasylization_HordeTowns();
 	end
---		Northern Rocketway Terminus
-	function FinalFantasylization_HordeTownNorthernRocketwayTerminus()
-		FinalFantasylization_HordeTowns();
-	end
 --		Orgrimmar Rear Gate
 	function FinalFantasylization_HordeTownOrgrimmarRearGate()
 		FinalFantasylization_HordeTowns();
@@ -4283,10 +4279,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Haldarr Encampment
 	function FinalFantasylization_SubzoneHaldarrEncampment()
-
-	end
---	Horizon Scout
-	function FinalFantasylization_SubzoneHorizonScout()
 
 	end
 --	*Hull of the Foebreaker
@@ -5293,6 +5285,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_Troll_Start_DarkspearHold()
 		FinalFantasylization_BeachSong();
 	end
+--				Darkspear Shore
+	function FinalFantasylization_Troll_Start_DarkspearShore()
+		FinalFantasylization_BeachSong();
+	end
 --				Darkspear Training Grounds
 	function FinalFantasylization_Troll_Start_DarkspearTrainingGrounds()
 		FinalFantasylization_BeachSong();
@@ -5305,7 +5301,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_Troll_Start_SpitescaleCavern()
 		FinalFantasylization_CaveSong();
 	end
---			Zalazane's Fall
+--				Zalazane's Fall
 	function FinalFantasylization_Troll_Start_ZalazanesFall()
 		FinalFantasylization_BeachSong();
 	end
@@ -6347,6 +6343,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Ban'ethil Barrow Den
 	function FinalFantasylization_SubzoneBanethilBarrowDen()
+		FinalFantasylization_SwampSong();
+	end
+--		Ban'ethil Barrow Descent
+	function FinalFantasylization_SubzoneBanethilBarrowDescent()
 		FinalFantasylization_SwampSong();
 	end
 --	The Cleft

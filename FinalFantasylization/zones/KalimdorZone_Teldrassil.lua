@@ -21,6 +21,7 @@ function FinalFantasylization_KalimdorZones_Teldrassil()
 --	SUBZONES:
 --	Ban'ethil Hollow			FinalFantasylization_SubzoneBanethilHollow()
 --		Ban'ethil Barrow Den		FinalFantasylization_SubzoneBanethilBarrowDen()
+--		Ban'ethil Barrow Descent	FinalFantasylization_SubzoneBanethilBarrowDescent()
 --	The Cleft					FinalFantasylization_SubzoneTheCleft()
 --	Fel Rock					FinalFantasylization_SubzoneFelRock()
 --	Gnarlpine Hold				FinalFantasylization_SubzoneGnarlpineHold()
@@ -184,6 +185,19 @@ function FinalFantasylization_KalimdorZones_Teldrassil()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneBanethilBarrowDen()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Teldrassil Subzone: Ban'ethil Barrow Descent in Ban'ethil Hollow
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Ban'ethil Barrow Descent"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneBanethilBarrowDescent()
 		else
 			return
 		end

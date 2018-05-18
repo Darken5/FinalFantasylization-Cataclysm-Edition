@@ -13,7 +13,6 @@ function FinalFantasylization_KalimdorZones_Azshara()
 --		Bilgewater Harbor				FinalFantasylization_HordeTownBilgewaterHarbor()
 --		Gallywix Pleasure Palace		FinalFantasylization_HordeTownGallywixPleasurePalace()
 --		Northern Rocketway Exchange		FinalFantasylization_HordeTownNorthernRocketwayExchange()
---		Northern Rocketway Terminus		FinalFantasylization_HordeTownNorthernRocketwayTerminus()
 --		Orgrimmar Rear Gate				FinalFantasylization_HordeTownOrgrimmarRearGate()
 --		Orgrimmar Rocketway Exchange 	FinalFantasylization_HordeTownOrgrimmarRocketwayExchange()
 --		The Secret Lab					FinalFantasylization_HordeTownTheSecretLab()
@@ -33,7 +32,6 @@ function FinalFantasylization_KalimdorZones_Azshara()
 --	Forlorn Ridge				FinalFantasylization_SubzoneForlornRidge()
 --	The Great Sea				FinalFantasylization_SubzoneTheGreatSea()
 --	Haldarr Encampment			FinalFantasylization_SubzoneHaldarrEncampment()
---	Horizon Scout				FinalFantasylization_SubzoneHorizonScout()
 --	*Hull of the Foebreaker		FinalFantasylization_SubzoneHulloftheFoebreaker()
 --	Jagged Reef					FinalFantasylization_SubzoneJaggedReef()
 --	Lake Mennar					FinalFantasylization_SubzoneLakeMennar()
@@ -134,24 +132,6 @@ function FinalFantasylization_KalimdorZones_Azshara()
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_HordeTownNorthernRocketwayExchange()
-			elseif ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Azshara Horde Town: Northern Rocketway Terminus
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Northern Rocketway Terminus"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownNorthernRocketwayTerminus()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -408,19 +388,6 @@ function FinalFantasylization_KalimdorZones_Azshara()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Azshara Subzone: Horizon Scout
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Horizon Scout"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneHorizonScout()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Azshara Subzone: Hull of the Foebreaker
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Hull of the Foebreaker"] ) then
@@ -514,7 +481,7 @@ function FinalFantasylization_KalimdorZones_Azshara()
 	--'==========================================================================================
 	--' Azshara Subzone: Ruins of Eldarath
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ruins of Eldarath"] ) then
+	elseif ( SubZoneName == SZ["Ruins of Eldarath "] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
