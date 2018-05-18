@@ -21,6 +21,8 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 --	Valley of Strength		FinalFantasylization_Orgrimmar_SubzoneValleyofStrength()
 --		Grommash Hold			FinalFantasylization_Orgrimmar_SubzoneGrommashHold()
 --	Valley of Wisdom		FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
+--		Miwana's Longhouse			FinalFantasylization_Orgrimmar_SubzoneMiwanasLonghouse()
+--		The Western Earthshrine		FinalFantasylization_Orgrimmar_SubzoneTheWesternEarthshrine()
 	--'==========================================================================================
 	--' Orgrimmar: Horde Check
 	--'==========================================================================================
@@ -201,6 +203,32 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Orgrimmar: Miwana's Longhouse in Valley of Wisdom
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Miwana's Longhouse"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneMiwanasLonghouse()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Orgrimmar: The Western Earthshrine in Valley of Wisdom
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["The Western Earthshrine"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneTheWesternEarthshrine()
 			else
 				return
 			end

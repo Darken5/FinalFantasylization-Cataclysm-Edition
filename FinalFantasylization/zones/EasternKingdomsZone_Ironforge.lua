@@ -21,6 +21,7 @@ function FinalFantasylization_EasternKingdomsZones_Ironforge()
 --		Hall of Arms				FinalFantasylization_Ironforge_SubzoneHallofArms()
 --	The Mystic Ward				FinalFantasylization_Ironforge_SubzoneTheMysticWard()
 --		Hall of Mysteries			FinalFantasylization_Ironforge_SubzoneHallofMysteries()
+--	Old Ironforge				FinalFantasylization_Ironforge_SubzoneOld Ironforge()
 --	Tinker Town					FinalFantasylization_Ironforge_SubzoneTinkerTown()
 --		Deeprun Tram				FinalFantasylization_Ironforge_SubzoneDeeprunTram()
 	--'==========================================================================================
@@ -203,6 +204,19 @@ function FinalFantasylization_EasternKingdomsZones_Ironforge()
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Ironforge_SubzoneHallofMysteries()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Ironforge: Old Ironforge
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Old Ironforge"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Ironforge_SubzoneOldIronforge()
 			else
 				return
 			end

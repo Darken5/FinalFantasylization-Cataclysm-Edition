@@ -290,6 +290,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
+--	Old Ironforge
+	function FinalFantasylization_Ironforge_SubzoneOld Ironforge()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
 --	Tinker Town
 	function FinalFantasylization_Ironforge_SubzoneTinkerTown()
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
@@ -3768,6 +3773,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Valley of Wisdom
 	function FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		Miwana's Longhouse
+	function FinalFantasylization_Orgrimmar_SubzoneMiwanasLonghouse()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		The Western Earthshrine
+	function FinalFantasylization_Orgrimmar_SubzoneTheWesternEarthshrine()
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
 		FinalFantasylization_debugMsg("OrgrimmarSong")
 	end
