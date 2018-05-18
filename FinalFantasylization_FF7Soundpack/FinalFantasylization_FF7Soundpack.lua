@@ -328,8 +328,33 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
---		The Sanctum
-	function FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
+--		The Bank of Silvermoon
+	function FinalFantasylization_SilvermoonCity_SubzoneTheBankofSilvermoon()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Blades & Axes
+	function FinalFantasylization_SilvermoonCity_SubzoneBlades&Axes()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		General Goods
+	function FinalFantasylization_SilvermoonCity_SubzoneGeneralGoods()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Keelen's Trustworthy Tailoring
+	function FinalFantasylization_SilvermoonCity_SubzoneKeelensTrustworthyTailoring()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Shields of Silver
+	function FinalFantasylization_SilvermoonCity_SubzoneShieldsofSilver()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Silvermoon Finery
+	function FinalFantasylization_SilvermoonCity_SubzoneSilvermoonFinery()
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
@@ -353,6 +378,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
+--		The Hall of Blood
+	function FinalFantasylization_SilvermoonCity_SubzoneTheHallofBlood()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		The Rangers' Lodge
+	function FinalFantasylization_SilvermoonCity_SubzoneTheRangersLodge()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
 --	Murder Row
 	function FinalFantasylization_SilvermoonCity_SubzoneMurderRow()
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
@@ -368,6 +403,36 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
+--		The Hall of Respite
+	function FinalFantasylization_SilvermoonCity_SubzoneTheHallofRespite()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--			Silvermoon Jewelery
+	function FinalFantasylization_SilvermoonCity_SubzoneSilvermoonJewelery()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		The Reliquary
+	function FinalFantasylization_SilvermoonCity_SubzoneTheReliquary()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Royal Exchange Auction House
+	function FinalFantasylization_SilvermoonCity_SubzoneRoyalExchangeAuctionHouse()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Royal Exchange Bank
+	function FinalFantasylization_SilvermoonCity_SubzoneRoyalExchangeBank()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Silvermoon City Inn
+	function FinalFantasylization_SilvermoonCity_SubzoneSilvermoonCityInn()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
 --	The Shepherd's Gate
 	function FinalFantasylization_SilvermoonCity_SubzoneTheShepherdsGate()
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
@@ -375,6 +440,21 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Walk of Elders
 	function FinalFantasylization_SilvermoonCity_SubzoneWalkofElders()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Silvermoon Registry
+	function FinalFantasylization_SilvermoonCity_SubzoneSilvermoonRegistry()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--		Velaani's Arcane Goods
+	function FinalFantasylization_SilvermoonCity_SubzoneVelaanisArcaneGoods()
+		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
+		FinalFantasylization_debugMsg("SilvermoonCitySong")
+	end
+--	Wayfarer's Rest
+	function FinalFantasylization_SilvermoonCity_SubzoneWayfarersRest()
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
