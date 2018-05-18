@@ -10,47 +10,49 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 --
 --	TOWNS:
 --	Dwarf Start:
---		Anvilmar						FinalFantasylization_Dwarf_Start_Anvilmar()
---		Coldridge Pass					FinalFantasylization_Dwarf_Start_ColdridgePass()
---		Coldridge Valley				FinalFantasylization_Dwarf_Start_ColdridgeValley()
---		Whitebeard's Encampment			FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
+--		Coldridge Valley			FinalFantasylization_Dwarf_Start_ColdridgeValley()
+--			Anvilmar					FinalFantasylization_Dwarf_Start_Anvilmar()
+--			Coldridge Pass				FinalFantasylization_Dwarf_Start_ColdridgePass()
+--			Whitebeard's Encampment		FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
 --	Gnome Start:
---		Gnomeregan						FinalFantasylization_Gnome_Start_Gnomeregan()
---			Loading Room					FinalFantasylization_Gnome_Start_LoadingRoom()
---			The Old Dormitory				FinalFantasylization_Gnome_Start_TheOldDormitory()
---			Train Depot						FinalFantasylization_Gnome_Start_TrainDepot()
---			Workshop Entrance				FinalFantasylization_Gnome_Start_WorkshopEntrance()
---		New Tinkertown					FinalFantasylization_Gnome_Start_NewTinkertown()
---		Crushcog's Arsenal				FinalFantasylization_Gnome_Start_CrushcogsArsenal()
---		Frostmane Hold					FinalFantasylization_Gnome_Start_FrostmaneHold()
---		Iceflow Lake					FinalFantasylization_Gnome_Start_IceflowLake()
---		The Toxic Airfield				FinalFantasylization_Gnome_Start_TheToxicAirfield()
+--		Chill Breeze Valley			FinalFantasylization_Gnome_Start_ChillBreezeValley()
+--			Brewnall Village			FinalFantasylization_Gnome_Start_BrewnallVillage()
+--			Crushcog's Arsenal			FinalFantasylization_Gnome_Start_CrushcogsArsenal()
+--			Frostmane Hold				FinalFantasylization_Gnome_Start_FrostmaneHold()
+--			Gnomeregan					FinalFantasylization_Gnome_Start_Gnomeregan()
+--				The Clockwerk Run			FinalFantasylization_Gnome_Start_TheClockwerkRun()
+--				Loading Room				FinalFantasylization_Gnome_Start_LoadingRoom()
+--				The Old Dormitory			FinalFantasylization_Gnome_Start_TheOldDormitory()
+--				Train Depot					FinalFantasylization_Gnome_Start_TrainDepot()
+--				Workshop Entrance			FinalFantasylization_Gnome_Start_WorkshopEntrance()
+--			Iceflow Lake				FinalFantasylization_Gnome_Start_IceflowLake()
+--			New Tinkertown				FinalFantasylization_Gnome_Start_NewTinkertown()
+--			The Toxic Airfield			FinalFantasylization_Gnome_Start_TheToxicAirfield()
 --	Alliance:
---		Brewnall Village				FinalFantasylization_AllianceTownBrewnallVillage()
---		Gates of Ironforge				FinalFantasylization_AllianceTownGatesofIronforge()
---		Gol'Bolar Quarry				FinalFantasylization_AllianceTownGolBolarQuarry()
---			Gol'Bolar Quarry Mine			FinalFantasylization_AllianceTownGolBolarQuarryMine()
---		Ironforge Airfield				FinalFantasylization_AllianceTownIronforgeAirfield()
---		Kharanos						FinalFantasylization_AllianceTownKharanos()
---			Thunderbrew Distillery			FinalFantasylization_AllianceTownThunderbrewDistillery()
---		Steelgrill's Depot				FinalFantasylization_AllianceTownSteelgrillsDepot()
+--		Amberstill Ranch			FinalFantasylization_AllianceTownAmberstillRanch()
+--		Gates of Ironforge			FinalFantasylization_AllianceTownGatesofIronforge()
+--		Gol'Bolar Quarry			FinalFantasylization_AllianceTownGolBolarQuarry()
+--		Ironforge Airfield			FinalFantasylization_AllianceTownIronforgeAirfield()
+--		Kharanos					FinalFantasylization_AllianceTownKharanos()
+--			Thunderbrew Distillery		FinalFantasylization_AllianceTownThunderbrewDistillery()
+--		Misty Pine Refuge			FinalFantasylization_AllianceTownMistyPineRefuge()
+--		North Gate Outpost			FinalFantasylization_AllianceTownNorthGateOutpost()
+--		Steelgrill's Depot			FinalFantasylization_AllianceTownSteelgrillsDepot()
+--		South Gate Outpost			FinalFantasylization_AllianceTownSouthGateOutpost()
 --
 --	SUBZONES:
---	Amberstill Ranch				FinalFantasylization_SubzoneAmberstillRanch()
---	Bahrum's Post					FinalFantasylization_SubzoneBahrumsPost()
---	Chill Breeze Valley				FinalFantasylization_SubzoneChillBreezeValley()
---	Frostmane Front					FinalFantasylization_SubzoneFrostmaneFront()
---	Frostmane Retreat				FinalFantasylization_SubzoneFrostmaneRetreat()
---	The Grizzled Den				FinalFantasylization_SubzoneTheGrizzledDen()
---	Helm's Bed Lake					FinalFantasylization_SubzoneHelmsBedLake()
---	Ironband's Compound				FinalFantasylization_SubzoneIronbandsCompound()
---	Misty Pine Refuge				FinalFantasylization_SubzoneMistyPineRefuge()
---	North Gate Pass					FinalFantasylization_SubzoneNorthGatePass()
---		North Gate Outpost				FinalFantasylization_SubzoneNorthGateOutpost()
---	Shimmer Ridge					FinalFantasylization_SubzoneShimmerRidge()
---	South Gate Pass					FinalFantasylization_SubzoneSouthGatePass()
---		South Gate Outpost				FinalFantasylization_SubzoneSouthGateOutpost()
---	The Tundrid Hills				FinalFantasylization_SubzoneTheTundridHills()
+--	Bahrum's Post			FinalFantasylization_SubzoneBahrumsPost()
+--	Frostmane Front			FinalFantasylization_SubzoneFrostmaneFront()
+--	Frostmane Retreat		FinalFantasylization_SubzoneFrostmaneRetreat()
+--	The Grizzled Den		FinalFantasylization_SubzoneTheGrizzledDen()
+--	Gol'Bolar Quarry Mine	FinalFantasylization_SubzoneGolBolarQuarryMine()
+--	Helm's Bed Lake			FinalFantasylization_SubzoneHelmsBedLake()
+--	Ironband's Compound		FinalFantasylization_SubzoneIronbandsCompound()
+--	The Mountain Den		FinalFantasylization_SubzoneTheMountainDen()
+--	North Gate Pass			FinalFantasylization_SubzoneNorthGatePass()
+--	Shimmer Ridge			FinalFantasylization_SubzoneShimmerRidge()
+--	South Gate Pass			FinalFantasylization_SubzoneSouthGatePass()
+--	The Tundrid Hills		FinalFantasylization_SubzoneTheTundridHills()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -81,6 +83,24 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Dun Morogh: Dwarf Starting Area: Coldridge Valley
+	--'==========================================================================================
+	elseif ( MinimapZoneName == SZ["Coldridge Valley"] ) then
+		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
+			FinalFantasylization_CurrentZone = MinimapZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MinimapZoneName..", "..ZoneName)
+				FinalFantasylization_Dwarf_Start_ColdridgeValley()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. MinimapZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Dun Morogh: Dwarf Starting Area: Anvilmar
 	--'==========================================================================================
 	elseif ( MinimapZoneName == SZ["Anvilmar"] ) then
@@ -101,24 +121,16 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 	--'==========================================================================================
 	--' Dun Morogh: Dwarf Starting Area: Coldridge Pass
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Coldridge Pass"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Dwarf_Start_ColdridgePass()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Dun Morogh: Dwarf Starting Area: Coldridge Valley
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Coldridge Valley"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Dwarf_Start_ColdridgeValley()
+	elseif ( MinimapZoneName == SZ["Coldridge Pass"] ) then
+		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
+			FinalFantasylization_CurrentZone = MinimapZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MinimapZoneName..", "..ZoneName)
+				FinalFantasylization_Dwarf_Start_ColdridgePass()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. MinimapZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
@@ -127,11 +139,88 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 	--'==========================================================================================
 	--' Dun Morogh: Dwarf Starting Area: Whitebeard's Encampment
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Whitebeard's Encampment"] ) then
+	elseif ( MinimapZoneName == SZ["Whitebeard's Encampment"] ) then
+		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
+			FinalFantasylization_CurrentZone = MinimapZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MinimapZoneName..", "..ZoneName)
+				FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. MinimapZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dun Morogh: Gnome Starting Area: Chill Breeze Valley
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Chill Breeze Valley"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Gnome_Start_ChillBreezeValley()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dun Morogh: Gnome Starting Area: Brewnall Village
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Brewnall Village"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Gnome_Start_BrewnallVillage()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dun Morogh: Gnome Starting Area: Crushcog's Arsenal
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Crushcog's Arsenal"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Gnome_Start_CrushcogsArsenal()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dun Morogh: Gnome Starting Area: Frostmane Hold
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Frostmane Hold"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Gnome_Start_FrostmaneHold()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
@@ -146,6 +235,24 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Gnome_Start_Gnomeregan()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dun Morogh: Gnome Starting Area: The Clockwerk Run in Gnomeregan
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Clockwerk Run"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Gnome_Start_TheClockwerkRun()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -228,6 +335,24 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Dun Morogh: Gnome Starting Area: Iceflow Lake
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Iceflow Lake"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Gnome_Start_IceflowLake()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Dun Morogh: Gnome Starting Area: New Tinkertown
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["New Tinkertown"] ) then
@@ -246,66 +371,32 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Dun Morogh: Gnome Starting Area: Crushcog's Arsenal
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Crushcog's Arsenal"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Gnome_Start_CrushcogsArsenal()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Dun Morogh: Gnome Starting Area: Frostmane Hold
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Frostmane Hold"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Gnome_Start_FrostmaneHold()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Dun Morogh: Gnome Starting Area: Iceflow Lake
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Iceflow Lake"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Gnome_Start_IceflowLake()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Dun Morogh: Gnome Starting Area: The Toxic Airfield
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["The Toxic Airfield"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Gnome_Start_TheToxicAirfield()
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Gnome_Start_TheToxicAirfield()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Dun Morogh Alliance Town: Brewnall Village
+	--' Dun Morogh Alliance Town: Amberstill Ranch
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Brewnall Village"] ) then
+	elseif ( SubZoneName == SZ["Amberstill Ranch"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownBrewnallVillage()
+				FinalFantasylization_AllianceTownAmberstillRanch()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -352,24 +443,6 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Dun Morogh Alliance Town: Gol'Bolar Quarry Mine in Gol'Bolar Quarry
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Gol'Bolar Quarry Mine"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownGolBolarQuarryMine()
-			elseif ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Dun Morogh Alliance Town: Ironforge Airfield
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Ironforge Airfield"] ) then
@@ -406,7 +479,7 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Dun Morogh Alliance Town: Thunderbrew Distillery in Kharanos
+	--' Dun Morogh Alliance Town: Thunderbrew Distillery
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Thunderbrew Distillery"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
@@ -414,6 +487,42 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_AllianceTownThunderbrewDistillery()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dun Morogh Alliance Town: Misty Pine Refuge
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Misty Pine Refuge"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownMistyPineRefuge()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dun Morogh Alliance Town: North Gate Outpost
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["North Gate Outpost"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownNorthGateOutpost()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -442,13 +551,18 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Dun Morogh Subzone: Amberstill Ranch
+	--' Dun Morogh Alliance Town: South Gate Outpost
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Amberstill Ranch"] ) then
+	elseif ( SubZoneName == SZ["South Gate Outpost"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneAmberstillRanch()
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownSouthGateOutpost()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
@@ -462,19 +576,6 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneBahrumsPost()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Dun Morogh Subzone: Chill Breeze Valley
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Chill Breeze Valley"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneChillBreezeValley()
 		else
 			return
 		end
@@ -520,6 +621,19 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Dun Morogh Subzone: Gol'Bolar Quarry Mine
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Gol'Bolar Quarry Mine"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneGolBolarQuarryMine()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Dun Morogh Subzone: Helm's Bed Lake
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Helm's Bed Lake"] ) then
@@ -546,13 +660,13 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Dun Morogh Subzone: Misty Pine Refuge
+	--' Dun Morogh Subzone: The Mountain Den
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Misty Pine Refuge"] ) then
+	elseif ( SubZoneName == SZ["The Mountain Den"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneMistyPineRefuge()
+			FinalFantasylization_SubzoneTheMountainDen()
 		else
 			return
 		end
@@ -566,19 +680,6 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneNorthGatePass()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Dun Morogh Subzone: North Gate Outpost in North Gate Pass
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["North Gate Outpost"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneNorthGateOutpost()
 		else
 			return
 		end
@@ -605,19 +706,6 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneSouthGatePass()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Dun Morogh Subzone: South Gate Outpost in South Gate Pass
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["South Gate Outpost"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSouthGateOutpost()
 		else
 			return
 		end

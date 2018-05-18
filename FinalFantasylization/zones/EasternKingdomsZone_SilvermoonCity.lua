@@ -11,7 +11,7 @@ function FinalFantasylization_EasternKingdomsZones_SilvermoonCity()
 --	SUBZONES:
 --	The Bazaar							FinalFantasylization_SilvermoonCity_SubzoneTheBazaar()
 --		The Bank of Silvermoon				FinalFantasylization_SilvermoonCity_SubzoneTheBankofSilvermoon()
---		Blades & Axes						FinalFantasylization_SilvermoonCity_SubzoneBlades&Axes()
+--		Blades & Axes						FinalFantasylization_SilvermoonCity_SubzoneBladesAxes()
 --		General Goods						FinalFantasylization_SilvermoonCity_SubzoneGeneralGoods()
 --		Keelen's Trustworthy Tailoring		FinalFantasylization_SilvermoonCity_SubzoneKeelensTrustworthyTailoring()
 --		Shields of Silver					FinalFantasylization_SilvermoonCity_SubzoneShieldsofSilver()
@@ -98,7 +98,7 @@ function FinalFantasylization_EasternKingdomsZones_SilvermoonCity()
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_SilvermoonCity_SubzoneBlades&Axes()
+				FinalFantasylization_SilvermoonCity_SubzoneBladesAxes()
 			else
 				return
 			end
