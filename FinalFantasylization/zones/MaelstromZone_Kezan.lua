@@ -209,7 +209,7 @@ function FinalFantasylization_MaelstromZones_Kezan()
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
 			FinalFantasylization_CurrentZone = ZoneName
-			FinalFantasylization_MaelstromKezan()
+			FinalFantasylization_Maelstrom_Kezan()
 			FinalFantasylization_IsPlaying = true
 		else
 			return
