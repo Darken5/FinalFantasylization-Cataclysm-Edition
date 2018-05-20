@@ -1302,77 +1302,65 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_NeutralTowns();
 	end
 --	SUBZONES:
---	Blackwater Cove
-	function FinalFantasylization_SubzoneBlackwaterCove()
-	
-	end
---	Brashtide Attack Fleet
-	function FinalFantasylization_SubzoneBrashtideAttackFleet()
-	
-	end
---	The Crimson Veil
-	function FinalFantasylization_SubzoneTheCrimsonVeil()
-	
+--	Bloodsail Compound
+	function FinalFantasylization_SubzoneBloodsailCompound()
+
 	end
 --	The Crystal Shore
 	function FinalFantasylization_SubzoneTheCrystalShore()
-	
+
 	end
 --	Crystalvein Mine
 	function FinalFantasylization_SubzoneCrystalveinMine()
-	
-	end
---	The Damsel's Luck
-	function FinalFantasylization_SubzoneTheDamselsLuck()
-	
+
 	end
 --	Gurubashi Arena
 	function FinalFantasylization_SubzoneGurubashiArena()
-	
-	end
---		Battle Ring
-	function FinalFantasylization_SubzoneBattleRing()
-	
+
 	end
 --	Jaguero Isle
 	function FinalFantasylization_SubzoneJagueroIsle()
-	
+
 	end
 --	Janeiro's Point
 	function FinalFantasylization_SubzoneJaneirosPoint()
-	
+
 	end
 --	Mistvale Valley
 	function FinalFantasylization_SubzoneMistvaleValley()
-	
+
+	end
+--		Spirit Den
+	function FinalFantasylization_SubzoneSpiritDen()
+
 	end
 --	Nek'mani Wellspring
 	function FinalFantasylization_SubzoneNekmaniWellspring()
-	
-	end
---	The Riptide
-	function FinalFantasylization_SubzoneTheRiptide()
-	
+
 	end
 --	Ruins of Aboraz
 	function FinalFantasylization_SubzoneRuinsofAboraz()
-	
+
 	end
 --	Ruins of Jubuwal
 	function FinalFantasylization_SubzoneRuinsofJubuwal()
-	
+
+	end
+--	South Seas
+	function FinalFantasylization_SubzoneSouthSeas()
+
 	end
 --	Southern Savage Coast
 	function FinalFantasylization_SubzoneSouthernSavageCoast()
-	
+
 	end
---	Spirit Den
-	function FinalFantasylization_SubzoneSpiritDen()
-	
+--	The Sundering
+	function FinalFantasylization_SubzoneTheSundering()
+
 	end
 --	Wild Shore
 	function FinalFantasylization_SubzoneWildShore()
-	
+
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Dun Morogh : Alliance
@@ -2968,6 +2956,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_AllianceTownCampEverstill()
 		FinalFantasylization_AllianceTowns();
 	end
+--		Keeshan's Post
+	function FinalFantasylization_AllianceTownKeeshansPost()
+		FinalFantasylization_AllianceTowns();
+	end
 --		Lakeshire
 	function FinalFantasylization_AllianceTownLakeshire()
 		FinalFantasylization_AllianceTowns();
@@ -3047,6 +3039,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Tower of Ilgalar
 	function FinalFantasylization_SubzoneTowerofIlgalar()
+
+	end
+--	Yowler's Den
+	function FinalFantasylization_SubzoneYowlersDen()
 
 	end
 --'==========================================================================================
@@ -5878,6 +5874,14 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_HordeTownTheCrossroads()
 		FinalFantasylization_HordeTowns();
 	end
+--		Darsok's Outpost
+	function FinalFantasylization_HordeTownDarsoksOutpost()
+		FinalFantasylization_HordeTowns();
+	end
+--		Dreadmist Camp
+	function FinalFantasylization_HordeTownDreadmistCamp()
+		FinalFantasylization_HordeTowns();
+	end
 --		Far Watch Post
 	function FinalFantasylization_HordeTownFarWatchPost()
 		FinalFantasylization_HordeTowns();
@@ -6204,6 +6208,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Charred Vale
 	function FinalFantasylization_SubzoneTheCharredVale()
+		FinalFantasylization_LandSong()
+	end
+--	Dagger Pass
+	function FinalFantasylization_SubzoneDaggerPass()
 		FinalFantasylization_LandSong()
 	end
 --	The Deep Reaches

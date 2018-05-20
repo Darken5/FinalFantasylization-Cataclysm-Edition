@@ -11,6 +11,7 @@ function FinalFantasylization_EasternKingdomsZones_RedridgeMountains()
 --	TOWNS:
 --	Alliance:
 --		Camp Everstill				FinalFantasylization_AllianceTownCampEverstill()
+--		Keeshan's Post				FinalFantasylization_AllianceTownKeeshansPost()
 --		Lakeshire					FinalFantasylization_AllianceTownLakeshire()
 --			Lakeshire Inn				FinalFantasylization_AllianceTownLakeshireInn()
 --			Lakeshire Town Hall			FinalFantasylization_AllianceTownLakeshireTownHall()
@@ -33,6 +34,7 @@ function FinalFantasylization_EasternKingdomsZones_RedridgeMountains()
 --	Stonewatch Falls			FinalFantasylization_SubzoneStonewatchFalls()
 --	Three Corners				FinalFantasylization_SubzoneThreeCorners()
 --	Tower of Ilgalar			FinalFantasylization_SubzoneTowerofIlgalar()
+--	Yowler's Den				FinalFantasylization_SubzoneYowlersDen()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -71,6 +73,24 @@ function FinalFantasylization_EasternKingdomsZones_RedridgeMountains()
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_AllianceTownCampEverstill()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Redridge Mountains Alliance Town: Keeshan's Post
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Keeshan's Post"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownKeeshansPost()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -350,6 +370,19 @@ function FinalFantasylization_EasternKingdomsZones_RedridgeMountains()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTowerofIlgalar()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Redridge Mountains Subzone: Yowler's Den
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Yowler's Den"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneYowlersDen()
 		else
 			return
 		end

@@ -29,6 +29,7 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 --		Boulderslide Cavern			FinalFantasylization_SubzoneBoulderslideCavern()
 --	Camp Aparaje				FinalFantasylization_SubzoneCampAparaje()
 --	The Charred Vale			FinalFantasylization_SubzoneTheCharredVale()
+--	Dagger Pass					FinalFantasylization_SubzoneDaggerPass()
 --	The Deep Reaches			FinalFantasylization_SubzoneTheDeepReaches()
 --	Greatwood Vale				FinalFantasylization_SubzoneGreatwoodVale()
 --	Grimtotem Post				FinalFantasylization_SubzoneGrimtotemPost()
@@ -336,6 +337,19 @@ function FinalFantasylization_KalimdorZones_StonetalonMountains()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheCharredVale()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Stonetalon Mountains Subzone: Dagger Pass
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Dagger Pass"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneDaggerPass()
 		else
 			return
 		end
