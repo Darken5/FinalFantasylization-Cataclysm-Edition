@@ -5443,6 +5443,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_NeutralTownMudsprocket()
 		FinalFantasylization_NeutralTowns();
 	end
+--		Tabetha's Farm
+	function FinalFantasylization_NeutralTownTabethasFarm()
+		FinalFantasylization_NeutralTowns();
+	end
 --	SUBZONES:
 --	Alcaz Island
 	function FinalFantasylization_SubzoneAlcazIsland()
@@ -5514,10 +5518,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Direhorn Post
 	function FinalFantasylization_SubzoneDirehornPost()
-
-	end
---		Tabetha's Farm
-	function FinalFantasylization_SubzoneTabethasFarm()
 
 	end
 --	Sentry Point

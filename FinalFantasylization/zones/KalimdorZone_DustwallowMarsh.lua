@@ -16,6 +16,7 @@ function FinalFantasylization_KalimdorZones_DustwallowMarsh()
 --		Brackenwall Village		FinalFantasylization_HordeTownBrackenwallVillage()
 --	Neutral
 --		Mudsprocket				FinalFantasylization_NeutralTownMudsprocket()
+--		Tabetha's Farm			FinalFantasylization_NeutralTownTabethasFarm()
 --
 --	SUBZONES:
 --	Alcaz Island			FinalFantasylization_SubzoneAlcazIsland()
@@ -36,7 +37,6 @@ function FinalFantasylization_KalimdorZones_DustwallowMarsh()
 --	The Quagmire			FinalFantasylization_SubzoneTheQuagmire()
 --		Beezil's Wreck			FinalFantasylization_SubzoneBeezilsWreck()
 --		Direhorn Post			FinalFantasylization_SubzoneDirehornPost()
---		Tabetha's Farm			FinalFantasylization_SubzoneTabethasFarm()
 --	Sentry Point			FinalFantasylization_SubzoneSentryPoint()
 --	Shady Rest Inn			FinalFantasylization_SubzoneShadyRestInn()
 --	Witch Hill				FinalFantasylization_SubzoneWitchHill()
@@ -135,6 +135,19 @@ function FinalFantasylization_KalimdorZones_DustwallowMarsh()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_NeutralTownMudsprocket()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Neutral Town: Tabetha's Farm
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Tabetha's Farm"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_NeutralTownTabethasFarm()
 		else
 			return
 		end
@@ -369,19 +382,6 @@ function FinalFantasylization_KalimdorZones_DustwallowMarsh()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneDirehornPost()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Dustwallow Marsh Subzone: Tabetha's Farm
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Tabetha's Farm"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTabethasFarm()
 		else
 			return
 		end
