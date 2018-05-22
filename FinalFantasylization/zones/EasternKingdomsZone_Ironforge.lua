@@ -21,7 +21,7 @@ function FinalFantasylization_EasternKingdomsZones_Ironforge()
 --		Hall of Arms				FinalFantasylization_Ironforge_SubzoneHallofArms()
 --	The Mystic Ward				FinalFantasylization_Ironforge_SubzoneTheMysticWard()
 --		Hall of Mysteries			FinalFantasylization_Ironforge_SubzoneHallofMysteries()
---	Old Ironforge				FinalFantasylization_Ironforge_SubzoneOld Ironforge()
+--	Old Ironforge				FinalFantasylization_Ironforge_SubzoneOldIronforge()
 --	Tinker Town					FinalFantasylization_Ironforge_SubzoneTinkerTown()
 --		Deeprun Tram				FinalFantasylization_Ironforge_SubzoneDeeprunTram()
 	--'==========================================================================================
