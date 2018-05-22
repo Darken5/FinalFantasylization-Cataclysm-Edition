@@ -27,14 +27,13 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 --	Lake Nazferiti					FinalFantasylization_SubzoneLakeNazferiti()
 --	Mizjah Ruins					FinalFantasylization_SubzoneMizjahRuins()
 --	Mosh'Ogg Ogre Mound				FinalFantasylization_SubzoneMoshOggOgreMound()
---	Nazferiti River					FinalFantasylization_SubzoneNazferitiRiver()
 --	Ruins of Zul'Kunda				FinalFantasylization_SubzoneRuinsofZulKunda()
 --	Ruins of Zul'Mamwe				FinalFantasylization_SubzoneRuinsofZulMamwe()
 --	The Savage Coast				FinalFantasylization_SubzoneTheSavageCoast()
 --	The Stockpile					FinalFantasylization_SubzoneTheStockpile()
 --	The Sundering					FinalFantasylization_SubzoneTheSundering()
 --	Tkashi Ruins					FinalFantasylization_SubzoneTkashiRuins()
---	Venture Company Base Camp		FinalFantasylization_SubzoneVentureCompanyBaseCamp()
+--	Venture Co. Base Camp			FinalFantasylization_SubzoneVentureCoBaseCamp()
 --	Venture Co. Operations Center	FinalFantasylization_SubzoneVentureCoOperationsCenter()
 --	The Vile Reef					FinalFantasylization_SubzoneTheVileReef()
 --	Yojamba Isle					FinalFantasylization_SubzoneYojambaIsle()
@@ -260,19 +259,6 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Nazferiti River
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Nazferiti River"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneNazferitiRiver()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Northern Stranglethorn Subzone: Ruins of Zul'Kunda
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Ruins of Zul'Kunda"] ) then
@@ -351,13 +337,13 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Venture Company Base Camp
+	--' Northern Stranglethorn Subzone: Venture Co. Base Camp
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Venture Company Base Camp"] ) then
+	elseif ( SubZoneName == SZ["Venture Co. Base Camp"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneVentureCompanyBaseCamp()
+			FinalFantasylization_SubzoneVentureCoBaseCamp()
 		else
 			return
 		end

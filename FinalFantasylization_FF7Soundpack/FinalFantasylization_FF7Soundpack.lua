@@ -2728,10 +2728,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneMoshOggOgreMound()
 
 	end
---	Nazferiti River
-	function FinalFantasylization_SubzoneNazferitiRiver()
-
-	end
 --	Ruins of Zul'Kunda
 	function FinalFantasylization_SubzoneRuinsofZulKunda()
 
@@ -2756,8 +2752,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTkashiRuins()
 
 	end
---	Venture Company Base Camp
-	function FinalFantasylization_SubzoneVentureCompanyBaseCamp()
+--	Venture Co. Base Camp
+	function FinalFantasylization_SubzoneVentureCoBaseCamp()
 
 	end
 --	Venture Co. Operations Center
