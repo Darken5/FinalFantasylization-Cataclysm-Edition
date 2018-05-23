@@ -22,6 +22,7 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --		Spearhead			FinalFantasylization_HordeTownSpearhead()
 --		Vendetta Point		FinalFantasylization_HordeTownVendettaPoint()
 --	Neutral:
+--		Firestone Point		FinalFantasylization_NeutralTownFirestonePoint()
 --		Overgrown Camp		FinalFantasylization_NeutralTownOvergrownCamp()
 -- 
 --	SUBZONES:
@@ -30,7 +31,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --		Bael Modan Excavation	FinalFantasylization_SubzoneBaelModanExcavation()
 --	Battlescar				FinalFantasylization_SubzoneBattlescar()
 --	Fields of Blood			FinalFantasylization_SubzoneFieldsofBlood()
---	Firestone Point			FinalFantasylization_SubzoneFirestonePoint()
 --	Frazzlecraz Motherlode	FinalFantasylization_SubzoneFrazzlecrazMotherlode()
 --	The Great Divide		FinalFantasylization_SubzoneTheGreatDivide()
 --	The Great Gate			FinalFantasylization_SubzoneTheGreatGate()
@@ -251,6 +251,19 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Southern Barrens Neutral Town: Firestone Point
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Firestone Point"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_NeutralTownFirestonePoint()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Southern Barrens Neutral Town: Overgrown Camp
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Overgrown Camp"] ) then
@@ -323,19 +336,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneFieldsofBlood()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Southern Barrens Subzone: Firestone Point
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Firestone Point"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFirestonePoint()
 		else
 			return
 		end

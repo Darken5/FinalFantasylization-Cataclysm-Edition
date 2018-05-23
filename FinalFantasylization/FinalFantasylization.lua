@@ -982,7 +982,7 @@ function FinalFantasylization_GetMusic()
 
 
 	-- Debug: Zone Catch-all
-			else
+			elseif not IsInInstance() then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")
 			end
 		end

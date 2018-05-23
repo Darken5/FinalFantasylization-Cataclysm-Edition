@@ -6080,6 +6080,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_HordeTowns();
 	end
 --	Neutral:
+--		Firestone Point
+	function FinalFantasylization_NeutralTownFirestonePoint()
+		FinalFantasylization_NeutralTowns();
+	end
 --		Overgrown Camp
 	function FinalFantasylization_NeutralTownOvergrownCamp()
 		FinalFantasylization_NeutralTowns();
@@ -6087,35 +6091,35 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Bael Modan
 	function FinalFantasylization_SubzoneBaelModan()
-
+		FinalFantasylization_PlayMusic(S .. Alliance5Town);
+		FinalFantasylization_debugMsg("Alliance5Town")
 	end
 --		Bael'dun Keep
 	function FinalFantasylization_SubzoneBaeldunKeep()
-
+		FinalFantasylization_PlayMusic(S .. Alliance5Town);
+		FinalFantasylization_debugMsg("Alliance5Town")
 	end
 --		Bael Modan Excavation
 	function FinalFantasylization_SubzoneBaelModanExcavation()
-
+		FinalFantasylization_PlayMusic(S .. Alliance5Town);
+		FinalFantasylization_debugMsg("Alliance5Town")
 	end
 --	Battlescar
 	function FinalFantasylization_SubzoneBattlescar()
-
+		FinalFantasylization_PlayMusic(S .. BattleGround3);
+		FinalFantasylization_debugMsg("BattleGround3")
 	end
 --	Fields of Blood
 	function FinalFantasylization_SubzoneFieldsofBlood()
 		FinalFantasylization_LandSong();
 	end
---	Firestone Point
-	function FinalFantasylization_SubzoneFirestonePoint()
-
-	end
 --	Frazzlecraz Motherlode
 	function FinalFantasylization_SubzoneFrazzlecrazMotherlode()
-
+		FinalFantasylization_LandSong();
 	end
 --	The Great Divide
 	function FinalFantasylization_SubzoneTheGreatDivide()
-
+		FinalFantasylization_LandSong();
 	end
 --	The Great Gate
 	function FinalFantasylization_SubzoneTheGreatGate()
@@ -6140,7 +6144,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Razorfen Kraul
 	function FinalFantasylization_SubzoneRazorfenKraul()
-
+		FinalFantasylization_LandSong();
 	end
 --	Ruins of Taurajo
 	function FinalFantasylization_SubzoneRuinsofTaurajo()
@@ -6149,7 +6153,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Stonetalon Pass
 	function FinalFantasylization_SubzoneStonetalonPass()
-
+		FinalFantasylization_LandSong();
 	end
 --'==========================================================================================
 --' Kalimdor Zones: Stonetalon Mountains
