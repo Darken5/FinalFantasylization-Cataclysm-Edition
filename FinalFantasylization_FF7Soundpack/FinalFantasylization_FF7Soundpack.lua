@@ -291,7 +291,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
 --	Old Ironforge
-	function FinalFantasylization_Ironforge_SubzoneOld Ironforge()
+	function FinalFantasylization_Ironforge_SubzoneOldIronforge()
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
@@ -5313,7 +5313,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Bladefist Bay
 	function FinalFantasylization_SubzoneBladefistBay()
-		FinalFantasylization_LandSong();
+		FinalFantasylization_WaterSong();
 	end
 --	Darkspear Strand
 	function FinalFantasylization_SubzoneDarkspearStrand()
@@ -5579,6 +5579,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_AllianceTownFeathermoonStronghold()
 		FinalFantasylization_AllianceTowns();
 	end
+--		New Thalanaar
+	function FinalFantasylization_AllianceTownNewThalanaar()
+		FinalFantasylization_AllianceTowns();
+	end
 --		Shadebough
 	function FinalFantasylization_AllianceTownShadebough()
 		FinalFantasylization_AllianceTowns();
@@ -5600,33 +5604,26 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_HordeTownStonemaulHold()
 		FinalFantasylization_HordeTowns();
 	end
+--
 --	SUBZONES:
---	Darkmist Ruins
-	function FinalFantasylization_SubzoneDarkmistRuins()
-
-	end
 --	Dire Maul
 	function FinalFantasylization_SubzoneDireMaul()
 
 	end
---	Dream Bough
-	function FinalFantasylization_SubzoneDreamBough()
+--		Broken Commons
+	function FinalFantasylization_SubzoneBrokenCommons()
 
 	end
---	The Emerald Summit
-	function FinalFantasylization_SubzoneTheEmeraldSummit()
+--		Eldreth Row
+	function FinalFantasylization_SubzoneEldrethRow()
 
 	end
---	Feral Scar Vale
-	function FinalFantasylization_SubzoneFeralScarVale()
+--		The Maul
+	function FinalFantasylization_SubzoneTheMaul()
 
 	end
 --	The Forgotten Coast
 	function FinalFantasylization_SubzoneTheForgottenCoast()
-
-	end
---	Frayfeather Highlands
-	function FinalFantasylization_SubzoneFrayfeatherHighlands()
 
 	end
 --	Gordunni Outpost
@@ -5641,36 +5638,44 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneHighWilderness()
 
 	end
+--		Feral Scar Vale
+	function FinalFantasylization_SubzoneFeralScarVale()
+
+	end
+--		Frayfeather Highlands
+	function FinalFantasylization_SubzoneFrayfeatherHighlands()
+
+	end
+--		Ruins of Isildien
+	function FinalFantasylization_SubzoneRuinsofIsildien()
+
+	end
 --	Jademir Lake
 	function FinalFantasylization_SubzoneJademirLake()
 
 	end
---	Lake Dumont
-	function FinalFantasylization_SubzoneLakeDumont()
+--		Dream Bough Lake
+	function FinalFantasylization_SubzoneDreamBoughLake()
 
 	end
---	Lariss Pavilion
-	function FinalFantasylization_SubzoneLarissPavilion()
+--	Dumont Lariss Pavilion
+	function FinalFantasylization_SubzoneDumontLarissPavilion()
 
 	end
 --	Lower Wilds
 	function FinalFantasylization_SubzoneLowerWilds()
 
 	end
---	New Thalanaar
-	function FinalFantasylization_SubzoneNewThalanaar()
+--		The Emerald Summit
+	function FinalFantasylization_SubzoneTheEmeraldSummit()
 
 	end
 --	Oneiros
-	function FinalFantasylization_SubzoneOneirosd()
+	function FinalFantasylization_SubzoneOneiros()
 
 	end
 --	Rage Scar Hold
 	function FinalFantasylization_SubzoneRageScarHold()
-
-	end
---	Ruins of Isildien
-	function FinalFantasylization_SubzoneRuinsofIsildien()
 
 	end
 --	Ruins of Ravenwind
@@ -5685,7 +5690,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneSardorIsle()
 
 	end
---	Ruins of Feathermoon
+--		Ruins of Feathermoon
 	function FinalFantasylization_SubzoneRuinsofFeathermoon()
 
 	end
@@ -5697,6 +5702,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheTwinColossals()
 
 	end
+--	The Veiled Sea
+	function FinalFantasylization_SubzoneTheVeiledSea()
+
+	end
 --	Verdantis River
 	function FinalFantasylization_SubzoneVerdantisRiver()
 
@@ -5705,15 +5714,19 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWildwindLake()
 
 	end
---	Woodpaw Den
-	function FinalFantasylization_SubzoneWoodpawDen()
-
-	end
 --	Woodpaw Hills
 	function FinalFantasylization_SubzoneWoodpawHills()
 
 	end
---	The Writhing Deep
+--		Darkmist Ruins
+	function FinalFantasylization_SubzoneDarkmistRuins()
+
+	end
+--		Woodpaw Den
+	function FinalFantasylization_SubzoneWoodpawDen()
+
+	end
+--		The Writhing Deep
 	function FinalFantasylization_SubzoneTheWrithingDeep()
 
 	end

@@ -12,6 +12,7 @@ function FinalFantasylization_KalimdorZones_Feralas()
 --	Alliance:
 --		Dreamer's Rest			FinalFantasylization_AllianceTownDreamersRest()
 --		Feathermoon Stronghold	FinalFantasylization_AllianceTownFeathermoonStronghold()
+--		New Thalanaar			FinalFantasylization_AllianceTownNewThalanaar()
 --		Shadebough				FinalFantasylization_AllianceTownShadebough()
 --		Tower of Estulan		FinalFantasylization_AllianceTownTowerofEstulan()
 --	Horde:
@@ -20,35 +21,37 @@ function FinalFantasylization_KalimdorZones_Feralas()
 --		Stonemaul Hold			FinalFantasylization_HordeTownStonemaulHold()
 --
 --	SUBZONES:
---	Darkmist Ruins			FinalFantasylization_SubzoneDarkmistRuins()
---	Dire Maul				FinalFantasylization_SubzoneDireMaul()
---	Dream Bough				FinalFantasylization_SubzoneDreamBough()
---	The Emerald Summit		FinalFantasylization_SubzoneTheEmeraldSummit()
---	Feral Scar Vale			FinalFantasylization_SubzoneFeralScarVale()
---	The Forgotten Coast		FinalFantasylization_SubzoneTheForgottenCoast()
---	Frayfeather Highlands	FinalFantasylization_SubzoneFrayfeatherHighlands()
---	Gordunni Outpost		FinalFantasylization_SubzoneGordunniOutpost()
---	Grimtotem Compound		FinalFantasylization_SubzoneGrimtotemCompound()
---	High Wilderness			FinalFantasylization_SubzoneHighWilderness()
---	Jademir Lake			FinalFantasylization_SubzoneJademirLake()
---	Lake Dumont				FinalFantasylization_SubzoneLakeDumont()
---	Lariss Pavilion			FinalFantasylization_SubzoneLarissPavilion()
---	Lower Wilds				FinalFantasylization_SubzoneLowerWilds()
---	New Thalanaar			FinalFantasylization_SubzoneNewThalanaar()
---	Oneiros					FinalFantasylization_SubzoneOneirosd()
---	Rage Scar Hold			FinalFantasylization_SubzoneRageScarHold()
---	Ruins of Isildien		FinalFantasylization_SubzoneRuinsofIsildien()
---	Ruins of Ravenwind		FinalFantasylization_SubzoneRuinsofRavenwind()
---	Ruins of Solarsal		FinalFantasylization_SubzoneRuinsofSolarsal()
---	Sardor Isle				FinalFantasylization_SubzoneSardorIsle()
---	Ruins of Feathermoon	FinalFantasylization_SubzoneRuinsofFeathermoon()
---	The Steam Pools			FinalFantasylization_SubzoneTheSteamPools()
---	The Twin Colossals		FinalFantasylization_SubzoneTheTwinColossals()
---	Verdantis River			FinalFantasylization_SubzoneVerdantisRiver()
---	Wildwind Lake			FinalFantasylization_SubzoneWildwindLake()
---	Woodpaw Den				FinalFantasylization_SubzoneWoodpawDen()
---	Woodpaw Hills			FinalFantasylization_SubzoneWoodpawHills()
---	The Writhing Deep		FinalFantasylization_SubzoneTheWrithingDeep()
+--	Dire Maul					FinalFantasylization_SubzoneDireMaul()
+--		Broken Commons				FinalFantasylization_SubzoneBrokenCommons()
+--		Eldreth Row					FinalFantasylization_SubzoneEldrethRow()
+--		The Maul					FinalFantasylization_SubzoneTheMaul()
+--	The Forgotten Coast			FinalFantasylization_SubzoneTheForgottenCoast()
+--	Gordunni Outpost			FinalFantasylization_SubzoneGordunniOutpost()
+--	Grimtotem Compound			FinalFantasylization_SubzoneGrimtotemCompound()
+--	High Wilderness				FinalFantasylization_SubzoneHighWilderness()
+--		Feral Scar Vale				FinalFantasylization_SubzoneFeralScarVale()
+--		Frayfeather Highlands		FinalFantasylization_SubzoneFrayfeatherHighlands()
+--		Ruins of Isildien			FinalFantasylization_SubzoneRuinsofIsildien()
+--	Jademir Lake				FinalFantasylization_SubzoneJademirLake()
+--		Dream Bough Lake			FinalFantasylization_SubzoneDreamBoughLake()
+--	Dumont Lariss Pavilion		FinalFantasylization_SubzoneDumontLarissPavilion()
+--	Lower Wilds					FinalFantasylization_SubzoneLowerWilds()
+--		The Emerald Summit			FinalFantasylization_SubzoneTheEmeraldSummit()
+--	Oneiros						FinalFantasylization_SubzoneOneiros()
+--	Rage Scar Hold				FinalFantasylization_SubzoneRageScarHold()
+--	Ruins of Ravenwind			FinalFantasylization_SubzoneRuinsofRavenwind()
+--	Ruins of Solarsal			FinalFantasylization_SubzoneRuinsofSolarsal()
+--	Sardor Isle					FinalFantasylization_SubzoneSardorIsle()
+--		Ruins of Feathermoon		FinalFantasylization_SubzoneRuinsofFeathermoon()
+--	The Steam Pools				FinalFantasylization_SubzoneTheSteamPools()
+--	The Twin Colossals			FinalFantasylization_SubzoneTheTwinColossals()
+--	The Veiled Sea				FinalFantasylization_SubzoneTheVeiledSea()
+--	Verdantis River				FinalFantasylization_SubzoneVerdantisRiver()
+--	Wildwind Lake				FinalFantasylization_SubzoneWildwindLake()
+--	Woodpaw Hills				FinalFantasylization_SubzoneWoodpawHills()
+--		Darkmist Ruins				FinalFantasylization_SubzoneDarkmistRuins()
+--		Woodpaw Den					FinalFantasylization_SubzoneWoodpawDen()
+--		The Writhing Deep			FinalFantasylization_SubzoneTheWrithingDeep()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -105,6 +108,24 @@ function FinalFantasylization_KalimdorZones_Feralas()
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_AllianceTownFeathermoonStronghold()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Feralas Alliance Town: New Thalanaar
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["New Thalanaar"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownNewThalanaar()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -205,19 +226,6 @@ function FinalFantasylization_KalimdorZones_Feralas()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Feralas Subzone: Darkmist Ruins
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Darkmist Ruins"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDarkmistRuins()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Feralas Subzone: Dire Maul
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Dire Maul"] ) then
@@ -231,39 +239,39 @@ function FinalFantasylization_KalimdorZones_Feralas()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Feralas Subzone: Dream Bough
+	--' Feralas Subzone: Broken Commons
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Dream Bough"] ) then
+	elseif ( SubZoneName == SZ["Broken Commons"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDreamBough()
+			FinalFantasylization_SubzoneBrokenCommons()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Feralas Subzone: The Emerald Summit
+	--' Feralas Subzone: Eldreth Row
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Emerald Summit"] ) then
+	elseif ( SubZoneName == SZ["Eldreth Row"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheEmeraldSummit()
+			FinalFantasylization_SubzoneEldrethRow()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Feralas Subzone: Feral Scar Vale
+	--' Feralas Subzone: The Maul
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Feral Scar Vale"] ) then
+	elseif ( SubZoneName == SZ["The Maul"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFeralScarVale()
+			FinalFantasylization_SubzoneTheMaul()
 		else
 			return
 		end
@@ -277,19 +285,6 @@ function FinalFantasylization_KalimdorZones_Feralas()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheForgottenCoast()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Feralas Subzone: Frayfeather Highlands
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Frayfeather Highlands"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFrayfeatherHighlands()
 		else
 			return
 		end
@@ -335,6 +330,45 @@ function FinalFantasylization_KalimdorZones_Feralas()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Feralas Subzone: Feral Scar Vale
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Feral Scar Vale"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneFeralScarVale()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Feralas Subzone: Frayfeather Highlands
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Frayfeather Highlands"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneFrayfeatherHighlands()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Feralas Subzone: Ruins of Isildien
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Ruins of Isildien"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneRuinsofIsildien()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Feralas Subzone: Jademir Lake
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Jademir Lake"] ) then
@@ -348,26 +382,26 @@ function FinalFantasylization_KalimdorZones_Feralas()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Feralas Subzone: Lake Dumont
+	--' Feralas Subzone: Dream Bough Lake
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Lake Dumont"] ) then
+	elseif ( SubZoneName == SZ["Dream Bough Lake"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneLakeDumont()
+			FinalFantasylization_SubzoneDreamBoughLake()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Feralas Subzone: Lariss Pavilion
+	--' Feralas Subzone: Dumont Lariss Pavilion
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Lariss Pavilion"] ) then
+	elseif ( SubZoneName == SZ["Dumont Lariss Pavilion"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneLarissPavilion()
+			FinalFantasylization_SubzoneDumontLarissPavilion()
 		else
 			return
 		end
@@ -387,13 +421,13 @@ function FinalFantasylization_KalimdorZones_Feralas()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Feralas Subzone: New Thalanaar
+	--' Feralas Subzone: The Emerald Summit
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["New Thalanaar"] ) then
+	elseif ( SubZoneName == SZ["The Emerald Summit"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneNewThalanaar()
+			FinalFantasylization_SubzoneTheEmeraldSummit()
 		else
 			return
 		end
@@ -406,7 +440,7 @@ function FinalFantasylization_KalimdorZones_Feralas()
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneOneirosd()
+			FinalFantasylization_SubzoneOneiros()
 		else
 			return
 		end
@@ -420,19 +454,6 @@ function FinalFantasylization_KalimdorZones_Feralas()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneRageScarHold()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Feralas Subzone: Ruins of Isildien
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ruins of Isildien"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRuinsofIsildien()
 		else
 			return
 		end
@@ -517,6 +538,19 @@ function FinalFantasylization_KalimdorZones_Feralas()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Feralas Subzone: The Veiled Sea
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Veiled Sea"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheVeiledSea()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Feralas Subzone: Verdantis River
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Verdantis River"] ) then
@@ -543,19 +577,6 @@ function FinalFantasylization_KalimdorZones_Feralas()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Feralas Subzone: Woodpaw Den
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Woodpaw Den"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneWoodpawDen()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Feralas Subzone: Woodpaw Hills
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Woodpaw Hills"] ) then
@@ -563,6 +584,32 @@ function FinalFantasylization_KalimdorZones_Feralas()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneWoodpawHills()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Feralas Subzone: Darkmist Ruins
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Darkmist Ruins"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneDarkmistRuins()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Feralas Subzone: Woodpaw Den
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Woodpaw Den"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWoodpawDen()
 		else
 			return
 		end
