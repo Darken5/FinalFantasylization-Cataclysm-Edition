@@ -11,25 +11,34 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 --	TOWNS:
 --	Alliance:
 --		Nethergarde Keep				FinalFantasylization_AllianceTownNethergardeKeep()
+--		Shattered Beachhead				FinalFantasylization_AllianceTownShatteredBeachhead()
 --		Surwich							FinalFantasylization_AllianceTownSurwich()
 --	Horde:
---		Dreadmaul Hold					FinalFantasylization_HordeTownDreadmaulHold()
+--		Okril'lon Hold					FinalFantasylization_HordeTownOkrillonHold()
+--		Shattered Landing				FinalFantasylization_HordeTownShatteredLanding()
 --		Sunveil Excursion				FinalFantasylization_HordeTownSunveilExcursion()
 --	
 --	SUBZONES:
 --	Altar of Storms					FinalFantasylization_SubzoneAltarofStorms()
 --	The Dark Portal					FinalFantasylization_SubzoneTheDarkPortal()
+--	Dreadmaul Furnace				FinalFantasylization_SubzoneDreadmaulFurnace()
 --	Dreadmaul Post					FinalFantasylization_SubzoneDreadmaulPost()
---	Garrison Armory					FinalFantasylization_SubzoneGarrisonArmory()
+--	The Forbidding Sea				FinalFantasylization_SubzoneTheForbiddingSea()
+--	Nethergarde Mines				FinalFantasylization_SubzoneNethergardeMines()
+--	Nethergarde Supply Camps		FinalFantasylization_SubzoneNethergardeSupplyCamps()
+--	The Forge Grounds				FinalFantasylization_SubzoneTheForgeGrounds()
 --	The Red Reaches					FinalFantasylization_SubzoneTheRedReaches()
+--		Bloodwash Cavern				FinalFantasylization_SubzoneBloodwashCavern()
 --		Bloodwash Fighting Pits			FinalFantasylization_SubzoneBloodwashFightingPits()
 --		Bloodwash Shrine				FinalFantasylization_SubzoneBloodwashShrine()
 --		Rockpool Village				FinalFantasylization_SubzoneRockpoolVillage()
---		Shattershore					FinalFantasylization_SubzoneShattershore()
 --	Rise of the Defiler				FinalFantasylization_SubzoneRiseoftheDefiler()
 --	Serpent's Coil					FinalFantasylization_SubzoneSerpentsCoil()
+--	Shattershore					FinalFantasylization_SubzoneShattershore()
+--		The Shattered Front				FinalFantasylization_SubzoneTheShatteredFront()
 --	The Tainted Forest				FinalFantasylization_SubzoneTheTaintedForest()
 --		Maldraz							FinalFantasylization_SubzoneMaldraz()
+--	The Tainted Scar				FinalFantasylization_SubzoneTheTaintedScar()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -78,6 +87,24 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Blasted Lands Alliance Town: Shattered Beachhead
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Shattered Beachhead"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownShatteredBeachhead()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Blasted Lands Alliance Town: Surwich
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Surwich"] ) then
@@ -96,14 +123,32 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Blasted Lands Horde Town: Dreadmaul Hold
+	--' Blasted Lands Horde Town: Okril'lon Hold
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Dreadmaul Hold"] ) then
+	elseif ( SubZoneName == SZ["Okril'lon Hold"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownDreadmaulHold()
+				FinalFantasylization_HordeTownOkrillonHold()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Blasted Lands Horde Town: Shattered Landing
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Shattered Landing"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_HordeTownShatteredLanding()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -158,6 +203,19 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Blasted Lands Subzone: Dreadmaul Furnace
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Dreadmaul Furnace"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneDreadmaulFurnace()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Blasted Lands Subzone: Dreadmaul Post
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Dreadmaul Post"] ) then
@@ -171,13 +229,52 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Blasted Lands Subzone: Garrison Armory
+	--' Blasted Lands Subzone: The Forbidding Sea
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Garrison Armory"] ) then
+	elseif ( SubZoneName == SZ["The Forbidding Sea"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneGarrisonArmory()
+			FinalFantasylization_SubzoneTheForbiddingSea()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Blasted Lands Subzone: Nethergarde Mines
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Nethergarde Mines"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneNethergardeMines()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Blasted Lands Subzone: Nethergarde Supply Camps
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Nethergarde Supply Camps"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneNethergardeSupplyCamps()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Blasted Lands Subzone: The Forge Grounds
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Forge Grounds"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheForgeGrounds()
 		else
 			return
 		end
@@ -197,7 +294,20 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Blasted Lands Subzone: Bloodwash Fighting Pits in The Red Reaches
+	--' Blasted Lands Subzone: Bloodwash Cavern
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Bloodwash Cavern"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneBloodwashCavern()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Blasted Lands Subzone: Bloodwash Fighting Pits
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Bloodwash Fighting Pits"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
@@ -210,7 +320,7 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Blasted Lands Subzone: Bloodwash Shrine in The Red Reaches
+	--' Blasted Lands Subzone: Bloodwash Shrine
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Bloodwash Shrine"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
@@ -223,26 +333,13 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Blasted Lands Subzone: Rockpool Village in The Red Reaches
+	--' Blasted Lands Subzone: Rockpool Village
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Rockpool Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneRockpoolVillage()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Blasted Lands Subzone: Shattershore in The Red Reaches
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Shattershore"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneShattershore()
 		else
 			return
 		end
@@ -275,6 +372,32 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Blasted Lands Subzone: Shattershore
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Shattershore"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneShattershore()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Blasted Lands Subzone: The Shattered Front
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Shattered Front"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheShatteredFront()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Blasted Lands Subzone: The Tainted Forest
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["The Tainted Forest"] ) then
@@ -288,13 +411,26 @@ function FinalFantasylization_EasternKingdomsZones_BlastedLands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Blasted Lands Subzone: Maldraz in The Tainted Forest
+	--' Blasted Lands Subzone: Maldraz
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Maldraz"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneMaldraz()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Blasted Lands Subzone: The Tainted Scar
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Tainted Scar"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheTaintedScar()
 		else
 			return
 		end

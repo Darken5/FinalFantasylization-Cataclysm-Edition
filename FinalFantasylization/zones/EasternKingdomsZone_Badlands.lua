@@ -26,7 +26,7 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 --	Camp Boff					FinalFantasylization_SubzoneCampBoff()
 --	Camp Cagg					FinalFantasylization_SubzoneCampCagg()
 --	Camp Kosh					FinalFantasylization_SubzoneCampKosh()
---	Camp Wurg					FinalFantasylization_SubzoneCampWurg()
+--	Crypt						FinalFantasylization_SubzoneCrypt()
 --	Dustbelch Grotto			FinalFantasylization_SubzoneDustbelchGrotto()
 --	The Dustbowl				FinalFantasylization_SubzoneTheDustbowl()
 --	Dustwind Gulch				FinalFantasylization_SubzoneDustwindGulch()
@@ -41,7 +41,6 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 --	Tomb of the Watchers		FinalFantasylization_SubzoneTomboftheWatchers()
 --	Uldaman						FinalFantasylization_SubzoneUldaman()
 --		Uldaman Entrance			FinalFantasylization_SubzoneUldamanEntrance()
---	Valley of Fangs				FinalFantasylization_SubzoneValleyofFangs()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -247,13 +246,13 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Badlands Subzone: Camp Wurg
+	--' Badlands Subzone: Crypt
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Camp Wurg"] ) then
+	elseif ( SubZoneName == SZ["Crypt"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneCampWurg()
+			FinalFantasylization_SubzoneCrypt()
 		else
 			return
 		end
@@ -436,19 +435,6 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneUldamanEntrance()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Badlands Subzone: Valley of Fangs
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Valley of Fangs"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneValleyofFangs()
 		else
 			return
 		end

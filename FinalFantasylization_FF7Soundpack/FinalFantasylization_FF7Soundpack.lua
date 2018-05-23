@@ -994,8 +994,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneCampKosh()
 	
 	end
---	Camp Wurg
-	function FinalFantasylization_SubzoneCampWurg()
+--	Crypt
+	function FinalFantasylization_SubzoneCrypt()
 	
 	end
 --	Dustbelch Grotto
@@ -1054,10 +1054,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneUldamanEntrance()
 	
 	end
---	Valley of Fangs
-	function FinalFantasylization_SubzoneValleyofFangs()
-	
-	end
 --'==========================================================================================
 --' Eastern Kingdoms Zone: Blasted Lands
 --'==========================================================================================
@@ -1085,13 +1081,21 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_AllianceTownNethergardeKeep()
 		FinalFantasylization_AllianceTowns();
 	end
+--		Shattered Beachhead
+	function FinalFantasylization_AllianceTownShatteredBeachhead()
+		FinalFantasylization_AllianceTowns();
+	end
 --		Surwich
 	function FinalFantasylization_AllianceTownSurwich()
 		FinalFantasylization_AllianceTowns();
 	end
 --	Horde:
---		Dreadmaul Hold
-	function FinalFantasylization_HordeTownDreadmaulHold()
+--		Okril'lon Hold
+	function FinalFantasylization_HordeTownOkrillonHold()
+		FinalFantasylization_HordeTowns();
+	end
+--		Shattered Landing
+	function FinalFantasylization_HordeTownShatteredLanding()
 		FinalFantasylization_HordeTowns();
 	end
 --		Sunveil Excursion
@@ -1101,55 +1105,83 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Altar of Storms
 	function FinalFantasylization_SubzoneAltarofStorms()
-	
+
 	end
 --	The Dark Portal
 	function FinalFantasylization_SubzoneTheDarkPortal()
-	
+
+	end
+--	Dreadmaul Furnace
+	function FinalFantasylization_SubzoneDreadmaulFurnace()
+
 	end
 --	Dreadmaul Post
 	function FinalFantasylization_SubzoneDreadmaulPost()
-	
+
 	end
---	Garrison Armory
-	function FinalFantasylization_SubzoneGarrisonArmory()
-	
+--	The Forbidding Sea
+	function FinalFantasylization_SubzoneTheForbiddingSea()
+
+	end
+--	Nethergarde Mines
+	function FinalFantasylization_SubzoneNethergardeMines()
+
+	end
+--	Nethergarde Supply Camps
+	function FinalFantasylization_SubzoneNethergardeSupplyCamps()
+
+	end
+--	The Forge Grounds
+	function FinalFantasylization_SubzoneTheForgeGrounds()
+
 	end
 --	The Red Reaches
 	function FinalFantasylization_SubzoneTheRedReaches()
-	
+
+	end
+--		Bloodwash Cavern
+	function FinalFantasylization_SubzoneBloodwashCavern()
+
 	end
 --		Bloodwash Fighting Pits
 	function FinalFantasylization_SubzoneBloodwashFightingPits()
-	
+
 	end
 --		Bloodwash Shrine
 	function FinalFantasylization_SubzoneBloodwashShrine()
-	
+
 	end
 --		Rockpool Village
 	function FinalFantasylization_SubzoneRockpoolVillage()
-	
-	end
---		Shattershore
-	function FinalFantasylization_SubzoneShattershore()
-	
+
 	end
 --	Rise of the Defiler
 	function FinalFantasylization_SubzoneRiseoftheDefiler()
-	
+
 	end
 --	Serpent's Coil
 	function FinalFantasylization_SubzoneSerpentsCoil()
-	
+
+	end
+--	Shattershore
+	function FinalFantasylization_SubzoneShattershore()
+
+	end
+--		The Shattered Front
+	function FinalFantasylization_SubzoneTheShatteredFront()
+
 	end
 --	The Tainted Forest
 	function FinalFantasylization_SubzoneTheTaintedForest()
-	
+
 	end
 --		Maldraz
 	function FinalFantasylization_SubzoneMaldraz()
-	
+
+	end
+--	The Tainted Scar
+	function FinalFantasylization_SubzoneTheTaintedScar()
+
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zone: Burning Steppes
