@@ -5494,11 +5494,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Bluefen
 	function FinalFantasylization_SubzoneBluefen()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Darkmist Cavern
 	function FinalFantasylization_SubzoneDarkmistCavern()
-
+		FinalFantasylization_CaveSong()
 	end
 --	The Dragonmurk
 	function FinalFantasylization_SubzoneTheDragonmurk()
@@ -5514,11 +5514,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Dreadmurk Shore
 	function FinalFantasylization_SubzoneDreadmurkShore()
-
+		FinalFantasylization_WaterSong()
 	end
 --	Dustwallow Bay
 	function FinalFantasylization_SubzoneDustwallowBay()
-
+		FinalFantasylization_WaterSong()
 	end
 --		Nat's Landing
 	function FinalFantasylization_SubzoneNatsLanding()
@@ -5530,7 +5530,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
-
+		FinalFantasylization_WaterSong()
 	end
 --	Lost Point
 	function FinalFantasylization_SubzoneLostPoint()
@@ -5538,11 +5538,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	North Point Tower
 	function FinalFantasylization_SubzoneNorthPointTower()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --	The Quagmire
 	function FinalFantasylization_SubzoneTheQuagmire()
-
+		FinalFantasylization_SwampSong()
 	end
 --		Beezil's Wreck
 	function FinalFantasylization_SubzoneBeezilsWreck()
@@ -5558,15 +5558,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Shady Rest Inn
 	function FinalFantasylization_SubzoneShadyRestInn()
-
+		FinalFantasylization_PlayMusic(S .. DeadSong);
+		FinalFantasylization_debugMsg("DeadSong")
 	end
 --	Witch Hill
 	function FinalFantasylization_SubzoneWitchHill()
-
+		FinalFantasylization_SwampSong()
 	end
 --		Swamplight Manor
 	function FinalFantasylization_SubzoneSwamplightManor()
-
+		FinalFantasylization_WarySong()
 	end
 --	Wyrmbog
 	function FinalFantasylization_SubzoneWyrmbog()
