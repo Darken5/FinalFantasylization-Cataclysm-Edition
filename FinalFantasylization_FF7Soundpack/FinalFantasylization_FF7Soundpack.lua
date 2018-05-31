@@ -1452,27 +1452,27 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --			Gnomeregan
 	function FinalFantasylization_Gnome_Start_Gnomeregan()
-
+		FinalFantasylization_HostileSong();
 	end
 --				The Clockwerk Run
 	function FinalFantasylization_Gnome_Start_TheClockwerkRun()
-
+		FinalFantasylization_HostileSong();
 	end
 --				Loading Room
 	function FinalFantasylization_Gnome_Start_LoadingRoom()
-
+		FinalFantasylization_HostileSong();
 	end
 --				The Old Dormitory
 	function FinalFantasylization_Gnome_Start_TheOldDormitory()
-
+		FinalFantasylization_HostileSong();
 	end
 --				Train Depot
 	function FinalFantasylization_Gnome_Start_TrainDepot()
-
+		FinalFantasylization_HostileSong();
 	end
 --				Workshop Entrance
 	function FinalFantasylization_Gnome_Start_WorkshopEntrance()
-
+		FinalFantasylization_HostileSong();
 	end
 --			Iceflow Lake
 	function FinalFantasylization_Gnome_Start_IceflowLake()
@@ -5486,7 +5486,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Blackhoof Village
 	function FinalFantasylization_SubzoneBlackhoofVillage()
-
+		FinalFantasylization_PlayMusic(S .. Alliance10Town);
+		FinalFantasylization_debugMsg("Alliance10Town")
 	end
 --	Bloodfen Burrow
 	function FinalFantasylization_SubzoneBloodfenBurrow()
@@ -5502,7 +5503,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Dragonmurk
 	function FinalFantasylization_SubzoneTheDragonmurk()
-
+		FinalFantasylization_SwampSong()
 	end
 --		The Den of Flame
 	function FinalFantasylization_SubzoneTheDenofFlame()
@@ -5510,7 +5511,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Stonemaul Ruins
 	function FinalFantasylization_SubzoneStonemaulRuins()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Dreadmurk Shore
 	function FinalFantasylization_SubzoneDreadmurkShore()
@@ -5546,11 +5547,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Beezil's Wreck
 	function FinalFantasylization_SubzoneBeezilsWreck()
-
+		FinalFantasylization_SwampSong()
 	end
 --		Direhorn Post
 	function FinalFantasylization_SubzoneDirehornPost()
-
+		FinalFantasylization_PlayMusic(S .. Alliance10Town);
+		FinalFantasylization_debugMsg("Alliance10Town")
 	end
 --	Sentry Point
 	function FinalFantasylization_SubzoneSentryPoint()
@@ -5981,7 +5983,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Great Divide
 	function FinalFantasylization_SubzoneTheGreatDivide()
-
+		FinalFantasylization_LandSong();
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
