@@ -1531,15 +1531,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Bahrum's Post
 	function FinalFantasylization_SubzoneBahrumsPost()
-
+		FinalFantasylization_SnowSong();
 	end
 --	Frostmane Front
 	function FinalFantasylization_SubzoneFrostmaneFront()
-
+		FinalFantasylization_SnowSong();
 	end
 --	Frostmane Retreat
 	function FinalFantasylization_SubzoneFrostmaneRetreat()
-
+		FinalFantasylization_SnowSong();
 	end
 --	The Grizzled Den
 	function FinalFantasylization_SubzoneTheGrizzledDen()
@@ -1547,23 +1547,23 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Gol'Bolar Quarry Mine
 	function FinalFantasylization_SubzoneGolBolarQuarryMine()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Helm's Bed Lake
 	function FinalFantasylization_SubzoneHelmsBedLake()
-
+		FinalFantasylization_LakeSong();
 	end
 --	Ironband's Compound
 	function FinalFantasylization_SubzoneIronbandsCompound()
-
+		FinalFantasylization_SnowSong();
 	end
 --	The Mountain Den
 	function FinalFantasylization_SubzoneTheMountainDen()
-
+		FinalFantasylization_CaveSong();
 	end
 --	North Gate Pass
 	function FinalFantasylization_SubzoneNorthGatePass()
-
+		FinalFantasylization_SnowSong();
 	end
 --	Shimmer Ridge
 	function FinalFantasylization_SubzoneShimmerRidge()
@@ -1571,11 +1571,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	South Gate Pass
 	function FinalFantasylization_SubzoneSouthGatePass()
-
+		FinalFantasylization_SnowSong();
 	end
 --	The Tundrid Hills
 	function FinalFantasylization_SubzoneTheTundridHills()
-
+		FinalFantasylization_SnowSong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Duskwood
@@ -2595,12 +2595,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Loch Modan
 	function FinalFantasylization_EasternKingdomsLochModan()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SwampSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
+		FinalFantasylization_FriendlySong();
 	end
 --	Zone Event:
 --		Player is Resting
@@ -2632,55 +2627,55 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Dun Algaz
 	function FinalFantasylization_SubzoneDunAlgaz()
-
+		FinalFantasylization_FriendlySong();
 	end
 --	Grizzlepaw Ridge
 	function FinalFantasylization_SubzoneGrizzlepawRidge()
-
+		FinalFantasylization_FriendlySong();
 	end
 --	Ironband's Excavation Site
 	function FinalFantasylization_SubzoneIronbandsExcavationSite()
-
+		FinalFantasylization_FriendlySong();
 	end
 --		Ironwing Cavern
 	function FinalFantasylization_SubzoneIronwingCavern()
-
+		FinalFantasylization_CaveSong();
 	end
 --	The Loch
 	function FinalFantasylization_SubzoneTheLoch()
-
+		FinalFantasylization_PlagueSong();
 	end
 --		Twilight Camp
 	function FinalFantasylization_SubzoneTwilightCamp()
-
+		FinalFantasylization_SwampSong();
 	end
 --	Mo'grosh Stronghold
 	function FinalFantasylization_SubzoneMogroshStronghold()
-
+		FinalFantasylization_LandSong();
 	end
 --	North Gate Pass
 	function FinalFantasylization_SubzoneNorthGatePass()
-
+		FinalFantasylization_FriendlySong();
 	end
 --	Silver Stream Mine
 	function FinalFantasylization_SubzoneSilverStreamMine()
-
+		FinalFantasylization_CaveSong();
 	end
 --	South Gate Pass
 	function FinalFantasylization_SubzoneSouthGatePass()
-
+		FinalFantasylization_SnowSong();
 	end
 --	Stonesplinter Valley
 	function FinalFantasylization_SubzoneStonesplinterValley()
-
+		FinalFantasylization_FriendlySong();
 	end
 --	Stonewrought Dam
 	function FinalFantasylization_SubzoneStonewroughtDam()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	Valley of Kings
 	function FinalFantasylization_SubzoneValleyofKings()
-
+		FinalFantasylization_FriendlySong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Northern Stranglethorn

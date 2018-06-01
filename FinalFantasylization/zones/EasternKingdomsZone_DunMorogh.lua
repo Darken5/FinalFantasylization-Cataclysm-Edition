@@ -623,10 +623,10 @@ function FinalFantasylization_EasternKingdomsZones_DunMorogh()
 	--'==========================================================================================
 	--' Dun Morogh Subzone: Gol'Bolar Quarry Mine
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Gol'Bolar Quarry Mine"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
+	elseif ( MinimapZoneName == SZ["Gol'Bolar Quarry Mine"] ) then
+		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MinimapZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = MinimapZoneName
 			FinalFantasylization_SubzoneGolBolarQuarryMine()
 		else
 			return
