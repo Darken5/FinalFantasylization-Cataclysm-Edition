@@ -17,10 +17,11 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 --		Booty Bay						FinalFantasylization_NeutralTownBootyBay()
 --
 --	SUBZONES:
---	Bloodsail Compound		FinalFantasylization_SubzoneBloodsailCompound()
 --	The Crystal Shore		FinalFantasylization_SubzoneTheCrystalShore()
 --	Crystalvein Mine		FinalFantasylization_SubzoneCrystalveinMine()
 --	Gurubashi Arena			FinalFantasylization_SubzoneGurubashiArena()
+--		The Great Arena			FinalFantasylization_SubzoneTheGreatArena()
+--		Battle Ring				FinalFantasylization_SubzoneBattleRing()
 --	Jaguero Isle			FinalFantasylization_SubzoneJagueroIsle()
 --	Janeiro's Point			FinalFantasylization_SubzoneJaneirosPoint()
 --	Mistvale Valley			FinalFantasylization_SubzoneMistvaleValley()
@@ -111,19 +112,6 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Cape of Stranglethorn Subzone: Bloodsail Compound
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Bloodsail Compound"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBloodsailCompound()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Cape of Stranglethorn Subzone: The Crystal Shore
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["The Crystal Shore"] ) then
@@ -157,6 +145,32 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneGurubashiArena()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Cape of Stranglethorn Subzone: The Great Arena in Gurubashi Arena
+	--'==========================================================================================
+	elseif ( MinimapZoneName == SZ["The Great Arena"] ) then
+		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MinimapZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = MinimapZoneName
+			FinalFantasylization_SubzoneTheGreatArena()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Cape of Stranglethorn Subzone: Battle Ring in Gurubashi Arena
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Battle Ring"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneBattleRing()
 		else
 			return
 		end

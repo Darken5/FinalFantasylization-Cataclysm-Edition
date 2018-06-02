@@ -1334,65 +1334,70 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_NeutralTowns();
 	end
 --	SUBZONES:
---	Bloodsail Compound
-	function FinalFantasylization_SubzoneBloodsailCompound()
-
-	end
 --	The Crystal Shore
 	function FinalFantasylization_SubzoneTheCrystalShore()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Crystalvein Mine
 	function FinalFantasylization_SubzoneCrystalveinMine()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Gurubashi Arena
 	function FinalFantasylization_SubzoneGurubashiArena()
-
+		FinalFantasylization_BattleGround();
+	end
+--		The Great Arena
+	function FinalFantasylization_SubzoneTheGreatArena()
+		FinalFantasylization_BattleGround();
+	end
+--		Battle Ring
+	function FinalFantasylization_SubzoneBattleRing()
+		FinalFantasylization_HostileSong();
 	end
 --	Jaguero Isle
 	function FinalFantasylization_SubzoneJagueroIsle()
-
+		FinalFantasylization_BeachSong();
 	end
 --	Janeiro's Point
 	function FinalFantasylization_SubzoneJaneirosPoint()
-
+		FinalFantasylization_PlayMusic(S ..Misc1Song);
+		FinalFantasylization_debugMsg("Misc1Song")
 	end
 --	Mistvale Valley
 	function FinalFantasylization_SubzoneMistvaleValley()
-
+		FinalFantasylization_ForestSong();
 	end
 --		Spirit Den
 	function FinalFantasylization_SubzoneSpiritDen()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Nek'mani Wellspring
 	function FinalFantasylization_SubzoneNekmaniWellspring()
-
+		FinalFantasylization_LakeSong();
 	end
 --	Ruins of Aboraz
 	function FinalFantasylization_SubzoneRuinsofAboraz()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Ruins of Jubuwal
 	function FinalFantasylization_SubzoneRuinsofJubuwal()
-
+		FinalFantasylization_ForestSong();
 	end
 --	South Seas
 	function FinalFantasylization_SubzoneSouthSeas()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Southern Savage Coast
 	function FinalFantasylization_SubzoneSouthernSavageCoast()
-
+		FinalFantasylization_WaterSong();
 	end
 --	The Sundering
 	function FinalFantasylization_SubzoneTheSundering()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Wild Shore
 	function FinalFantasylization_SubzoneWildShore()
-
+		FinalFantasylization_WaterSong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Dun Morogh : Alliance
@@ -1582,7 +1587,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Duskwood
 	function FinalFantasylization_EasternKingdomsDuskwood()
-
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
 	end
 --	Zone Events:
 --		Player is Resting
@@ -2725,87 +2735,89 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Bal'lal Ruins
 	function FinalFantasylization_SubzoneBallalRuins()
-
+		FinalFantasylization_BeachSong()
 	end
 --	Balia'mah Ruins
 	function FinalFantasylization_SubzoneBaliamahRuins()
-
+		FinalFantasylization_ForestSong()
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
-
+		FinalFantasylization_WaterSong()
 	end
 --	Kal'ai Ruins
 	function FinalFantasylization_SubzoneKalaiRuins()
-
+		FinalFantasylization_WarySong()
 	end
 --	Kurzen's Compound
 	function FinalFantasylization_SubzoneKurzensCompound()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Lake Nazferiti
 	function FinalFantasylization_SubzoneLakeNazferiti()
-
+		FinalFantasylization_LakeSong();
 	end
 --	Mizjah Ruins
 	function FinalFantasylization_SubzoneMizjahRuins()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Mosh'Ogg Ogre Mound
 	function FinalFantasylization_SubzoneMoshOggOgreMound()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Ruins of Zul'Kunda
 	function FinalFantasylization_SubzoneRuinsofZulKunda()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Ruins of Zul'Mamwe
 	function FinalFantasylization_SubzoneRuinsofZulMamwe()
-
+		FinalFantasylization_ForestSong()
 	end
 --	The Savage Coast
 	function FinalFantasylization_SubzoneTheSavageCoast()
-
+		FinalFantasylization_BeachSong()
 	end
 --	The Stockpile
 	function FinalFantasylization_SubzoneTheStockpile()
-
+		FinalFantasylization_ForestSong()
 	end
 --	The Sundering
 	function FinalFantasylization_SubzoneTheSundering()
-
+		FinalFantasylization_WaterSong()
 	end
 --	Tkashi Ruins
 	function FinalFantasylization_SubzoneTkashiRuins()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Venture Co. Base Camp
 	function FinalFantasylization_SubzoneVentureCoBaseCamp()
-
+			FinalFantasylization_PlayMusic(S .. Alliance10Town);
+			FinalFantasylization_debugMsg("Alliance10Town")
 	end
 --	Venture Co. Operations Center
 	function FinalFantasylization_SubzoneVentureCoOperationsCenter()
-
+			FinalFantasylization_PlayMusic(S .. Alliance8Town);
+			FinalFantasylization_debugMsg("Alliance8Town")
 	end
 --	The Vile Reef
 	function FinalFantasylization_SubzoneTheVileReef()
-
+		FinalFantasylization_LakeSong()
 	end
 --	Yojamba Isle
 	function FinalFantasylization_SubzoneYojambaIsle()
-
+		FinalFantasylization_BeachSong()
 	end
 --	Ziata'jai Ruins
 	function FinalFantasylization_SubzoneZiatajaiRuins()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Zul'Gurub
 	function FinalFantasylization_SubzoneZulGurub()
-
+		FinalFantasylization_WarySong()
 	end
 --	Zuuldaia Ruins
 	function FinalFantasylization_SubzoneZuuldaiaRuins()
-
+		FinalFantasylization_BeachSong()
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Plaguelands: The Scarlet Enclave : Death Knight Start
@@ -3503,10 +3515,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneDeadmines()
 		FinalFantasylization_CaveSong();
 	end
---			Moonbrook Schoolhouse
-	function FinalFantasylization_AllianceTownMoonbrookSchoolhouse()
-		FinalFantasylization_AllianceTowns();
-	end
 --		Sentinel Hill
 	function FinalFantasylization_AllianceTownSentinelHill()
 		FinalFantasylization_AllianceTowns();
@@ -3518,31 +3526,31 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Alexston Farmstead
 	function FinalFantasylization_SubzoneAlexstonFarmstead()
-	
+		FinalFantasylization_SandSong();
 	end
 --	The Dagger Hills
 	function FinalFantasylization_SubzoneTheDaggerHills()
-	
+		FinalFantasylization_SandSong();
 	end
 --	The Dead Acre
 	function FinalFantasylization_SubzoneTheDeadAcre()
-	
+		FinalFantasylization_SandSong();
 	end
 --	Demont's Place
 	function FinalFantasylization_SubzoneDemontsPlace()
-	
+		FinalFantasylization_SandSong();
 	end
 --	The Dust Plains
 	function FinalFantasylization_SubzoneTheDustPlains()
-	
+		FinalFantasylization_SandSong();
 	end
 --		Mortwake's Tower
 	function FinalFantasylization_SubzoneMortwakesTower()
-	
+		FinalFantasylization_ForestSong();
 	end
 --	Furlbrow's Pumpkin Farm
 	function FinalFantasylization_SubzoneFurlbrowsPumpkinFarm()
-	
+		FinalFantasylization_SandSong();
 	end
 --	Gold Coast Quarry
 	function FinalFantasylization_SubzoneGoldCoastQuarry()
@@ -3558,27 +3566,28 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Longshore
 	function FinalFantasylization_SubzoneLongshore()
-
+		FinalFantasylization_BeachSong();
 	end
 --	The Molsen Farm
 	function FinalFantasylization_SubzoneTheMolsenFarm()
-	
+		FinalFantasylization_SandSong();
 	end
 --	The Raging Chasm
 	function FinalFantasylization_SubzoneTheRagingChasm()
-	
+		FinalFantasylization_PlayMusic(S .. Horde1Town);
+		FinalFantasylization_debugMsg("Horde1Town")
 	end
 --	Saldean's Farm
 	function FinalFantasylization_SubzoneSaldeansFarm()
-	
+		FinalFantasylization_SandSong();
 	end
 --	Stendel's Pond
 	function FinalFantasylization_SubzoneStendelsPond()
-
+		FinalFantasylization_LakeSong();
 	end
 --	Westfall Lighthouse
 	function FinalFantasylization_SubzoneWestfallLighthouse()
-	
+		FinalFantasylization_WaterSong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Wetlands : Alliance

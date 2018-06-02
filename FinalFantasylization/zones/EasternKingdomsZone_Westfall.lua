@@ -12,7 +12,6 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 --	Alliance:
 --		Moonbrook					FinalFantasylization_AllianceTownMoonbrook()
 --			Deadmines					FinalFantasylization_SubzoneDeadmines()
---			Moonbrook Schoolhouse		FinalFantasylization_AllianceTownMoonbrookSchoolhouse()	
 --		Sentinel Hill				FinalFantasylization_AllianceTownSentinelHill()
 --				Sentinel Tower			FinalFantasylization_AllianceTownSentinelTower()
 --	
@@ -67,17 +66,18 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Moonbrook"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-		elseif ( factionEnglish == "Alliance" ) then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_AllianceTownMoonbrook()
-		elseif ( factionEnglish == "Horde" ) then
-			FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-			FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownMoonbrook()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Deadmines in Moonbrook
@@ -85,64 +85,48 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Deadmines"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneDeadmines()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
---[[	--'==========================================================================================
-	--' Westfall Alliance Town: Moonbrook Schoolhouse in Moonbrook
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Moonbrook Schoolhouse"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-		elseif ( factionEnglish == "Alliance" ) then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_AllianceTownMoonbrookSchoolhouse()
-		elseif ( factionEnglish == "Horde" ) then
-			FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-			FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
-		return
-]]
 	--'==========================================================================================
 	--' Westfall Alliance Town: Sentinel Hill
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Sentinel Hill"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-		elseif ( factionEnglish == "Alliance" ) then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_AllianceTownSentinelHill()
-		elseif ( factionEnglish == "Horde" ) then
-			FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-			FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownSentinelHill()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Alliance Town: Sentinel Tower in Sentinel Hill
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Sentinel Tower"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-		elseif ( factionEnglish == "Alliance" ) then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_AllianceTownSentinelTower()
-		elseif ( factionEnglish == "Horde" ) then
-			FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-			FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownSentinelTower()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Alexston Farmstead
@@ -150,12 +134,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Alexston Farmstead"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneAlexstonFarmstead()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: The Dagger Hills
@@ -163,12 +147,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["The Dagger Hills"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheDaggerHills()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: The Dead Acre
@@ -176,12 +160,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["The Dead Acre"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheDeadAcre()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Demont's Place
@@ -189,12 +173,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Demont's Place"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneDemontsPlace()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: The Dust Plains
@@ -202,12 +186,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["The Dust Plains"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheDustPlains()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Mortwake's Tower in The Dust Plains
@@ -215,12 +199,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Mortwake's Tower"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneMortwakesTower()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Furlbrow's Pumpkin Farm
@@ -228,12 +212,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Furlbrow's Pumpkin Farm"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneFurlbrowsPumpkinFarm()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Gold Coast Quarry
@@ -241,12 +225,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Gold Coast Quarry"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneGoldCoastQuarry()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Jangolode Mine
@@ -254,12 +238,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Jangolode Mine"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneJangolodeMine()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: The Jansen Stead
@@ -267,12 +251,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["The Jansen Stead"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheJansenStead()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Longshore
@@ -280,12 +264,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Longshore"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneLongshore()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: The Molsen Farm
@@ -293,12 +277,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["The Molsen Farm"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheMolsenFarm()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: The Raging Chasm
@@ -306,12 +290,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["The Raging Chasm"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneTheRagingChasm()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Saldean's Farm
@@ -319,12 +303,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Saldean's Farm"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneSaldeansFarm()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Stendel's Pond
@@ -332,12 +316,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Stendel's Pond"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneStendelsPond()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall Subzone: Westfall Lighthouse
@@ -345,12 +329,12 @@ function FinalFantasylization_EasternKingdomsZones_Westfall()
 	elseif ( SubZoneName == SZ["Westfall Lighthouse"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneWestfallLighthouse()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
-		FinalFantasylization_CurrentZone = SubZoneName
 		return
 	--'==========================================================================================
 	--' Westfall END
