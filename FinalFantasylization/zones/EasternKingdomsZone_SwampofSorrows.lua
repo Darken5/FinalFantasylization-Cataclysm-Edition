@@ -1,36 +1,37 @@
-function FinalFantasylization_EasternKingdomsZones_Duskwood()
+function FinalFantasylization_EasternKingdomsZones_SwampofSorrows()
 --'==========================================================================================
---' Eastern Kingdoms Zones: Duskwood
+--' Eastern Kingdoms Zones: Swamp of Sorrows
 --'==========================================================================================
---	Zone: Duskwood				FinalFantasylization_EasternKingdomsDuskwood()
+--	Zone: Swamp of Sorrows				FinalFantasylization_EasternKingdomsSwampofSorrows()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_EasternKingdomsDuskwoodResting()
---		Player is Swimming		FinalFantasylization_EasternKingdomsDuskwoodSwimming()
+--		Player is Resting		FinalFantasylization_EasternKingdomsSwampofSorrowsResting()
+--		Player is Swimming		FinalFantasylization_EasternKingdomsSwampofSorrowsSwimming()
 --
 --	TOWNS:
 --	Alliance:
---		Darkshire					FinalFantasylization_AllianceTownDarkshire()
---		Darkshire Town Hall			FinalFantasylization_AllianceTownDarkshireTownHall()
---		Scarlet Raven Tavern		FinalFantasylization_AllianceTownScarletRavenTavern()
---		Raven Hill					FinalFantasylization_AllianceTownRavenHill()
+--		The Harborage		FinalFantasylization_AllianceTownTheHarborage()
+--		Marshtide Watch		FinalFantasylization_AllianceTownMarshtideWatch()
+--	Horde:
+--		Misty Reed Post		FinalFantasylization_HordeTownMistyReedPost()
+--		Stonard				FinalFantasylization_HordeTownStonard()
+--	Neutral:
+--		Bogpaddle			FinalFantasylization_NeutralTownBogpaddle()
+--		Sorrowmurk			FinalFantasylization_NeutralTownSorrowmurk()
 --
---	SUBZONES:
---	Addle's Stead					FinalFantasylization_SubzoneAddlesStead()
---	Beggar's Haunt					FinalFantasylization_SubzoneBeggarsHaunt()
---	Brightwood Grove				FinalFantasylization_SubzoneBrightwoodGrove()
---	The Darkened Bank				FinalFantasylization_SubzoneTheDarkenedBank()
---	Forlorn Rowe					FinalFantasylization_SubzoneForlornRowe()
---	The Hushed Bank					FinalFantasylization_SubzoneTheHushedBank()
---	Manor Mistmantle				FinalFantasylization_SubzoneManorMistmantle()
---	Raven Hill Cemetery				FinalFantasylization_SubzoneRavenHillCemetery()
---		Dawning Wood Catacombs			FinalFantasylization_SubzoneDawningWoodCatacombs()
---	Roland's Doom					FinalFantasylization_SubzoneRolandsDoom()
---	The Rotting Orchard				FinalFantasylization_SubzoneTheRottingOrchard()
---	Tranquil Gardens Cemetery		FinalFantasylization_SubzoneTranquilGardensCemetery()
---	Twilight Grove					FinalFantasylization_SubzoneTwilightGrove()
---	Vul'Gol Ogre Mound				FinalFantasylization_SubzoneVulGolOgreMound()
---	The Yorgen Farmstead			FinalFantasylization_SubzoneTheYorgenFarmstead()
+--	SUBZONES:		
+--	The Bloodmire				FinalFantasylization_SubzoneTheBloodmire()
+--	Fallow Sanctuary			FinalFantasylization_SubzoneFallowSanctuary()
+--	The Forbidding Sea			FinalFantasylization_SubzoneTheForbiddingSea()
+--	Misty Reed Strand			FinalFantasylization_SubzoneMistyReedStrand()
+--	Misty Valley				FinalFantasylization_SubzoneMistyValley()
+--	Pool of Tears				FinalFantasylization_SubzonePoolofTears()
+--		Temple of Atal'Hakkar		FinalFantasylization_SubzoneTempleofAtalHakkar()
+--	Purespring Cavern			FinalFantasylization_SubzonePurespringCavern()
+--	The Shifting Mire			FinalFantasylization_SubzoneTheShiftingMire()
+--	Splinterspear Junction		FinalFantasylization_SubzoneSplinterspearJunction()
+--	Stagalbog					FinalFantasylization_SubzoneStagalbog()
+--		Stagalbog Cave				FinalFantasylization_SubzoneStagalbogCave()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -42,7 +43,7 @@ function FinalFantasylization_EasternKingdomsZones_Duskwood()
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 			end
 			FinalFantasylization_CurrentZone = "Sleeping"
-			FinalFantasylization_EasternKingdomsDuskwoodResting()
+			FinalFantasylization_EasternKingdomsSwampofSorrowsResting()
 		else
 			return
 		end
@@ -54,21 +55,21 @@ function FinalFantasylization_EasternKingdomsZones_Duskwood()
 	elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
 		if FinalFantasylization_CurrentZone ~= "Swimming" then
 			FinalFantasylization_CurrentZone = "Swimming"
-			FinalFantasylization_EasternKingdomsDuskwoodSwimming()
+			FinalFantasylization_EasternKingdomsSwampofSorrowsSwimming()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Alliance Town: Darkshire
+	--' Swamp of Sorrows Alliance Town: The Harborage
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Darkshire"] ) then
+	elseif ( SubZoneName == SZ["The Harborage"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownDarkshire()
+				FinalFantasylization_AllianceTownTheHarborage()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -79,14 +80,14 @@ function FinalFantasylization_EasternKingdomsZones_Duskwood()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Alliance Town: Darkshire Town Hall
+	--' Swamp of Sorrows Alliance Town: Marshtide Watch
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Darkshire Town Hall"] ) then
+	elseif ( SubZoneName == SZ["Marshtide Watch"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownDarkshireTownHall()
+				FinalFantasylization_AllianceTownMarshtideWatch()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -97,15 +98,15 @@ function FinalFantasylization_EasternKingdomsZones_Duskwood()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Alliance Town: Scarlet Raven Tavern
+	--' Swamp of Sorrows Horde Town: Misty Reed Post
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Scarlet Raven Tavern"] ) then
+	elseif ( SubZoneName == SZ["Misty Reed Post"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
+			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownScarletRavenTavern()
-			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_HordeTownMistyReedPost()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -115,15 +116,15 @@ function FinalFantasylization_EasternKingdomsZones_Duskwood()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Alliance Town: Raven Hill
+	--' Swamp of Sorrows Horde Town: Stonard
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Raven Hill"] ) then
+	elseif ( SubZoneName == SZ["Stonard"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Alliance" ) then
+			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownRavenHill()
-			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_HordeTownStonard()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -133,208 +134,195 @@ function FinalFantasylization_EasternKingdomsZones_Duskwood()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Addle's Stead
+	--' Swamp of Sorrows Neutral Town: Bogpaddle
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Addle's Stead"] ) then
+	elseif ( SubZoneName == SZ["Bogpaddle"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneAddlesStead()
+			FinalFantasylization_NeutralTownBogpaddle()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Beggar's Haunt
+	--' Swamp of Sorrows Neutral Town: Sorrowmurk
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Beggar's Haunt"] ) then
+	elseif ( SubZoneName == SZ["Sorrowmurk"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBeggarsHaunt()
+			FinalFantasylization_NeutralTownSorrowmurk()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Brightwood Grove
+	--' Swamp of Sorrows Subzone: The Bloodmire
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Brightwood Grove"] ) then
+	elseif ( SubZoneName == SZ["The Bloodmire"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBrightwoodGrove()
+			FinalFantasylization_SubzoneTheBloodmire()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: The Darkened Bank
+	--' Swamp of Sorrows Subzone: Fallow Sanctuary
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Darkened Bank"] ) then
+	elseif ( SubZoneName == SZ["Fallow Sanctuary"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheDarkenedBank()
+			FinalFantasylization_SubzoneFallowSanctuary()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Forlorn Rowe
+	--' Swamp of Sorrows Subzone: The Forbidding Sea
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Forlorn Rowe"] ) then
+	elseif ( SubZoneName == SZ["The Forbidding Sea"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneForlornRowe()
+			FinalFantasylization_SubzoneTheForbiddingSea()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: The Hushed Bank
+	--' Swamp of Sorrows Subzone: Misty Reed Strand
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Hushed Bank"] ) then
+	elseif ( SubZoneName == SZ["Misty Reed Strand"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheHushedBank()
+			FinalFantasylization_SubzoneMistyReedStrand()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Manor Mistmantle
+	--' Swamp of Sorrows Subzone: Misty Valley
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Manor Mistmantle"] ) then
+	elseif ( SubZoneName == SZ["Misty Valley"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneManorMistmantle()
+			FinalFantasylization_SubzoneMistyValley()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Raven Hill Cemetery
+	--' Swamp of Sorrows Subzone: Pool of Tears
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Raven Hill Cemetery"] ) then
+	elseif ( SubZoneName == SZ["Pool of Tears"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRavenHillCemetery()
+			FinalFantasylization_SubzonePoolofTears()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Dawning Wood Catacombs
+	--' Swamp of Sorrows Subzone: Temple of Atal'Hakkar
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Dawning Wood Catacombs"] ) then
+	elseif ( SubZoneName == SZ["Temple of Atal'Hakkar"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDawningWoodCatacombs()
+			FinalFantasylization_SubzoneTempleofAtalHakkar()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Roland's Doom
+	--' Swamp of Sorrows Subzone: Purespring Cavern
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Roland's Doom"] ) then
+	elseif ( SubZoneName == SZ["Purespring Cavern"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRolandsDoom()
+			FinalFantasylization_SubzonePurespringCavern()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: The Rotting Orchard
+	--' Swamp of Sorrows Subzone: The Shifting Mire
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Rotting Orchard"] ) then
+	elseif ( SubZoneName == SZ["The Shifting Mire"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheRottingOrchard()
+			FinalFantasylization_SubzoneTheShiftingMire()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Tranquil Gardens Cemetery
+	--' Swamp of Sorrows Subzone: Splinterspear Junction
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Tranquil Gardens Cemetery"] ) then
+	elseif ( SubZoneName == SZ["Splinterspear Junction"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTranquilGardensCemetery()
+			FinalFantasylization_SubzoneSplinterspearJunction()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Twilight Grove
+	--' Swamp of Sorrows Subzone: Stagalbog
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Twilight Grove"] ) then
+	elseif ( SubZoneName == SZ["Stagalbog"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTwilightGrove()
+			FinalFantasylization_SubzoneStagalbog()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: Vul'Gol Ogre Mound
+	--' Swamp of Sorrows Subzone: Stagalbog Cave
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Vul'Gol Ogre Mound"] ) then
+	elseif ( SubZoneName == SZ["Stagalbog Cave"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneVulGolOgreMound()
+			FinalFantasylization_SubzoneStagalbogCave()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Duskwood Subzone: The Yorgen Farmstead
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Yorgen Farmstead"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheYorgenFarmstead()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Duskwood END
+	--' Swamp of Sorrows END
 	--'==========================================================================================
 	else
 		if FinalFantasylization_CurrentZone ~= ZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
 			FinalFantasylization_CurrentZone = ZoneName
-			FinalFantasylization_EasternKingdomsDuskwood()
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
+			FinalFantasylization_EasternKingdomsSwampofSorrows()
 			FinalFantasylization_IsPlaying = true
 		else
 			return

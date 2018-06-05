@@ -25,7 +25,6 @@ function FinalFantasylization_EasternKingdomsZones_RedridgeMountains()
 --	Render's Camp				FinalFantasylization_SubzoneRendersCamp()
 --		Render's Rock				FinalFantasylization_SubzoneRendersRock()
 --	Render's Valley				FinalFantasylization_SubzoneRendersValley()
---	Redridge Highway			FinalFantasylization_SubzoneRedridgeHighway()
 --	Rethban Caverns				FinalFantasylization_SubzoneRethbanCaverns()
 --	Shalewind Canyon			FinalFantasylization_SubzoneShalewindCanyon()
 --	Stonewatch					FinalFantasylization_SubzoneStonewatch()
@@ -253,19 +252,6 @@ function FinalFantasylization_EasternKingdomsZones_RedridgeMountains()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneRendersValley()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Redridge Mountains Subzone: Redridge Highway
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Redridge Highway"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRedridgeHighway()
 		else
 			return
 		end

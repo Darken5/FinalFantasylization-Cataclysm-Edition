@@ -7,6 +7,7 @@
 	<Script file="EasternKingdomsZone_BlastedLands.lua"/>
 	<Script file="EasternKingdomsZone_BurningSteppes.lua"/>
 	<Script file="EasternKingdomsZone_CapeofStranglethorn.lua"/>
+	<Script file="EasternKingdomsZone_DeadwindPass.lua"/>
 	<Script file="EasternKingdomsZone_DeeprunTram.lua"/>
 	<Script file="EasternKingdomsZone_DunMorogh.lua"/>
 	<Script file="EasternKingdomsZone_Duskwood.lua"/>
@@ -26,6 +27,7 @@
 	<Script file="EasternKingdomsZone_SilvermoonCity.lua"/>
 	<Script file="EasternKingdomsZone_SilverpineForest.lua"/>
 	<Script file="EasternKingdomsZone_StormwindCity.lua"/>
+	<Script file="EasternKingdomsZone_SwampofSorrows.lua"/>
 	<Script file="EasternKingdomsZone_TirisfalGlades.lua"/>	
 	<Script file="EasternKingdomsZone_Undercity.lua"/>
 	<Script file="EasternKingdomsZone_Westfall.lua"/>

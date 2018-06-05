@@ -96,7 +96,7 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_CurrentZone = SubZoneNameDustwindDig()
+				FinalFantasylization_AllianceTownDustwindDig()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -129,6 +129,7 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["New Kargath"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_HordeTownNewKargath()
@@ -248,10 +249,10 @@ function FinalFantasylization_EasternKingdomsZones_Badlands()
 	--'==========================================================================================
 	--' Badlands Subzone: Crypt
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Crypt"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
+	elseif ( MinimapZoneName == SZ["Crypt"] ) then
+		if FinalFantasylization_CurrentZone ~= MinimapZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. MinimapZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = MinimapZoneName
 			FinalFantasylization_SubzoneCrypt()
 		else
 			return

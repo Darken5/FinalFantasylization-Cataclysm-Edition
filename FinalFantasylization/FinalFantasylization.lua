@@ -840,6 +840,9 @@ function FinalFantasylization_GetMusic()
 		-- Cape of Stranglethorn
 			elseif ( MapID == 673 ) then
 				FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn(SubZoneName)
+		-- Deadwind Pass
+			elseif ( MapID == 32 ) then
+				FinalFantasylization_EasternKingdomsZones_DeadwindPass(SubZoneName)
 		-- Deeprun Tram
 			elseif ( MinimapZoneName == SZ["Deeprun Tram"] ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
@@ -895,8 +898,11 @@ function FinalFantasylization_GetMusic()
 			elseif ( MapID == 480 ) then
 				FinalFantasylization_EasternKingdomsZones_SilvermoonCity(SubZoneName)
 		-- Stormwind City
-			elseif ( MapID == 301 ) then
+			elseif ( MapID == 301 ) and not IsInInstance() then
 				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)
+		-- Swamp of Sorrows
+			elseif ( MapID == 38 ) then
+				FinalFantasylization_EasternKingdomsZones_SwampofSorrows(SubZoneName)
 		-- Tirisfal Glades
 			elseif ( MapID == 20 ) then
 				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)
