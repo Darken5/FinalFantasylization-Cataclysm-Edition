@@ -10,12 +10,12 @@ function FinalFantasylization_EasternKingdomsZones_Wetlands()
 --
 --	TOWNS:
 --	Alliance:
---		Dun Modr				FinalFantasylization_AllianceTownDunModr()
 --		Greenwarden's Grove		FinalFantasylization_AllianceTownGreenwardensGrove()
 --		Menethil Harbor			FinalFantasylization_AllianceTownMenethilHarbor()
 --			Deepwater Tavern		FinalFantasylization_AllianceTownDeepwaterTavern()
 --			Menethil Keep			FinalFantasylization_AllianceTownMenethilKeep()
 --		Slabchisel's Survey		FinalFantasylization_AllianceTownSlabchiselsSurvey()
+--		Swiftgear Station		FinalFantasylization_AllianceTownSwiftgearStation()
 --		Whelgar's Retreat		FinalFantasylization_AllianceTownWhelgarsRetreat()
 --
 --	SUBZONES:
@@ -25,6 +25,7 @@ function FinalFantasylization_EasternKingdomsZones_Wetlands()
 --	Bluegill Marsh				FinalFantasylization_SubzoneBluegillMarsh()
 --	Direforge Hill				FinalFantasylization_SubzoneDireforgeHill()
 --	Dun Algaz					FinalFantasylization_SubzoneDunAlgaz()
+--	Dun Modr					FinalFantasylization_SubzoneDunModr()
 --	The Great Sea				FinalFantasylization_SubzoneTheGreatSea()
 --	The Green Belt				FinalFantasylization_SubzoneTheGreenBelt()
 --	Ironbeard's Tomb			FinalFantasylization_SubzoneIronbeardsTomb()
@@ -34,7 +35,6 @@ function FinalFantasylization_EasternKingdomsZones_Wetlands()
 --	Raptor Ridge				FinalFantasylization_SubzoneRaptorRidge()
 --	Saltspray Glen				FinalFantasylization_SubzoneSaltsprayGlen()
 --	Sundown Marsh				FinalFantasylization_SubzoneSundownMarsh()
---		Swiftgear Station			FinalFantasylization_SubzoneSwiftgearStation()
 --	Thandol Span				FinalFantasylization_SubzoneThandolSpan()
 --	Thelgen Rock				FinalFantasylization_SubzoneThelgenRock()
 --	Whelgar's Excavation Site	FinalFantasylization_SubzoneWhelgarsExcavationSite()
@@ -176,6 +176,24 @@ function FinalFantasylization_EasternKingdomsZones_Wetlands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Wetlands Alliance Town: Swiftgear Station
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Swiftgear Station"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownSwiftgearStation()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Wetlands Alliance Town: Whelgar's Retreat
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Whelgar's Retreat"] ) then
@@ -266,6 +284,19 @@ function FinalFantasylization_EasternKingdomsZones_Wetlands()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneDunAlgaz()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Wetlands Subzone: Dun Modr
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Dun Modr"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneDunModr()
 		else
 			return
 		end
@@ -383,19 +414,6 @@ function FinalFantasylization_EasternKingdomsZones_Wetlands()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneSundownMarsh()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Wetlands Subzone: Swiftgear Station
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Swiftgear Station"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSwiftgearStation()
 		else
 			return
 		end

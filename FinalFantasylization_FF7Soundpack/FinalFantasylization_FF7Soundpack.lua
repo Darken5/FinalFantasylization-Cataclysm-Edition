@@ -3167,7 +3167,83 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --		Tempest's Reach
 	function FinalFantasylization_SubzoneTempestsReach()
 
-	end	
+	end
+--'==========================================================================================
+--' Eastern Kingdoms Zones: Searing Gorge
+--'==========================================================================================
+--	Zone: Searing Gorge
+	function FinalFantasylization_EasternKingdomsSearingGorge()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_PlagueSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_EasternKingdomsSearingGorgeResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_EasternKingdomsSearingGorgeSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--	TOWNS:
+--	Neutral:
+--		Iron Summit
+	function FinalFantasylization_NeutralTownIronSummit()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Thorium Advance
+	function FinalFantasylization_NeutralTownThoriumAdvance()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Thorium Point
+	function FinalFantasylization_NeutralTownThoriumPoint()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Blackchar Cave
+	function FinalFantasylization_SubzoneBlackcharCave()
+		FinalFantasylization_CaveSong()
+	end
+--	Blackrock Mountain
+	function FinalFantasylization_SubzoneBlackrockMountain()
+		FinalFantasylization_PlagueSong()
+	end
+--	The Cauldron
+	function FinalFantasylization_SubzoneTheCauldron()
+		FinalFantasylization_PlagueSong()
+	end
+--		The Slag Pit
+	function FinalFantasylization_SubzoneTheSlagPit()
+		FinalFantasylization_PlagueSong()
+	end
+--	Dustfire Valley
+	function FinalFantasylization_SubzoneDustfireValley()
+		FinalFantasylization_PlagueSong()
+	end
+--	Firewatch Ridge
+	function FinalFantasylization_SubzoneFirewatchRidge()
+		FinalFantasylization_PlagueSong()
+	end
+--	Grimesilt Dig Site
+	function FinalFantasylization_SubzoneGrimesiltDigSite()
+		FinalFantasylization_PlagueSong()
+	end
+--	Pyrox Flats
+	function FinalFantasylization_SubzonePyroxFlats()
+		FinalFantasylization_PlagueSong()
+	end
+--	The Sea of Cinders
+	function FinalFantasylization_SubzoneTheSeaofCinders()
+		FinalFantasylization_PlagueSong()
+	end
+--	Stonewrought Pass
+	function FinalFantasylization_SubzoneStonewroughtPass()
+		FinalFantasylization_PlagueSong()
+	end
 --'==========================================================================================
 --' Eastern Kingdoms Zones: Silverpine Forest
 --'==========================================================================================
@@ -3730,10 +3806,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	TOWNS:
 --	Alliance:
---		Dun Modr
-	function FinalFantasylization_AllianceTownDunModr()
-		FinalFantasylization_AllianceTowns();
-	end
 --		Greenwarden's Grove
 	function FinalFantasylization_AllianceTownGreenwardensGrove()
 		FinalFantasylization_AllianceTowns();
@@ -3754,6 +3826,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_AllianceTownSlabchiselsSurvey()
 		FinalFantasylization_AllianceTowns();
 	end
+--		Swiftgear Station
+	function FinalFantasylization_AllianceTownSwiftgearStation()
+		FinalFantasylization_AllianceTowns();
+	end
 --		Whelgar's Retreat
 	function FinalFantasylization_AllianceTownWhelgarsRetreat()
 		FinalFantasylization_AllianceTowns();
@@ -3761,79 +3837,79 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Angerfang Encampment
 	function FinalFantasylization_SubzoneAngerfangEncampment()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Baradin Bay
 	function FinalFantasylization_SubzoneBaradinBay()
-
+		FinalFantasylization_WaterSong()
 	end
 --	Black Channel Marsh
 	function FinalFantasylization_SubzoneBlackChannelMarsh()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Bluegill Marsh
 	function FinalFantasylization_SubzoneBluegillMarsh()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Direforge Hill
 	function FinalFantasylization_SubzoneDireforgeHill()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Dun Algaz
 	function FinalFantasylization_SubzoneDunAlgaz()
-
+		FinalFantasylization_SwampSong()
+	end
+--	Dun Modr
+	function FinalFantasylization_SubzoneDunModr()
+		FinalFantasylization_SwampSong()
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
-
+		FinalFantasylization_WaterSong()
 	end
 --	The Green Belt
 	function FinalFantasylization_SubzoneTheGreenBelt()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Ironbeard's Tomb
 	function FinalFantasylization_SubzoneIronbeardsTomb()
-
+		FinalFantasylization_CaveSong()
 	end
 --	The Lost Fleet
 	function FinalFantasylization_SubzoneTheLostFleet()
-
+		FinalFantasylization_WaterSong()
 	end
 --	Menethil Bay
 	function FinalFantasylization_SubzoneMenethilBay()
-
+		FinalFantasylization_LakeSong()
 	end
 --	Mosshide Fen
 	function FinalFantasylization_SubzoneMosshideFen()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Raptor Ridge
 	function FinalFantasylization_SubzoneRaptorRidge()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Saltspray Glen
 	function FinalFantasylization_SubzoneSaltsprayGlen()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Sundown Marsh
 	function FinalFantasylization_SubzoneSundownMarsh()
-
-	end
---		Swiftgear Station
-	function FinalFantasylization_SubzoneSwiftgearStation()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Thandol Span
 	function FinalFantasylization_SubzoneThandolSpan()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Thelgen Rock
 	function FinalFantasylization_SubzoneThelgenRock()
-
+		FinalFantasylization_LandSong()
 	end
 --	Whelgar's Excavation Site
 	function FinalFantasylization_SubzoneWhelgarsExcavationSite()
-
+		FinalFantasylization_CaveSong()
 	end
 
 

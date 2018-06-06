@@ -891,6 +891,9 @@ function FinalFantasylization_GetMusic()
 		-- Ruins of Gilneas
 			elseif ( MapID == 684 ) then
 				FinalFantasylization_EasternKingdomsZones_RuinsofGilneas(SubZoneName)
+		-- Searing Gorge
+			elseif ( MapID == 28 ) then
+				FinalFantasylization_EasternKingdomsZones_SearingGorge(SubZoneName)
 		-- Silverpine Forest
 			elseif ( MapID == 21 ) then
 				FinalFantasylization_EasternKingdomsZones_SilverpineForest(SubZoneName)
