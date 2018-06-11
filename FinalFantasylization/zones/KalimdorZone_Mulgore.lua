@@ -15,7 +15,7 @@ function FinalFantasylization_KalimdorZones_Mulgore()
 --			Brambleblade Ravine			FinalFantasylization_Tauren_Start_BramblebladeRavine()
 --			Camp Narache				FinalFantasylization_Tauren_Start_CampNarache()
 --			Fargaze Mesa				FinalFantasylization_Tauren_Start_FargazeMesa()
---			Thormantle's Hideout		FinalFantasylization_Tauren_Start_ThormantlesHideout()
+--			Thornmantle's Hideout		FinalFantasylization_Tauren_Start_ThornmantlesHideout()
 --			The Thornsnarl				FinalFantasylization_Tauren_Start_TheThornsnarl()
 --	Horde:
 --		Bloodhoof Village			FinalFantasylization_HordeTownBloodhoofVillage()
@@ -137,13 +137,13 @@ function FinalFantasylization_KalimdorZones_Mulgore()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mulgore: Tauren Starting Area: Thormantle's Hideout
+	--' Mulgore: Tauren Starting Area: Thornmantle's Hideout
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Thormantle's Hideout"] ) then
+	elseif ( SubZoneName == SZ["Thornmantle's Hideout"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_Tauren_Start_ThormantlesHideout()
+			FinalFantasylization_Tauren_Start_ThornmantlesHideout()
 		else
 			return
 		end
