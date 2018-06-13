@@ -10,12 +10,14 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 --
 --	TOWNS:
 --	Alliance:
+--		Faldir's Cove		FinalFantasylization_AllianceTownFaldirsCove()
 --		Refuge Pointe		FinalFantasylization_AllianceTownRefugePointe()
 --	Horde:
+--		Galen's Fall		FinalFantasylization_HordeTownGalensFall()
+--		Go'Shek Farm		FinalFantasylization_HordeTownGoShekFarm()
 --		Hammerfall			FinalFantasylization_HordeTownHammerfall()
 --
 --	SUBZONES:
---	Blackwater Shipwrecks		FinalFantasylization_SubzoneBlackwaterShipwrecks()
 --	Boulder'gor					FinalFantasylization_SubzoneBouldergor()
 --		Boulderfist Outpost			FinalFantasylization_SubzoneBoulderfistOutpost()
 --	Boulderfist Hall			FinalFantasylization_SubzoneBoulderfistHall()
@@ -26,19 +28,14 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 --	Dabyrie's Farmstead			FinalFantasylization_SubzoneDabyriesFarmstead()
 --	The Drowned Reef			FinalFantasylization_SubzoneTheDrownedReef()
 --	Drywhisker Gorge			FinalFantasylization_SubzoneDrywhiskerGorge()
---	Faldir's Cove				FinalFantasylization_SubzoneFaldirsCove()
 --	The Forbidding Sea			FinalFantasylization_SubzoneTheForbiddingSea()
---	Galen's Fall				FinalFantasylization_SubzoneGalensFall()
---	Go'Shek Farm				FinalFantasylization_SubzoneGoShekFarm()
 --	Northfold Manor				FinalFantasylization_SubzoneNorthfoldManor()
---	O'Breen's Camp				FinalFantasylization_SubzoneOBreensCamp()
 --	Stromgarde Keep				FinalFantasylization_SubzoneStromgardeKeep()
 --		Crypt						FinalFantasylization_SubzoneCrypt()
 --		The Sanctum					FinalFantasylization_SubzoneTheSanctum()
 --		The Tower of Arathor		FinalFantasylization_SubzoneTheTowerofArathor()
 --	Thandol Span				FinalFantasylization_SubzoneThandolSpan()
 --	Thoradin's Wall				FinalFantasylization_SubzoneThoradinsWall()
---	Witherbark Caverns			FinalFantasylization_SubzoneWitherbarkCaverns()
 --	Witherbark Village			FinalFantasylization_SubzoneWitherbarkVillage()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
@@ -70,6 +67,24 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Arathi Highlands Alliance Town: Faldir's Cove
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Faldir's Cove"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownFaldirsCove()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Arathi Highlands Alliance Town: Refuge Pointe
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Refuge Pointe"] ) then
@@ -79,6 +94,42 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_AllianceTownRefugePointe()
 			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Arathi Highlands Horde Town: Galen's Fall
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Galen's Fall"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_HordeTownGalensFall()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Arathi Highlands Horde Town: Go'Shek Farm
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Go'Shek Farm"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_HordeTownGoShekFarm()
+			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
@@ -100,19 +151,6 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Arathi Highlands Subzone: Blackwater Shipwrecks
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Blackwater Shipwrecks"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBlackwaterShipwrecks()
 		else
 			return
 		end
@@ -249,19 +287,6 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Arathi Highlands Subzone: Faldir's Cove
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Faldir's Cove"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFaldirsCove()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Arathi Highlands Subzone: The Forbidding Sea
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["The Forbidding Sea"] ) then
@@ -275,32 +300,6 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Arathi Highlands Subzone: Galen's Fall
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Galen's Fall"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneGalensFall()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Arathi Highlands Subzone: Go'Shek Farm
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Go'Shek Farm"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneGoShekFarm()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Arathi Highlands Subzone: Northfold Manor
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Northfold Manor"] ) then
@@ -308,19 +307,6 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneNorthfoldManor()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Arathi Highlands Subzone: O'Breen's Camp
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["O'Breen's Camp"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneOBreensCamp()
 		else
 			return
 		end
@@ -399,19 +385,6 @@ function FinalFantasylization_EasternKingdomsZones_ArathiHighlands()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneThoradinsWall()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Arathi Highlands Subzone: Witherbark Caverns
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Witherbark Caverns"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneWitherbarkCaverns()
 		else
 			return
 		end

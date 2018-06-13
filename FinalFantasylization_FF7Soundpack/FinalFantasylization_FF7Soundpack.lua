@@ -793,12 +793,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --'==========================================================================================
 --	Zone: Arathi Highlands
 	function FinalFantasylization_EasternKingdomsArathiHighlands()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_ContestedSong();
-			end
+		FinalFantasylization_ContestedSong();
 	end
 --	Zone Event:
 --		Player is Resting
@@ -810,114 +805,104 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_Swimming(2)
 	end
 --	TOWNS:
---	Alliance: Refuge Pointe
+--	Alliance:
+--		Faldir's Cove
+	function FinalFantasylization_AllianceTownFaldirsCove()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Refuge Pointe
 	function FinalFantasylization_AllianceTownRefugePointe()
 		FinalFantasylization_AllianceTowns();
 	end
---	Horde: Hammerfall
+--	Horde:
+--		Galen's Fall
+	function FinalFantasylization_HordeTownGalensFall()
+		FinalFantasylization_HordeTowns();
+	end
+--		Go'Shek Farm
+	function FinalFantasylization_HordeTownGoShekFarm()
+		FinalFantasylization_HordeTowns();
+	end
+--		Hammerfall
 	function FinalFantasylization_HordeTownHammerfall()
 		FinalFantasylization_HordeTowns();
 	end
 --	SUBZONES:
---	Blackwater Shipwrecks
-	function FinalFantasylization_SubzoneBlackwaterShipwrecks()
-
-	end
 --	Boulder'gor
 	function FinalFantasylization_SubzoneBouldergor()
-
+		FinalFantasylization_LandSong();
 	end
 --		Boulderfist Outpost
 	function FinalFantasylization_SubzoneBoulderfistOutpost()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Boulderfist Hall
 	function FinalFantasylization_SubzoneBoulderfistHall()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Circle of East Binding
 	function FinalFantasylization_SubzoneCircleofEastBinding()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	Circle of Inner Binding
 	function FinalFantasylization_SubzoneCircleofInnerBinding()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	Circle of Outer Binding
 	function FinalFantasylization_SubzoneCircleofOuterBinding()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	Circle of West Binding
 	function FinalFantasylization_SubzoneCircleofWestBinding()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	Dabyrie's Farmstead
 	function FinalFantasylization_SubzoneDabyriesFarmstead()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	The Drowned Reef
 	function FinalFantasylization_SubzoneTheDrownedReef()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Drywhisker Gorge
 	function FinalFantasylization_SubzoneDrywhiskerGorge()
-
-	end
---	Faldir's Cove
-	function FinalFantasylization_SubzoneFaldirsCove()
-
+		FinalFantasylization_LandSong();
 	end
 --	The Forbidding Sea
 	function FinalFantasylization_SubzoneTheForbiddingSea()
-
-	end
---	Galen's Fall
-	function FinalFantasylization_SubzoneGalensFall()
-
-	end
---	Go'Shek Farm
-	function FinalFantasylization_SubzoneGoShekFarm()
-
+		FinalFantasylization_WaterSong();
 	end
 --	Northfold Manor
 	function FinalFantasylization_SubzoneNorthfoldManor()
-
-	end
---	O'Breen's Camp
-	function FinalFantasylization_SubzoneOBreensCamp()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	Stromgarde Keep
 	function FinalFantasylization_SubzoneStromgardeKeep()
-
+		FinalFantasylization_PlagueSong();
 	end
 --		Crypt
 	function FinalFantasylization_SubzoneCrypt()
-
+		FinalFantasylization_CaveSong();
 	end
 --		The Sanctum
 	function FinalFantasylization_SubzoneTheSanctum()
-
+		FinalFantasylization_ContestedSong();
 	end
 --		The Tower of Arathor
 	function FinalFantasylization_SubzoneTheTowerofArathor()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Thandol Span
 	function FinalFantasylization_SubzoneThandolSpan()
-
+		FinalFantasylization_ContestedSong();
 	end
 --	Thoradin's Wall
 	function FinalFantasylization_SubzoneThoradinsWall()
-
-	end
---	Witherbark Caverns
-	function FinalFantasylization_SubzoneWitherbarkCaverns()
-		FinalFantasylization_CaveSong();
+		FinalFantasylization_ContestedSong();
 	end
 --	Witherbark Village
 	function FinalFantasylization_SubzoneWitherbarkVillage()
-
+		FinalFantasylization_ForestSong();
 	end
 --'==========================================================================================
 --' Eastern Kingdoms Zone: Badlands
@@ -2430,13 +2415,38 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_Swimming(1)
 	end
 --	TOWNS:
---	Horde:
+--	Alliance:
+--		Corrahn's Dagger
+	function FinalFantasylization_AllianceTownCorrahnsDagger()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Gavin's Naze
+	function FinalFantasylization_AllianceTownGavinsNaze()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Sofera's Naze
+	function FinalFantasylization_AllianceTownSoferasNaze()
+		FinalFantasylization_AllianceTowns();
+	end
+--		The Headland
+	function FinalFantasylization_AllianceTownTheHeadland()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Purgation Isle
+	function FinalFantasylization_AllianceTownPurgationIsle()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde
 --		Eastpoint Tower
 	function FinalFantasylization_HordeTownEastpointTower()
 		FinalFantasylization_HordeTowns();
 	end
 --		Ruins of Southshore
 	function FinalFantasylization_HordeTownRuinsofSouthshore()
+		FinalFantasylization_HordeTowns();
+	end
+--		Sludgeguard Tower
+	function FinalFantasylization_HordeTownSludgeguardTower()
 		FinalFantasylization_HordeTowns();
 	end
 --		Southpoint Gate
@@ -2455,7 +2465,53 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_HordeTownTheSludgeFields()
 		FinalFantasylization_HordeTowns();
 	end
+--	Neutral:
+--		Brazie Farmstead
+	function FinalFantasylization_NeutralTownBrazieFarmstead()
+		FinalFantasylization_NeutralTowns();
+	end
 --	SUBZONES:
+--	Alterac Mountains
+	function FinalFantasylization_SubzoneAlteracMountains()
+
+	end
+--		Chillwind Point
+	function FinalFantasylization_SubzoneChillwindPoint()
+
+	end
+--		Crushridge Hold
+	function FinalFantasylization_SubzoneCrushridgeHold()
+
+	end
+--		Dandred's Fold
+	function FinalFantasylization_SubzoneDandredsFold()
+
+	end
+--		Gallows' Corner
+	function FinalFantasylization_SubzoneGallowsCorner()
+
+	end
+--		Growless Cave
+	function FinalFantasylization_SubzoneGrowlessCave()
+
+	end
+--		Ravenholdt Manor
+	function FinalFantasylization_SubzoneRavenholdtManor()
+			FinalFantasylization_PlayMusic(S .. Horde8Town);
+			FinalFantasylization_debugMsg("Horde8Town")
+	end
+--		Ruins of Alterac
+	function FinalFantasylization_SubzoneRuinsofAlterac()
+
+	end
+--		Slaughter Hollow
+	function FinalFantasylization_SubzoneSlaughterHollow()
+
+	end
+--		The Uplands
+	function FinalFantasylization_SubzoneTheUplands()
+		FinalFantasylization_LandSong();
+	end
 --	Azurelode Mine
 	function FinalFantasylization_SubzoneAzurelodeMine()
 		FinalFantasylization_PlagueSong();
@@ -2474,38 +2530,26 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Durnholde Keep
 	function FinalFantasylization_SubzoneDurnholdeKeep()
-
+		FinalFantasylization_PlagueSong();
 	end
 --	Eastern Strand
 	function FinalFantasylization_SubzoneEasternStrand()
 
 	end
---	Sludgeguard Tower
-	function FinalFantasylization_SubzoneSludgeguardTower()
+--	Lordamere Lake
+	function FinalFantasylization_SubzoneLordamereLake()
+		FinalFantasylization_LakeSong();
+	end
+--	Misty Shore
+	function FinalFantasylization_SubzoneMistyShore()
 
 	end
 --	Nethander Stead
 	function FinalFantasylization_SubzoneNethanderStead()
 
 	end
---	Purgation Isle
-	function FinalFantasylization_SubzonePurgationIsle()
-
-	end
---	Ruins of Alterac
-	function FinalFantasylization_SubzoneRuinsofAlterac()
-
-	end
---	Southpoint Tower
-	function FinalFantasylization_SubzoneSouthpointTower()
-
-	end
 --	Thoradin's Wall
 	function FinalFantasylization_SubzoneThoradinsWall()
-
-	end
---	The Uplands
-	function FinalFantasylization_SubzoneTheUplands()
 
 	end
 --	Western Strand
