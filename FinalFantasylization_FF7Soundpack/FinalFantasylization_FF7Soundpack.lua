@@ -6233,6 +6233,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneSouthfuryRiver()
 		FinalFantasylization_WaterSong();
 	end
+--	The Stagnant Oasis
+	function FinalFantasylization_SubzoneTheStagnantOasis()
+		FinalFantasylization_LakeSong();
+	end
 --	Thorn Hill
 	function FinalFantasylization_SubzoneThornHill()
 		FinalFantasylization_CaveSong();
@@ -6656,6 +6660,123 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Wellspring River
 	function FinalFantasylization_SubzoneWellspringRiver()
 		FinalFantasylization_LakeSong();
+	end
+--'==========================================================================================
+--' Kalimdor Zones: Thousand Needles
+--'==========================================================================================
+--	Zone: Thousand Needles
+	function FinalFantasylization_KalimdorThousandNeedles()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_LakeSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorThousandNeedlesResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorThousandNeedlesSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Horde:
+--		Westreach Summit
+	function FinalFantasylization_HordeTownWestreachSummit()
+		FinalFantasylization_HordeTowns();
+	end
+--	Neutral:
+--		Fizzle & Pozzik's Speedbarge
+	function FinalFantasylization_NeutralTownFizzleandPozziksSpeedbarge()
+		FinalFantasylization_NeutralTowns();
+	end
+--			Speedbarge Bar
+	function FinalFantasylization_NeutralTownSpeedbargeBar()
+		FinalFantasylization_Sleeping()
+	end
+--		Freewind Post
+	function FinalFantasylization_NeutralTownFreewindPost()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Darkcloud Pinnacle
+	function FinalFantasylization_SubzoneDarkcloudPinnacle()
+		FinalFantasylization_LandSong();
+	end
+--		Arikara's Needle
+	function FinalFantasylization_SubzoneArikarasNeedle()
+		FinalFantasylization_LandSong();
+	end
+--	The Great Lift
+	function FinalFantasylization_SubzoneTheGreatLift()
+		FinalFantasylization_LandSong();
+	end
+--	Highperch
+	function FinalFantasylization_SubzoneHighperch()
+		FinalFantasylization_ForestSong();
+	end
+--	Razorfen Downs
+	function FinalFantasylization_SubzoneRazorfenDowns()
+		FinalFantasylization_LandSong();
+	end
+--	The Shimmering Deep
+	function FinalFantasylization_SubzoneTheShimmeringDeep()
+		FinalFantasylization_LakeSong();
+	end
+--		Mirage Abyss
+	function FinalFantasylization_SubzoneMirageAbyss()
+		FinalFantasylization_LakeSong();
+	end
+--		Raceway Ruins
+	function FinalFantasylization_SubzoneRacewayRuins()
+		FinalFantasylization_LakeSong();
+	end
+--		Sunken Dig Site
+	function FinalFantasylization_SubzoneSunkenDigSite()
+		FinalFantasylization_LakeSong();
+	end
+--	Southsea Holdfast
+	function FinalFantasylization_SubzoneSouthseaHoldfast()
+		FinalFantasylization_LandSong();
+	end
+--		The Admiral's Den
+	function FinalFantasylization_SubzoneTheAdmiralsDen()
+		FinalFantasylization_LandSong();
+	end
+--	Splithoof Crag
+	function FinalFantasylization_SubzoneSplithoofCrag()
+		FinalFantasylization_LandSong();
+	end
+--		Splithoof Hold
+	function FinalFantasylization_SubzoneSplithoofHold()
+		FinalFantasylization_LandSong();
+	end
+--	Splithoof Heights
+	function FinalFantasylization_SubzoneSplithoofHeights()
+		FinalFantasylization_LandSong();
+	end
+--	Tirth's Haunt
+	function FinalFantasylization_SubzoneTirthsHaunt()
+		FinalFantasylization_WarySong();
+	end
+--	Twilight Aerie
+	function FinalFantasylization_SubzoneTwilightAerie()
+		FinalFantasylization_PlagueSong();
+	end
+--	Twilight Bulwark
+	function FinalFantasylization_SubzoneTwilightBulwark()
+		FinalFantasylization_PlagueSong();
+	end
+--	The Twilight Withering
+	function FinalFantasylization_SubzoneTheTwilightWithering()
+		FinalFantasylization_PlagueSong();
+	end
+--	Whitereach Post
+	function FinalFantasylization_SubzoneWhitereachPost()
+		FinalFantasylization_LandSong();
 	end
 
 

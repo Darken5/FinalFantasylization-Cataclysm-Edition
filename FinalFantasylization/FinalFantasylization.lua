@@ -973,6 +973,9 @@ function FinalFantasylization_GetMusic()
 		-- Teldrassil
 			elseif ( MapID == 41 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
+		-- Thousand Needles
+			elseif ( MapID == 61 ) then
+				FinalFantasylization_KalimdorZones_ThousandNeedles(SubZoneName)
 		-- Thunder Bluff
 			elseif ( MapID == 362 ) then
 				FinalFantasylization_KalimdorZones_ThunderBluff(SubZoneName)
