@@ -952,6 +952,9 @@ function FinalFantasylization_GetMusic()
 		-- The Exodar
 			elseif ( MapID == 471 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
+		-- Felwood
+			elseif ( MapID == 182 ) then
+				FinalFantasylization_KalimdorZones_Felwood(SubZoneName)
 		-- Feralas
 			elseif ( MapID == 121 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
@@ -970,6 +973,9 @@ function FinalFantasylization_GetMusic()
 		-- Stonetalon Mountains
 			elseif ( MapID == 81 ) then
 				FinalFantasylization_KalimdorZones_StonetalonMountains(SubZoneName)
+		-- Tanaris
+			elseif ( MapID == 161 ) then
+				FinalFantasylization_KalimdorZones_Tanaris(SubZoneName)
 		-- Teldrassil
 			elseif ( MapID == 41 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
@@ -979,6 +985,15 @@ function FinalFantasylization_GetMusic()
 		-- Thunder Bluff
 			elseif ( MapID == 362 ) then
 				FinalFantasylization_KalimdorZones_ThunderBluff(SubZoneName)
+		-- Uldum
+			elseif ( MapID == 720 ) then
+				FinalFantasylization_KalimdorZones_Uldum(SubZoneName)
+		-- Un'Goro Crater
+			elseif ( MapID == 201 ) then
+				FinalFantasylization_KalimdorZones_UnGoroCrater(SubZoneName)
+		-- Winterspring
+			elseif ( MapID == 281 ) then
+				FinalFantasylization_KalimdorZones_Winterspring(SubZoneName)
 
 --'==========================================================================================
 --' Outland Zones
@@ -1001,7 +1016,7 @@ function FinalFantasylization_GetMusic()
 
 	-- Debug: Zone Catch-all
 			elseif not IsInInstance() then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. ZoneName .. " - (ID " .. MapID .. ") " .. "not in FinalFantasylization")
 			end
 		end
 --###########################################################################################

@@ -1,41 +1,48 @@
-function FinalFantasylization_KalimdorZones_ThousandNeedles()
+function FinalFantasylization_KalimdorZones_Tanaris()
 --'==========================================================================================
---' Kalimdor Zones: Thousand Needles
+--' Kalimdor Zones: Tanaris
 --'==========================================================================================
---	Zone: Thousand Needles			FinalFantasylization_KalimdorThousandNeedles()
+--	Zone: Tanaris			FinalFantasylization_KalimdorTanaris()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_KalimdorThousandNeedlesResting()
---		Player is Swimming		FinalFantasylization_KalimdorThousandNeedlesSwimming()
+--		Player is Resting		FinalFantasylization_KalimdorTanarisResting()
+--		Player is Swimming		FinalFantasylization_KalimdorTanarisSwimming()
 --
 --	TOWNS:
+--	Alliance:
+--		Gunstan's Dig					FinalFantasylization_AllianceTownGunstansDig()
+--		Steelspark Station				FinalFantasylization_AllianceTownSteelsparkStation()
 --	Horde:
---		Westreach Summit		FinalFantasylization_HordeTownWestreachSummit()
---	Neutral:
---		Fizzle & Pozzik's Speedbarge		FinalFantasylization_NeutralTownFizzleandPozziksSpeedbarge()
---			Speedbarge Bar						FinalFantasylization_NeutralTownSpeedbargeBar()
---		Freewind Post						FinalFantasylization_NeutralTownFreewindPost()
+--		Dawnrise Expedition				FinalFantasylization_HordeTownDawnriseExpedition()
+--		Dunemaul Recruitment Camp		FinalFantasylization_HordeTownDunemaulRecruitmentCamp()
+--	Neutral
+--		Bootlegger Outpost				FinalFantasylization_NeutralTownBootleggerOutpost()
+--		Gadgetzan						FinalFantasylization_NeutralTownGadgetzan()
 --
 --	SUBZONES:
---	Darkcloud Pinnacle			FinalFantasylization_SubzoneDarkcloudPinnacle()
---		Arikara's Needle			FinalFantasylization_SubzoneArikarasNeedle()
---	The Great Lift				FinalFantasylization_SubzoneTheGreatLift()
---	Highperch					FinalFantasylization_SubzoneHighperch()
---	Razorfen Downs				FinalFantasylization_SubzoneRazorfenDowns()
---	The Shimmering Deep			FinalFantasylization_SubzoneTheShimmeringDeep()
---		Mirage Abyss				FinalFantasylization_SubzoneMirageAbyss()
---		Raceway Ruins				FinalFantasylization_SubzoneRacewayRuins()
---		Sunken Dig Site				FinalFantasylization_SubzoneSunkenDigSite()
---	Southsea Holdfast			FinalFantasylization_SubzoneSouthseaHoldfast()
---		The Admiral's Den			FinalFantasylization_SubzoneTheAdmiralsDen()
---	Splithoof Crag				FinalFantasylization_SubzoneSplithoofCrag()
---		Splithoof Hold				FinalFantasylization_SubzoneSplithoofHold()
---	Splithoof Heights			FinalFantasylization_SubzoneSplithoofHeights()
---	Tirth's Haunt				FinalFantasylization_SubzoneTirthsHaunt()
---	Twilight Aerie				FinalFantasylization_SubzoneTwilightAerie()
---	Twilight Bulwark			FinalFantasylization_SubzoneTwilightBulwark()
---	The Twilight Withering		FinalFantasylization_SubzoneTheTwilightWithering()
---	Whitereach Post				FinalFantasylization_SubzoneWhitereachPost()
+--	Abyssal Sands				FinalFantasylization_SubzoneAbyssalSands()
+--	Broken Pillar				FinalFantasylization_SubzoneBrokenPillar()
+--	Caverns of Time				FinalFantasylization_SubzoneCavernsofTime()
+--	The Deserted Workshop		FinalFantasylization_SubzoneTheDesertedWorkshop()
+--	Dunemaul Compound			FinalFantasylization_SubzoneDunemaulCompound()
+--	Eastmoon Ruins				FinalFantasylization_SubzoneEastmoonRuins()
+--	The Gaping Chasm			FinalFantasylization_SubzoneTheGapingChasm()
+--	Land's End Beach			FinalFantasylization_SubzoneLandsEndBeach()
+--	Lost Rigger Cove			FinalFantasylization_SubzoneLostRiggerCove()
+--	Noonshade Ruins				FinalFantasylization_SubzoneNoonshadeRuins()
+--	The Noxious Lair			FinalFantasylization_SubzoneTheNoxiousLair()
+--	Sandsorrow Watch			FinalFantasylization_SubzoneSandsorrowWatch()
+--	South Seas					FinalFantasylization_SubzoneSouthSeas()
+--	Southbreak Shore			FinalFantasylization_SubzoneSouthbreakShore()
+--	Southmoon Ruins				FinalFantasylization_SubzoneSouthmoonRuins()
+--	Steamwheedle Port			FinalFantasylization_SubzoneSteamwheedlePort()
+--	Thistleshrub Valley			FinalFantasylization_SubzoneThistleshrubValley()
+--	Valley of the Watchers		FinalFantasylization_SubzoneValleyoftheWatchers()
+--		Ruins of Uldum				FinalFantasylization_SubzoneRuinsofUldum()
+--	Waterspring Field			FinalFantasylization_SubzoneWaterspringField()
+--	Wavestrider Beach			FinalFantasylization_SubzoneWavestriderBeach()
+--		Zalashji's Den				FinalFantasylization_SubzoneZalashjisDen()
+--	Zul'Farrak					FinalFantasylization_SubzoneZulFarrak()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -47,7 +54,7 @@ function FinalFantasylization_KalimdorZones_ThousandNeedles()
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 			end
 			FinalFantasylization_CurrentZone = "Sleeping"
-			FinalFantasylization_KalimdorThousandNeedlesResting()
+			FinalFantasylization_KalimdorTanarisResting()
 		else
 			return
 		end
@@ -56,24 +63,60 @@ function FinalFantasylization_KalimdorZones_ThousandNeedles()
 	--'==========================================================================================
 	--'	Zone Event: Player is Swimming
 	--'==========================================================================================
-	elseif IsSubmerged() and FinalFantasylizationOptions.Swim == true then
+	elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
 		if FinalFantasylization_CurrentZone ~= "Swimming" then
 			FinalFantasylization_CurrentZone = "Swimming"
-			FinalFantasylization_KalimdorThousandNeedlesSwimming()
+			FinalFantasylization_KalimdorTanarisSwimming()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Horde Town: Westreach Summit
+	--' Tanaris Alliance Town: Gunstan's Dig
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Westreach Summit"] ) then
+	elseif ( SubZoneName == SZ["Gunstan's Dig"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownGunstansDig()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Tanaris Alliance Town: Steelspark Station
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Steelspark Station"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownSteelsparkStation()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Tanaris Horde Town: Dawnrise Expedition
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Dawnrise Expedition"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownWestreachSummit()
+				FinalFantasylization_HordeTownDawnriseExpedition()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -84,299 +127,356 @@ function FinalFantasylization_KalimdorZones_ThousandNeedles()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Neutral Town: Fizzle & Pozzik's Speedbarge
+	--' Tanaris Horde Town: Dunemaul Recruitment Camp
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Fizzle & Pozzik's Speedbarge"] ) then
+	elseif ( SubZoneName == SZ["Dunemaul Recruitment Camp"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownFizzleandPozziksSpeedbarge()
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_HordeTownDunemaulRecruitmentCamp()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Neutral Town: Speedbarge Bar
+	--' Tanaris Neutral Town: Bootlegger Outpost
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Speedbarge Bar"] ) then
+	elseif ( SubZoneName == SZ["Bootlegger Outpost"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownSpeedbargeBar()
+			FinalFantasylization_NeutralTownBootleggerOutpost()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Neutral Town: Freewind Post
+	--' Tanaris Neutral Town: Gadgetzan
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Freewind Post"] ) then
+	elseif ( SubZoneName == SZ["Gadgetzan"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownFreewindPost()
+			FinalFantasylization_NeutralTownGadgetzan()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Darkcloud Pinnacle
+	--' Tanaris Subzone: Abyssal Sands
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Darkcloud Pinnacle"] ) then
+	elseif ( SubZoneName == SZ["Abyssal Sands"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDarkcloudPinnacle()
+			FinalFantasylization_SubzoneAbyssalSands()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Arikara's Needle
+	--' Tanaris Subzone: Broken Pillar
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Arikara's Needle"] ) then
+	elseif ( SubZoneName == SZ["Broken Pillar"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneArikarasNeedle()
+			FinalFantasylization_SubzoneBrokenPillar()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: The Great Lift
+	--' Tanaris Subzone: Caverns of Time
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Great Lift"] ) then
+	elseif ( SubZoneName == SZ["Caverns of Time"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheGreatLift()
+			FinalFantasylization_SubzoneCavernsofTime()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Highperch
+	--' Tanaris Subzone: The Deserted Workshop
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Highperch"] ) then
+	elseif ( SubZoneName == SZ["The Deserted Workshop"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneHighperch()
+			FinalFantasylization_SubzoneTheDesertedWorkshop()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Razorfen Downs
+	--' Tanaris Subzone: Dunemaul Compound
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Razorfen Downs"] ) then
+	elseif ( SubZoneName == SZ["Dunemaul Compound"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRazorfenDowns()
+			FinalFantasylization_SubzoneDunemaulCompound()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: The Shimmering Deep
+	--' Tanaris Subzone: Eastmoon Ruins
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Shimmering Deep"] ) then
+	elseif ( SubZoneName == SZ["Eastmoon Ruins"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheShimmeringDeep()
+			FinalFantasylization_SubzoneEastmoonRuins()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Mirage Abyss
+	--' Tanaris Subzone: The Gaping Chasm
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Mirage Abyss"] ) then
+	elseif ( SubZoneName == SZ["The Gaping Chasm"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneMirageAbyss()
+			FinalFantasylization_SubzoneTheGapingChasm()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Raceway Ruins
+	--' Tanaris Subzone: Land's End Beach
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Raceway Ruins"] ) then
+	elseif ( SubZoneName == SZ["Land's End Beach"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRacewayRuins()
+			FinalFantasylization_SubzoneLandsEndBeach()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Sunken Dig Site
+	--' Tanaris Subzone: Lost Rigger Cove
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Sunken Dig Site"] ) then
+	elseif ( SubZoneName == SZ["Lost Rigger Cove"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSunkenDigSite()
+			FinalFantasylization_SubzoneLostRiggerCove()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Southsea Holdfast
+	--' Tanaris Subzone: Noonshade Ruins
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Southsea Holdfast"] ) then
+	elseif ( SubZoneName == SZ["Noonshade Ruins"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSouthseaHoldfast()
+			FinalFantasylization_SubzoneNoonshadeRuins()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: The Admiral's Den
+	--' Tanaris Subzone: The Noxious Lair
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Admiral's Den"] ) then
+	elseif ( SubZoneName == SZ["The Noxious Lair"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheAdmiralsDen()
+			FinalFantasylization_SubzoneTheNoxiousLair()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Splithoof Crag
+	--' Tanaris Subzone: Sandsorrow Watch
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Splithoof Crag"] ) then
+	elseif ( SubZoneName == SZ["Sandsorrow Watch"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSplithoofCrag()
+			FinalFantasylization_SubzoneSandsorrowWatch()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Splithoof Hold
+	--' Tanaris Subzone: South Seas
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Splithoof Hold"] ) then
+	elseif ( SubZoneName == SZ["South Seas"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSplithoofHold()
+			FinalFantasylization_SubzoneSouthSeas()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Splithoof Heights
+	--' Tanaris Subzone: Southbreak Shore
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Splithoof Heights"] ) then
+	elseif ( SubZoneName == SZ["Southbreak Shore"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSplithoofHeights()
+			FinalFantasylization_SubzoneSouthbreakShore()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Tirth's Haunt
+	--' Tanaris Subzone: Southmoon Ruins
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Tirth's Haunt"] ) then
+	elseif ( SubZoneName == SZ["Southmoon Ruins"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTirthsHaunt()
+			FinalFantasylization_SubzoneSouthmoonRuins()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Twilight Aerie
+	--' Tanaris Subzone: Steamwheedle Port
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Twilight Aerie"] ) then
+	elseif ( SubZoneName == SZ["Steamwheedle Port"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTwilightAerie()
+			FinalFantasylization_SubzoneSteamwheedlePort()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Twilight Bulwark
+	--' Tanaris Subzone: Thistleshrub Valley
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Twilight Bulwark"] ) then
+	elseif ( SubZoneName == SZ["Thistleshrub Valley"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTwilightBulwark()
+			FinalFantasylization_SubzoneThistleshrubValley()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: The Twilight Withering
+	--' Tanaris Subzone: Valley of the Watchers
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Twilight Withering"] ) then
+	elseif ( SubZoneName == SZ["Valley of the Watchers"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheTwilightWithering()
+			FinalFantasylization_SubzoneValleyoftheWatchers()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Whitereach Post
+	--' Tanaris Subzone: Ruins of Uldum
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Whitereach Post"] ) then
+	elseif ( SubZoneName == SZ["Ruins of Uldum"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneWhitereachPost()
+			FinalFantasylization_SubzoneRuinsofUldum()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles END
+	--' Tanaris Subzone: Waterspring Field
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Waterspring Field"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWaterspringField()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Tanaris Subzone: Wavestrider Beach
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Wavestrider Beach"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWavestriderBeach()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Tanaris Subzone: Zalashji's Den
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Zalashji's Den"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneZalashjisDen()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Tanaris Subzone: Zul'Farrak
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Zul'Farrak"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneZulFarrak()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Tanaris END
 	--'==========================================================================================
 	else
 		if FinalFantasylization_CurrentZone ~= ZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
 			FinalFantasylization_CurrentZone = ZoneName
-			FinalFantasylization_KalimdorThousandNeedles()
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
+			FinalFantasylization_KalimdorTanaris()
 			FinalFantasylization_IsPlaying = true
 		else
 			return

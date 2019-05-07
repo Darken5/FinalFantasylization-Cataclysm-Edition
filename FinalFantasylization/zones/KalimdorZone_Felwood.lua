@@ -1,41 +1,41 @@
-function FinalFantasylization_KalimdorZones_ThousandNeedles()
+function FinalFantasylization_KalimdorZones_Felwood()
 --'==========================================================================================
---' Kalimdor Zones: Thousand Needles
+--' Kalimdor Zones: Felwood
 --'==========================================================================================
---	Zone: Thousand Needles			FinalFantasylization_KalimdorThousandNeedles()
+--	Zone: Felwood			FinalFantasylization_KalimdorFelwood()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_KalimdorThousandNeedlesResting()
---		Player is Swimming		FinalFantasylization_KalimdorThousandNeedlesSwimming()
+--		Player is Resting		FinalFantasylization_KalimdorFelwoodResting()
+--		Player is Swimming		FinalFantasylization_KalimdorFelwoodSwimming()
 --
 --	TOWNS:
+--	Alliance:
+--		Talonbranch Glade		FinalFantasylization_AllianceTownTalonbranchGlade()
 --	Horde:
---		Westreach Summit		FinalFantasylization_HordeTownWestreachSummit()
---	Neutral:
---		Fizzle & Pozzik's Speedbarge		FinalFantasylization_NeutralTownFizzleandPozziksSpeedbarge()
---			Speedbarge Bar						FinalFantasylization_NeutralTownSpeedbargeBar()
---		Freewind Post						FinalFantasylization_NeutralTownFreewindPost()
+--		Irontree Clearing		FinalFantasylization_HordeTownIrontreeClearing()
+--	Neutral
+--		Emerald Sanctuary		FinalFantasylization_NeutralTownEmeraldSanctuary()
+--		Whisperwind Grove		FinalFantasylization_NeutralTownWhisperwindGrove()
+--		Wildheart Point			FinalFantasylization_NeutralTownWildheartPoint()
 --
 --	SUBZONES:
---	Darkcloud Pinnacle			FinalFantasylization_SubzoneDarkcloudPinnacle()
---		Arikara's Needle			FinalFantasylization_SubzoneArikarasNeedle()
---	The Great Lift				FinalFantasylization_SubzoneTheGreatLift()
---	Highperch					FinalFantasylization_SubzoneHighperch()
---	Razorfen Downs				FinalFantasylization_SubzoneRazorfenDowns()
---	The Shimmering Deep			FinalFantasylization_SubzoneTheShimmeringDeep()
---		Mirage Abyss				FinalFantasylization_SubzoneMirageAbyss()
---		Raceway Ruins				FinalFantasylization_SubzoneRacewayRuins()
---		Sunken Dig Site				FinalFantasylization_SubzoneSunkenDigSite()
---	Southsea Holdfast			FinalFantasylization_SubzoneSouthseaHoldfast()
---		The Admiral's Den			FinalFantasylization_SubzoneTheAdmiralsDen()
---	Splithoof Crag				FinalFantasylization_SubzoneSplithoofCrag()
---		Splithoof Hold				FinalFantasylization_SubzoneSplithoofHold()
---	Splithoof Heights			FinalFantasylization_SubzoneSplithoofHeights()
---	Tirth's Haunt				FinalFantasylization_SubzoneTirthsHaunt()
---	Twilight Aerie				FinalFantasylization_SubzoneTwilightAerie()
---	Twilight Bulwark			FinalFantasylization_SubzoneTwilightBulwark()
---	The Twilight Withering		FinalFantasylization_SubzoneTheTwilightWithering()
---	Whitereach Post				FinalFantasylization_SubzoneWhitereachPost()
+--	Bloodvenom Falls		FinalFantasylization_SubzoneBloodvenomFalls()
+--	Bloodvenom Post			FinalFantasylization_SubzoneBloodvenomPost()
+--	Bloodvenom River		FinalFantasylization_SubzoneBloodvenomRiver()
+--	Deadwood Village		FinalFantasylization_SubzoneDeadwoodVillage()
+--	Felpaw Village			FinalFantasylization_SubzoneFelpawVillage()
+--	Irontree Woods			FinalFantasylization_SubzoneIrontreeWoods()
+--		Irontree Cavern			FinalFantasylization_SubzoneIrontreeCavern()
+--	Jadefire Glen			FinalFantasylization_SubzoneJadefireGlen()
+--	Jadefire Run			FinalFantasylization_SubzoneJadefireRun()
+--	Jaedenar				FinalFantasylization_SubzoneJaedenar()
+--		Shadow Hold				FinalFantasylization_SubzoneShadowHold()
+--		Shrine of the Deceiver	FinalFantasylization_SubzoneShrineoftheDeceiver()
+--	Morlos'Aran				FinalFantasylization_SubzoneMorlosAran()
+--	Ruins of Constellas		FinalFantasylization_SubzoneRuinsofConstellas()
+--	Shadowlurk Ridge		FinalFantasylization_SubzoneShadowlurkRidge()
+--	Shatter Scar Vale		FinalFantasylization_SubzoneShatterScarVale()
+--	Timbermaw Hold			FinalFantasylization_SubzoneTimbermawHold()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -47,7 +47,7 @@ function FinalFantasylization_KalimdorZones_ThousandNeedles()
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 			end
 			FinalFantasylization_CurrentZone = "Sleeping"
-			FinalFantasylization_KalimdorThousandNeedlesResting()
+			FinalFantasylization_KalimdorFelwoodResting()
 		else
 			return
 		end
@@ -56,24 +56,42 @@ function FinalFantasylization_KalimdorZones_ThousandNeedles()
 	--'==========================================================================================
 	--'	Zone Event: Player is Swimming
 	--'==========================================================================================
-	elseif IsSubmerged() and FinalFantasylizationOptions.Swim == true then
+	elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
 		if FinalFantasylization_CurrentZone ~= "Swimming" then
 			FinalFantasylization_CurrentZone = "Swimming"
-			FinalFantasylization_KalimdorThousandNeedlesSwimming()
+			FinalFantasylization_KalimdorFelwoodSwimming()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Horde Town: Westreach Summit
+	--' Felwood Alliance Town: Talonbranch Glade
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Westreach Summit"] ) then
+	elseif ( SubZoneName == SZ["Talonbranch Glade"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_AllianceTownTalonbranchGlade()
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Felwood Horde Town: Irontree Clearing
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Irontree Clearing"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownWestreachSummit()
+				FinalFantasylization_HordeTownIrontreeClearing()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -84,299 +102,273 @@ function FinalFantasylization_KalimdorZones_ThousandNeedles()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Neutral Town: Fizzle & Pozzik's Speedbarge
+	--' Felwood Neutral Town: Emerald Sanctuary
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Fizzle & Pozzik's Speedbarge"] ) then
+	elseif ( SubZoneName == SZ["Emerald Sanctuary"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownFizzleandPozziksSpeedbarge()
+			FinalFantasylization_NeutralTownEmeraldSanctuary()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Neutral Town: Speedbarge Bar
+	--' Felwood Neutral Town: Whisperwind Grove
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Speedbarge Bar"] ) then
+	elseif ( SubZoneName == SZ["Whisperwind Grove"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownSpeedbargeBar()
+			FinalFantasylization_NeutralTownWhisperwindGrove()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Neutral Town: Freewind Post
+	--' Felwood Neutral Town: Wildheart Point
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Freewind Post"] ) then
+	elseif ( SubZoneName == SZ["Wildheart Point"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownFreewindPost()
+			FinalFantasylization_NeutralTownWildheartPoint()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Darkcloud Pinnacle
+	--' Felwood Subzone: Bloodvenom Falls
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Darkcloud Pinnacle"] ) then
+	elseif ( SubZoneName == SZ["Bloodvenom Falls"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDarkcloudPinnacle()
+			FinalFantasylization_SubzoneBloodvenomFalls()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Arikara's Needle
+	--' Felwood Subzone: Bloodvenom Post
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Arikara's Needle"] ) then
+	elseif ( SubZoneName == SZ["Bloodvenom Post"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneArikarasNeedle()
+			FinalFantasylization_SubzoneBloodvenomPost()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: The Great Lift
+	--' Felwood Subzone: Bloodvenom River
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Great Lift"] ) then
+	elseif ( SubZoneName == SZ["Bloodvenom River"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheGreatLift()
+			FinalFantasylization_SubzoneBloodvenomRiver()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Highperch
+	--' Felwood Subzone: Deadwood Village
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Highperch"] ) then
+	elseif ( SubZoneName == SZ["Deadwood Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneHighperch()
+			FinalFantasylization_SubzoneDeadwoodVillage()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Razorfen Downs
+	--' Felwood Subzone: Felpaw Village
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Razorfen Downs"] ) then
+	elseif ( SubZoneName == SZ["Felpaw Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRazorfenDowns()
+			FinalFantasylization_SubzoneFelpawVillage()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: The Shimmering Deep
+	--' Felwood Subzone: Irontree Woods
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Shimmering Deep"] ) then
+	elseif ( SubZoneName == SZ["Irontree Woods"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheShimmeringDeep()
+			FinalFantasylization_SubzoneIrontreeWoods()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Mirage Abyss
+	--' Felwood Subzone: Irontree Cavern
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Mirage Abyss"] ) then
+	elseif ( SubZoneName == SZ["Irontree Cavern"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneMirageAbyss()
+			FinalFantasylization_SubzoneIrontreeCavern()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Raceway Ruins
+	--' Felwood Subzone: Jadefire Glen
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Raceway Ruins"] ) then
+	elseif ( SubZoneName == SZ["Jadefire Glen"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRacewayRuins()
+			FinalFantasylization_SubzoneJadefireGlen()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Sunken Dig Site
+	--' Felwood Subzone: Jadefire Run
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Sunken Dig Site"] ) then
+	elseif ( SubZoneName == SZ["Jadefire Run"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSunkenDigSite()
+			FinalFantasylization_SubzoneJadefireRun()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Southsea Holdfast
+	--' Felwood Subzone: Jaedenar
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Southsea Holdfast"] ) then
+	elseif ( SubZoneName == SZ["Jaedenar"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSouthseaHoldfast()
+			FinalFantasylization_SubzoneJaedenar()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: The Admiral's Den
+	--' Felwood Subzone: Shadow Hold
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Admiral's Den"] ) then
+	elseif ( SubZoneName == SZ["Shadow Hold"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheAdmiralsDen()
+			FinalFantasylization_SubzoneShadowHold()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Splithoof Crag
+	--' Felwood Subzone: Shrine of the Deceiver
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Splithoof Crag"] ) then
+	elseif ( SubZoneName == SZ["Shrine of the Deceiver"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSplithoofCrag()
+			FinalFantasylization_SubzoneShrineoftheDeceiver()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Splithoof Hold
+	--' Felwood Subzone: Morlos'Aran
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Splithoof Hold"] ) then
+	elseif ( SubZoneName == SZ["Morlos'Aran"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSplithoofHold()
+			FinalFantasylization_SubzoneMorlosAran()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Splithoof Heights
+	--' Felwood Subzone: Ruins of Constellas
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Splithoof Heights"] ) then
+	elseif ( SubZoneName == SZ["Ruins of Constellas"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSplithoofHeights()
+			FinalFantasylization_SubzoneRuinsofConstellas()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Tirth's Haunt
+	--' Felwood Subzone: Shadowlurk Ridge
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Tirth's Haunt"] ) then
+	elseif ( SubZoneName == SZ["Shadowlurk Ridge"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTirthsHaunt()
+			FinalFantasylization_SubzoneShadowlurkRidge()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Twilight Aerie
+	--' Felwood Subzone: Shatter Scar Vale
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Twilight Aerie"] ) then
+	elseif ( SubZoneName == SZ["Shatter Scar Vale"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTwilightAerie()
+			FinalFantasylization_SubzoneShatterScarVale()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: Twilight Bulwark
+	--' Felwood Subzone: Timbermaw Hold
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Twilight Bulwark"] ) then
+	elseif ( SubZoneName == SZ["Timbermaw Hold"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTwilightBulwark()
+			FinalFantasylization_SubzoneTimbermawHold()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Thousand Needles Subzone: The Twilight Withering
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Twilight Withering"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheTwilightWithering()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Thousand Needles Subzone: Whitereach Post
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Whitereach Post"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneWhitereachPost()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Thousand Needles END
+	--' Felwood END
 	--'==========================================================================================
 	else
 		if FinalFantasylization_CurrentZone ~= ZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
 			FinalFantasylization_CurrentZone = ZoneName
-			FinalFantasylization_KalimdorThousandNeedles()
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
+			FinalFantasylization_KalimdorFelwood()
 			FinalFantasylization_IsPlaying = true
 		else
 			return

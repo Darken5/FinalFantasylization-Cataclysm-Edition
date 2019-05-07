@@ -5808,6 +5808,123 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_CaveSong()
 	end
 --'==========================================================================================
+--' Kalimdor Zones: Felwood
+--'==========================================================================================
+--	Zone: Felwood
+	function FinalFantasylization_KalimdorFelwood()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SwampSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorFelwoodResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorFelwoodSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--
+--	TOWNS:
+--	Alliance:
+--		Talonbranch Glade
+	function FinalFantasylization_AllianceTownTalonbranchGlade()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Irontree Clearing
+	function FinalFantasylization_HordeTownIrontreeClearing()
+		FinalFantasylization_HordeTowns();
+	end
+--	Neutral
+--		Emerald Sanctuary
+	function FinalFantasylization_NeutralTownEmeraldSanctuary()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Whisperwind Grove
+	function FinalFantasylization_NeutralTownWhisperwindGrove()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Wildheart Point
+	function FinalFantasylization_NeutralTownWildheartPoint()
+		FinalFantasylization_NeutralTowns();
+	end
+--
+--	SUBZONES:
+--	Bloodvenom Falls
+	function FinalFantasylization_SubzoneBloodvenomFalls()
+
+	end
+--	Bloodvenom Post
+	function FinalFantasylization_SubzoneBloodvenomPost()
+
+	end
+--	Bloodvenom River
+	function FinalFantasylization_SubzoneBloodvenomRiver()
+
+	end
+--	Deadwood Village
+	function FinalFantasylization_SubzoneDeadwoodVillage()
+
+	end
+--	Felpaw Village
+	function FinalFantasylization_SubzoneFelpawVillage()
+
+	end
+--	Irontree Woods
+	function FinalFantasylization_SubzoneIrontreeWoods()
+
+	end
+--		Irontree Cavern
+	function FinalFantasylization_SubzoneIrontreeCavern()
+
+	end
+--	Jadefire Glen
+	function FinalFantasylization_SubzoneJadefireGlen()
+
+	end
+--	Jadefire Run
+	function FinalFantasylization_SubzoneJadefireRun()
+
+	end
+--	Jaedenar
+	function FinalFantasylization_SubzoneJaedenar()
+
+	end
+--		Shadow Hold
+	function FinalFantasylization_SubzoneShadowHold()
+
+	end
+--		Shrine of the Deceiver
+	function FinalFantasylization_SubzoneShrineoftheDeceiver()
+
+	end
+--	Morlos'Aran
+	function FinalFantasylization_SubzoneMorlosAran()
+
+	end
+--	Ruins of Constellas
+	function FinalFantasylization_SubzoneRuinsofConstellas()
+
+	end
+--	Shadowlurk Ridge
+	function FinalFantasylization_SubzoneShadowlurkRidge()
+
+	end
+--	Shatter Scar Vale
+	function FinalFantasylization_SubzoneShatterScarVale()
+
+	end
+--	Timbermaw Hold
+	function FinalFantasylization_SubzoneTimbermawHold()
+
+	end
+--'==========================================================================================
 --' Kalimdor Zones: Feralas
 --'==========================================================================================
 --	Zone: Feralas
@@ -6559,6 +6676,149 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_LandSong()
 	end
 --'==========================================================================================
+--' Kalimdor Zones: Tanaris
+--'==========================================================================================
+--	Zone: Tanaris
+	function FinalFantasylization_KalimdorTanaris()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SandSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorTanarisResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorTanarisSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Alliance:
+--		Gunstan's Dig
+	function FinalFantasylization_AllianceTownGunstansDig()
+		FinalFantasylization_AllianceTowns();
+	end
+--		Steelspark Station
+	function FinalFantasylization_AllianceTownSteelsparkStation()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Horde:
+--		Dawnrise Expedition
+	function FinalFantasylization_HordeTownDawnriseExpedition()
+		FinalFantasylization_HordeTowns();
+	end
+--		Dunemaul Recruitment Camp
+	function FinalFantasylization_HordeTownDunemaulRecruitmentCamp()
+		FinalFantasylization_HordeTowns();
+	end
+--	Neutral
+--		Bootlegger Outpost
+	function FinalFantasylization_NeutralTownBootleggerOutpost()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Gadgetzan
+	function FinalFantasylization_NeutralTownGadgetzan()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Abyssal Sands
+	function FinalFantasylization_SubzoneAbyssalSands()
+		FinalFantasylization_SandSong()
+	end
+--	Broken Pillar
+	function FinalFantasylization_SubzoneBrokenPillar()
+		FinalFantasylization_SandSong()
+	end
+--	Caverns of Time
+	function FinalFantasylization_SubzoneCavernsofTime()
+		FinalFantasylization_WarySong()
+	end
+--	The Deserted Workshop
+	function FinalFantasylization_SubzoneTheDesertedWorkshop()
+		FinalFantasylization_SandSong()
+	end
+--	Dunemaul Compound
+	function FinalFantasylization_SubzoneDunemaulCompound()
+		FinalFantasylization_SandSong()
+	end
+--	Eastmoon Ruins
+	function FinalFantasylization_SubzoneEastmoonRuins()
+		FinalFantasylization_SandSong()
+	end
+--	The Gaping Chasm
+	function FinalFantasylization_SubzoneTheGapingChasm()
+		FinalFantasylization_SwampSong()
+	end
+--	Land's End Beach
+	function FinalFantasylization_SubzoneLandsEndBeach()
+		FinalFantasylization_BeachSong()
+	end
+--	Lost Rigger Cove
+	function FinalFantasylization_SubzoneLostRiggerCove()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Noonshade Ruins
+	function FinalFantasylization_SubzoneNoonshadeRuins()
+		FinalFantasylization_LakeSong()
+	end
+--	The Noxious Lair
+	function FinalFantasylization_SubzoneTheNoxiousLair()
+		FinalFantasylization_SwampSong()
+	end
+--	Sandsorrow Watch
+	function FinalFantasylization_SubzoneSandsorrowWatch()
+		FinalFantasylization_SandSong()
+	end
+--	South Seas
+	function FinalFantasylization_SubzoneSouthSeas()
+		FinalFantasylization_WaterSong()
+	end
+--	Southbreak Shore
+	function FinalFantasylization_SubzoneSouthbreakShore()
+		FinalFantasylization_BeachSong()
+	end
+--	Southmoon Ruins
+	function FinalFantasylization_SubzoneSouthmoonRuins()
+		FinalFantasylization_SandSong()
+	end
+--	Steamwheedle Port
+	function FinalFantasylization_SubzoneSteamwheedlePort()
+		FinalFantasylization_LakeSong()
+	end
+--	Thistleshrub Valley
+	function FinalFantasylization_SubzoneThistleshrubValley()
+		FinalFantasylization_SandSong()
+	end
+--	Valley of the Watchers
+	function FinalFantasylization_SubzoneValleyoftheWatchers()
+		FinalFantasylization_SandSong()
+	end
+--		Ruins of Uldum
+	function FinalFantasylization_SubzoneRuinsofUldum()
+		FinalFantasylization_WarySong()
+	end
+--	Waterspring Field
+	function FinalFantasylization_SubzoneWaterspringField()
+		FinalFantasylization_LakeSong()
+	end
+--	Wavestrider Beach
+	function FinalFantasylization_SubzoneWavestriderBeach()
+		FinalFantasylization_BeachSong()
+	end
+--		Zalashji's Den
+	function FinalFantasylization_SubzoneZalashjisDen()
+		FinalFantasylization_LakeSong()
+	end
+--	Zul'Farrak
+	function FinalFantasylization_SubzoneZulFarrak()
+		FinalFantasylization_SandSong()
+	end
+--'==========================================================================================
 --' Kalimdor Zones: Teldrassil
 --'==========================================================================================
 --	Zone: Teldrassil
@@ -6778,8 +7038,432 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWhitereachPost()
 		FinalFantasylization_LandSong();
 	end
+--'==========================================================================================
+--' Kalimdor Zones: Uldum
+--'==========================================================================================
+--	Zone: Uldum
+	function FinalFantasylization_KalimdorUldum()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SandSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorUldumResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorUldumSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Neutral:
+--		Mar'at
+	function FinalFantasylization_NeutralTownMarat()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Oasis of Vir'sar
+	function FinalFantasylization_NeutralTownOasisofVirsar()
+		FinalFantasylization_NeutralTowns();
+	end
+--			Sullah's Sideshow
+	function FinalFantasylization_NeutralTownSullahsSideshow()
+		FinalFantasylization_Sleeping()
+	end
+--		Ramkahen
+	function FinalFantasylization_NeutralTownRamkahen()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Schnottz's Landing
+	function FinalFantasylization_NeutralTownSchnottzsLanding()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Akhenet Fields
+	function FinalFantasylization_SubzoneAkhenetFields()
 
+	end
+--	Arsad Trade Post
+	function FinalFantasylization_SubzoneArsadTradePost()
 
+	end
+--	Bluff of the South Wind
+	function FinalFantasylization_SubzoneBluffoftheSouthWind()
+
+	end
+--	Cloudtop Terrace
+	function FinalFantasylization_SubzoneCloudtopTerrace()
+
+	end
+--	Cradle of the Ancients
+	function FinalFantasylization_SubzoneCradleoftheAncients()
+
+	end
+--	The Cursed Landing
+	function FinalFantasylization_SubzoneTheCursedLanding()
+
+	end
+--	Gate of Hamatep
+	function FinalFantasylization_SubzoneGateofHamatep()
+
+	end
+--	The Gate of Unending Cycles
+	function FinalFantasylization_SubzoneTheGateofUnendingCycles()
+
+	end
+--		Khartut's Tomb
+	function FinalFantasylization_SubzoneKhartutsTomb()
+
+	end
+--	Halls of Origination
+	function FinalFantasylization_SubzoneHallsofOrigination()
+
+	end
+--	Keset Pass
+	function FinalFantasylization_SubzoneKesetPass()
+
+	end
+--	Lost City of the Tol'vir
+	function FinalFantasylization_SubzoneLostCityoftheTolvir()
+
+	end
+--	Maker's Ascent
+	function FinalFantasylization_SubzoneMakersAscent()
+
+	end
+--	M.A.C. Diver
+	function FinalFantasylization_SubzoneMACDiver()
+
+	end
+--	Mount Akher
+	function FinalFantasylization_SubzoneMountAkher()
+
+	end
+--	Nahom
+	function FinalFantasylization_SubzoneNahom()
+
+	end
+--	Neferset City
+	function FinalFantasylization_SubzoneNefersetCity()
+
+	end
+--	Neferset City Outskirts
+	function FinalFantasylization_SubzoneNefersetCityOutskirts()
+
+	end
+--	Obelisk of the Moon
+	function FinalFantasylization_SubzoneObeliskoftheMoon()
+
+	end
+--		Chamber of the Moon
+	function FinalFantasylization_SubzoneChamberoftheMoon()
+
+	end
+--	Obelisk of the Stars
+	function FinalFantasylization_SubzoneObeliskoftheStars()
+
+	end
+--		Chamber of the Stars
+	function FinalFantasylization_SubzoneChamberoftheStars()
+
+	end
+--	Obelisk of the Sun
+	function FinalFantasylization_SubzoneObeliskoftheSun()
+
+	end
+--		Chamber of the Sun
+	function FinalFantasylization_SubzoneChamberoftheSun()
+
+	end
+--	Orsis
+	function FinalFantasylization_SubzoneOrsis()
+
+	end
+--	Pilgrim's Precipice
+	function FinalFantasylization_SubzonePilgrimsPrecipice()
+
+	end
+--	The Pit of Scales
+	function FinalFantasylization_SubzoneThePitofScales()
+
+	end
+--	Ramkahen Legion Outpost
+	function FinalFantasylization_SubzoneRamkahenLegionOutpost()
+
+	end
+--	Ruins of Ahmtul
+	function FinalFantasylization_SubzoneRuinsofAhmtul()
+
+	end
+--	Ruins of Ammon
+	function FinalFantasylization_SubzoneRuinsofAmmon()
+
+	end
+--	Ruins of Khintaset
+	function FinalFantasylization_SubzoneRuinsofKhintaset()
+
+	end
+--	Sahket Wastes
+	function FinalFantasylization_SubzoneSahketWastes()
+
+	end
+--	Seal of the Sun King
+	function FinalFantasylization_SubzoneSealoftheSunKing()
+
+	end
+--	The Steps of Fate
+	function FinalFantasylization_SubzoneTheStepsofFate()
+
+	end
+--	Sunstone Terrace
+	function FinalFantasylization_SubzoneSunstoneTerrace()
+
+	end
+--	Sunwatcher's Ridge
+	function FinalFantasylization_SubzoneSunwatchersRidge()
+
+	end
+--	Surveyors' Outpost
+	function FinalFantasylization_SubzoneSurveyorsOutpost()
+
+	end
+--	Tahret Grounds
+	function FinalFantasylization_SubzoneTahretGrounds()
+
+	end
+--	Temple of Uldum
+	function FinalFantasylization_SubzoneTempleofUldum()
+
+	end
+--	Tomb of the Sun King
+	function FinalFantasylization_SubzoneTomboftheSunKing()
+
+	end
+--	Tombs of the Precursors
+	function FinalFantasylization_SubzoneTombsofthePrecursors()
+
+	end
+--	The Trail of Devastation
+	function FinalFantasylization_SubzoneTheTrailofDevastation()
+
+	end
+--	Vir'naal Dam
+	function FinalFantasylization_SubzoneVirnaalDam()
+
+	end
+--	Vir'naal Lake
+	function FinalFantasylization_SubzoneVirnaalLake()
+
+	end
+--		Murkdeep Cavern
+	function FinalFantasylization_SubzoneMurkdeepCavern()
+
+	end
+--	Vir'naal Oasis
+	function FinalFantasylization_SubzoneVirnaalOasis()
+
+	end
+--	Vir'naal River
+	function FinalFantasylization_SubzoneVirnaalRiver()
+
+	end
+--	Vir'naal River Delta
+	function FinalFantasylization_SubzoneVirnaalRiverDelta()
+
+	end
+--'==========================================================================================
+--' Kalimdor Zones: Un'Goro Crater
+--'==========================================================================================
+--	Zone: Un'Goro Crater
+	function FinalFantasylization_KalimdorUnGoroCrater()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SwampSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorUnGoroCraterResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorUnGoroCraterSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Neutral:
+--		Marshal's Stand
+	function FinalFantasylization_NeutralTownMarshalsStand()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Mossy Pile
+	function FinalFantasylization_NeutralTownMossyPile()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Fire Plume Ridge
+	function FinalFantasylization_SubzoneFirePlumeRidge()
+
+	end
+--	Fungal Rock
+	function FinalFantasylization_SubzoneFungalRock()
+
+	end
+--	Golakka Hot Springs
+	function FinalFantasylization_SubzoneGolakkaHotSprings()
+
+	end
+--	Ironstone Plateau
+	function FinalFantasylization_SubzoneIronstonePlateau()
+
+	end
+--	Lakkari Tar Pits
+	function FinalFantasylization_SubzoneLakkariTarPits()
+
+	end
+--	Marshal's Refuge
+	function FinalFantasylization_SubzoneMarshalsRefuge()
+
+	end
+--	The Marshlands
+	function FinalFantasylization_SubzoneTheMarshlands()
+
+	end
+--	The Roiling Gardens
+	function FinalFantasylization_SubzoneTheRoilingGardens()
+
+	end
+--	The Screaming Reaches
+	function FinalFantasylization_SubzoneTheScreamingReaches()
+
+	end
+--	The Shaper's Terrace
+	function FinalFantasylization_SubzoneTheShapersTerrace()
+
+	end
+--	The Slithering Scar
+	function FinalFantasylization_SubzoneTheSlitheringScar()
+
+	end
+--	Terror Run
+	function FinalFantasylization_SubzoneTerrorRun()
+
+	end
+--	Waygate
+	function FinalFantasylization_SubzoneWaygate()
+
+	end
+--'==========================================================================================
+--' Kalimdor Zones: Winterspring
+--'==========================================================================================
+--	Zone: Winterspring
+	function FinalFantasylization_KalimdorWinterspring()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_SnowSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorWinterspringResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorWinterspringSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Alliance:
+--		Starfall Village
+	function FinalFantasylization_AllianceTownStarfallVillage()
+		FinalFantasylization_AllianceTowns();
+	end
+--	Neutral
+--		Everlook
+	function FinalFantasylization_NeutralTownEverlook()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Goodgrub Smoking Pit
+	function FinalFantasylization_NeutralTownGoodgrubSmokingPit()
+		FinalFantasylization_NeutralTowns();
+	end
+--		Snowden Chalet
+	function FinalFantasylization_NeutralTownSnowdenChalet()
+		FinalFantasylization_NeutralTowns();	
+	end
+--	SUBZONES:
+--	Ban'Thallow Barrow Den
+	function FinalFantasylization_SubzoneBanThallowBarrowDen()
+
+	end
+--	Caverns of Consumption
+	function FinalFantasylization_SubzoneCavernsofConsumption()
+
+	end
+--	Dun Mandarr
+	function FinalFantasylization_SubzoneDunMandarr()
+
+	end
+--	Frostfire Hot Springs
+	function FinalFantasylization_SubzoneFrostfireHotSprings()
+
+	end
+--	Frostsaber Rock
+	function FinalFantasylization_SubzoneFrostsaberRock()
+
+	end
+--	Frostwhisper Gorge
+	function FinalFantasylization_SubzoneFrostwhisperGorge()
+
+	end
+--	The Hidden Grove
+	function FinalFantasylization_SubzoneTheHiddenGrove()
+
+	end
+--	Ice Thistle Hills
+	function FinalFantasylization_SubzoneIceThistleHills()
+
+	end
+--	Lake Kel'Theril
+	function FinalFantasylization_SubzoneLakeKelTheril()
+
+	end
+--	Mazthoril
+	function FinalFantasylization_SubzoneMazthoril()
+
+	end
+--		Beryl Egress
+	function FinalFantasylization_SubzoneBerylEgress()
+
+	end
+--	Moon Horror Den
+	function FinalFantasylization_SubzoneMoonHorrorDen()
+
+	end
+--	Owl Wing Thicket
+	function FinalFantasylization_SubzoneOwlWingThicket()
+
+	end
+--	The Ruins of Kel'Theril
+	function FinalFantasylization_SubzoneTheRuinsofKelTheril()
+
+	end
+--	Timbermaw Post
+	function FinalFantasylization_SubzoneTimbermawPost()
+
+	end
+--	Winterfall Village
+	function FinalFantasylization_SubzoneWinterfallVillage()
+
+	end
+	
 --###########################################################################################
 --##   MAELSTROM ZONES
 --###########################################################################################		
